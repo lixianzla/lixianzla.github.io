@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+    <meta name="viewport"
+		  content="width=device-width, initial-scale=1">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+		  rel="stylesheet"
+		  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+		  crossorigin="anonymous">
+
+  	<link rel="stylesheet"
+		  type="text/css"
+		  href="css/style.css"/>
+
+
+
+
+
+		<script src="js/handlebars-v4.7.6.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+					integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+					crossorigin="anonymous">
+		</script>
+
+		<script src="js/jquery-3.5.1.min.js"></script>
+
+		<link rel="icon" href="icon/favicon.png" type="image/png"/>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+
+
+		<title>Photography - Lixian Zeng</title>
+
+	</head>
+
+  <body>
+		<div class="d-none d-sm-block" style="height:50px;"></div>
+		<!-- navbar -->
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+			<div class="container">
+
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.png" alt="logo" width="36" height="27" class="d-inline-block align-top">
+				</a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span><img src="icon/menu-outline.svg" alt="menu" width="25" height="25"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Work</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="insights.html">Insights</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="aboutme.html">About</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#">Resume</a>
+						</li>
+					</ul>
+				</div><!-- collapse-->
+
+			</div> <!-- container-->
+		</nav>
+
+		<!-- breadcrumb trail -->
+
+		<div class="container">
+			<div style="height:20px;"></div>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active" aria-current="page">
+						<a href="#">Something else</a>
+					</li>
+					<li class="breadcrumb-item">
+						Photos
+					</li>
+				</ol>
+			</nav>
+		</div>
+
+
+
+
+
+
+<!-- photo gallery -->
+
+
+		<section>
+			<div class="container">
+				<div class="row">
+
+					<div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div style="height:20px;"></div>
+						<h1 class="gallery-title">Photo Gallery</h1>
+					</div>
+
+					<div align="center">
+						<button class="filter-button" data-filter="all">All</button>
+						<button class="filter-button" data-filter="category1">Designing</button>
+						<button class="filter-button" data-filter="category2">Landscape</button>
+						<button class="filter-button" data-filter="category3">Graphics</button>
+					</div>
+
+					<br/><br/>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category1">
+            <a data-fancybox="gallery" href="images/flower.jpeg">
+              <img class="img-responsive" style="width:100%;" alt="" src="images/flower.jpeg" />
+              <div class='img-info'>
+                <h4>Image Title 1</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category3">
+            <a data-fancybox="gallery" href="images/p2.jpg">
+              <img class="img-responsive" alt="" src="images/p2.jpg" />
+              <div class='img-info'>
+                <h4>Image Title 3</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category1">
+            <a data-fancybox="gallery" href="images/download.jpeg">
+              <img class="img-responsive" alt="" src="images/download.jpeg" />
+              <div class='img-info'>
+                  <h4>Image Title 4</h4>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category2">
+            <a data-fancybox="gallery"  href="https://picsum.photos/400/250?image=486">
+              <img class="img-responsive" alt="" style="width:100%;" src="https://picsum.photos/400/250?image=486" />
+              <div class='img-info'>
+                <h4>Image Title 5</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category3">
+            <a data-fancybox="gallery" href="https://picsum.photos/400/250?image=846">
+              <img class="img-responsive" alt="" src="https://picsum.photos/400/250?image=846" />
+              <div class='img-info'>
+                <h4>Image Title 6</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category1">
+            <a data-fancybox="gallery" href="https://picsum.photos/400/250?image=1066">
+              <img class="img-responsive" alt="" src="https://picsum.photos/400/250?image=1066" />
+              <div class='img-info'>
+                <h4>Image Title 7</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category2">
+            <a data-fancybox="gallery" href="https://picsum.photos/400/250?image=506">
+              <img class="img-responsive" alt="" src="https://picsum.photos/400/250?image=506" />
+              <div class='img-info'>
+                <h4>Image Title 8</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category3">
+            <a data-fancybox="gallery" href="https://picsum.photos/400/250?image=1026">
+              <img class="img-responsive" alt="" src="https://picsum.photos/400/250?image=1026" />
+              <div class='img-info'>
+                <h4>Image Title 9</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category1">
+            <a data-fancybox="gallery"href="https://picsum.photos/400/250?image=1077">
+              <img class="img-responsive" alt="" src="https://picsum.photos/400/250?image=1077" />
+              <div class='img-info'>
+                <h4>Image Title 10</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category2">
+            <a data-fancybox="gallery" href="https://picsum.photos/400/250?image=102">
+              <img class="img-responsive" alt="" src="https://picsum.photos/400/250?image=102" />
+              <div class='img-info'>
+                <h4>Image Title 11</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="gallery_product col-md-3 col-sm-12 filter category3">
+            <a data-fancybox="gallery" href="https://picsum.photos/400/250?image=106">
+              <img class="img-responsive" alt="" src="https://picsum.photos/400/250?image=106" />
+              <div class='img-info'>
+                <h4>Image Title 12</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </a>
+          </div>
+
+					<div class="col-md-12" style="height:300px;">
+
+					</div>
+
+				</div> <!-- row -->
+			</div> <!-- container-->
+		</section> <!--Portfolio -->
+
+
+
+		<!--	gallery -->
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+
+			    $(".filter-button").click(function(){
+			        var value = $(this).attr('data-filter');
+
+			        if(value == "all")
+			        {
+			            $('.filter').show('1000');
+			        }
+			        else
+			        {
+			            $(".filter").not('.'+value).hide('3000');
+			            $('.filter').filter('.'+value).show('3000');
+
+			        }
+
+				        	if ($(".filter-button").removeClass("active")) {
+						$(this).removeClass("active");
+					    }
+					    	$(this).addClass("active");
+				    	});
+			});
+			/*	end gallery */
+
+			$(document).ready(function(){
+			    $(".fancybox").fancybox({
+			        openEffect: "none",
+			        closeEffect: "none"
+			    });
+			});
+
+		</script>
+
+
+
+
+  </body>
+
+
+  </html>
