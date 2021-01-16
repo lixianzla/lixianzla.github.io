@@ -1,0 +1,384 @@
+/* @media= if statement*/
+/*
+ @media (min-width:1200px){
+	body {
+		  background: black;
+		  color:white;
+		  font-family: sans-serif;
+	}
+		.colum2{
+		display: inline-block;
+		width:500px;
+
+	}
+}
+
+
+
+ @media (max-width:700px){
+	body {
+		  background: pink;
+		  color:white;
+		  font-family: sans-serif;
+	}
+}
+
+
+a {
+color:gray;
+}
+
+
+/* hover to emphasis a link */
+/*
+a:hover {
+color:black;
+background: white;
+text-decoration: none;
+}
+
+.greenlink:hover{
+background: yellow;
+}
+
+h1 {
+font-family:sans-serif;
+font-size: 40pt;
+}
+
+h2 {
+font-family: monospace;
+font-size:25pt;
+}
+
+.indent {
+margin-left:10px;
+}
+
+.gap_below {
+margin-bottom: 30px;
+}
+*/
+
+
+/* 3 parameter for the border propoerty */
+
+body{
+	 font-family: 'Raleway', sans-serif !important;
+}
+
+.thin_border{
+	border:1px solid black;
+
+}
+
+.indent {
+margin-left:10px;
+}
+
+.legendImage:hover{
+	cursor: pointer;
+}
+
+
+.menu{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.menu:hover{
+	background-color: white;
+	color:black;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* dropdown menu */
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  overflow: auto;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 13px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {display: block;}
+
+
+
+
+
+
+
+/* image overlay */
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+
+
+}
+
+.imageContainer:hover .overlay {
+  opacity: 1;
+}
+
+
+/* chapter-thumnail */
+.chapter-thumbnail {
+  white-space : pre;  /* preserve the original line breaks and spacing
+               (I need this because the content of the
+               chapter is just text not HTML, so normally
+               the line breaks would be ignored) */
+  overflow : hidden;  /* don't show a scroll bar when the text is
+                         too big to fit in the box (which it always
+                         will be but we don't mind as it is just a
+                         thumbnail) */
+  max-height: 150px;  /* make sure that the box doesn't get too big */
+  margin-top: 10px;
+  border-radius: 10px;
+
+}
+
+#mainViewer {
+  margin-top: 10px;
+  white-space : pre;   /* preserve the original line breaks (see above)*/
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+
+/* photo gallery */
+*{
+	padding:0;
+	margin:0;
+}
+
+section{
+    z-index:-2;
+}
+
+.gallery-title{
+  color: #212529;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.filter-button{
+  font-size: 18px;
+  border: 2px solid #212529;
+	padding:5px 10px;
+  text-align: center;
+  color: #212529;
+  margin-bottom: 30px;
+	background:transparent;
+}
+.filter-button:hover,
+.filter-button:focus,
+.filter-button.active{
+  color: #ffffff;
+  background-color:#212529;
+	outline:none;
+}
+
+
+.gallery_product{
+  margin: 0px;
+	padding:0;
+	position:relative;
+}
+
+
+.gallery_product .img-info{
+	position: absolute;
+  background: rgba(0,0,0,0.5);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+	overflow:hidden;
+	color:#fff;
+	top:0;
+	display:none;
+ -webkit-transition: 2s;
+  transition: 2s;
+
+}
+
+.gallery_product:hover .img-info{
+	display:block;
+ -webkit-transition: 2s;
+  transition: 2s;
+}
+
+
+.img-responsive{
+	width: 100%; /* width of container */
+	height:240px; /* height of container */
+	object-fit: cover;
+	object-position: 10% 10%;
+}
+
+
+/* slection */
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #C9B9C9;
+}
+
+::selection {
+  color: black;
+  background: #C9B9C9;
+}
+
+
+
+/* landing page image */
+#planet1 {
+top:30%;
+right:20%;
+position:absolute;
+z-index:-1;
+animation-name: float1;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+width:15%
+}
+
+#planet2 {
+top:57%;
+right:32%;
+position:absolute;
+z-index:-1;
+animation-name: float2;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+width:9%
+}
+
+#planet3 {
+top:57%;
+right:13%;
+position:absolute;
+z-index:-1;
+animation-name: float3;
+animation-duration: 4.5s;
+animation-iteration-count: infinite;
+width:9%
+}
+
+
+#planet4 {
+top:17%;
+right:32%;
+position:absolute;
+z-index:-1;
+animation-name: float4;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+width:5%
+}
+
+
+#star {
+top:26.5%;
+right:23%;
+position:absolute;
+z-index:-1;
+width:1.2%
+}
+
+
+
+
+#galaxy1 {
+	bottom:0%;
+	left:0%;
+	position:absolute;
+	z-index:-1;
+	width:100%
+}
+
+#galaxy2 {
+	top:12%;
+	right:0%;
+	position:absolute;
+	z-index:-2;
+	width:25%;
+	overflow:hidden;
+}
+
+@keyframes float1{
+	0% {top:30%;}
+	25% {top:30.5%;}
+	50% {top:29%;}
+	80% {top:31%;}
+	100% {top:30%;}
+}
+
+@keyframes float2{
+	0% {top:57%;}
+	30% {top:56%;}
+	50% {top:57%;}
+	75% {top:56%;}
+	100% {top:57%;}
+}
+
+@keyframes float3{
+	0% {top:57%;}
+	28% {top:56%;}
+	40% {top:57%;}
+	80% {top:56%;}
+	90% {top:56.5%;}
+	100% {top:57%;}
+}
+
+@keyframes float4{
+	0% {top:17%;}
+	32% {top:16%;}
+	45% {top:16.5%;}
+	70% {top:16%;}
+	80% {top:16.8%;}
+	100% {top:17%;}
+}
