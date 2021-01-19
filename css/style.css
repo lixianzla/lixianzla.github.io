@@ -276,57 +276,57 @@ section{
 
 /* landing page image */
 #planet1 {
-top:30%;
-right:20%;
-position:absolute;
+top:80px;
+right:28%;
 z-index:-1;
+position:absolute;
 animation-name: float1;
 animation-duration: 4s;
 animation-iteration-count: infinite;
-width:15%
+width:35%;
 }
 
 #planet2 {
-top:57%;
-right:32%;
+top:320px;
+right:62%;
 position:absolute;
 z-index:-1;
 animation-name: float2;
 animation-duration: 4s;
 animation-iteration-count: infinite;
-width:9%
+width:20%;
 }
 
 #planet3 {
-top:57%;
-right:13%;
+top:280px;
+right:5%;
 position:absolute;
 z-index:-1;
 animation-name: float3;
 animation-duration: 4.5s;
 animation-iteration-count: infinite;
-width:9%
+width:18%
 }
 
 
 #planet4 {
-top:17%;
-right:32%;
+top:10px;
+right:58%;
 position:absolute;
 z-index:-1;
 animation-name: float4;
 animation-duration: 4s;
 animation-iteration-count: infinite;
-width:5%
+width:12%
 }
 
 
 #star {
-top:26.5%;
-right:23%;
+top:80px;
+right:30%;
 position:absolute;
 z-index:-1;
-width:1.2%
+width:3%
 }
 
 
@@ -336,7 +336,7 @@ width:1.2%
 	bottom:0%;
 	left:0%;
 	position:absolute;
-	z-index:-1;
+	z-index:-3;
 	width:100%
 }
 
@@ -350,35 +350,128 @@ width:1.2%
 }
 
 @keyframes float1{
-	0% {top:30%;}
-	25% {top:30.5%;}
-	50% {top:29%;}
-	80% {top:31%;}
-	100% {top:30%;}
+	0% {top:80px;}
+	25% {top:85px;}
+	50% {top:75px;}
+	80% {top:90px;}
+	100% {top:80px;}
 }
 
 @keyframes float2{
-	0% {top:57%;}
-	30% {top:56%;}
-	50% {top:57%;}
-	75% {top:56%;}
-	100% {top:57%;}
+	0% {top:320px;}
+	30% {top:310px;}
+	50% {top:320px;}
+	75% {top:310px;}
+	100% {top:320px;}
 }
 
 @keyframes float3{
-	0% {top:57%;}
-	28% {top:56%;}
-	40% {top:57%;}
-	80% {top:56%;}
-	90% {top:56.5%;}
-	100% {top:57%;}
+	0% {top:280px;}
+	28% {top:270px;}
+	40% {top:280px;}
+	80% {top:270px;}
+	90% {top:275px;}
+	100% {top:280px;}
 }
 
 @keyframes float4{
-	0% {top:17%;}
-	32% {top:16%;}
-	45% {top:16.5%;}
-	70% {top:16%;}
-	80% {top:16.8%;}
-	100% {top:17%;}
+	0% {top:10px;}
+	32% {top:0px;}
+	45% {top:5px;}
+	70% {top:0px;}
+	80% {top:8px;}
+	100% {top:10px;}
 }
+
+
+
+ @media (max-width:1200px){
+	 #planet1 {
+	 top:80px;
+	 right:28%;
+	 z-index:-1;
+	 position:absolute;
+	 animation-name: float1;
+	 animation-duration: 4s;
+	 animation-iteration-count: infinite;
+	 width:40%;
+	 }
+
+	 #planet2 {
+	 top:230px;
+	 right:65%;
+	 position:absolute;
+	 z-index:-1;
+	 animation-name: float2;
+	 animation-duration: 4s;
+	 animation-iteration-count: infinite;
+	 width:18%;
+	 }
+
+	 #planet3 {
+	 top:280px;
+	 right:10%;
+	 position:absolute;
+	 z-index:-1;
+	 animation-name: float3;
+	 animation-duration: 4.5s;
+	 animation-iteration-count: infinite;
+	 width:18%
+	 }
+
+
+	 #planet4 {
+	 top:30px;
+	 right:61%;
+	 position:absolute;
+	 z-index:-1;
+	 animation-name: float4;
+	 animation-duration: 4s;
+	 animation-iteration-count: infinite;
+	 width:12%
+	 }
+
+
+	 #star {
+	 top:80px;
+	 right:30%;
+	 position:absolute;
+	 z-index:-1;
+	 width:3%
+	 }
+
+	 @keyframes float1{
+	 	0% {top:80px;}
+	 	25% {top:85px;}
+	 	50% {top:75px;}
+	 	80% {top:90px;}
+	 	100% {top:80px;}
+	 }
+
+	 @keyframes float2{
+	 	0% {top:230px;}
+	 	30% {top:220px;}
+	 	50% {top:230px;}
+	 	75% {top:220px;}
+	 	100% {top:230px;}
+	 }
+
+	 @keyframes float3{
+	 	0% {top:280px;}
+	 	28% {top:270px;}
+	 	40% {top:280px;}
+	 	80% {top:270px;}
+	 	90% {top:275px;}
+	 	100% {top:280px;}
+	 }
+
+	 @keyframes float4{
+	 	0% {top:30px;}
+	 	32% {top:20px;}
+	 	45% {top:25px;}
+	 	70% {top:20px;}
+	 	80% {top:28px;}
+	 	100% {top:30px;}
+	 }
+
+ }

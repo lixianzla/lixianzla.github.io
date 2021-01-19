@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html;" />
+
+<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+
+
+<!-- page piling -->
+	<link rel="stylesheet" type="text/css" href="pagePiling/jquery.pagepiling.css" />
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script type="text/javascript" src="pagePiling/jquery.pagepiling.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			* Plugin intialization
+			*/
+	    	$('#pagepiling').pagepiling({
+	          	direction: 'horizontal',
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+			    sectionsColor: ['white', 'white', 'white', 'white', 'white'],
+			    navigation: {
+			    	'position': 'right',
+			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4', 'Pgae 5']
+			   	},
+			    afterRender: function(){
+			    	$('#pp-nav').addClass('custom');
+			    },
+			    afterLoad: function(anchorLink, index){
+			    	if(index>1){
+			    		$('#pp-nav').removeClass('custom');
+			    	}else{
+			    		$('#pp-nav').addClass('custom');
+			    	}
+			    }
+			});
+	    });
+    </script>
+
+
+    <style>
+
+
+	/* Overwriting fullPage.js tooltip color
+	* --------------------------------------- */
+	#pp-nav.custom .pp-tooltip{
+		color: #AAA;
+	}
+
+</style>
+
+
+<!-- handlebars -->
+<script src="js/handlebars-v4.7.6.js"></script>
+
+<!--
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+-->
+
+<link rel="stylesheet"
+	type="text/css"
+	href="css/style.css"/>
+
+
+<link rel="stylesheet"
+	type="text/css"
+	href="css/bootstrap.css"/>
+
+
+
+<link rel="icon" href="icon/favicon.png" type="image/png"/>
+
+
+
+
+<title>Homepage - Lixian Zeng</title>
+
+
+
+</head>
+<body>
+
+
+	<div id="pagepiling">
+
+	    <div class="section" id="section1">
+				<!-- Landing page -->
+
+				<div class="container">
+					<div class="row">
+
+
+		        <div class="col-md-12">
+		        	<div style="position: absolute;top: 20%;">
+			    			<h1 style="font-family: 'Rufina', serif;font-size:4rem;">Lixian Zeng</h1>
+								<h2 style="font-family: 'Rufina', serif;">UI/UX Design Portfolio</h2>
+
+				    	</div>
+							<div>
+								<img  id="planet1" alt="planet1" src="images/lp/planet1.png"/>
+								<img  id="planet2" alt="planet2" src="images/lp/planet2.png"/>
+								<img  id="planet3" alt="planet3" src="images/lp/planet3.png"/>
+								<img  id="planet4" alt="planet4" src="images/lp/planet4.png"/>
+							  <img  id="star" alt="star" src="images/lp/star.png"/>
+								<img  id="galaxy1" alt="landing page" src="images/lp/galaxy1.png"/>
+
+							</div>
+						</div>
+
+
+
+
+		        <div style="height:200px;"></div>
+						<div style="height:1500px;"></div>
+
+						<div class="col-md-12">
+							<a href="p3.html">Locavore</a> <br>
+							<a href="photos.html">Photo Gallery</a>
+						</div>
+
+
+					</div> <!-- row -->
+				</div> <!-- container -->
+
+	    </div>
+
+
+
+	    <div class="section" id="section2">
+	    	<div>
+	    		<h1>Simple to use</h1>
+	    		<p>Just use the option direction: 'horizontal' to have it working!</p>
+	    	</div>
+	    </div>
+
+
+	    <div class="section" id="section3">
+	    	<div>
+	    		<h1>Isn't it great?</h1>
+	    		<p>Just as you expected!</p>
+	    	</div>
+	    </div>
+
+
+			<div class="section" id="section4">
+	    	<div>
+	    		<h1>Isn't it great?</h1>
+	    		<p>Just as you expected!</p>
+	    	</div>
+	    </div>
+
+			<div class="section" id="section5">
+				<div>
+					<h1>Hello</h1>
+					<p>How are you!</p>
+				</div>
+			</div>
+
+
+
+
+	</div>
+
+</body>
+</html>
