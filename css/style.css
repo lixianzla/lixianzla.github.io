@@ -399,7 +399,7 @@ width:3%
 
 	 #planet2 {
 	 top:200px;
-	 right:65%;
+	 right:70%;
 	 position:absolute;
 	 z-index:-1;
 	 animation-name: float2;
@@ -409,7 +409,7 @@ width:3%
 	 }
 
 	 #planet3 {
-	 top:250px;
+	 top:200px;
 	 right:10%;
 	 position:absolute;
 	 z-index:-1;
@@ -452,17 +452,17 @@ width:3%
 	 	0% {top:200px;}
 	 	30% {top:190px;}
 	 	50% {top:200px;}
-	 	75% {top:190px;}
+	 	75% {top:180px;}
 	 	100% {top:200px;}
 	 }
 
 	 @keyframes float3{
-	 	0% {top:250px;}
-	 	28% {top:240px;}
-	 	40% {top:250px;}
-	 	80% {top:240px;}
-	 	90% {top:245px;}
-	 	100% {top:250px;}
+	 	0% {top:210px;}
+	 	28% {top:200px;}
+	 	40% {top:210px;}
+	 	80% {top:200px;}
+	 	90% {top:205px;}
+	 	100% {top:210px;}
 	 }
 
 	 @keyframes float4{
