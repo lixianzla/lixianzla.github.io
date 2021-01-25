@@ -475,3 +475,15 @@ width:3%
 	 }
 
  }
+
+ .navbarlink{
+	   display: block;
+	   opacity: .5;
+	   appearance: none;
+	   border: none;
+ }
+
+ a{
+  	color:black;
+		text-decoration: none !important;
+ }
