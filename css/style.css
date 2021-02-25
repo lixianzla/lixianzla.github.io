@@ -493,25 +493,6 @@ width:3%
 
 
 /** project thumbnail **/
-body {
-
-font-size: 16px;
-line-height: 1.42857143;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-background-color: #F7F9FA;
-}
-
-
-
-.text-center {
-text-align: center;
-}
-
-.text-left {
-text-align: left;
-}
-
 
 img {
 vertical-align: middle;
@@ -628,24 +609,16 @@ bottom: 42%;
 transform: translateY(50%);
 }
 .project__title {
-margin-bottom: 5px;
 text-transform: none;
 letter-spacing: 0;
-font-size: 16px;
+font-size: 24px;
 }
-.project__title:hover a {
-color: #f36b21;
-}
+
 .project__category {
 font-size: 13px;
 font-style: italic;
 }
-.project__category a {
-color: inherit;
-}
-.project__category:hover a {
-color: #f36b21;
-}
+
 
 /*-------------------------------------------------------*/
 /* Portfolio
