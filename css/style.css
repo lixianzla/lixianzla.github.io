@@ -320,6 +320,14 @@ animation-iteration-count: infinite;
 width:12%
 }
 
+#planet5 {
+bottom:30px;
+right:75%;
+position:absolute;
+z-index:-1;
+width:10%
+}
+
 
 #star {
 top:80px;
@@ -332,22 +340,14 @@ width:3%
 
 
 
-#galaxy1 {
-	bottom:0%;
+#galaxy {
+	bottom:0px;
 	left:0%;
 	position:absolute;
 	z-index:-3;
-	width:100%
+	width:100%;
 }
 
-#galaxy2 {
-	top:12%;
-	right:0%;
-	position:absolute;
-	z-index:-2;
-	width:25%;
-	overflow:hidden;
-}
 
 @keyframes float1{
 	0% {top:80px;}
@@ -662,4 +662,14 @@ top: 42%;
 @media screen and (max-width: 35.5em) {
 .project-grid .project {
 width: 100% !important;
+}
+
+
+
+/** profile image **/
+.myprofile img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 20%;
 }
