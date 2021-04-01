@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx UI Kit | Alerts</title>
+    
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template and UI Kit">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/themes/prism.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/theme.min.css">
+  </head>
+
+
+  <!-- Body-->
+  <body>
+    <main class="container-fluid">
+
+      <!-- Main content-->
+      <section class="cs-offcanvas-enabled row pb-3 pb-md-4">
+        <div class="col-xl-9">
+
+          <!-- Navbar-->
+          <header class="navbar navbar-expand navbar-light fixed-top navbar-box-shadow bg-light px-3 px-lg-4" data-scroll-header data-fixed-element>
+            <a class="navbar-brand d-lg-none" href="typography.html">
+              <img src="../../assets/img/components/logo/logo-dark.svg" alt="Createx" width="130">
+            </a>
+            <button class="navbar-toggler d-block d-lg-none mr-3 ml-auto" type="button" data-toggle="offcanvas" data-target="componentsNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav ml-auto d-none d-lg-flex align-items-center">
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../../index.html">
+                  <i class="cxi-eye align-middle mt-n1 mr-2"></i>
+                  Live preview
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../documentation/dev-setup.html">
+                  <i class="cxi-files align-middle mt-n1 mr-2"></i>
+                  Documentation
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+            </ul>
+            <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-primary btn-shadow ml-lg-4" target="_blank" rel="noopener">
+              <i class="cxi-cart mr-2 d-none d-sm-inline-block"></i>
+              Buy now
+            </a>
+          </header>
+
+          <!-- Side navigation (Off-canvas)-->
+          <aside class="cs-offcanvas cs-offcanvas-expand bg-dark" id="componentsNav">
+            <div class="cs-offcanvas-cap d-none d-lg-block py-4">
+              <a class="navbar-brand py-2" href="typography.html">
+                <img src="../../assets/img/components/logo/logo-white.svg" alt="Createx" width="130">
+              </a>
+              <span class="badge badge-success">UI Kit</span>
+            </div>
+            <div class="cs-offcanvas-cap d-flex d-lg-none">
+              <div class="d-flex align-items-center mt-1">
+                <h5 class="text-light mb-0 mr-3">Menu</h5>
+                <span class="badge badge-success">UI Kit</span>
+              </div>
+              <button class="close text-light" type="button" data-dismiss="offcanvas" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="d-flex d-lg-none align-items-center py-4 px-3 border-bottom border-light">
+              <a class="btn btn-primary btn-block mr-3" href="../../index.html"><i class="cxi-eye mt-n1 mr-2"></i>Preview</a>
+              <a class="btn btn-warning btn-block mt-0" href="../documentation/dev-setup.html"><i class="cxi-files mt-n1 mr-2"></i>Docs</a>
+            </div>
+            <div class="cs-offcanvas-body px-0 pt-4 pb-grid-gutter" data-simplebar data-simplebar-inverse>
+              <h6 class="font-size-lg text-light px-4 mt-2 mb-3">Content</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="typography.html">Typography</a>
+                <a class="nav-link px-4" href="icon-font.html">Icon font</a>
+                <a class="nav-link px-4" href="code.html">Code</a>
+                <a class="nav-link px-4" href="images.html">Images &amp; figures</a>
+                <a class="nav-link px-4" href="tables.html">Tables</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Components</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4 active" href="alerts.html">Alerts</a>
+                <a class="nav-link px-4" href="badge.html">Badges</a>
+                <a class="nav-link px-4" href="blog-components.html">Blog components</a>
+                <a class="nav-link px-4" href="breadcrumb.html">Breadcrumb</a>
+                <a class="nav-link px-4" href="buttons.html">Buttons</a>
+                <a class="nav-link px-4" href="button-group.html">Button group</a>
+                <a class="nav-link px-4" href="cards.html">Cards</a>
+                <a class="nav-link px-4" href="carousel.html">Carousel</a>
+                <a class="nav-link px-4" href="collapse.html">Collapse</a>
+                <a class="nav-link px-4" href="contacts-card.html">Contacts card</a>
+                <a class="nav-link px-4" href="countdown.html">Countdown</a>
+                <a class="nav-link px-4" href="dividers.html">Dividers</a>
+                <a class="nav-link px-4" href="dropdowns.html">Dropdowns</a>
+                <a class="nav-link px-4" href="forms.html">Forms</a>
+                <a class="nav-link px-4" href="gallery.html">Gallery</a>
+                <a class="nav-link px-4" href="icon-box.html">Icon box</a>
+                <a class="nav-link px-4" href="input-group.html">Input group</a>
+                <a class="nav-link px-4" href="jumbotron.html">Jumbotron</a>
+                <a class="nav-link px-4" href="list-group.html">List group</a>
+                <a class="nav-link px-4" href="media-object.html">Media object</a>
+                <a class="nav-link px-4" href="modal.html">Modal</a>
+                <a class="nav-link px-4" href="navs.html">Navs</a>
+                <a class="nav-link px-4" href="navbar.html">Navbar</a>
+                <a class="nav-link px-4" href="pagination.html">Pagination</a>
+                <a class="nav-link px-4" href="parallax.html">Parallax</a>
+                <a class="nav-link px-4" href="pills.html">Pills</a>
+                <a class="nav-link px-4" href="popovers.html">Popovers</a>
+                <a class="nav-link px-4" href="portfolio-components.html">Portfolio components</a>
+                <a class="nav-link px-4" href="pricing.html">Pricing</a>
+                <a class="nav-link px-4" href="progress-bar.html">Progress bar</a>
+                <a class="nav-link px-4" href="progress-radial.html">Progress radial</a>
+                <a class="nav-link px-4" href="scrollbar-custom.html">Scrollbar (custom)</a>
+                <a class="nav-link px-4" href="shop-components.html">Shop components</a>
+                <a class="nav-link px-4" href="social-buttons.html">Social buttons</a>
+                <a class="nav-link px-4" href="spinners.html">Spinners</a>
+                <a class="nav-link px-4" href="steps.html">Steps</a>
+                <a class="nav-link px-4" href="tabs.html">Tabs</a>
+                <a class="nav-link px-4" href="team.html">Team</a>
+                <a class="nav-link px-4" href="testimonials.html">Testimonials / reviews</a>
+                <a class="nav-link px-4" href="toasts.html">Toasts</a>
+                <a class="nav-link px-4" href="tooltips.html">Tooltips</a>
+                <a class="nav-link px-4" href="video-popup.html">Video popup</a>
+                <a class="nav-link px-4" href="widgets.html">Widgets</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Utilities</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="https://getbootstrap.com/docs/4.5/utilities/borders/" target="_blank" rel="noopener">Bootstrap</a>
+                <a class="nav-link px-4" href="utilities.html">Createx</a>
+              </nav>
+            </div>
+          </aside>
+
+          <!-- Page title-->
+          <div class="border-bottom pt-5 mt-2 mb-5">
+            <h1 class="mt-2 mt-md-4 mb-3 pt-5">Alerts</h1>
+            <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+              <p class="text-muted">Provide contextual feedback messages for typical user actions.</p>
+              <p class="font-size-sm font-weight-medium pl-md-4">
+                <a class="text-nowrap" href="https://getbootstrap.com/docs/4.5/components/alerts/" target="_blank" rel="noopener">
+                  Bootstrap docs<i class="cxi-angle-right font-size-base align-middle ml-1"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Basic example-->
+          <section class="pb-5 mb-md-2" id="alerts-basic">
+            <h2 class="h3">Basic example</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result1" role="tabpanel">
+                    <div class="alert alert-primary" role="alert">A simple primary alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.</div>
+                    <div class="alert alert-secondary" role="alert">A simple secondary alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.</div>
+                    <div class="alert alert-success" role="alert">A simple success alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.</div>
+                    <div class="alert alert-danger" role="alert">A simple danger alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.</div>
+                    <div class="alert alert-warning" role="alert">A simple warning alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.</div>
+                    <div class="alert alert-info" role="alert">A simple info alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.</div>
+                    <div class="alert alert-light" role="alert">A simple light alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.</div>
+                    <div class="alert alert-dark mb-0" role="alert">A simple dark alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.</div>
+                  </div>
+                  <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary alert --&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  A simple primary alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;
+
+&lt;!-- Secondary alert --&gt;
+&lt;div class=&quot;alert alert-secondary&quot; role=&quot;alert&quot;&gt;
+  A simple secondary alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;
+
+&lt;!-- Success alert --&gt;
+&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+  A simple success alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;
+
+&lt;!-- Danger alert --&gt;
+&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;
+  A simple danger alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;
+
+&lt;!-- Warning alert --&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+  A simple warning alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;
+
+&lt;!-- Info alert --&gt;
+&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;
+  A simple info alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;
+
+&lt;!-- Light alert --&gt;
+&lt;div class=&quot;alert alert-light&quot; role=&quot;alert&quot;&gt;
+  A simple light alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;
+
+&lt;!-- Dark alert --&gt;
+&lt;div class=&quot;alert alert-dark&quot; role=&quot;alert&quot;&gt;
+  A simple dark alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Alert with icon-->
+          <section class="pb-5 mb-md-2" id="alerts-icon">
+            <h2 class="h3">Alert with icon</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result2" data-toggle="tab" role="tab" aria-controls="result2" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html2" data-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result2" role="tabpanel">
+                    <div class="alert alert-primary" role="alert">
+                      <div class="media align-items-center">
+                        <i class="cxi-bell lead mr-3"></i>
+                        <div class="media-body">
+                          A simple primary alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                      <div class="media align-items-center">
+                        <i class="cxi-clock lead mr-3"></i>
+                        <div class="media-body">
+                          A simple secondary alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                      <div class="media align-items-center">
+                        <i class="cxi-check lead mr-3"></i>
+                        <div class="media-body">
+                          A simple success alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                      <div class="media align-items-center">
+                        <i class="cxi-close-round lead mr-3"></i>
+                        <div class="media-body">
+                          A simple danger alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                      <div class="media align-items-center">
+                        <i class="cxi-alert lead mr-3"></i>
+                        <div class="media-body">
+                          A simple warning alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                      <div class="media align-items-center">
+                        <i class="cxi-alert-octagon lead mr-3"></i>
+                        <div class="media-body">
+                          A simple info alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                      <div class="media align-items-center">
+                        <i class="cxi-unlock lead mr-3"></i>
+                        <div class="media-body">
+                          A simple light alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-dark mb-0" role="alert">
+                      <div class="media align-items-center">
+                        <i class="cxi-map-pin-outline lead mr-3"></i>
+                        <div class="media-body">
+                          A simple dark alert with <a href='#' class='alert-link'>an example link</a>. Give it a click if you like.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary alert --&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;media align-items-center&quot;&gt;
+    &lt;i class=&quot;cxi-bell lead mr-3&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;media-body&quot;&gt;
+      A simple primary alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Secondary alert --&gt;
+&lt;div class=&quot;alert alert-secondary&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;media align-items-center&quot;&gt;
+    &lt;i class=&quot;cxi-clock lead mr-3&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;media-body&quot;&gt;
+      A simple secondary alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Success alert --&gt;
+&lt;div class=&quot;alert alert-success&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;media align-items-center&quot;&gt;
+    &lt;i class=&quot;cxi-check lead mr-3&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;media-body&quot;&gt;
+      A simple success alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Danger alert --&gt;
+&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;media align-items-center&quot;&gt;
+    &lt;i class=&quot;cxi-close-round lead mr-3&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;media-body&quot;&gt;
+      A simple danger alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Warning alert --&gt;
+&lt;div class=&quot;alert alert-warning&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;media align-items-center&quot;&gt;
+    &lt;i class=&quot;cxi-alert lead mr-3&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;media-body&quot;&gt;
+      A simple warning alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Info alert --&gt;
+&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;media align-items-center&quot;&gt;
+    &lt;i class=&quot;cxi-alert-octagon lead mr-3&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;media-body&quot;&gt;
+      A simple info alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Light alert --&gt;
+&lt;div class=&quot;alert alert-light&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;media align-items-center&quot;&gt;
+    &lt;i class=&quot;cxi-unlock lead mr-3&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;media-body&quot;&gt;
+      A simple light alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Dark alert --&gt;
+&lt;div class=&quot;alert alert-dark&quot; role=&quot;alert&quot;&gt;
+  &lt;div class=&quot;media align-items-center&quot;&gt;
+    &lt;i class=&quot;cxi-map-pin-outline lead mr-3&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;media-body&quot;&gt;
+      A simple dark alert with &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Dismissible alerts-->
+          <section class="pb-5 mb-md-2" id="alerts-dismissible">
+            <h2 class="h3">Dismissible alerts</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result3" data-toggle="tab" role="tab" aria-controls="result3" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html3" data-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result3" role="tabpanel">
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert"><span class='font-weight-medium'>Primary alert:</span> Dismiss me by clicking the close button on the right.
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="alert alert-secondary alert-dismissible fade show" role="alert"><span class='font-weight-medium'>Secondary alert:</span> Dismiss me by clicking the close button on the right.
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert"><span class='font-weight-medium'>Success alert:</span> Dismiss me by clicking the close button on the right.
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert"><span class='font-weight-medium'>Danger alert:</span> Dismiss me by clicking the close button on the right.
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert"><span class='font-weight-medium'>Warning alert:</span> Dismiss me by clicking the close button on the right.
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="alert alert-info alert-dismissible fade show" role="alert"><span class='font-weight-medium'>Info alert:</span> Dismiss me by clicking the close button on the right.
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="alert alert-light alert-dismissible fade show" role="alert"><span class='font-weight-medium'>Light alert:</span> Dismiss me by clicking the close button on the right.
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="alert alert-dark alert-dismissible fade show mb-0" role="alert"><span class='font-weight-medium'>Dark alert:</span> Dismiss me by clicking the close button on the right.
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary alert --&gt;
+&lt;div class=&quot;alert alert-primary alert-dismissible fade show&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;font-weight-medium&quot;&gt;Primary alert:&lt;/span&gt; Dismiss me by clicking the close button on the right.
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Secondary alert --&gt;
+&lt;div class=&quot;alert alert-secondary alert-dismissible fade show&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;font-weight-medium&quot;&gt;Secondary alert:&lt;/span&gt; Dismiss me by clicking the close button on the right.
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Success alert --&gt;
+&lt;div class=&quot;alert alert-success alert-dismissible fade show&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;font-weight-medium&quot;&gt;Success alert:&lt;/span&gt; Dismiss me by clicking the close button on the right.
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Danger alert --&gt;
+&lt;div class=&quot;alert alert-danger alert-dismissible fade show&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;font-weight-medium&quot;&gt;Danger alert:&lt;/span&gt; Dismiss me by clicking the close button on the right.
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Warning alert --&gt;
+&lt;div class=&quot;alert alert-warning alert-dismissible fade show&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;font-weight-medium&quot;&gt;Warning alert:&lt;/span&gt; Dismiss me by clicking the close button on the right.
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Info alert --&gt;
+&lt;div class=&quot;alert alert-info alert-dismissible fade show&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;font-weight-medium&quot;&gt;Info alert:&lt;/span&gt; Dismiss me by clicking the close button on the right.
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Light alert --&gt;
+&lt;div class=&quot;alert alert-light alert-dismissible fade show&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;font-weight-medium&quot;&gt;Light alert:&lt;/span&gt; Dismiss me by clicking the close button on the right.
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- Dark alert --&gt;
+&lt;div class=&quot;alert alert-dark alert-dismissible fade show&quot; role=&quot;alert&quot;&gt;
+  &lt;span class=&quot;font-weight-medium&quot;&gt;Dark alert:&lt;/span&gt; Dismiss me by clicking the close button on the right.
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Additional content-->
+          <section class="pb-5 mb-md-2" id="alerts-additional-content">
+            <h2 class="h3">Additional content</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result4" data-toggle="tab" role="tab" aria-controls="result4" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html4" data-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result4" role="tabpanel">
+                    <div class="alert alert-primary mb-0" role="alert">
+                      <h4 class="pt-2 alert-heading">Well done!</h4>
+                      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                      <hr>
+                      <p class="pt-3 mb-2">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary alert --&gt;
+&lt;div class=&quot;alert alert-primary&quot; role=&quot;alert&quot;&gt;
+  &lt;h4 class=&quot;pt-2 alert-heading&quot;&gt;Well done!&lt;/h4&gt;
+  &lt;p&gt;Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;p class=&quot;pt-3 mb-2&quot;&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Quick (anchor) navigation-->
+        <div class="col-xl-3 d-none d-xl-block pl-5">
+          <aside class="sticky-top pt-5">
+            <div class="pt-5 mt-5">
+              <div class="pl-4 border-left">
+                <h3 class="h5 mb-3">Jump to</h3>
+                <nav class="nav nav-dark flex-column">
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#alerts-basic">Basic example</a><a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#alerts-icon">Alert with icon</a><a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#alerts-dismissible">Dismissible alerts</a><a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#alerts-additional-content">Additional content</a>
+                </nav>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | E-Commerce - Shop Catalog</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template and UI Kit">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/nouislider/distribute/nouislider.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/ecommerce/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  
+  <!-- Body-->
+  <!-- Add class "cs-is-sidebar" when page has off-canvas sidebar on handheld devices -->
+  <body class="cs-is-sidebar">
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper">
+
+
+      <!-- Sign in modal-->
+      <div class="modal fade" id="modal-signin" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+
+            <!-- Sign in form -->
+            <div class="cs-view show" id="modal-signin-view">
+              <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+                <h3 class="modal-title mt-4 mb-0 text-center">Sign in</h3>
+                <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                  <i class="cxi-cross" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="modal-body px-md-5 px-4">
+                <p class="font-size-sm text-muted text-center">Sign in to your account using email and password provided during registration.</p>
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" class="form-control" id="signin-email" placeholder="Your email address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signin-password" class="form-label">Password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signin-password" placeholder="Your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="remember-me" checked>
+                      <label for="remember-me" class="custom-control-label">Remember me</label>
+                    </div>
+                    <a href="#" class="font-size-sm text-decoration-none">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                  <p class="font-size-sm pt-4 mb-0">
+                    Don't have an account?
+                    <a href="#" class="font-weight-bold text-decoration-none" data-view="#modal-signup-view">Sign up</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <!-- Sign up form -->
+            <div class="cs-view" id="modal-signup-view">
+              <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+                <h3 class="modal-title mt-4 mb-0 text-center">Sign up</h3>
+                <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                  <i class="cxi-cross" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="modal-body px-md-5 px-4">
+                <p class="font-size-sm text-muted text-center">Sign in to your account using email and password provided during registration.</p>
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="signup-name">Full name</label>
+                    <input type="text" class="form-control" id="signup-name" placeholder="Your full name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" class="form-control" id="signup-email" placeholder="Your email address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-password" class="form-label">Password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signup-password" placeholder="Your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-confirm-password" class="form-label">Confirm password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signup-confirm-password" placeholder="Confirm your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary btn-block" type="submit">Sign up</button>
+                  <p class="font-size-sm pt-4 mb-0">Already have an account?
+                    <a href="#" class="font-weight-bold text-decoration-none" data-view="#modal-signin-view">Sign in</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="modal-body text-center px-0 pt-2 pb-4">
+              <hr>
+              <p class="font-size-sm text-heading mb-3 pt-4">Or sign in with</p>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Facebook">
+                <i class="cxi-facebook"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Google">
+                <i class="cxi-google"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Twitter">
+                <i class="cxi-twitter"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="LinkedIn">
+                <i class="cxi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Shopping cart off-canvas -->
+      <div id="cart" class="cs-offcanvas cs-offcanvas-right">
+
+        <!-- Header -->
+        <div class="cs-offcanvas-cap align-items-center border-bottom">
+          <h2 class="h5 mb-0">Your cart (4)</h2>
+          <button class="close mr-n1" type="button" data-dismiss="offcanvas" aria-label="Close">
+            <span class="h3 font-weight-normal mb-0" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="cs-offcanvas-body">
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/01.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Basic hooded sweatshirt in pink</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Color:</span> Pink</li>
+                    <li class="mb-0"><span class="text-muted">Size:</span> S</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong class="text-danger">$15.00</strong> <s class="font-size-xs text-muted">$31.00</s></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/02.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Black and white sport cap</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$18.15</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/03.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Mid-rise slim cropped fit jeans</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Size:</span> M</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$76.00</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/04.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Men fashion gray shoes</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Color:</span> Gray</li>
+                    <li class="mb-0"><span class="text-muted">Size:</span> 10.5</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$84.00</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="cs-offcanvas-cap flex-column border-top">
+          <div class="d-flex align-items-center justify-content-between mb-3 pb-1">
+            <span class="text-muted mr-2">Subtotal:</span>
+            <span class="h5 mb-0">$198.65</span>
+          </div>
+          <a href="checkout.html" class="btn btn-primary btn-lg btn-block">
+            <i class="cxi-credit-card font-size-lg mt-n1 mr-1"></i>
+            Checkout
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Header (Topbar + Navbar) -->
+      <header class="cs-header">
+  
+        <!-- Topbar -->
+        <div class="topbar topbar-dark bg-dark">
+          <div class="container d-flex align-items-center px-0 px-xl-3">
+            <div class="mr-3">
+              <a href="tel:4055550128" class="topbar-link d-md-inline-block d-none">
+                Available 24/7 at
+                <span class='font-weight-bold'>(405) 555-0128</span>
+              </a>
+              <a href="tel:4055550128" class="topbar-link d-md-none d-inline-block text-nowrap">
+                <i class="cxi-iphone align-middle"></i>
+                (405) 555-0128
+              </a>
+            </div>
+            <a href="order-tracking.html" class="topbar-link ml-auto mr-4 pr-sm-2 text-nowrap">
+              <i class="cxi-map-pin-outline mr-1 font-size-base align-middle"></i>
+              Track <span class="d-none d-sm-inline">order</span>
+            </a>
+            <div class="dropdown">
+              <a href="#" class="topbar-link dropdown-toggle" data-toggle="dropdown">
+                <img src="../../assets/img/ecommerce/flags/en.png" class="mr-2" width="20" alt="English">
+                Eng / $
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/fr.png" class="mr-2" width="20" alt="Français">
+                  Français / €
+                </a>
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/de.png" class="mr-2" width="20" alt="Deutsch">
+                  Deutsch / €
+                </a>
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/it.png" class="mr-2" width="20" alt="Italiano">
+                  Italiano / €
+                </a>
+              </div>
+            </div>
+            <a href="#modal-signin" class="topbar-link d-lg-inline-block d-none ml-4 pl-1 text-decoration-none text-nowrap" data-toggle="modal" data-view="#modal-signin-view">
+              <i class="cxi-profile mr-1 font-size-base align-middle"></i>
+              Sign in / up
+            </a>
+          </div>
+        </div>
+  
+        <!-- Navbar -->
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+        <div class="navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-fixed-element>
+          <div class="container px-0 px-xl-3">
+            <a href="index.html" class="navbar-brand order-lg-1 mr-0 pr-lg-3 mr-lg-4">
+              <img src="../../assets/img/ecommerce/logo.svg" alt="Createx Logo" width="130">
+            </a>
+            <!-- Search desktop -->
+            <div class="input-group-overlay ml-4 d-lg-block d-none order-lg-3" style="max-width: 21rem;">
+              <input class="form-control appended-form-control" type="text" placeholder="Search for products...">
+              <div class="input-group-append-overlay">
+                <span class="input-group-text"><i class="cxi-search lead align-middle"></i></span>
+              </div>
+            </div>
+            <!-- Toolbar -->
+            <div class="d-flex align-items-center order-lg-3">
+              <ul class="nav nav-tools flex-nowrap">
+                <li class="nav-item d-lg-block d-none mb-0">
+                  <a href="account-wishlist.html" class="nav-tool">
+                    <i class="cxi-heart nav-tool-icon"></i>
+                    <span class="nav-tool-label">2</span>
+                  </a>
+                </li>
+                <li class="divider-vertical mb-0 d-lg-block d-none"></li>
+                <li class="nav-item align-self-center mb-0">
+                  <a href="#" class="nav-tool pr-lg-0" data-toggle="offcanvas" data-target="cart">
+                    <i class="cxi-cart nav-tool-icon"></i>
+                    <span class="badge badge-success align-middle mt-n1 ml-2 px-2 py-1 font-size-xs">4</span>
+                  </a>
+                </li>
+                <li class="divider-vertical mb-0 d-lg-none d-block"></li>
+                <li class="nav-item mb-0">
+                  <button class="navbar-toggler mt-n1 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!-- Navbar collapse -->
+            <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse">
+              <!-- Search mobile -->
+              <div class="input-group-overlay form-group mb-0 d-lg-none d-block">
+                <input type="text" class="form-control prepended-form-control rounded-0 border-0" placeholder="Search for products...">
+                <div class="input-group-prepend-overlay">
+                  <span class="input-group-text">
+                    <i class="cxi-search font-size-lg align-middle mt-n1"></i>
+                  </span>
+                </div>
+              </div>
+              <!-- Menu -->
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="shop-catalog.html" class="dropdown-item">Catalog with Filters</a></li>
+                    <li><a href="shop-single.html" class="dropdown-item">Single Product</a></li>
+                    <li><a href="checkout.html" class="dropdown-item">Checkout</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mega-dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Megamenu</a>
+                  <div class="dropdown-menu">
+                    <div class="container pt-lg-1 pb-lg-3">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">New collection</a></li>
+                            <li><a href="#" class="dropdown-item">Best sellers</a></li>
+                            <li><a href="#" class="dropdown-item">Plus size</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Sale up to 70%</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Clothes</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Coats</a></li>
+                            <li><a href="#" class="dropdown-item">Jackets</a></li>
+                            <li><a href="#" class="dropdown-item">Suits</a></li>
+                            <li><a href="#" class="dropdown-item">Dresses</a></li>
+                            <li><a href="#" class="dropdown-item">Cardigans &amp; sweaters</a></li>
+                            <li><a href="#" class="dropdown-item">Sweatshirts &amp; hoodies</a></li>
+                            <li><a href="#" class="dropdown-item">T-shirts &amp; tops</a></li>
+                            <li><a href="#" class="dropdown-item">Pants</a></li>
+                            <li><a href="#" class="dropdown-item">Jeans</a></li>
+                            <li><a href="#" class="dropdown-item">Shorts</a></li>
+                            <li><a href="#" class="dropdown-item">Skirts</a></li>
+                            <li><a href="#" class="dropdown-item">Lingerie &amp; nightwear</a></li>
+                            <li><a href="#" class="dropdown-item">Sportswear</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Shoes</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Boots</a></li>
+                            <li><a href="#" class="dropdown-item">Flat shoes</a></li>
+                            <li><a href="#" class="dropdown-item">Heels</a></li>
+                            <li><a href="#" class="dropdown-item">Sandals</a></li>
+                            <li><a href="#" class="dropdown-item">Mules</a></li>
+                            <li><a href="#" class="dropdown-item">Sliders</a></li>
+                            <li><a href="#" class="dropdown-item">Slippers</a></li>
+                            <li><a href="#" class="dropdown-item">Sneakers</a></li>
+                            <li><a href="#" class="dropdown-item">Leather</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Accessories</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Bags &amp; backpacks</a></li>
+                            <li><a href="#" class="dropdown-item">Hats &amp; scarves</a></li>
+                            <li><a href="#" class="dropdown-item">Hair accessories</a></li>
+                            <li><a href="#" class="dropdown-item">Belts</a></li>
+                            <li><a href="#" class="dropdown-item">Jewellery</a></li>
+                            <li><a href="#" class="dropdown-item">Watches</a></li>
+                            <li><a href="#" class="dropdown-item">Sunglasses</a></li>
+                            <li><a href="#" class="dropdown-item">Purses</a></li>
+                            <li><a href="#" class="dropdown-item">Socks &amp; tights</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-1 d-none d-lg-block py-2">
+                          <span class="divider-vertical h-100 mx-auto"></span>
+                        </div>
+                        <div class="col-lg-3 d-none d-lg-block py-2">
+                          <a href="#" class="d-block text-decoration-none pt-1">
+                            <img src="../../assets/img/ecommerce/megamenu.jpg" class="d-block rounded mb-3" alt="Promo banner">
+                            <h5 class="font-size-sm mb-3">Back to school. Sale up to 50%</h5>
+                            <div class="btn btn-outline-primary btn-sm">
+                              See offers
+                              <i class="cxi-arrow-right ml-1"></i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="account-profile.html" class="dropdown-item">Profile</a></li>
+                    <li><a href="account-orders.html" class="dropdown-item">My Orders</a></li>
+                    <li><a href="account-wishlist.html" class="dropdown-item">Wishlist</a></li>
+                    <li><a href="account-recently-viewed.html" class="dropdown-item">Recently Viewed</a></li>
+                    <li><a href="account-reviews.html" class="dropdown-item">My Reviews</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="blog.html" class="dropdown-item">Blog List</a></li>
+                    <li><a href="blog-single.html" class="dropdown-item">Single Post</a></li>
+                    <li><a href="contacts.html" class="dropdown-item">Contacts</a></li>
+                    <li><a href="order-tracking.html" class="dropdown-item">Order Tracking</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#modal-signin" class="nav-link d-lg-none" data-toggle="modal" data-view="#modal-signin-view">
+                    <i class="cxi-profile font-size-base align-middle mr-1"></i>
+                    Sign in / up
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <!-- Promo bar -->
+      <section class="cs-promo-bar bg-primary py-2">
+        <div class="container d-flex justify-content-center">
+          <div class="cs-carousel cs-controls-inverse">
+            <div class="cs-carousel-inner" data-carousel-options = '{"mode": "gallery", "nav": false}'>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Up to 70% Off.</strong>
+                <a href="#" class="text-light">Shop our latest sale offers</a>
+              </div>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Money back guarantee.</strong>
+                <a href="#" class="text-light">Learn more</a>
+              </div>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Friendly customer support.</strong>
+                <a href="#" class="text-light">Contact 24/7</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Breadcrumb + Active filters -->
+      <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+        <div class="container d-sm-flex align-items-center">
+          <ol class="breadcrumb breadcrumb-alt mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html"><i class="cxi-home"></i></a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Women</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Clothes</li>
+          </ol>
+          <hr class="d-sm-none">
+          <div class="ml-auto py-2">
+            <a class="active-filter pl-0" href="#">Dresses</a>
+            <a class="active-filter" href="#">Yellow</a>
+            <a class="active-filter" href="#">Cotton</a>
+            <a class="active-filter text-dark pr-0" href="#">Clear all</a>
+          </div>
+        </div>
+      </nav>
+
+
+      <!-- Shop catalog -->
+      <section class="container pt-3 pb-5 pb-md-6 mb-2 mb-lg-0">
+
+
+        <!-- Toolbar + Pagination -->
+        <div class="row mb-4 pb-2">
+          <div class="col-md-3 pr-lg-4 mb-3 mb-md-0">
+
+            <!-- Show / hide filters on Desktop -->
+            <div class="d-none d-lg-block">
+              <button type="button" class="btn btn-primary btn-block d-none d-lg-block" data-filters-hide="#filtersSidebar">
+                <i class="cxi-filter-1 mr-1"></i>
+                Hide filters
+              </button>
+              <button type="button" class="btn btn-primary btn-block mt-0 d-lg-none" data-filters-show="#filtersSidebar">
+                <i class="cxi-filter-2 mr-1"></i>
+                Show filters
+              </button>
+            </div>
+
+            <!-- Show / hide filters (off-canvas) on Mobile -->
+            <button type="button" class="btn btn-primary btn-block mt-0 d-lg-none" data-toggle="offcanvas" data-target="filtersOffcanvas">
+              <i class="cxi-filter-2 mr-1"></i>
+              Show filters
+            </button>
+          </div>
+
+          <div class="col-md-9">
+            <div class="d-flex align-items-center">
+              <div class="form-inline flex-nowrap mr-3 mr-xl-5">
+                <label for="sorting-top" class="font-weight-bold text-nowrap mr-2 pr-1 d-none d-lg-block">Sort by</label>
+                <select id="sorting-top" class="custom-select">
+                  <option>Popularity</option>
+                  <option>Low - Hight Price</option>
+                  <option>High - Low Price</option>
+                  <option>Average Rating</option>
+                  <option>A - Z Order</option>
+                  <option>Z - A Order</option>
+                </select>
+              </div>
+              <div class="form-inline flex-nowrap d-none d-sm-flex mr-3 mr-xl-5">
+                <label for="pager-top" class="font-weight-bold text-nowrap mr-2 pr-1 d-none d-lg-block">Show</label>
+                <select id="pager-top" class="custom-select">
+                  <option>12</option>
+                  <option>24</option>
+                  <option>48</option>
+                  <option>72</option>
+                  <option>96</option>
+                </select>
+                <span class="font-size-sm text-muted text-nowrap ml-2 d-none d-lg-block">products per page</span>
+              </div>
+              <nav class="ml-auto" aria-label="Pagination">
+                <ul class="pagination mb-0">
+                  <li class="page-item d-sm-none">
+                    <span class="page-link page-link-static">1 / 5</span>
+                  </li>
+                  <li class="page-item active d-none d-sm-block" aria-current="page">
+                    <span class="page-link">1
+                      <span class="sr-only">(current)</span>
+                    </span>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">4</a>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">5</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <i class="cxi-arrow-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="row flex-lg-nowrap">
+
+
+          <!-- Filters (sidebar) -->
+          <div id="filtersSidebar" class="col-lg-3 pr-lg-4">
+            <div id="filtersOffcanvas" class="cs-offcanvas cs-offcanvas-collapse">
+              <div class="cs-offcanvas-cap align-items-center border-bottom mb-3">
+                <h2 class="h5 mb-0">Shop filters</h2>
+                <button class="close mr-n1" type="button" data-dismiss="offcanvas" aria-label="Close">
+                  <span class="h2 font-weight-normal mt-n1 mb-0" aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="cs-offcanvas-body accordion-alt pb-4">
+
+                <!-- Category -->
+                <div class="card border-bottom">
+                  <div class="card-header pt-0 pb-3" id="category-panel">
+                    <h6 class="accordion-heading">
+                      <a href="#category" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="category">
+                        Clothes
+                        <span class="accordion-indicator"></span>
+                      </a>
+                    </h6>
+                  </div>
+                  <div class="collapse show" id="category" aria-labelledby="category-panel">
+                    <div class="cs-widget-data-list cs-filter">
+                      <div class="input-group-overlay mb-3">
+                        <input type="text" class="cs-filter-search form-control form-control-sm appended-form-control" placeholder="Search the clothes">
+                        <div class="input-group-append-overlay">
+                          <span class="input-group-text">
+                            <i class="cxi-search font-size-sm"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <ul class="cs-filter-list list-unstyled pr-3" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="blazers">
+                            <label for="blazers" class="custom-control-label">
+                              <span class="cs-filter-item-text">Blazers &amp; Suits</span>
+                              <span class="pl-1 text-muted">(235)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="blouses">
+                            <label for="blouses" class="custom-control-label">
+                              <span class="cs-filter-item-text">Blouses</span>
+                              <span class="pl-1 text-muted">(410)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="cardigans">
+                            <label for="cardigans" class="custom-control-label">
+                              <span class="cs-filter-item-text">Cardigans &amp; Jumpers</span>
+                              <span class="pl-1 text-muted">(107)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="dresses">
+                            <label for="dresses" class="custom-control-label">
+                              <span class="cs-filter-item-text">Dresses</span>
+                              <span class="pl-1 text-muted">(93)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="hoodie">
+                            <label for="hoodie" class="custom-control-label">
+                              <span class="cs-filter-item-text">Hoodie &amp; Sweatshirts</span>
+                              <span class="pl-1 text-muted">(122)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="jackets">
+                            <label for="jackets" class="custom-control-label">
+                              <span class="cs-filter-item-text">Jackets &amp; Coats</span>
+                              <span class="pl-1 text-muted">(116)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="jeans">
+                            <label for="jeans" class="custom-control-label">
+                              <span class="cs-filter-item-text">Jeans</span>
+                              <span class="pl-1 text-muted">(215)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="lingerie">
+                            <label for="lingerie" class="custom-control-label">
+                              <span class="cs-filter-item-text">Lingerie</span>
+                              <span class="pl-1 text-muted">(150)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="maternity">
+                            <label for="maternity" class="custom-control-label">
+                              <span class="cs-filter-item-text">Maternity Wear</span>
+                              <span class="pl-1 text-muted">(8)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="nightwear">
+                            <label for="nightwear" class="custom-control-label">
+                              <span class="cs-filter-item-text">Nightwear</span>
+                              <span class="pl-1 text-muted">(26)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="shirts">
+                            <label for="shirts" class="custom-control-label">
+                              <span class="cs-filter-item-text">Shirts</span>
+                              <span class="pl-1 text-muted">(164)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="shorts">
+                            <label for="shorts" class="custom-control-label">
+                              <span class="cs-filter-item-text">Shorts</span>
+                              <span class="pl-1 text-muted">(147)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="socks">
+                            <label for="socks" class="custom-control-label">
+                              <span class="cs-filter-item-text">Socks &amp; Tights</span>
+                              <span class="pl-1 text-muted">(139)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="sportswear">
+                            <label for="sportswear" class="custom-control-label">
+                              <span class="cs-filter-item-text">Sportswear</span>
+                              <span class="pl-1 text-muted">(65)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="swimwear">
+                            <label for="swimwear" class="custom-control-label">
+                              <span class="cs-filter-item-text">Swimwear</span>
+                              <span class="pl-1 text-muted">(18)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="tshirts">
+                            <label for="tshirts" class="custom-control-label">
+                              <span class="cs-filter-item-text">T-shirts &amp; Vests</span>
+                              <span class="pl-1 text-muted">(209)</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Price -->
+                <div class="card border-bottom">
+                  <div class="card-header py-3" id="price-panel">
+                    <h6 class="accordion-heading">
+                      <a href="#price" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="price">
+                        Price
+                        <span class="accordion-indicator"></span>
+                      </a>
+                    </h6>
+                  </div>
+                  <div class="collapse show" id="price" aria-labelledby="price-panel">
+                    <div class="cs-widget pl-1 pr-3 pb-4 mt-n3">
+                      <div class="cs-range-slider" data-start-min="250" data-start-max="680" data-min="0" data-max="1000" data-step="1">
+                        <div class="cs-range-slider-ui"></div>
+                        <div class="d-flex align-items-center mt-3">
+                          <div class="w-50">
+                            <div class="form-group position-relative mb-0">
+                              <input type="number" class="form-control form-control-sm cs-range-slider-value-min">
+                            </div>
+                          </div>
+                          <div class="mx-1 px-2 font-size-xs">—</div>
+                          <div class="w-50">
+                            <div class="form-group position-relative mb-0">
+                              <input type="number" class="form-control form-control-sm cs-range-slider-value-max">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Color -->
+                <div class="card border-bottom">
+                  <div class="card-header py-3" id="color-panel">
+                    <h6 class="accordion-heading">
+                      <a href="#color" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="color">
+                        Color
+                        <span class="accordion-indicator"></span>
+                      </a>
+                    </h6>
+                  </div>
+                  <div class="collapse show" id="color" aria-labelledby="color-panel">
+                    <div class="d-flex nav-justified pb-3">
+                      <div class="nav-item text-center">
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-black" value="Black">
+                          <label for="c-black" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #111;"></span>
+                          </label>
+                          <label for="c-black" class="cs-custom-color-option-description mt-n1">Black</label>
+                        </div> 
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-dark-blue" value="Dark blue">
+                          <label for="c-dark-blue" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #0c2c7e;"></span>
+                          </label>
+                          <label for="c-dark-blue" class="cs-custom-color-option-description mt-n1">Dark blue</label>
+                        </div> 
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-purple" value="Purple">
+                          <label for="c-purple" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #a27ac9;"></span>
+                          </label>
+                          <label for="c-purple" class="cs-custom-color-option-description mt-n1">Purple</label>
+                        </div> 
+                      </div>
+                      <div class="nav-item text-center">
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-blue-gray" value="Blue-gray">
+                          <label for="c-blue-gray" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #c0dded;"></span>
+                          </label>
+                          <label for="c-blue-gray" class="cs-custom-color-option-description mt-n1">Blue-gray</label>
+                        </div> 
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-beige" value="Beige">
+                          <label for="c-beige" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #d8c1ad;"></span>
+                          </label>
+                          <label for="c-beige" class="cs-custom-color-option-description mt-n1">Beige</label>
+                        </div> 
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-green" value="Green">
+                          <label for="c-green" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #67ba92;"></span>
+                          </label>
+                          <label for="c-green" class="cs-custom-color-option-description mt-n1">Green</label>
+                        </div> 
+                      </div>
+                      <div class="nav-item text-center">
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-yellow" value="Yellow">
+                          <label for="c-yellow" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #fcd164;"></span>
+                          </label>
+                          <label for="c-yellow" class="cs-custom-color-option-description mt-n1">Yellow</label>
+                        </div> 
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-brown" value="Brown">
+                          <label for="c-brown" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #874e19;"></span>
+                          </label>
+                          <label for="c-brown" class="cs-custom-color-option-description mt-n1">Brown</label>
+                        </div> 
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-orange" value="Orange">
+                          <label for="c-orange" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #fb9620;"></span>
+                          </label>
+                          <label for="c-orange" class="cs-custom-color-option-description mt-n1">Orange</label>
+                        </div> 
+                      </div>
+                      <div class="nav-item text-center">
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-red" value="Red">
+                          <label for="c-yellow" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #f75151;"></span>
+                          </label>
+                          <label for="c-yellow" class="cs-custom-color-option-description mt-n1">Red</label>
+                        </div> 
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-gray" value="Gray">
+                          <label for="c-gray" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #9a9494;"></span>
+                          </label>
+                          <label for="c-gray" class="cs-custom-color-option-description mt-n1">Gray</label>
+                        </div> 
+                        <div class="custom-control cs-custom-color-option">
+                          <input type="checkbox" class="custom-control-input" id="c-white" value="White">
+                          <label for="c-white" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #f1f1f1;"></span>
+                          </label>
+                          <label for="c-white" class="cs-custom-color-option-description mt-n1">White</label>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Size -->
+                <div class="card border-bottom">
+                  <div class="card-header py-3" id="size-panel">
+                    <h6 class="accordion-heading">
+                      <a href="#size" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="size">
+                        Size
+                        <span class="accordion-indicator"></span>
+                      </a>
+                    </h6>
+                  </div>
+                  <div class="collapse show" id="size" aria-labelledby="size-panel">
+                    <div class="cs-widget-data-list">
+                      <ul class="list-unstyled">
+                        <li>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="xs">
+                            <label for="xs" class="custom-control-label">
+                              <span class="cs-filter-item-text">XS</span>
+                              <span class="pl-1 text-muted">(16)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="s">
+                            <label for="s" class="custom-control-label">
+                              <span class="cs-filter-item-text">S</span>
+                              <span class="pl-1 text-muted">(12)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="m">
+                            <label for="m" class="custom-control-label">
+                              <span class="cs-filter-item-text">M</span>
+                              <span class="pl-1 text-muted">(5)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="l">
+                            <label for="l" class="custom-control-label">
+                              <span class="cs-filter-item-text">L</span>
+                              <span class="pl-1 text-muted">(11)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="xl">
+                            <label for="xl" class="custom-control-label">
+                              <span class="cs-filter-item-text">XL</span>
+                              <span class="pl-1 text-muted">(18)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="plus">
+                            <label for="plus" class="custom-control-label">
+                              <span class="cs-filter-item-text">Plus Size</span>
+                              <span class="pl-1 text-muted">(4)</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Material -->
+                <div class="card border-bottom">
+                  <div class="card-header py-3" id="material-panel">
+                    <h6 class="accordion-heading">
+                      <a href="#material" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="material">
+                        Material
+                        <span class="accordion-indicator"></span>
+                      </a>
+                    </h6>
+                  </div>
+                  <div class="collapse show" id="material" aria-labelledby="material-panel">
+                    <div class="cs-widget-data-list cs-filter">
+                      <div class="input-group-overlay mb-3">
+                        <input type="text" class="cs-filter-search form-control form-control-sm appended-form-control" placeholder="Search the material">
+                        <div class="input-group-append-overlay">
+                          <span class="input-group-text">
+                            <i class="cxi-search font-size-sm"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <ul class="cs-filter-list list-unstyled pr-3" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="cotton">
+                            <label for="cotton" class="custom-control-label">
+                              <span class="cs-filter-item-text">Cotton</span>
+                              <span class="pl-1 text-muted">(162)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="synthetics">
+                            <label for="synthetics" class="custom-control-label">
+                              <span class="cs-filter-item-text">Synthetics</span>
+                              <span class="pl-1 text-muted">(12)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="nappa">
+                            <label for="nappa" class="custom-control-label">
+                              <span class="cs-filter-item-text">Nappa leather</span>
+                              <span class="pl-1 text-muted">(26)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="leather">
+                            <label for="leather" class="custom-control-label">
+                              <span class="cs-filter-item-text">Leather</span>
+                              <span class="pl-1 text-muted">(5)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="cashmere">
+                            <label for="cashmere" class="custom-control-label">
+                              <span class="cs-filter-item-text">Cashmere</span>
+                              <span class="pl-1 text-muted">(41)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="denim">
+                            <label for="denim" class="custom-control-label">
+                              <span class="cs-filter-item-text">Denim</span>
+                              <span class="pl-1 text-muted">(48)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="batiste">
+                            <label for="batiste" class="custom-control-label">
+                              <span class="cs-filter-item-text">Batiste</span>
+                              <span class="pl-1 text-muted">(17)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="velour">
+                            <label for="velour" class="custom-control-label">
+                              <span class="cs-filter-item-text">Velours</span>
+                              <span class="pl-1 text-muted">(3)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="veil">
+                            <label for="veil" class="custom-control-label">
+                              <span class="cs-filter-item-text">Veil</span>
+                              <span class="pl-1 text-muted">(9)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="suede">
+                            <label for="suede" class="custom-control-label">
+                              <span class="cs-filter-item-text">Suede</span>
+                              <span class="pl-1 text-muted">(4)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="organza">
+                            <label for="organza" class="custom-control-label">
+                              <span class="cs-filter-item-text">Organza</span>
+                              <span class="pl-1 text-muted">(1)</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Brand -->
+                <div class="card border-bottom">
+                  <div class="card-header py-3" id="brand-panel">
+                    <h6 class="accordion-heading">
+                      <a href="#brand" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="brand">
+                        Brand
+                        <span class="accordion-indicator"></span>
+                      </a>
+                    </h6>
+                  </div>
+                  <div class="collapse show" id="brand" aria-labelledby="brand-panel">
+                    <div class="cs-widget-data-list cs-filter">
+                      <div class="input-group-overlay mb-3">
+                        <input type="text" class="cs-filter-search form-control form-control-sm appended-form-control" placeholder="Search the brand">
+                        <div class="input-group-append-overlay">
+                          <span class="input-group-text">
+                            <i class="cxi-search font-size-sm"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <ul class="cs-filter-list list-unstyled pr-3" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="adidas">
+                            <label for="adidas" class="custom-control-label">
+                              <span class="cs-filter-item-text">Adidas</span>
+                              <span class="pl-1 text-muted">(425)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="ann-taylor">
+                            <label for="ann-taylor" class="custom-control-label">
+                              <span class="cs-filter-item-text">Ann Taylor</span>
+                              <span class="pl-1 text-muted">(15)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="armani">
+                            <label for="armani" class="custom-control-label">
+                              <span class="cs-filter-item-text">Armani</span>
+                              <span class="pl-1 text-muted">(18)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="banana">
+                            <label for="banana" class="custom-control-label">
+                              <span class="cs-filter-item-text">Banana Republic</span>
+                              <span class="pl-1 text-muted">(103)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="bilabong">
+                            <label for="bilabong" class="custom-control-label">
+                              <span class="cs-filter-item-text">Bilabong</span>
+                              <span class="pl-1 text-muted">(27)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="birkenstock">
+                            <label for="birkenstock" class="custom-control-label">
+                              <span class="cs-filter-item-text">Birkenstock</span>
+                              <span class="pl-1 text-muted">(10)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="klein">
+                            <label for="klein" class="custom-control-label">
+                              <span class="cs-filter-item-text">Calvin Klein</span>
+                              <span class="pl-1 text-muted">(365)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="columbia">
+                            <label for="columbia" class="custom-control-label">
+                              <span class="cs-filter-item-text">Columbia</span>
+                              <span class="pl-1 text-muted">(508)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="converse">
+                            <label for="converse" class="custom-control-label">
+                              <span class="cs-filter-item-text">Converse</span>
+                              <span class="pl-1 text-muted">(176)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="dockers">
+                            <label for="dockers" class="custom-control-label">
+                              <span class="cs-filter-item-text">Dockers</span>
+                              <span class="pl-1 text-muted">(54)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="fruit">
+                            <label for="fruit" class="custom-control-label">
+                              <span class="cs-filter-item-text">Fruit of the Loom</span>
+                              <span class="pl-1 text-muted">(239)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="hanes">
+                            <label for="hanes" class="custom-control-label">
+                              <span class="cs-filter-item-text">Hanes</span>
+                              <span class="pl-1 text-muted">(92)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="choo">
+                            <label for="choo" class="custom-control-label">
+                              <span class="cs-filter-item-text">Jimmy Choo</span>
+                              <span class="pl-1 text-muted">(17)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="levis">
+                            <label for="levis" class="custom-control-label">
+                              <span class="cs-filter-item-text">Levi's</span>
+                              <span class="pl-1 text-muted">(361)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="cs-filter-item">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="new-balance">
+                            <label for="new-balance" class="custom-control-label">
+                              <span class="cs-filter-item-text">New Balance</span>
+                              <span class="pl-1 text-muted">(218)</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Product grid -->
+          <div class="col">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3" data-filters-columns>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/01.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Shirt with insertion lace trims</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$49.95</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-2 pb-1">
+                      <div class="mt-n2">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-1" id="l-1">
+                          <label for="l-1" class="cs-custom-option-label">L</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-1" id="m-1" checked>
+                          <label for="m-1" class="cs-custom-option-label">M</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-1" id="s-1">
+                          <label for="s-1" class="cs-custom-option-label">S</label>
+                        </div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-1" id="blue-1" value="Blue" checked>
+                          <label for="blue-1" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #6a9bf4;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-1" id="orange-1" value="Orange">
+                          <label for="orange-1" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #ff9d50;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-1" id="green-1" value="Green">
+                          <label for="green-1" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #16c995;"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/02.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Mid-rise slim cropped fit jeans</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$40.00</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-3">
+                      <div class="mt-n1">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-2" id="s-28" checked>
+                          <label for="s-28" class="cs-custom-option-label">28</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-2" id="s-30">
+                          <label for="s-30" class="cs-custom-option-label">30</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-2" id="s-32">
+                          <label for="s-32" class="cs-custom-option-label">32</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-2" id="s-34">
+                          <label for="s-34" class="cs-custom-option-label">34</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/03.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Black and white sport cap</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$18.15</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/04.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Green baby romper</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$20.40</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-2 pb-1">
+                      <div class="mt-n2">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-3" id="s-21" checked>
+                          <label for="s-21" class="cs-custom-option-label">21</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-3" id="s-22">
+                          <label for="s-22" class="cs-custom-option-label">22</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-3" id="s-23">
+                          <label for="s-23" class="cs-custom-option-label">23</label>
+                        </div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-2" id="green-2" value="Green" checked>
+                          <label for="green-2" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #94ddd6;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-2" id="pink-2" value="Pink">
+                          <label for="pink-2" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #febcc0;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-2" id="yellow-2" value="Yellow">
+                          <label for="yellow-2" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #fbdc3b;"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/05.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Check coat with color contrast</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$183.45</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-3">
+                      <div class="mt-n1">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-4" id="xl-4">
+                          <label for="xl-4" class="cs-custom-option-label">XL</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-4" id="l-4" checked>
+                          <label for="l-4" class="cs-custom-option-label">L</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-4" id="m-4">
+                          <label for="m-4" class="cs-custom-option-label">M</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-4" id="s-4">
+                          <label for="s-4" class="cs-custom-option-label">S</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/06.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Red dangle earrings</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$29.95</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-2 pb-1">
+                      <div class="ml-auto mt-n2">
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-3" id="red-3" value="Red" checked>
+                          <label for="red-3" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #8a1a2b;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-3" id="green-3" value="Green">
+                          <label for="green-3" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #0e7d48;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-3" id="black-2" value="Black">
+                          <label for="black-2" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #1c1c1c;"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/08.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Baby shoes with laces</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$30.75</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-3">
+                      <div class="mt-n1">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-5" id="s-75">
+                          <label for="s-75" class="cs-custom-option-label">7.5</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-5" id="s-80" checked>
+                          <label for="s-80" class="cs-custom-option-label">8</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-5" id="s-85">
+                          <label for="s-85" class="cs-custom-option-label">8.5</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-5" id="s-90">
+                          <label for="s-90" class="cs-custom-option-label">9</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/07.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Chrono watch with gold rim and blue strap</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$120.60</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/09.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <span class="badge product-badge badge-danger">-50%</span>
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Basic hooded sweatshirt in pink</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block text-danger mb-0">$15.50</span>
+                      <del class="d-inline-block ml-2 pl-1 text-muted">$31.00</del>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-2 pb-1">
+                      <div class="mt-n2">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-6" id="l-6" checked>
+                          <label for="l-6" class="cs-custom-option-label">L</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-6" id="m-6">
+                          <label for="m-6" class="cs-custom-option-label">M</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-6" id="s-6">
+                          <label for="s-6" class="cs-custom-option-label">S</label>
+                        </div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-6" id="beige-6" value="Beige" checked>
+                          <label for="beige-6" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #dead9c;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-6" id="blue-6" value="Blue">
+                          <label for="blue-6" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #7998d1;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-6" id="white-6" value="White">
+                          <label for="white-6" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #f4f4f4;"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/10.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <span class="badge product-badge badge-danger">-33%</span>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Skinny push-up jeans</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block text-danger mb-0">$53.60</span>
+                      <del class="d-inline-block ml-2 pl-1 text-muted">$80.00</del>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-3">
+                      <div class="mt-n1">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-7" id="s-7-28" checked>
+                          <label for="s-7-28" class="cs-custom-option-label">28</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-7" id="s-7-30">
+                          <label for="s-7-30" class="cs-custom-option-label">30</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-7" id="s-7-32">
+                          <label for="s-7-32" class="cs-custom-option-label">32</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-7" id="s-7-34">
+                          <label for="s-7-34" class="cs-custom-option-label">34</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/11.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <span class="badge product-badge badge-danger">-50%</span>
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Leather crossbody bag with chain lace</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block text-danger mb-0">$89.50</span>
+                      <del class="d-inline-block ml-2 pl-1 text-muted">$179.00</del>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-sm-2 mb-grid-gutter">
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="shop-single.html" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/12.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Men fashion gray shoes</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$85.00</span>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-3">
+                      <div class="mt-n1">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-8" id="s-8-95" checked>
+                          <label for="s-8-95" class="cs-custom-option-label">9.5</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-8" id="s-8-10">
+                          <label for="s-8-10" class="cs-custom-option-label">10</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-8" id="s-8-11">
+                          <label for="s-8-11" class="cs-custom-option-label">11</label>
+                        </div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-8" id="gray-8" value="Gray" checked>
+                          <label for="gray-8" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #7a898c;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-8" id="brown-8" value="Brown">
+                          <label for="brown-8" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #844a1a;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-8" id="black-8" value="Black">
+                          <label for="black-8" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #1c1c1c;"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Toolbar + Pagination -->
+            <div class="d-flex align-items-center pt-md-4">
+              <div class="form-inline flex-nowrap mr-3 mr-xl-5 pt-1">
+                <label for="sorting-bottom" class="font-weight-bold text-nowrap mr-2 pr-1 d-none d-md-block">Sort by</label>
+                <select id="sorting-bottom" class="custom-select">
+                  <option>Popularity</option>
+                  <option>Low - Hight Price</option>
+                  <option>High - Low Price</option>
+                  <option>Average Rating</option>
+                  <option>A - Z Order</option>
+                  <option>Z - A Order</option>
+                </select>
+              </div>
+              <div class="form-inline flex-nowrap d-none d-sm-flex mr-3 mr-xl-5 pt-1">
+                <label for="pager-bottom" class="font-weight-bold text-nowrap mr-2 pr-1 d-none d-md-block">Show</label>
+                <select id="pager-bottom" class="custom-select">
+                  <option>12</option>
+                  <option>24</option>
+                  <option>48</option>
+                  <option>72</option>
+                  <option>96</option>
+                </select>
+                <span class="font-size-sm text-muted text-nowrap ml-2 d-none d-md-block">products per page</span>
+              </div>
+              <nav class="pt-1 ml-auto" aria-label="Pagination">
+                <ul class="pagination mb-0">
+                  <li class="page-item d-sm-none">
+                    <span class="page-link page-link-static">1 / 5</span>
+                  </li>
+                  <li class="page-item active d-none d-sm-block" aria-current="page">
+                    <span class="page-link">1
+                      <span class="sr-only">(current)</span>
+                    </span>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">4</a>
+                  </li>
+                  <li class="page-item d-none d-sm-block">
+                    <a class="page-link" href="#">5</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <i class="cxi-arrow-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Subscription CTA -->
+      <section class="bg-secondary py-5">
+        <div class="container pt-2 pt-md-3 pb-3">
+          <div class="row align-items-center">
+            <form class="col-md-6 col-xl-5 needs-validation" novalidate>
+              <h2 class="h1 mb-3">Subscribe for updates</h2>
+              <p class="text-muted font-size-lg pb-3 mb-4">Subscribe for exclusive early sale access and new arrivals.</p>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-women" checked>
+                <label for="s-women" class="cs-btn-control-label">Women</label>
+              </div>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-men">
+                <label for="s-men" class="cs-btn-control-label">Men</label>
+              </div>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-girls">
+                <label for="s-girls" class="cs-btn-control-label">Girls</label>
+              </div>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-boys">
+                <label for="s-boys" class="cs-btn-control-label">Boys</label>
+              </div>
+              <div class="form-group pt-4">
+                <label for="s-email">Email</label>
+                <div class="input-group input-group-lg">
+                  <input type="email" id="s-email" class="form-control" placeholder="Your email address" required>
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" id="s-agree" class="custom-control-input">
+                <label for="s-agree" class="custom-control-label">I agree to receive communications from Createx Store.</label>
+              </div>
+            </form>
+            <div class="col-md-6 col-xl-7 d-none d-md-block">
+              <div class="ml-auto" style="max-width: 459px;">
+                <img src="../../assets/img/ecommerce/subscribe-illustration.png" class="d-block" alt="Illustration">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-sm-5 pt-4 bg-dark">
+      <div class="container pt-3">
+        <div class="row pb-sm-2">
+          <div class="col-6 col-sm-3 col-lg-2 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Help</h3>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Delivery &amp; returns</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">FAQ</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="order-tracking.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Track order</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="blog.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-sm-3 col-lg-2 col-xl-3 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light pl-xl-6">Shop</h3>
+            <ul class="nav nav-light flex-column pl-xl-6">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">New arrivals</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Trending now</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Sales</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Brands</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3 pb-2 pb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Get in Touch</h3>
+            <ul class="nav nav-light flex-column pb-3">
+              <li class="nav-item text-nowrap mb-2">
+                <span class="text-light mr-1">Call:</span>
+                <a href="tel:4055550128" class="nav-link d-inline-block mr-lg-0 mr-sm-4 p-0 font-weight-normal">(405) 555-0128</a>
+              </li>
+              <li class="nav-item text-nowrap mb-2">
+                <span class="text-light mr-1">Email:</span>
+                <a href="mailto:support@example.com" class="nav-link d-inline-block mr-lg-0 mr-sm-4 p-0 font-weight-normal">support@example.com</a>
+              </li>
+            </ul>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-facebook"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-instagram"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-twitter"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-youtube"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light">
+              <i class="cxi-pinterest"></i>
+            </a>
+          </div>
+          <div class="col-lg-4 col-xl-3 mb-4">
+            <h3 class="h6 mb-3 pb-1 text-uppercase text-light">Download our App</h3>
+            <div class="d-flex flex-wrap flex-sm-nowrap">
+              <a href="#" class="btn-market btn-apple mb-3 mr-3" role="button">
+                <span class="btn-market-subtitle">Download on the</span>
+                <span class="btn-market-title">App Store</span>
+              </a>
+              <a href="#" class="btn-market btn-google mb-3" role="button">
+                <span class="btn-market-subtitle">Download on the</span>
+                <span class="btn-market-title">Google Play</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-light">
+        <div class="container py-4">
+          <div class="font-size-xs text-light">
+            <span class="font-size-sm">&copy; </span>
+            All rights reserved. Made with 
+            <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+            <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Offcanvas mobile toggle btn -->
+    <button class="btn btn-primary btn-sm cs-sidebar-toggle" type="button" data-toggle="offcanvas" data-target="filtersOffcanvas" data-fixed-element>
+      <i class="cxi-filter-2 font-size-base mr-1 align-middle"></i>
+      Show filters
+    </button>
+
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="../../assets/vendor/nouislider/distribute/nouislider.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

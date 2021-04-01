@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx UI Kit | Blog components</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/themes/prism.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/theme.min.css">
+  </head>
+
+
+  <!-- Body-->
+  <body>
+    <main class="container-fluid">
+      
+      <!-- Main content-->
+      <section class="cs-offcanvas-enabled row pb-3 pb-md-4">
+        <div class="col-xl-9">
+
+          <!-- Navbar-->
+          <header class="navbar navbar-expand navbar-light fixed-top navbar-box-shadow bg-light px-3 px-lg-4" data-scroll-header data-fixed-element>
+            <a class="navbar-brand d-lg-none" href="typography.html">
+              <img src="../../assets/img/components/logo/logo-dark.svg" alt="Createx" width="130">
+            </a>
+            <button class="navbar-toggler d-block d-lg-none mr-3 ml-auto" type="button" data-toggle="offcanvas" data-target="componentsNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav ml-auto d-none d-lg-flex align-items-center">
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../../index.html">
+                  <i class="cxi-eye align-middle mt-n1 mr-2"></i>
+                  Live preview
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../documentation/dev-setup.html">
+                  <i class="cxi-files align-middle mt-n1 mr-2"></i>
+                  Documentation
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+            </ul>
+            <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-primary btn-shadow ml-lg-4" target="_blank" rel="noopener">
+              <i class="cxi-cart mr-2 d-none d-sm-inline-block"></i>
+              Buy now
+            </a>
+          </header>
+
+          <!-- Side navigation (Off-canvas)-->
+          <aside class="cs-offcanvas cs-offcanvas-expand bg-dark" id="componentsNav">
+            <div class="cs-offcanvas-cap d-none d-lg-block py-4">
+              <a class="navbar-brand py-2" href="typography.html">
+                <img src="../../assets/img/components/logo/logo-white.svg" alt="Createx" width="130">
+              </a>
+              <span class="badge badge-success">UI Kit</span>
+            </div>
+            <div class="cs-offcanvas-cap d-flex d-lg-none">
+              <div class="d-flex align-items-center mt-1">
+                <h5 class="text-light mb-0 mr-3">Menu</h5>
+                <span class="badge badge-success">UI Kit</span>
+              </div>
+              <button class="close text-light" type="button" data-dismiss="offcanvas" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="d-flex d-lg-none align-items-center py-4 px-3 border-bottom border-light">
+              <a class="btn btn-primary btn-block mr-3" href="../../index.html"><i class="cxi-eye mt-n1 mr-2"></i>Preview</a>
+              <a class="btn btn-warning btn-block mt-0" href="../documentation/dev-setup.html"><i class="cxi-files mt-n1 mr-2"></i>Docs</a>
+            </div>
+            <div class="cs-offcanvas-body px-0 pt-4 pb-grid-gutter" data-simplebar data-simplebar-inverse>
+              <h6 class="font-size-lg text-light px-4 mt-2 mb-3">Content</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="typography.html">Typography</a>
+                <a class="nav-link px-4" href="icon-font.html">Icon font</a>
+                <a class="nav-link px-4" href="code.html">Code</a>
+                <a class="nav-link px-4" href="images.html">Images &amp; figures</a>
+                <a class="nav-link px-4" href="tables.html">Tables</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Components</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="alerts.html">Alerts</a>
+                <a class="nav-link px-4" href="badge.html">Badges</a>
+                <a class="nav-link px-4 active" href="blog-components.html">Blog components</a>
+                <a class="nav-link px-4" href="breadcrumb.html">Breadcrumb</a>
+                <a class="nav-link px-4" href="buttons.html">Buttons</a>
+                <a class="nav-link px-4" href="button-group.html">Button group</a>
+                <a class="nav-link px-4" href="cards.html">Cards</a>
+                <a class="nav-link px-4" href="carousel.html">Carousel</a>
+                <a class="nav-link px-4" href="collapse.html">Collapse</a>
+                <a class="nav-link px-4" href="contacts-card.html">Contacts card</a>
+                <a class="nav-link px-4" href="countdown.html">Countdown</a>
+                <a class="nav-link px-4" href="dividers.html">Dividers</a>
+                <a class="nav-link px-4" href="dropdowns.html">Dropdowns</a>
+                <a class="nav-link px-4" href="forms.html">Forms</a>
+                <a class="nav-link px-4" href="gallery.html">Gallery</a>
+                <a class="nav-link px-4" href="icon-box.html">Icon box</a>
+                <a class="nav-link px-4" href="input-group.html">Input group</a>
+                <a class="nav-link px-4" href="jumbotron.html">Jumbotron</a>
+                <a class="nav-link px-4" href="list-group.html">List group</a>
+                <a class="nav-link px-4" href="media-object.html">Media object</a>
+                <a class="nav-link px-4" href="modal.html">Modal</a>
+                <a class="nav-link px-4" href="navs.html">Navs</a>
+                <a class="nav-link px-4" href="navbar.html">Navbar</a>
+                <a class="nav-link px-4" href="pagination.html">Pagination</a>
+                <a class="nav-link px-4" href="parallax.html">Parallax</a>
+                <a class="nav-link px-4" href="pills.html">Pills</a>
+                <a class="nav-link px-4" href="popovers.html">Popovers</a>
+                <a class="nav-link px-4" href="portfolio-components.html">Portfolio components</a>
+                <a class="nav-link px-4" href="pricing.html">Pricing</a>
+                <a class="nav-link px-4" href="progress-bar.html">Progress bar</a>
+                <a class="nav-link px-4" href="progress-radial.html">Progress radial</a>
+                <a class="nav-link px-4" href="scrollbar-custom.html">Scrollbar (custom)</a>
+                <a class="nav-link px-4" href="shop-components.html">Shop components</a>
+                <a class="nav-link px-4" href="social-buttons.html">Social buttons</a>
+                <a class="nav-link px-4" href="spinners.html">Spinners</a>
+                <a class="nav-link px-4" href="steps.html">Steps</a>
+                <a class="nav-link px-4" href="tabs.html">Tabs</a>
+                <a class="nav-link px-4" href="team.html">Team</a>
+                <a class="nav-link px-4" href="testimonials.html">Testimonials / reviews</a>
+                <a class="nav-link px-4" href="toasts.html">Toasts</a>
+                <a class="nav-link px-4" href="tooltips.html">Tooltips</a>
+                <a class="nav-link px-4" href="video-popup.html">Video popup</a>
+                <a class="nav-link px-4" href="widgets.html">Widgets</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Utilities</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="https://getbootstrap.com/docs/4.5/utilities/borders/" target="_blank" rel="noopener">Bootstrap</a>
+                <a class="nav-link px-4" href="utilities.html">Createx</a>
+              </nav>
+            </div>
+          </aside>
+
+          <!-- Page title-->
+          <div class="border-bottom pt-5 mt-2 mb-5">
+            <h1 class="mt-2 mt-md-4 mb-3 pt-5">Blog components</h1>
+            <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+              <p class="text-muted">Components that are related to the blog / news section of the website.</p>
+              <div class="pl-md-4 mb-3"><span class="badge badge-success">Createx component</span></div>
+            </div>
+          </div>
+
+          <!-- Post preview: basic card-->
+          <section class="pb-5 mb-md-2" id="blog-basic">
+            <h2 class="h3">Post card: basic</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result1" role="tabpanel">
+                    <article class="cs-image-scale card border-0" style="max-width: 24rem;"><a class="cs-image-inner card-header mb-3 p-0 border-0 rounded" href="#"><img src="../../assets/img/components/blog/01.jpg" alt="Blog card image"></a>
+                      <div class="card-body p-0">
+                        <ul class="nav nav-muted mb-2">
+                          <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">SEO</a><span class="text-border px-1">|</span></li>
+                          <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#"><i class="cxi-clock mt-n1 mr-2 font-size-base align-middle"></i>May 1, 2020</a><span class="text-border px-1">|</span></li>
+                          <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#"><i class="cxi-profile mt-n1 mr-2 font-size-base align-middle"></i>By Shawn Edwards</a></li>
+                        </ul>
+                        <h3 class="h5 mb-2 nav-dark"><a class="nav-link" href="#">The Best Practices to Optimize Your Website for Mobile.</a></h3>
+                        <p class="mb-3">Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+                      </div>
+                      <div class="card-footer p-0 border-0">
+                        <div class="h6 mb-0"><a class="nav-link py-3" href="#">Read more</a><i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i></div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Post preview: basic card --&gt;
+&lt;article class=&quot;cs-image-scale card border-0&quot;&gt;
+  &lt;a class=&quot;cs-image-inner card-header mb-3 p-0 border-0 rounded&quot; href=&quot;#&quot;&gt;
+    &lt;img src=&quot;path-to-image&quot; alt=&quot;Blog card image&quot;&gt;
+  &lt;/a&gt;
+  &lt;div class=&quot;card-body p-0&quot;&gt;
+    &lt;ul class=&quot;nav nav-muted mb-2&quot;&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          SEO
+        &lt;/a&gt;
+        &lt;span class=&quot;text-border px-1&quot;&gt;|&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;cxi-clock mt-n1 mr-2 font-size-base align-middle&quot;&gt;&lt;/i&gt;
+          May 1, 2020
+        &lt;/a&gt;
+        &lt;span class=&quot;text-border px-1&quot;&gt;|&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;cxi-profile mt-n1 mr-2 font-size-base align-middle&quot;&gt;&lt;/i&gt;
+          By Shawn Edwards
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3 class=&quot;h5 mb-2 nav-dark&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;The Best Practices to Optimize Your Website for Mobile.&lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;p class=&quot;mb-3&quot;&gt;Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-footer p-0 border-0&quot;&gt;
+    &lt;div class=&quot;h6 mb-0&quot;&gt;
+      &lt;a class=&quot;nav-link py-3&quot; href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+      &lt;i class=&quot;cxi-arrow-right text-primary align-middle h5 mb-0 ml-2&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Post card alt-->
+          <section class="pb-5 mb-md-2" id="blog-alt">
+            <h2 class="h3">Post card: alternative</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result2" data-toggle="tab" role="tab" aria-controls="result2" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html2" data-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result2" role="tabpanel">
+                    <article class="cs-image-scale card box-shadow card-hover border-0" style="max-width: 37rem;"><a class="cs-image-inner card-img-top" href="#"><img src="../../assets/img/components/blog/03.jpg" alt="Blog card image"></a>
+                      <div class="card-body">
+                        <h3 class="h5 mb-2 pb-1"><a class="nav-link" href="#">How to Build Climate Change-Resilient Infrastructure</a></h3>
+                        <ul class="nav nav-muted mb-2 pb-1">
+                          <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">Industry News</a><span class="text-border px-1">|</span></li>
+                          <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">June 24, 2020</a><span class="text-border px-1">|</span></li>
+                          <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#"><i class="cxi-chat mt-n1 mr-2 font-size-base align-middle"></i>4 comments</a></li>
+                        </ul>
+                        <p class="card-text">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Post preview: card alt --&gt;
+&lt;article class=&quot;cs-image-scale card box-shadow card-hover border-0&quot;&gt;
+  &lt;a class=&quot;cs-image-inner card-img-top&quot; href=&quot;#&quot;&gt;
+    &lt;img src=&quot;path-to-image&quot; alt=&quot;Blog card image&quot;&gt;
+  &lt;/a&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;h3 class=&quot;h5 mb-2 pb-1&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;How to Build Climate Change-Resilient Infrastructure&lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;ul class=&quot;nav nav-muted mb-2 pb-1&quot;&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          Industry News
+        &lt;/a&gt;
+        &lt;span class=&quot;text-border px-1&quot;&gt;|&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          June 24, 2020
+        &lt;/a&gt;
+        &lt;span class=&quot;text-border px-1&quot;&gt;|&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;cxi-chat mt-n1 mr-2 font-size-base align-middle&quot;&gt;&lt;/i&gt;
+          4 comments
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p class=&quot;card-text&quot;&gt;Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Post image fade in-->
+          <section class="pb-5 mb-md-3" id="blog-fade-in">
+            <h2 class="h3">Post card: image fade in</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result3" data-toggle="tab" role="tab" aria-controls="result3" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html3" data-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result3" role="tabpanel">
+                    <article class="cs-image-fade card card-hover box-shadow" style="max-width: 24rem; background-image: url(../../assets/img/components/blog/05.jpg);">
+                      <div class="cs-image-inner d-flex flex-column justify-content-between h-100 p-3">
+                        <div class="card-header border-0 pb-0">
+                          <ul class="nav nav-muted mb-2 pb-1">
+                            <li class="nav-item mr-2"><a class="cs-inner-text nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">Creativity</a><span class="cs-inner-text text-border px-1">|</span></li>
+                            <li class="nav-item mr-2"><a class="cs-inner-text nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">April 9, 2020</a></li>
+                          </ul>
+                        </div>
+                        <div class="card-body pt-0" style="min-height: 15rem;">
+                          <h3 class="h5 mb-2 pb-1"><a class="cs-inner-text nav-link" href="#">Definitive Guide to Make a Daily More Productive Working Flow.</a></h3>
+                        </div>
+                        <div class="card-footer border-0">
+                          <div class="h6 mb-0 text-right"><a class="cs-inner-text nav-link py-3" href="#">Read more</a><i class="cs-inner-text cxi-arrow-right align-middle h5 mb-0 ml-2 card-text"></i></div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Post image fade in --&gt;
+&lt;article class=&quot;cs-image-fade card card-hover box-shadow&quot; style=&quot;background-image: url(path-to-background-image);&quot;&gt;
+  &lt;div class=&quot;cs-image-inner d-flex flex-column justify-content-between h-100 p-3&quot;&gt;
+    &lt;div class=&quot;card-header border-0 pb-0&quot;&gt;
+      &lt;ul class=&quot;nav nav-muted mb-2 pb-1&quot;&gt;
+        &lt;li class=&quot;nav-item mr-2&quot;&gt;
+          &lt;a class=&quot;cs-inner-text nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+            Creativity
+          &lt;/a&gt;
+          &lt;span class=&quot;cs-inner-text text-border px-1&quot;&gt;|&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item mr-2&quot;&gt;
+          &lt;a class=&quot;cs-inner-text nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+            April 9, 2020
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-body pt-0&quot; style=&quot;min-height: 15rem;&quot;&gt;
+      &lt;h3 class=&quot;h5 mb-2 pb-1&quot;&gt;
+        &lt;a class=&quot;cs-inner-text nav-link&quot; href=&quot;#&quot;&gt;
+          Definitive Guide to Make a Daily More Productive Working Flow.
+        &lt;/a&gt;
+      &lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-footer border-0&quot;&gt;
+      &lt;div class=&quot;h6 mb-0 text-right&quot;&gt;
+        &lt;a class=&quot;cs-inner-text nav-link py-3&quot; href=&quot;#&quot;&gt;
+          Read more
+        &lt;/a&gt;
+        &lt;i class=&quot;cs-inner-text cxi-arrow-right align-middle h5 mb-0 ml-2 card-text&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Post with badge-->
+          <section class="pb-5 mb-md-3" id="blog-badge">
+            <h2 class="h3">Post card: with badge</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result4" data-toggle="tab" role="tab" aria-controls="result4" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html4" data-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result4" role="tabpanel">
+                    <div class="d-md-flex">
+                      <article class="cs-image-scale card border-0 mb-grid-gutter mr-grid-gutter"><a class="cs-image-inner card-header mb-3 p-0 border-0 rounded position-relative" href="#"><span class="badge badge-success badge-floating badge-floating-right p-2 font-size-base font-weight-bold">Latest Post</span><img src="../../assets/img/components/blog/02.jpg" alt="Blog card image"></a>
+                        <div class="card-body p-0">
+                          <ul class="nav nav-muted mb-2">
+                            <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">SEO</a><span class="text-border px-1">|</span></li>
+                            <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#"><i class="cxi-clock mt-n1 mr-2 font-size-base align-middle"></i>May 1, 2020</a><span class="text-border px-1">|</span></li>
+                            <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#"><i class="cxi-profile mt-n1 mr-2 font-size-base align-middle"></i>By Shawn Edwards</a></li>
+                          </ul>
+                          <h3 class="h5 mb-2 nav-dark"><a class="nav-link" href="#">The Best Practices to Optimize Your Website for Mobile.</a></h3>
+                          <p class="mb-3">Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+                        </div>
+                        <div class="card-footer p-0 border-0">
+                          <div class="h6 mb-0"><a class="nav-link py-3" href="#">Read more</a><i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i></div>
+                        </div>
+                      </article>
+                      <article class="cs-image-scale card box-shadow card-hover border-0 mb-grid-gutter"><a class="cs-image-inner card-img-top position-relative" href="#"><span class="badge badge-success badge-floating badge-floating-right p-2 font-size-base font-weight-bold">Latest Post</span><img src="../../assets/img/components/blog/04.jpg" alt="Blog card image"></a>
+                        <div class="card-body">
+                          <h3 class="h5 mb-2 pb-1"><a class="nav-link" href="#">How to Build Climate Change-Resilient Infrastructure</a></h3>
+                          <ul class="nav nav-muted mb-2 pb-1">
+                            <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">Industry News</a><span class="text-border px-1">|</span></li>
+                            <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">June 24, 2020</a><span class="text-border px-1">|</span></li>
+                            <li class="nav-item mr-2"><a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#"><i class="cxi-chat mt-n1 mr-2 font-size-base align-middle"></i>4 comments</a></li>
+                          </ul>
+                          <p class="card-text">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...</p>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Basic post with badge --&gt;
+&lt;article class=&quot;cs-image-scale card border-0&quot;&gt;
+  &lt;a class=&quot;cs-image-inner card-header mb-3 p-0 border-0 rounded position-relative&quot; href=&quot;#&quot;&gt;
+    &lt;span class=&quot;badge badge-success badge-floating badge-floating-right p-2 font-size-base font-weight-bold&quot;&gt;
+      Latest Post
+    &lt;/span&gt;
+    &lt;img src=&quot;path-to-image&quot; alt=&quot;Blog card image&quot;&gt;
+  &lt;/a&gt;
+  &lt;div class=&quot;card-body p-0&quot;&gt;
+    &lt;ul class=&quot;nav nav-muted mb-2&quot;&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          SEO
+        &lt;/a&gt;
+        &lt;span class=&quot;text-border px-1&quot;&gt;|&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;cxi-clock mt-n1 mr-2 font-size-base align-middle&quot;&gt;&lt;/i&gt;
+          May 1, 2020
+        &lt;/a&gt;
+        &lt;span class=&quot;text-border px-1&quot;&gt;|&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;cxi-profile mt-n1 mr-2 font-size-base align-middle&quot;&gt;&lt;/i&gt;
+          By Shawn Edwards
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3 class=&quot;h5 mb-2 nav-dark&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;
+        The Best Practices to Optimize Your Website for Mobile.
+      &lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;p class=&quot;mb-3&quot;&gt;Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-footer p-0 border-0&quot;&gt;
+    &lt;div class=&quot;h6 mb-0&quot;&gt;
+      &lt;a class=&quot;nav-link py-3&quot; href=&quot;#&quot;&gt;Read more&lt;/a&gt;
+      &lt;i class=&quot;cxi-arrow-right text-primary align-middle h5 mb-0 ml-2&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;!-- Alt post with badge --&gt;
+&lt;article class=&quot;cs-image-scale card box-shadow card-hover border-0&quot;&gt;
+  &lt;a class=&quot;cs-image-inner card-img-top position-relative&quot; href=&quot;#&quot;&gt;
+    &lt;span class=&quot;badge badge-success badge-floating badge-floating-right p-2 font-size-base font-weight-bold&quot;&gt;
+      Latest Post
+    &lt;/span&gt;
+    &lt;img src=&quot;path-to-image&quot; alt=&quot;Blog card image&quot;&gt;
+  &lt;/a&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;h3 class=&quot;h5 mb-2 pb-1&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;
+        How to Build Climate Change-Resilient Infrastructure
+      &lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;ul class=&quot;nav nav-muted mb-2 pb-1&quot;&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          Industry News
+        &lt;/a&gt;
+        &lt;span class=&quot;text-border px-1&quot;&gt;|&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          June 24, 2020
+        &lt;/a&gt;
+        &lt;span class=&quot;text-border px-1&quot;&gt;|&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;nav-item mr-2&quot;&gt;
+        &lt;a class=&quot;nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;cxi-chat mt-n1 mr-2 font-size-base align-middle&quot;&gt;&lt;/i&gt;
+          4 comments
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p class=&quot;card-text&quot;&gt;Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Post comments-->
+          <section class="pb-5 mb-md-3" id="blog-comments">
+            <h2 class="h3">Post comments</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result5" data-toggle="tab" role="tab" aria-controls="result5" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html5" data-toggle="tab" role="tab" aria-controls="html5" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result5" role="tabpanel">
+                    <div class="cs-comment mb-5 pb-2">
+                      <div class="row">
+                        <div class="col-lg-2 col-sm-3 mb-sm-0 mb-3">
+                          <div class="mb-2 font-size-lg text-dark font-weight-bold">Devon Lane</div><span class="font-size-sm text-muted">July 15, 2020</span>
+                        </div>
+                        <div class="col">
+                          <p class="mb-3">Phasellus varius faucibus ultrices odio in. Massa neque dictum natoque ornare rutrum malesuada et phasellus. Viverra natoque nulla cras vel nisl proin senectus. Tortor sed eleifend ante tristique felis sed urna aliquet. Suspendisse fames egestas sed duis purus diam et.</p>
+                          <div class="nav-muted"><a class="nav-link p-0" href="#"><i class="cxi-comment align-middle mr-2"></i>Reply</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cs-comment mb-5 pb-2">
+                      <div class="row">
+                        <div class="col-lg-2 col-sm-3 mb-sm-0 mb-3">
+                          <div class="mb-2 font-size-lg text-dark font-weight-bold">Annette Black</div><span class="font-size-sm text-muted">1 day ago</span>
+                        </div>
+                        <div class="col">
+                          <p class="mb-3"><a class="font-weight-bold text-decoration-none" href="#">@Devon Lane&nbsp;</a>Egestas fermentum natoque sollicitudin mauris. Facilisis praesent urna sed rhoncus quis pharetra pellentesque erat sagittis.</p>
+                          <div class="nav-muted"><a class="nav-link p-0" href="#"><i class="cxi-comment align-middle mr-2"></i>Reply</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cs-comment mb-5 pb-2">
+                      <div class="row">
+                        <div class="col-lg-2 col-sm-3 mb-sm-0 mb-3">
+                          <div class="mb-2 font-size-lg text-dark font-weight-bold">Albert Flores</div><span class="font-size-sm text-muted">July 7, 2020</span>
+                        </div>
+                        <div class="col">
+                          <p class="mb-3">Ullamcorper nibh sed ac ipsum nunc imperdiet rhoncus. Quam donec habitant nibh sit consequat erat libero, tincidunt. Eros ut aliquam proin et duis. Mauris, egestas congue nibh dui a nulla.</p>
+                          <div class="nav-muted"><a class="nav-link p-0" href="#"><i class="cxi-comment align-middle mr-2"></i>Reply</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html5" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Post comment --&gt;
+&lt;div class=&quot;cs-comment mb-5 pb-2&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-lg-2 col-sm-3 mb-sm-0 mb-3&quot;&gt;
+      &lt;div class=&quot;mb-2 font-size-lg text-dark font-weight-bold&quot;&gt;Annette Black&lt;/div&gt;
+      &lt;span class=&quot;font-size-sm text-muted&quot;&gt;1 day ago&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col&quot;&gt;
+      &lt;p class=&quot;mb-3&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;font-weight-bold text-decoration-none&quot;&gt;@Devon Lane&lt;/a&gt; Egestas fermentum natoque sollicitudin mauris. Facilisis praesent urna sed rhoncus quis pharetra pellentesque erat sagittis.
+      &lt;/p&gt;
+      &lt;div class=&quot;nav-muted&quot;&gt;
+        &lt;a class=&quot;nav-link p-0&quot; href=&quot;#&quot;&gt;
+          &lt;i class=&quot;cxi-comment align-middle mr-2&quot;&gt;&lt;/i&gt;
+          Reply
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Quick (anchor) navigation-->
+        <div class="col-xl-3 d-none d-xl-block pl-5">
+          <aside class="sticky-top pt-5">
+            <div class="pt-5 mt-5">
+              <div class="pl-4 border-left">
+                <h3 class="h5 mb-3">Jump to</h3>
+                <nav class="nav nav-dark flex-column">
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#blog-basic">Post card: basic</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#blog-alt">Post card: alternative</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#blog-fade-in">Post card: image fade in</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#blog-badge">Post card: with badge</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#blog-comments">Post comments</a>
+                </nav>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

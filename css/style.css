@@ -63,9 +63,7 @@ margin-bottom: 30px;
 
 /* 3 parameter for the border propoerty */
 
-body{
-	 font-family: 'Raleway', sans-serif !important;
-}
+
 
 .thin_border{
 	border:1px solid black;
@@ -321,8 +319,8 @@ width:12%
 }
 
 #planet5 {
-bottom:30px;
-right:75%;
+bottom:20px;
+right:15%;
 position:absolute;
 z-index:-1;
 width:10%
@@ -346,6 +344,8 @@ width:3%
 	position:absolute;
 	z-index:-3;
 	width:100%;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
 }
 
 
@@ -672,4 +672,25 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 width: 20%;
+}
+
+
+
+
+/** project **/
+
+.pTitle {
+
+}
+
+.pText{
+
+}
+
+.pDivide{
+
+}
+
+.pNote{
+
 }

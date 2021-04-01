@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | Construction Bureau - Modern Cottage v.1</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/construction/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Main content-->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper position-relative">
+
+
+      <!-- Navbar -->
+      <!-- Remove .navbar-sticky class to detach .navbar from page scroll -->
+      <header class="cs-header navbar navbar-expand-lg navbar-light navbar-sticky navbar-floating">
+        <div class="container px-0 px-xl-3">
+          <a class="navbar-brand order-lg-1 mr-lg-5 mr-0 pr-lg-2" href="index.html">
+            <img src="../../assets/img/construction/logo-dark.svg" alt="Createx Logo" width="130">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a class="media media-tool" href="tel:(405)555-0128">
+              <i class="media-tool-icon cxi-iphone"></i>
+              <div class="media-body ml-2 pl-1">
+                <h6 class="media-tool-title">Call us</h6>
+                <span class="media-tool-label d-xl-inline-block d-none">(405) 555-0128</span>
+              </div>
+            </a>
+            <a class="media media-tool" href="mailto:hello@example.com">
+              <i class="media-tool-icon cxi-chat"></i>
+              <div class="media-body ml-2 pl-1">
+                <h6 class="media-tool-title">Talk to us</h6>
+                <span class="media-tool-label d-xl-inline-block d-none">hello@example.com</span>
+              </div>
+            </a>
+            <button class="navbar-toggler ml-2 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse1">
+            <ul class="navbar-nav mr-auto text-nowrap">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html">Homepage v.1</a></li>
+                  <li><a class="dropdown-item" href="index-v2.html">Homepage v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="services.html">Services List</a></li>
+                  <li><a class="dropdown-item" href="services-single-v1.html">Single Service v.1</a></li>
+                  <li><a class="dropdown-item" href="services-single-v2.html">Single Service v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">Works</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="projects.html">Projects Grid</a></li>
+                  <li><a class="dropdown-item" href="project-single-v1.html">Single Project v.1</a></li>
+                  <li><a class="dropdown-item" href="project-single-v2.html">Single Project v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                  <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">News</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="news.html">News Grid</a></li>
+                  <li><a class="dropdown-item" href="news-single.html">Single Post</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page title-->
+      <section class="pt-6 pb-lg-6 pb-5 bg-no-repeat bg-fixed" style="background-image: url(../../assets/img/construction/work/single/page-title-bg-v1.png);">
+        <div class="container py-lg-5">
+          
+          <!-- Breadcrumbs -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-lg-4 pb-md-3">
+              <li class="breadcrumb-item">
+                <a href="index.html">Homepage</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="projects.html">Work</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Modern Cottage</li>
+            </ol>
+          </nav>
+
+          <!-- Title -->
+          <h1 class="display-2 mb-sm-5 pb-md-3">Modern Cottage</h1>
+
+          <!-- Carousel -->
+          <div class="cs-carousel cs-controls-onhover cs-gallery mb-lg-6 mb-5 pb-md-4">
+            <div class="cs-carousel-inner" data-carousel-options='{
+              "mode": "gallery",
+              "navContainer": "#cs-project-thumbnails",
+              "navAsThumbnails": true
+            }'>
+
+              <!-- Gallery item -->
+              <div class="cs-gallery">
+                <a class="cs-gallery-item rounded" href="../../assets/img/construction/work/single/carousel/01.jpg">
+                  <img src="../../assets/img/construction/work/single/carousel/01.jpg" alt="Gallery thumbnail">
+                  <span class="cs-gallery-caption">In officia beatae omnis rem.</span>
+                </a>
+              </div>
+
+              <!-- Gallery item -->
+              <div class="cs-gallery">
+                <a class="cs-gallery-item rounded" href="../../assets/img/construction/work/single/carousel/02.jpg">
+                  <img src="../../assets/img/construction/work/single/carousel/02.jpg" alt="Gallery thumbnail">
+                  <span class="cs-gallery-caption">Totam officiis animi excepturi.</span>
+                </a>
+              </div>
+
+              <!-- Gallery item -->
+              <div class="cs-gallery">
+                <a class="cs-gallery-item rounded" href="../../assets/img/construction/work/single/carousel/03.jpg">
+                  <img src="../../assets/img/construction/work/single/carousel/03.jpg" alt="Gallery thumbnail">
+                  <span class="cs-gallery-caption">Nihil odio nam ea laudantium cumque debitis.</span>
+                </a>
+              </div>
+
+              <!-- Gallery item -->
+              <div class="cs-gallery">
+                <a class="cs-gallery-item rounded" href="../../assets/img/construction/work/single/carousel/04.jpg">
+                  <img src="../../assets/img/construction/work/single/carousel/04.jpg" alt="Gallery thumbnail">
+                  <span class="cs-gallery-caption">Praesentium blanditiis mollitia.</span>
+                </a>
+              </div>
+
+              <!-- Gallery item -->
+              <div class="cs-gallery">
+                <a class="cs-gallery-item rounded" href="../../assets/img/construction/work/single/carousel/05.jpg">
+                  <img src="../../assets/img/construction/work/single/carousel/05.jpg" alt="Gallery thumbnail">
+                  <span class="cs-gallery-caption">Doloremque facere quia maxime.</span>
+                </a>
+              </div>
+
+              <!-- Gallery item -->
+              <div class="cs-gallery">
+                <a class="cs-gallery-item rounded" href="../../assets/img/construction/work/single/carousel/06.jpg">
+                  <img src="../../assets/img/construction/work/single/carousel/06.jpg" alt="Gallery thumbnail">
+                  <span class="cs-gallery-caption">laboriosam eveniet consectetur repellat.</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="cs-thumbnails" id="cs-project-thumbnails">
+              <button type="button" data-nav="0">
+                <img src="../../assets/img/construction/work/single/th/01.jpg" alt="Thumbnail">
+              </button>
+              <button type="button" data-nav="1">
+                <img src="../../assets/img/construction/work/single/th/02.jpg" alt="Thumbnail">
+              </button>
+              <button type="button" data-nav="2">
+                <img src="../../assets/img/construction/work/single/th/03.jpg" alt="Thumbnail">
+              </button>
+              <button type="button" data-nav="3">
+                <img src="../../assets/img/construction/work/single/th/04.jpg" alt="Thumbnail">
+              </button>
+              <button type="button" data-nav="4">
+                <img src="../../assets/img/construction/work/single/th/05.jpg" alt="Thumbnail">
+              </button>
+              <button type="button" data-nav="5">
+                <img src="../../assets/img/construction/work/single/th/06.jpg" alt="Thumbnail">
+              </button>
+            </div>
+          </div>
+
+          <!-- Project goal -->
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="h1 pb-md-3">Project goal</h2>
+              <p class="font-size-lg">Build a private house 840 sq. feet with a large living room, three bedrooms, two bathrooms, a terrace, a pool and a garage for two cars.</p>
+              <p class="font-size-lg">Modern design and care for each family member to feel as comfortable as possible in the new home.</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-md-6">
+              <div class="d-table w-100 p-sm-4 p-3 rounded bg-light box-shadow-sm">
+                <div class="d-table-row">
+                  <h6 class="d-table-cell py-2 px-sm-4 px-2 text-uppercase">Location</h6>
+                  <span class="d-table-cell py-2 px-sm-4 px-2 text-muted">2464 Royal Ln. Mesa, New Jersey</span>
+                </div>
+                <div class="d-table-row">
+                  <h6 class="d-table-cell py-2 px-sm-4 px-2 text-uppercase">Client</h6>
+                  <span class="d-table-cell py-2 px-sm-4 px-2 text-muted">Darlene Robertson</span>
+                </div>
+                <div class="d-table-row">
+                  <h6 class="d-table-cell py-2 px-sm-4 px-2 text-uppercase">Architect</h6>
+                  <span class="d-table-cell py-2 px-sm-4 px-2 text-muted">HIK Architecture</span>
+                </div>
+                <div class="d-table-row">
+                  <h6 class="d-table-cell py-2 px-sm-4 px-2 text-uppercase">Size</h6>
+                  <span class="d-table-cell py-2 px-sm-4 px-2 text-muted">840 sq. feet</span>
+                </div>
+                <div class="d-table-row">
+                  <h6 class="d-table-cell py-2 px-sm-4 px-2 text-uppercase">Value</h6>
+                  <span class="d-table-cell py-2 px-sm-4 px-2 text-muted">$2 million</span>
+                </div>
+                <div class="d-table-row">
+                  <h6 class="d-table-cell py-2 px-sm-4 px-2 text-uppercase">Completed</h6>
+                  <span class="d-table-cell py-2 px-sm-4 px-2 text-muted">May 2020</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page content -->
+      <!-- Decisions -->
+      <section class="pt-5 pb-lg-0 py-5 bg-secondary">
+        <div class="container">
+          <div class="row align-items-lg-center">
+            <div class="col-md-5 d-md-block d-none mb-lg-n5" data-jarallax-element="-15" data-disable-parallax-down="lg">
+              <img src="../../assets/img/construction/work/single/decisions.jpg" alt="Decisions" class="rounded">
+            </div>
+            <div class="col-lg-6 offset-lg-1 col-md-6">
+              <h2 class="h1 mb-sm-5 pb-md-3">Constructive decisions</h2>
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex mb-2 pb-1">
+                  <i class="cxi-check mt-1 mr-3 text-primary"></i>
+                  Vitae ultrices ornare eu sed in est quisque duis id.
+                </li>
+                <li class="d-flex mb-2 pb-1">
+                  <i class="cxi-check mt-1 mr-3 text-primary"></i>
+                  A fermentum in morbi pretium aliquam adipiscing donec tempus.
+                </li>
+                <li class="d-flex mb-2 pb-1">
+                  <i class="cxi-check mt-1 mr-3 text-primary"></i>
+                  Mauris odio pellentesque commodo, diam.
+                </li>
+                <li class="d-flex mb-2 pb-1">
+                  <i class="cxi-check mt-1 mr-3 text-primary"></i>
+                  Fermentum vestibulum est fermentum, egestas gravida scelerisque quis.
+                </li>
+                <li class="d-flex mb-2 pb-1">
+                  <i class="cxi-check mt-1 mr-3 text-primary"></i>
+                  At pharetra libero blandit risus, fringilla sed commodo diam.
+                </li>
+                <li class="d-flex mb-2 pb-1">
+                  <i class="cxi-check mt-1 mr-3 text-primary"></i>
+                  Integer ultricies viverra ut enim viverra ut.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Recent projects -->
+      <section class="container mt-md-5 py-lg-6 py-5">
+        <div class="row align-items-end mb-5 pb-md-3">
+          <div class="col-lg-7 col-md-8 col-sm-9">
+            <h2 class="h1 mb-0 text-sm-left text-center">Related projects</h2>
+          </div>
+          <div class="col d-sm-block d-none">
+
+            <!-- Carousel custom controls -->
+            <div class="tns-custom-controls cs-controls-inverse ml-auto" id="tns-projects-controls" tabindex="0">
+              <button type="button" data-controls="prev" tabindex="-1">
+                <i class="cxi-arrow-left"></i>
+              </button>
+              <button type="button" data-controls="next" tabindex="-1">
+                <i class="cxi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Carousel -->
+        <div class="cs-carousel cs-nav-inverse">
+          <div class="cs-carousel-inner" data-carousel-options='{
+            "gutter": 30,
+            "controlsContainer": "#tns-projects-controls",
+            "responsive": {
+              "0": {
+                "items": 1,
+                "nav": true
+              },
+              "576": {
+                "items": 2,
+                "nav": false
+              },
+              "992": {
+                "items": 3
+              }
+            }
+          }'>
+            <article class="mb-5 pt-2 pb-sm-3 pb-2">
+              <a class="cs-portfolio-card-slide" href="project-single-v1.html">
+                <div class="cs-portfolio-card-img">
+                  <img src="../../assets/img/construction/work/projects/05.jpg" alt="Card image">
+                </div>
+                <div class="cs-portfolio-card-body">
+                  <h3 class="cs-portfolio-card-title">Kids Bedroom With Decorations</h3>
+                  <div class="font-size-sm text-muted">Apartments &amp; flats</div>
+                  <div class="btn btn-outline-primary text-uppercase">View project</div>
+                </div>
+              </a>
+            </article>
+            <article class="mb-5 pt-2 pb-sm-3 pb-2">
+              <a class="cs-portfolio-card-slide" href="project-single-v2.html">
+                <div class="cs-portfolio-card-img">
+                  <img src="../../assets/img/construction/work/projects/04.jpg" alt="Card image">
+                </div>
+                <div class="cs-portfolio-card-body">
+                  <h3 class="cs-portfolio-card-title">Modern Double Bedroom</h3>
+                  <div class="font-size-sm text-muted">Apartments &amp; flats</div>
+                  <div class="btn btn-outline-primary text-uppercase">View project</div>
+                </div>
+              </a>
+            </article>
+            <article class="mb-5 pt-2 pb-sm-3 pb-2">
+              <a class="cs-portfolio-card-slide" href="project-single-v1.html">
+                <div class="cs-portfolio-card-img">
+                  <img src="../../assets/img/construction/work/projects/08.jpg" alt="Card image">
+                </div>
+                <div class="cs-portfolio-card-body">
+                  <h3 class="cs-portfolio-card-title">Scandinavian Style Interior</h3>
+                  <div class="font-size-sm text-muted">Private houses</div>
+                  <div class="btn btn-outline-primary text-uppercase">View project</div>
+                </div>
+              </a>
+            </article>
+            <article class="mb-5 pt-2 pb-sm-3 pb-2">
+              <a class="cs-portfolio-card-slide" href="project-single-v2.html">
+                <div class="cs-portfolio-card-img">
+                  <img src="../../assets/img/construction/work/projects/09.jpg" alt="Card image">
+                </div>
+                <div class="cs-portfolio-card-body">
+                  <h3 class="cs-portfolio-card-title">Brown and Gray Painted House</h3>
+                  <div class="font-size-sm text-muted">Private Houses</div>
+                  <div class="btn btn-outline-primary text-uppercase">View project</div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+        <h4 class="h3 d-flex flex-md-row flex-column align-items-center justify-content-center pt-sm-0 pt-4 text-center">
+          Explore all our works
+          <a href="projects.html" class="btn btn-lg btn-primary mt-md-0 mt-sm-4 mt-3 ml-md-5 text-uppercase">View portfolio</a>
+        </h4>  
+      </section>
+
+
+      <!-- Details -->
+      <section class="py-5 jarallax" data-jarallax data-speed="0.8">
+
+        <!-- Parallax bg -->
+        <div class="jarallax-img" style="background-image: url(../../assets/img/construction/detail-form-bg.jpg);"></div>
+
+        <!-- Content -->
+        <div class="container py-4">
+          <div class="ml-md-auto mr-md-0 mx-auto" style="max-width: 495px;">
+
+            <!-- Details form -->
+            <form class="py-5 px-sm-5 px-4 bg-light rounded box-shadow-lg">
+              <h2 class="h3 text-center">A quick way to discuss details</h2>
+              <div class="form-group">
+                <label for="detail-name" class="font-size-sm">Name*</label>
+                <input id="detail-name" class="form-control" type="text" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="detail-tel" class="font-size-sm">Phone*</label>
+                <input id="detail-tel" class="form-control" type="tel" placeholder="Your phone number" required>
+              </div>
+              <div class="form-group">
+                <label for="detail-email" class="font-size-sm">Email</label>
+                <input id="detail-email" class="form-control" type="email" placeholder="Your working email">
+              </div>
+              <div class="form-group">
+                <label for="detail-message" class="font-size-sm">Message*</label>
+                <textarea id="detail-message" class="form-control" rows="2" placeholder="Your message" required></textarea>
+              </div>
+              <div class="form-group custom-control custom-checkbox">
+                <input id="detail-subscribe" class="custom-control-input" type="checkbox" checked>
+                <label for="detail-subscribe" class="custom-control-label font-size-sm">I agree to receive communications from Createx Construction Bureau.</label>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary text-uppercase">Send request</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-3 bg-dark">
+      <div class="container mt-lg-3 py-md-5 py-4">
+        <div class="row mb-5">
+          <div class="col-lg-5 col-md-6">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <a class="d-inline-block" href="index.html">
+                <img src="../../assets/img/construction/logo-light.svg" width="130" alt="Createx logo">
+              </a>
+              <div class="mt-sm-1 mt-4 pr-sm-4">
+                <a href="#" class="social-btn">
+                  <i class="cxi-whatsapp"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-messenger"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-facebook"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-twitter"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <p class="mb-md-0 mb-4 font-size-sm text-light opacity-60">Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service. Our mission is to set the highest standards for construction sphere.</p>
+          </div>
+          <div class="col-lg-5 offset-lg-2 col-md-6">
+            <h4 class="text-light">Let’s stay in touch</h4>
+            <form class="input-group">
+              <input class="form-control input-light" type="email" placeholder="Your email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary text-uppercase" type="submit">Subscribe</button>
+              </div>
+            </form>
+            <p class="mb-0 pt-3 font-size-xs text-light opacity-60">*Subscribe to our newsletter to receive communications and early updates from Createx Construction Bureau.</p>
+          </div>
+        </div>
+        <div class="row mb-sm-5 mb-4">
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Head office</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Address:</span>
+                <a href="#" class="nav-link d-inline-block p-0 font-weight-normal">8502 Preston Rd. Inglewood, New York</a>
+              </li>
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Call:</span>
+                <a href="tel:(405)555-0128" class="nav-link d-inline-block p-0 font-weight-normal">(405) 555-0128</a>
+              </li>
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Email:</span>
+                <a href="mailto:hello@example.com" class="nav-link d-inline-block p-0 font-weight-normal">hello@example.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Who we are</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="about.html" class="nav-link p-0 font-weight-normal">About Us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="careers.html" class="nav-link p-0 font-weight-normal">Available Positions</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 col-sm-6 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Our experience</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="services.html" class="nav-link p-0 font-weight-normal">Services</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="projects.html" class="nav-link p-0 font-weight-normal">Work</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="news.html" class="nav-link p-0 font-weight-normal">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex align-items-sm-center justify-content-between py-1">
+          <div class="font-size-xs text-light">
+            <span class="d-sm-inline d-block mb-1">
+              <span class="font-size-sm">&copy; </span>
+              All rights reserved.
+            </span>
+            Made with 
+            <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+            <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+          </div>
+          <div class="d-flex align-items-sm-center">
+            <span class="d-sm-inline-block d-none text-light font-size-sm mr-3 mb-1 align-vertical text-uppercase">Go to top</span>
+            <a class="btn-scroll-top position-static rounded" href="#top" data-scroll>
+              <i class="btn-scroll-top-icon cxi-angle-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="../../assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="../../assets/vendor/lg-fullscreen.js/dist/lg-fullscreen.min.js"></script>
+    <script src="../../assets/vendor/lg-zoom.js/dist/lg-zoom.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

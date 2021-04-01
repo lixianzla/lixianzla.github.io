@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | Construction Bureau - Home v.1</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/construction/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Main content-->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper position-relative">
+
+
+      <!-- Navbar -->
+      <!-- Remove .navbar-sticky class to detach .navbar from page scroll -->
+      <header class="cs-header navbar navbar-expand-lg navbar-light navbar-sticky navbar-floating">
+        <div class="container px-0 px-xl-3">
+          <a class="navbar-brand order-lg-1 mr-lg-5 mr-0 pr-lg-2" href="index.html">
+            <img src="../../assets/img/construction/logo-dark.svg" alt="Createx Logo" width="130">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a class="media media-tool" href="tel:(405)555-0128">
+              <i class="media-tool-icon cxi-iphone"></i>
+              <div class="media-body ml-2 pl-1">
+                <h6 class="media-tool-title">Call us</h6>
+                <span class="media-tool-label d-xl-inline-block d-none">(405) 555-0128</span>
+              </div>
+            </a>
+            <a class="media media-tool" href="mailto:hello@example.com">
+              <i class="media-tool-icon cxi-chat"></i>
+              <div class="media-body ml-2 pl-1">
+                <h6 class="media-tool-title">Talk to us</h6>
+                <span class="media-tool-label d-xl-inline-block d-none">hello@example.com</span>
+              </div>
+            </a>
+            <button class="navbar-toggler ml-2 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse1">
+            <ul class="navbar-nav mr-auto text-nowrap">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html">Homepage v.1</a></li>
+                  <li><a class="dropdown-item" href="index-v2.html">Homepage v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="services.html">Services List</a></li>
+                  <li><a class="dropdown-item" href="services-single-v1.html">Single Service v.1</a></li>
+                  <li><a class="dropdown-item" href="services-single-v2.html">Single Service v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Works</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="projects.html">Projects Grid</a></li>
+                  <li><a class="dropdown-item" href="project-single-v1.html">Single Project v.1</a></li>
+                  <li><a class="dropdown-item" href="project-single-v2.html">Single Project v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                  <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">News</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="news.html">News Grid</a></li>
+                  <li><a class="dropdown-item" href="news-single.html">Single Post</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page content-->
+      <!-- Hero-->
+      <section class="d-flex min-vh-100 mb-4 pt-lg-6 pt-5 bg-secondary jarallax" data-jarallax data-speed="0.8">
+        <div class="container d-flex flex-column justify-content-center pt-lg-4 py-5">
+          <div class="order-lg-1 order-2 row align-items-end mb-lg-4 mb-5 pb-lg-3">
+            <div class="col-lg-7 col-md-10 col-sm-11 mx-auto">
+              <p class="mb-lg-0 font-size-lg text-lg-left text-center">Are you looking for a reliable construction company to make your dream come true? Createx Construction Bureau is your best choice.</p>
+              <div class="text-center">
+                <a href="projects.html" class="btn btn-primary btn-lg d-lg-none d-inline-block px-sm-5 px-4 text-uppercase">Explore our projects</a>
+              </div>
+            </div>
+            <div class="col d-lg-block d-none">
+              <div class="tns-custom-controls cs-controls-inverse ml-auto mb-n3" id="tns-custom-hero-controls" tabindex="0">
+                <button type="button" data-controls="prev" tabindex="-1">
+                  <i class="cxi-arrow-left"></i>
+                </button>
+                <button type="button" data-controls="next" tabindex="-1">
+                  <i class="cxi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="order-lg-2 order-1 row align-items-lg-stretch align-items-center mb-5">
+            <div class="col-lg-4 col-md-10 col-sm-11 d-lg-flex flex-column justify-content-between position-relative mx-auto mt-lg-6 text-lg-left text-center" style="z-index: 5;" data-jarallax-element="25" data-disable-parallax-down="lg">
+              <div class="">
+                <h3 class="mb-2 pb-1">Over 20 years leader in</h3>
+                <h1 class="display-2 mb-lg-5 pb-lg-3 text-uppercase">Construction <br>business</h1>
+                <a href="projects.html" class="btn btn-primary btn-lg d-lg-inline-block d-none px-sm-5 px-4 text-uppercase">Explore our projects</a>
+              </div>
+              <div class="mb-lg-0 mb-md-5 mb-4 text-nowrap">
+                <a href="#" class="social-btn mr-1">
+                  <i class="cxi-facebook"></i>
+                </a>
+                <a href="#" class="social-btn mr-1">
+                  <i class="cxi-twitter"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-10 col-sm-11 mx-auto">
+
+              <!-- Carousel -->
+              <div class="cs-carousel">
+                <div class="cs-carousel-inner" data-carousel-options='{
+                  "gutter": 15,
+                  "navContainer": "#cs-hero-pager",
+                  "controlsContainer": "#tns-custom-hero-controls"
+                }'>
+                  <div><img class="rounded" src="../../assets/img/construction/home/hero/carousel/01.jpg" alt="Slider image"></div>
+                  <div><img class="rounded" src="../../assets/img/construction/home/hero/carousel/02.jpg" alt="Slider image"></div>
+                  <div><img class="rounded" src="../../assets/img/construction/home/hero/carousel/03.jpg" alt="Slider image"></div>
+                  <div><img class="rounded" src="../../assets/img/construction/home/hero/carousel/04.jpg" alt="Slider image"></div>
+                </div>
+
+                <!-- Pager -->
+                <div class="cs-pager px-sm-5 pb-sm-5 px-3 pb-3" id="cs-hero-pager">
+                  <button type="button" data-nav="0">01</button>
+                  <button type="button" data-nav="1">02</button>
+                  <button type="button" data-nav="2">03</button>
+                  <button type="button" data-nav="3">04</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-lg-3 order-3 text-center">
+            <h5 class="mb-0 font-size-sm font-weight-normal">
+              Become a part of the best team in the construction market of the USA. 
+              <a href="careers.html">Available Positions</a>
+            </h5>
+          </div>
+        </div>
+
+        <!-- Parallax bg -->
+        <div class="jarallax-img" style="background-image: url(../../assets/img/construction/home/hero/bg.jpg);"></div>
+      </section>
+
+
+      <!-- Presentation -->
+      <section class="container mb-4 py-lg-6 py-5">
+        <h2 class="h1 text-center">We are Createx Construction Bureau</h2>
+        <p class="mb-lg-5 pb-3 font-size-lg text-muted text-center">We are rightfully considered to be the best construction company in the USA.</p>
+        <div class="jumbotron position-relative bg-size-cover bg-position-center bg-no-repeat text-center mb-0 py-sm-6 py-5" style="background-image: url(../../assets/img/construction/home/video-cover.jpg);">
+          <div class="bg-overlay rounded opacity-60"></div>
+          <div class="bg-overlay-content my-5 py-5">
+            <a class="cs-video-btn cs-video-btn-lg my-3" href="https://www.youtube.com/watch?v=imtHMFpeAj8&ab_channel=Unicoo" data-gallery-video></a>
+            <div class="pt-1"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Core values -->
+      <section class="container position-relative">
+        <h2 class="h1 text-center">Our core values</h2>
+        <p class="mb-5 pb-3 font-size-lg text-muted text-center">Our mission is to set the highest standards for construction sphere.</p>
+        <div class="row pb-lg-6 pb-sm-5 pb-4">
+          <div class="col-sm-4 mb-sm-0 mb-4 pb-sm-0 pb-2">
+            <div class="px-lg-5 px-4 text-center">
+              <img class="mb-4" src="../../assets/img/construction/icons/ic-like.svg" width="48" alt="Icon box image">
+              <h5 class="h5 mb-2">Quality</h5>
+              <p class="mb-0 text-muted">Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.</p>
+            </div>
+          </div>
+          <span class="divider-vertical d-sm-block d-none"></span>
+          <div class="col-sm-4 mb-sm-0 mb-4 pb-sm-0 pb-2">
+            <div class="px-lg-5 px-4 text-center">
+              <img class="mb-4" src="../../assets/img/construction/icons/ic-hand.svg" width="48" alt="Icon box image">
+              <h5 class="h5 mb-2">Safety</h5>
+              <p class="mb-0 text-muted">Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est ea.</p>
+            </div>
+          </div>
+          <span class="divider-vertical d-sm-block d-none"></span>
+          <div class="col-sm-4 mb-sm-0 mb-4 pb-sm-0 pb-2">
+            <div class="px-lg-5 px-4 text-center">
+              <img class="mb-4" src="../../assets/img/construction/icons/ic-slippers.svg" width="48" alt="Icon box image">
+              <h5 class="h5 mb-2">Comfort</h5>
+              <p class="mb-0 text-muted">Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-md-5 p-4 bg-light box-shadow-sm rounded">
+          <h3 class="pb-2 text-center">Want to know more? Ask us a question:</h3>
+
+          <!-- Question form -->
+          <form class="row">
+            <div class="col-lg-3 col-sm-6">
+              <div class="form-group mb-lg-0">
+                <label for="question-name">Name*</label>
+                <input id="question-name" class="form-control" type="text" placeholder="Your name" required>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="form-group mb-lg-0">
+                <label for="question-tel">Phone</label>
+                <input id="question-tel" class="form-control" type="tel" placeholder="Your phone">
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <div class="form-group mb-sm-0">
+                <label for="question-email">Message*</label>
+                <input id="question-email" class="form-control" type="text" placeholder="Your message" required>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 d-flex align-items-end pt-sm-0 pt-4">
+              <button type="submit" class="btn btn-primary btn-block">Send</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+
+      <!-- Services -->
+      <section class="mt-md-n6 mt-n5 pt-md-6 pt-5 bg-secondary">
+        <div class="container mt-4 pt-lg-6 py-5">
+          <h2 class="h1 text-center">Our services</h2>
+          <p class="mb-lg-5 pb-3 font-size-lg text-muted text-center">Createx Construction Bureau is a construction giant with a full range of construction services.</p>
+          <div class="row mb-lg-5 mb-4">
+            <div class="col-lg-3 col-sm-6 mb-sm-grid-gutter mb-3">
+              <a class="cs-image-fade h-100 card card-hover box-shadow py-3" href="services-single-v1.html" style="background-image: url(../../assets/img/construction/home/services/01.jpg);">
+                <div class="cs-image-inner py-5">
+                  <div class="card-body">
+                    <img class="cs-inner-img d-block mx-auto mb-4" src="../../assets/img/construction/icons/ic-construction.svg" width="52" alt="Construction">
+                    <h5 class="cs-inner-text mb-0 text-center">Construction</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-sm-grid-gutter mb-3">
+              <a class="cs-image-fade h-100 card card-hover box-shadow py-3" href="services-single-v1.html" style="background-image: url(../../assets/img/construction/home/services/02.jpg);">
+                <div class="cs-image-inner py-5">
+                  <div class="card-body">
+                    <img class="cs-inner-img d-block mx-auto mb-4" src="../../assets/img/construction/icons/ic-project.svg" width="52" alt="Project Development">
+                    <h5 class="cs-inner-text mb-0 text-center">Project Development</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-sm-grid-gutter mb-3">
+              <a class="cs-image-fade h-100 card card-hover box-shadow py-3" href="services-single-v2.html" style="background-image: url(../../assets/img/construction/home/services/03.jpg);">
+                <div class="cs-image-inner py-5">
+                  <div class="card-body">
+                    <img class="cs-inner-img d-block mx-auto mb-4" src="../../assets/img/construction/icons/ic-pantone.svg" width="52" alt="Interior Design">
+                    <h5 class="cs-inner-text mb-0 text-center">Interior Design</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-sm-grid-gutter mb-3">
+              <a class="cs-image-fade h-100 card card-hover box-shadow py-3" href="services-single-v2.html" style="background-image: url(../../assets/img/construction/home/services/04.jpg);">
+                <div class="cs-image-inner py-5">
+                  <div class="card-body">
+                    <img class="cs-inner-img d-block mx-auto mb-4" src="../../assets/img/construction/icons/ic-repair.svg" width="52" alt="Repairs">
+                    <h5 class="cs-inner-text mb-0 text-center">Repairs</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <h4 class="h3 d-flex flex-md-row flex-column align-items-center justify-content-center text-center">
+            Learn more about our services
+            <a href="services.html" class="btn btn-lg btn-primary mt-md-0 mt-sm-4 mt-3 ml-md-5 text-uppercase">View services</a>
+          </h4>
+        </div>
+      </section>
+
+
+      <!-- Recent projects -->
+      <section class="container mt-md-4 py-lg-6 py-5">
+        <div class="row align-items-end mb-5 pb-md-3">
+          <div class="col-lg-7 col-md-8 col-sm-9">
+            <h2 class="h1 mb-0 text-sm-left text-center">Browse our selected projects and learn more about our work</h2>
+          </div>
+          <div class="col d-sm-block d-none">
+
+            <!-- Carousel custom controls -->
+            <div class="tns-custom-controls cs-controls-inverse ml-auto" id="tns-projects-controls" tabindex="0">
+              <button type="button" data-controls="prev" tabindex="-1">
+                <i class="cxi-arrow-left"></i>
+              </button>
+              <button type="button" data-controls="next" tabindex="-1">
+                <i class="cxi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Carousel -->
+        <div class="cs-carousel cs-nav-inverse">
+          <div class="cs-carousel-inner" data-carousel-options='{
+            "gutter": 30,
+            "controlsContainer": "#tns-projects-controls",
+            "responsive": {
+              "0": {
+                "items": 1,
+                "nav": true
+              },
+              "576": {
+                "items": 2,
+                "nav": false
+              },
+              "992": {
+                "items": 3
+              }
+            }
+          }'>
+            <article class="mb-5 pt-2 pb-sm-3 pb-2">
+              <a class="cs-portfolio-card-slide" href="project-single-v1.html">
+                <div class="cs-portfolio-card-img">
+                  <img src="../../assets/img/construction/work/projects/07.jpg" alt="Card image">
+                </div>
+                <div class="cs-portfolio-card-body">
+                  <h3 class="cs-portfolio-card-title">Red Finger Building</h3>
+                  <div class="font-size-sm text-muted">Business Centers</div>
+                  <div class="btn btn-outline-primary text-uppercase">View project</div>
+                </div>
+              </a>
+            </article>
+            <article class="mb-5 pt-2 pb-sm-3 pb-2">
+              <a class="cs-portfolio-card-slide" href="project-single-v2.html">
+                <div class="cs-portfolio-card-img">
+                  <img src="../../assets/img/construction/work/projects/01.jpg" alt="Card image">
+                </div>
+                <div class="cs-portfolio-card-body">
+                  <h3 class="cs-portfolio-card-title">Cubes Building</h3>
+                  <div class="font-size-sm text-muted">Business Centers</div>
+                  <div class="btn btn-outline-primary text-uppercase">View project</div>
+                </div>
+              </a>
+            </article>
+            <article class="mb-5 pt-2 pb-sm-3 pb-2">
+              <a class="cs-portfolio-card-slide" href="project-single-v1.html">
+                <div class="cs-portfolio-card-img">
+                  <img src="../../assets/img/construction/work/projects/06.jpg" alt="Card image">
+                </div>
+                <div class="cs-portfolio-card-body">
+                  <h3 class="cs-portfolio-card-title">The Pencil Building</h3>
+                  <div class="font-size-sm text-muted">Stores &amp; Malls</div>
+                  <div class="btn btn-outline-primary text-uppercase">View project</div>
+                </div>
+              </a>
+            </article>
+            <article class="mb-5 pt-2 pb-sm-3 pb-2">
+              <a class="cs-portfolio-card-slide" href="project-single-v2.html">
+                <div class="cs-portfolio-card-img">
+                  <img src="../../assets/img/construction/work/projects/02.jpg" alt="Card image">
+                </div>
+                <div class="cs-portfolio-card-body">
+                  <h3 class="cs-portfolio-card-title">Modern Cottage</h3>
+                  <div class="font-size-sm text-muted">Private Houses</div>
+                  <div class="btn btn-outline-primary text-uppercase">View project</div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+        <h4 class="h3 d-flex flex-md-row flex-column align-items-center justify-content-center pt-sm-0 pt-4 text-center">
+          Explore all our works
+          <a href="projects.html" class="btn btn-lg btn-primary mt-md-0 mt-sm-4 mt-3 ml-md-5 text-uppercase">View portfolio</a>
+        </h4>
+      </section>
+
+
+      <!-- Shaped bg -->
+      <div class="bg-secondary">
+
+
+        <!-- Brands -->
+        <section class="container mt-md-4 pt-lg-6 py-5 px-0">
+          <h2 class="h1 mb-5 pb-md-3 text-center">Supported by 12+ partners</h2>
+
+          <!-- Carousel -->
+          <div class="cs-carousel">
+            <div class="cs-carousel-inner" data-carousel-options='{
+              "nav": false,
+              "controls": false,
+              "autoplay": true,
+              "autoplayTimeout": 4000,
+              "responsive": {
+                "0": {
+                  "items": 2
+                },
+                "576": {
+                  "items": 3
+                },
+                "768": {
+                  "items": 4
+                },
+                "992": {
+                  "items": 5
+                },
+                "1200": {
+                  "items": 6
+                }
+              }
+            }'>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/construction/logo/skema-floor.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/construction/logo/skema-floor-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/construction/logo/factory-glass.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/construction/logo/factory-glass-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/construction/logo/numark.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/construction/logo/numark-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/construction/logo/edwin.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/construction/logo/edwin-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/construction/logo/eiffage-construction.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/construction/logo/eiffage-construction-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/construction/logo/royal-floor-mats.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/construction/logo/royal-floor-mats-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/construction/logo/lotte.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/construction/logo/lotte-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Testimonials -->
+        <section class="container mt-md-4 pt-lg-6 pt-5">
+          <div class="row pt-3 pt-lg-0">
+            <div class="col-md-6 pb-md-4 pb-5">
+              <h2 class="h1 mb-5 pb-md-3 text-md-left text-center">What our clients are saying</h2>
+
+              <!-- Carousel custom controls -->
+              <div class="tns-custom-controls cs-controls-inverse d-md-flex d-none mb-n5 mx-0" id="tns-custom-controls" tabindex="0">
+                <button class="mb-n2" type="button" data-controls="prev" tabindex="-1">
+                  <i class="cxi-arrow-left"></i>
+                </button>
+                <button class="mb-n2" type="button" data-controls="next" tabindex="-1">
+                  <i class="cxi-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Carousel -->
+              <div class="cs-carousel cs-nav-outside">
+                <div class="cs-carousel-inner" data-carousel-options='{
+                  "controlsContainer": "#tns-custom-controls",
+                  "autoHeight": true,
+                  "responsive": {
+                    "0": {
+                      "nav": true,
+                      "gutter": 0
+                    },
+                    "768": {
+                      "nav": false,
+                      "gutter": 15
+                    }
+                  }
+                }'>
+
+                  <!-- Carousel testimonial item -->
+                  <blockquote class="px-1 text-md-left text-center">
+                    <img class="mb-4 rounded-circle" src="../../assets/img/construction/testimonials/01.jpg" width="72" alt="Author">
+                    <p>Ipsum aute sunt aliquip aute et occaecat. Anim minim do cillum eiusmod enim. Consectetur magna cillum consequat minim  laboris cillum laboris voluptate minim proident exercitation ullamco. </p>
+                    <footer>
+                      <h3 class="h6 mb-0">Courtney Alexander</h3>
+                      <span class="font-size-sm text-muted">Position, Company name</span>
+                    </footer>
+                  </blockquote>
+
+                  <!-- Carousel testimonial item -->
+                  <blockquote class="px-1 text-md-left text-center">
+                    <img class="mb-4 rounded-circle" src="../../assets/img/construction/testimonials/02.jpg" width="72" alt="Author">
+                    <p>Eveniet molestias. Expedita porro doloremque sit at fugiat in animi obcaecati repellendus, quaerat quo soluta quisquam adipisci odit error repudiandae dolorum accusamus vel?</p>
+                    <footer>
+                      <h3 class="h6 mb-0">Shawn Edwards</h3>
+                      <span class="font-size-sm text-muted">Position, Company name</span>
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 d-md-block d-none mb-md-n5 ml-lg-auto" data-jarallax-element="15" data-disable-parallax-down="lg">
+              <img class="rounded" src="../../assets/img/construction/testimonials/03.jpg" alt="Testimonials">
+            </div>
+          </div>
+        </section>
+
+
+      </div> <!-- / Shaped bg -->
+
+
+      <!-- Shaped bg -->
+      <div class="pt-md-5 bg-no-repeat bg-position-center-top" style="background-image: url(../../assets/img/construction/shapes/01.png);">
+
+
+        <!-- Progress + Carousel -->
+        <section class="container mt-md-4 pt-lg-6 pt-5 pb-4">
+          <h2 class="h1 mb-5 pb-md-3 text-center">Some facts and figures</h2>
+          <div class="row pt-md-4">
+            <div class="col-sm-8 mx-auto">
+              <div class="cs-carousel">
+                <div class="cs-carousel-inner" data-carousel-options='{
+                  "gutter": 48,
+                  "nav": false,
+                  "controls": false,
+                  "autoplay": true,
+                  "autoplayTimeout": 4000,
+                  "responsive": {
+                    "0": {
+                      "items": 1
+                    },
+                    "576": {
+                      "items": 2
+                    },
+                    "768": {
+                      "items": 3
+                    },
+                    "992": {
+                      "items": 4
+                    }
+                  }
+                }'>
+                  <div>
+                    <div class="cs-progress-radial mx-auto" style="max-width: 150px;" data-progress-radial='{
+                      "text": {"value": "98%"},
+                      "color": "#f89828",
+                      "trailColor": "rgba(248,152,40, .3)",
+                      "strokeWidth": 4,
+                      "trailWidth": 4,
+                      "progress": 0.98
+                    }'></div>
+                    <span class="d-block mt-3 pt-1 text-center font-size-sm">Totally satisfied clients</span>
+                  </div>
+                  <div>
+                    <div class="cs-progress-radial mx-auto" style="max-width: 150px;" data-progress-radial='{
+                      "text": {"value": "20"},
+                      "color": "#f52f6e",
+                      "trailColor": "rgba(245,47,110, .3)",
+                      "strokeWidth": 4,
+                      "trailWidth": 4,
+                      "progress": 0.75
+                    }'></div>
+                    <span class="d-block mt-3 pt-1 text-center font-size-sm">Years of experience</span>
+                  </div>
+                  <div>
+                    <div class="cs-progress-radial mx-auto" style="max-width: 150px;" data-progress-radial='{
+                      "text": {"value": "9452"},
+                      "color": "#5a87fc",
+                      "trailColor": "rgba(90,135,252, .3)",
+                      "strokeWidth": 4,
+                      "trailWidth": 4,
+                      "progress": 0.8
+                    }'></div>
+                    <span class="d-block mt-3 pt-1 text-center font-size-sm">Working hours spent</span>
+                  </div>
+                  <div>
+                    <div class="cs-progress-radial mx-auto" style="max-width: 150px;" data-progress-radial='{
+                      "text": {"value": "100%"},
+                      "color": "#03cea4",
+                      "trailColor": "rgba(3,206,164, .3)",
+                      "strokeWidth": 4,
+                      "trailWidth": 4,
+                      "progress": 1
+                    }'></div>
+                    <span class="d-block mt-3 pt-1 text-center font-size-sm">Succeeded projects</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Recent news -->
+        <section class="container mt-md-4 py-lg-6 py-5">
+          <h2 class="h1 mb-5 pb-md-3 text-center">Recent news</h2>
+          <div class="row">
+            <div class="col-lg-7 col-md-6 mb-md-0 mb-grid-gutter">
+              <article class="cs-image-scale h-100 card box-shadow card-hover border-0">
+                <a class="cs-image-inner card-img-top" href="news-single.html">
+                  <img src="../../assets/img/construction/news/01.jpg" alt="Blog card image">
+                </a>
+                <div class="card-body">
+                  <h3 class="h5 mb-2 pb-1">
+                    <a class="nav-link" href="news-single.html">How to Build Climate Change-Resilient Infrastructure</a>
+                  </h3>
+                  <ul class="nav nav-muted mb-2 pb-1">
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        Industry News
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        June 24, 2020
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        <i class="cxi-chat mt-n1 mr-2 font-size-base align-middle"></i>
+                        4 comments
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="card-text">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-5 col-md-6 d-flex flex-column mb-md-0 mb-grid-gutter">
+              <article class="cs-image-scale h-100 mb-grid-gutter card box-shadow card-hover border-0">
+                <a class="cs-image-inner card-img-top" href="news-single.html">
+                  <img src="../../assets/img/construction/news/recent/01.jpg" alt="Blog card image">
+                </a>
+                <div class="card-body py-3">
+                  <h3 class="h5 mb-2">
+                    <a class="nav-link" href="news-single.html">How Construction Can Help Itself</a>
+                  </h3>
+                  <ul class="nav nav-muted">
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        Innovation
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        June 12, 2020
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        <i class="cxi-chat mt-n1 mr-2 font-size-base align-middle"></i>
+                        No comments
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="cs-image-scale h-100 card box-shadow card-hover border-0">
+                <a class="cs-image-inner card-img-top" href="news-single.html">
+                  <img src="../../assets/img/construction/news/recent/02.jpg" alt="Blog card image">
+                </a>
+                <div class="card-body py-3">
+                  <h3 class="h5 mb-2">
+                    <a class="nav-link" href="news-single.html">Types of Flooring Materials</a>
+                  </h3>
+                  <ul class="nav nav-muted">
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        Company News
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        June 2, 2020
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        <i class="cxi-chat mt-n1 mr-2 font-size-base align-middle"></i>
+                        No comments
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+          <h4 class="h3 d-flex flex-md-row flex-column align-items-center justify-content-center mt-md-4 pt-md-5 pt-3 text-center">
+            Explore all our news posts
+            <a href="news.html" class="btn btn-lg btn-primary mt-md-0 mt-sm-4 mt-3 ml-md-5 text-uppercase">View all news</a>
+          </h4>
+        </section>
+
+
+      </div> <!-- / Shaped bg -->
+
+
+      <!-- Details -->
+      <section class="py-5 jarallax" data-jarallax data-speed="0.8">
+
+        <!-- Parallax bg -->
+        <div class="jarallax-img" style="background-image: url(../../assets/img/construction/detail-form-bg.jpg);"></div>
+
+        <!-- Content -->
+        <div class="container py-4">
+          <div class="ml-md-auto mr-md-0 mx-auto" style="max-width: 495px;">
+
+            <!-- Details form -->
+            <form class="py-5 px-sm-5 px-4 bg-light rounded box-shadow-lg">
+              <h2 class="h3 text-center">A quick way to discuss details</h2>
+              <div class="form-group">
+                <label for="detail-name" class="font-size-sm">Name*</label>
+                <input id="detail-name" class="form-control" type="text" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="detail-tel" class="font-size-sm">Phone*</label>
+                <input id="detail-tel" class="form-control" type="tel" placeholder="Your phone number" required>
+              </div>
+              <div class="form-group">
+                <label for="detail-email" class="font-size-sm">Email</label>
+                <input id="detail-email" class="form-control" type="email" placeholder="Your working email">
+              </div>
+              <div class="form-group">
+                <label for="detail-message" class="font-size-sm">Message*</label>
+                <textarea id="detail-message" class="form-control" rows="2" placeholder="Your message" required></textarea>
+              </div>
+              <div class="form-group custom-control custom-checkbox">
+                <input id="detail-subscribe" class="custom-control-input" type="checkbox" checked>
+                <label for="detail-subscribe" class="custom-control-label font-size-sm">I agree to receive communications from Createx Construction Bureau.</label>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary text-uppercase">Send request</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-3 bg-dark">
+      <div class="container mt-lg-3 py-md-5 py-4">
+        <div class="row mb-5">
+          <div class="col-lg-5 col-md-6">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <a class="d-inline-block" href="index.html">
+                <img src="../../assets/img/construction/logo-light.svg" width="130" alt="Createx logo">
+              </a>
+              <div class="mt-sm-1 mt-4 pr-sm-4">
+                <a href="#" class="social-btn">
+                  <i class="cxi-whatsapp"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-messenger"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-facebook"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-twitter"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <p class="mb-md-0 mb-4 font-size-sm text-light opacity-60">Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service. Our mission is to set the highest standards for construction sphere.</p>
+          </div>
+          <div class="col-lg-5 offset-lg-2 col-md-6">
+            <h4 class="text-light">Let’s stay in touch</h4>
+            <form class="input-group">
+              <input class="form-control input-light" type="email" placeholder="Your email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary text-uppercase" type="submit">Subscribe</button>
+              </div>
+            </form>
+            <p class="mb-0 pt-3 font-size-xs text-light opacity-60">*Subscribe to our newsletter to receive communications and early updates from Createx Construction Bureau.</p>
+          </div>
+        </div>
+        <div class="row mb-sm-5 mb-4">
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Head office</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Address:</span>
+                <a href="#" class="nav-link d-inline-block p-0 font-weight-normal">8502 Preston Rd. Inglewood, New York</a>
+              </li>
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Call:</span>
+                <a href="tel:(405)555-0128" class="nav-link d-inline-block p-0 font-weight-normal">(405) 555-0128</a>
+              </li>
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Email:</span>
+                <a href="mailto:hello@example.com" class="nav-link d-inline-block p-0 font-weight-normal">hello@example.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Who we are</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="about.html" class="nav-link p-0 font-weight-normal">About Us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="careers.html" class="nav-link p-0 font-weight-normal">Available Positions</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 col-sm-6 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Our experience</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="services.html" class="nav-link p-0 font-weight-normal">Services</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="projects.html" class="nav-link p-0 font-weight-normal">Work</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="news.html" class="nav-link p-0 font-weight-normal">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex align-items-sm-center justify-content-between py-1">
+          <div class="font-size-xs text-light">
+            <span class="d-sm-inline d-block mb-1">
+              <span class="font-size-sm">&copy; </span>
+              All rights reserved.
+            </span>
+            Made with 
+            <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+            <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+          </div>
+          <div class="d-flex align-items-sm-center">
+            <span class="d-sm-inline-block d-none text-light font-size-sm mr-3 mb-1 align-vertical text-uppercase">Go to top</span>
+            <a class="btn-scroll-top position-static rounded" href="#top" data-scroll>
+              <i class="btn-scroll-top-icon cxi-angle-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="../../assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="../../assets/vendor/progressbar.js/dist/progressbar.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

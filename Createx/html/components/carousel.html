@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx UI Kit | Carousel</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/themes/prism.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/theme.min.css">
+  </head>
+
+
+  <!-- Body-->
+  <body>
+    <main class="container-fluid">
+
+      <!-- Main content-->
+      <section class="cs-offcanvas-enabled row pb-3 pb-md-4">
+        <div class="col-xl-9">
+
+          <!-- Navbar-->
+          <header class="navbar navbar-expand navbar-light fixed-top navbar-box-shadow bg-light px-3 px-lg-4" data-scroll-header data-fixed-element>
+            <a class="navbar-brand d-lg-none" href="typography.html">
+              <img src="../../assets/img/components/logo/logo-dark.svg" alt="Createx" width="130">
+            </a>
+            <button class="navbar-toggler d-block d-lg-none mr-3 ml-auto" type="button" data-toggle="offcanvas" data-target="componentsNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav ml-auto d-none d-lg-flex align-items-center">
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../../index.html">
+                  <i class="cxi-eye align-middle mt-n1 mr-2"></i>
+                  Live preview
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../documentation/dev-setup.html">
+                  <i class="cxi-files align-middle mt-n1 mr-2"></i>
+                  Documentation
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+            </ul>
+            <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-primary btn-shadow ml-lg-4" target="_blank" rel="noopener">
+              <i class="cxi-cart mr-2 d-none d-sm-inline-block"></i>
+              Buy now
+            </a>
+          </header>
+
+          <!-- Side navigation (Off-canvas)-->
+          <aside class="cs-offcanvas cs-offcanvas-expand bg-dark" id="componentsNav">
+            <div class="cs-offcanvas-cap d-none d-lg-block py-4">
+              <a class="navbar-brand py-2" href="typography.html">
+                <img src="../../assets/img/components/logo/logo-white.svg" alt="Createx" width="130">
+              </a>
+              <span class="badge badge-success">UI Kit</span>
+            </div>
+            <div class="cs-offcanvas-cap d-flex d-lg-none">
+              <div class="d-flex align-items-center mt-1">
+                <h5 class="text-light mb-0 mr-3">Menu</h5>
+                <span class="badge badge-success">UI Kit</span>
+              </div>
+              <button class="close text-light" type="button" data-dismiss="offcanvas" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="d-flex d-lg-none align-items-center py-4 px-3 border-bottom border-light">
+              <a class="btn btn-primary btn-block mr-3" href="../../index.html"><i class="cxi-eye mt-n1 mr-2"></i>Preview</a>
+              <a class="btn btn-warning btn-block mt-0" href="../documentation/dev-setup.html"><i class="cxi-files mt-n1 mr-2"></i>Docs</a>
+            </div>
+            <div class="cs-offcanvas-body px-0 pt-4 pb-grid-gutter" data-simplebar data-simplebar-inverse>
+              <h6 class="font-size-lg text-light px-4 mt-2 mb-3">Content</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="typography.html">Typography</a>
+                <a class="nav-link px-4" href="icon-font.html">Icon font</a>
+                <a class="nav-link px-4" href="code.html">Code</a>
+                <a class="nav-link px-4" href="images.html">Images &amp; figures</a>
+                <a class="nav-link px-4" href="tables.html">Tables</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Components</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="alerts.html">Alerts</a>
+                <a class="nav-link px-4" href="badge.html">Badges</a>
+                <a class="nav-link px-4" href="blog-components.html">Blog components</a>
+                <a class="nav-link px-4" href="breadcrumb.html">Breadcrumb</a>
+                <a class="nav-link px-4" href="buttons.html">Buttons</a>
+                <a class="nav-link px-4" href="button-group.html">Button group</a>
+                <a class="nav-link px-4" href="cards.html">Cards</a>
+                <a class="nav-link px-4 active" href="carousel.html">Carousel</a>
+                <a class="nav-link px-4" href="collapse.html">Collapse</a>
+                <a class="nav-link px-4" href="contacts-card.html">Contacts card</a>
+                <a class="nav-link px-4" href="countdown.html">Countdown</a>
+                <a class="nav-link px-4" href="dividers.html">Dividers</a>
+                <a class="nav-link px-4" href="dropdowns.html">Dropdowns</a>
+                <a class="nav-link px-4" href="forms.html">Forms</a>
+                <a class="nav-link px-4" href="gallery.html">Gallery</a>
+                <a class="nav-link px-4" href="icon-box.html">Icon box</a>
+                <a class="nav-link px-4" href="input-group.html">Input group</a>
+                <a class="nav-link px-4" href="jumbotron.html">Jumbotron</a>
+                <a class="nav-link px-4" href="list-group.html">List group</a>
+                <a class="nav-link px-4" href="media-object.html">Media object</a>
+                <a class="nav-link px-4" href="modal.html">Modal</a>
+                <a class="nav-link px-4" href="navs.html">Navs</a>
+                <a class="nav-link px-4" href="navbar.html">Navbar</a>
+                <a class="nav-link px-4" href="pagination.html">Pagination</a>
+                <a class="nav-link px-4" href="parallax.html">Parallax</a>
+                <a class="nav-link px-4" href="pills.html">Pills</a>
+                <a class="nav-link px-4" href="popovers.html">Popovers</a>
+                <a class="nav-link px-4" href="portfolio-components.html">Portfolio components</a>
+                <a class="nav-link px-4" href="pricing.html">Pricing</a>
+                <a class="nav-link px-4" href="progress-bar.html">Progress bar</a>
+                <a class="nav-link px-4" href="progress-radial.html">Progress radial</a>
+                <a class="nav-link px-4" href="scrollbar-custom.html">Scrollbar (custom)</a>
+                <a class="nav-link px-4" href="shop-components.html">Shop components</a>
+                <a class="nav-link px-4" href="social-buttons.html">Social buttons</a>
+                <a class="nav-link px-4" href="spinners.html">Spinners</a>
+                <a class="nav-link px-4" href="steps.html">Steps</a>
+                <a class="nav-link px-4" href="tabs.html">Tabs</a>
+                <a class="nav-link px-4" href="team.html">Team</a>
+                <a class="nav-link px-4" href="testimonials.html">Testimonials / reviews</a>
+                <a class="nav-link px-4" href="toasts.html">Toasts</a>
+                <a class="nav-link px-4" href="tooltips.html">Tooltips</a>
+                <a class="nav-link px-4" href="video-popup.html">Video popup</a>
+                <a class="nav-link px-4" href="widgets.html">Widgets</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Utilities</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="https://getbootstrap.com/docs/4.5/utilities/borders/" target="_blank" rel="noopener">Bootstrap</a>
+                <a class="nav-link px-4" href="utilities.html">Createx</a>
+              </nav>
+            </div>
+          </aside>
+          
+          <!-- Page title-->
+          <div class="border-bottom pt-5 mt-2 mb-5">
+            <h1 class="mt-2 mt-md-4 mb-3 pt-5">Carousel</h1>
+            <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+              <p class="text-muted">A slideshow component for cycling through elements (images or slides of text) like a carousel.</p>
+              <div class="pl-md-4 mb-3"><span class="badge badge-success">Createx component</span></div>
+            </div>
+          </div>
+
+          <style>
+            .example-code {
+              padding-top: 0 !important;
+            }
+            div.code-toolbar > .toolbar {
+              display: none;
+            }
+          </style>
+
+          <!-- Info alert -->
+          <div class="alert alert-info mb-4" role="alert">
+            <div class="d-flex"><i class="cxi-info lead mt-1 mr-3 d-none d-sm-block"></i>
+              <p class="font-size-md mb-0">Make sure to link to <strong>Tiny Slider css and js</strong> files in your document: <strong>assets/vendor/tiny-slider/dist/tiny-slider.css</strong> and <strong>assets/vendor/tiny-slider/dist/min/tiny-slider.js</strong>. Use this page as a reference.</p>
+            </div>
+          </div>
+          
+          <div class="rounded p-4 mb-5" style="background-color: rgba(229,232,237, .5);">
+            <p class="font-size-sm">You can alter carousel look and behaviour via modifier CSS classes and flexible data API.</p>
+            <h6 class="mb-2 font-size-sm">Basic HTML structure:</h6>
+            <pre class="example-code" style="background-color: transparent;"><code class="lang-html">&lt;div class=&quot;cs-carousel&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options='{}'&gt;
+    &lt;!-- Carousel slides here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <h6 class="mb-2 font-size-sm">Modifier classes:</h6>
+            <ul class="list-unstyled font-size-sm">
+              <li><code>cs-controls-outside</code><span>&nbsp;- Position controls (prev/next buttons) arranged around the edges outside of the carousel content. Will not work with the above positioning classes.</span></li>
+              <li><code>cs-controls-onhover</code><span>&nbsp;- Show controls (prev/next buttons) only when user hovers over the carousel.</span></li>
+              <li><code>cs-controls-inverse</code><span>&nbsp;- Switch controls (prev/next buttons) skin colors.</span></li>
+              <li><code>cs-nav-outside</code><span>&nbsp;- Position nav (dots) absolutely outside on bottom of the carousel content.</span></li>
+              <li><code>cs-nav-inverse</code><span>&nbsp;- Switch nav (dots) skin colors.</span></li>
+            </ul>
+            <h6 class="mb-2 font-size-sm">Data API:</h6><code class="font-size-sm">data-carousel-options = '{}'</code>:
+            <ul class="list-unstyled font-size-sm">
+              <li><code>"mode": "carousel" | "gallery"</code><span>&nbsp;- With carousel everything slides to the side, while gallery uses fade animations and changes all slides at once.</span></li>
+              <li><code>"axis": "horizontal" | "vertical"</code><span>&nbsp;- The axis of the slider.</span></li>
+              <li><code>"items": 1</code><span>&nbsp;- How many items to display</span></li>
+              <li><code>"nav": true/false</code><span>&nbsp;- Enable/disable dots control</span></li>
+              <li><code>"controls": true/false</code><span>&nbsp;- Enable/disable prev / next arrow buttons</span></li>
+              <li><code>"loop": true/false</code><span>&nbsp;- Enable/disable infinite loop</span></li>
+              <li><code>"speed": 300</code><span>&nbsp;- Speed of the slide animation (in "ms")</span></li>
+              <li><code>"autoplay": true/false</code><span>&nbsp;- Toggles the automatic change of slides</span></li>
+              <li><code>"autoplayTimeout": 5000</code><span>&nbsp;- Timeou between transition. Value in ms | 1000ms = 1s</span></li>
+              <li><code>"gutter": 0</code><span>&nbsp;- Space between carousel items (in px)</span></li>
+              <li><code>"autoHeight": true/false</code><span>&nbsp;- Height of slider container changes according to each slide's height.</span></li>
+              <li><code>"responsive": {"0": {"items": 1}, "768": {"items": 2}, ...}</code><span>&nbsp;- How many items to display on each screen size. Options are not limited to number of items. You can change any option based on screen size.</span></li>
+              <li><code>"controlsContainer"</code><span>&nbsp;- The container element/selector around the prev/next buttons. Must have at least 2 child elements.</span></li>
+              <li><code>"navContainer"</code><span>&nbsp;- The container element/selector around the dots. Must have at least same number of children as the slides.</span></li>
+              <li><code>"navAsThumbnails"</code><span>&nbsp;- Indicate if the dots are thumbnails. If true, they will always be visible even when more than 1 slides displayed in the viewport.</span></li>
+              <li class="font-weight-medium pt-3">For more options please visit<a class="ml-2" href="https://github.com/ganlanyuan/tiny-slider#options" target="_blank" rel="noopener">https://github.com/ganlanyuan/tiny-slider#options</a></li>
+            </ul>
+            <h6 class="mb-2 font-size-sm">Layer animation classes:</h6>
+            <ul class="list-unstyled font-size-sm mb-0">
+              <li><code>cs-from-top</code></li>
+              <li><code>cs-from-bottom</code></li>
+              <li><code>cs-from-left</code></li>
+              <li><code>cs-from-right</code></li>
+              <li><code>cs-scale-up</code></li>
+              <li><code>cs-scale-down</code></li>
+              <li><code>cs-fade-in</code></li>
+              <li><code>cs-delay-1</code></li>
+              <li><code>cs-delay-2</code></li>
+              <li><code>cs-delay-3</code></li>
+              <li><code>cs-delay-4</code></li>
+            </ul>
+          </div>
+
+          <!-- Default: Nav (dots) inside + controls (prev/next) inside-->
+          <section class="pb-5 mb-md-2" id="carousel-all-controls-inside">
+            <h2 class="h3">Default: Nav (dots) inside + controls (prev/next) inside</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result1" role="tabpanel">
+                    <div class="cs-carousel" style="max-width: 50rem;">
+                      <div class="cs-carousel-inner" data-carousel-options="{
+                  &quot;gutter&quot;: 15,
+                  &quot;loop&quot;: false
+                }">
+                        <div><img src="../../assets/img/components/carousel/01.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/02.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/03.jpg" alt="Slider image"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- All controls inside: Dots + Arrows --&gt;
+&lt;div class=&quot;cs-carousel&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options=&#39;{
+    &quot;gutter&quot;: 15,
+    &quot;loop&quot;: false
+  }&#39;&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Nav (dots) outside + Controls (prev/next) outside + Infinite-->
+          <section class="pb-5 mb-md-2" id="carousel-all-controls-outside">
+            <h2 class="h3">Nav (dots) outside + Controls (prev/next) outside + Infinite</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result2" data-toggle="tab" role="tab" aria-controls="result2" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html2" data-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result2" role="tabpanel">
+                    <div class="cs-carousel cs-nav-outside cs-controls-outside" style="max-width: 50rem;">
+                      <div class="cs-carousel-inner" data-carousel-options="{
+                  &quot;gutter&quot;: 15
+                }">
+                        <div><img src="../../assets/img/components/carousel/04.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/05.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/06.jpg" alt="Slider image"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- All controls outside: Dots + Arrows --&gt;
+&lt;div class=&quot;cs-carousel cs-nav-outside cs-controls-outside&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options=&#39;{
+    &quot;gutter&quot;: 15
+  }&#39;&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Custom controls outside carousel-->
+          <section class="pb-5 mb-md-2" id="carousel-controls-top-bot">
+            <h2 class="h3">Custom controls outside carousel</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result3" data-toggle="tab" role="tab" aria-controls="result3" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html3" data-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result3" role="tabpanel">
+                    <div class="row">
+                      <div class="col-md-6 mb-md-0 mb-grid-gutter">
+                        <div class="tns-custom-controls cs-controls-inverse mb-3" id="tns-custom-controls-1" tabindex="0">
+                          <button type="button" data-controls="prev" tabindex="-1"><i class="cxi-arrow-left"></i></button>
+                          <button type="button" data-controls="next" tabindex="-1"><i class="cxi-arrow-right"></i></button>
+                        </div>
+                        <div class="cs-carousel">
+                          <div class="cs-carousel-inner" data-carousel-options="{
+                      &quot;gutter&quot;: 15,
+                      &quot;nav&quot;: false,
+                      &quot;controlsContainer&quot;: &quot;#tns-custom-controls-1&quot;
+                    }">
+                            <div><img src="../../assets/img/components/carousel/01.jpg" alt="Slider image"></div>
+                            <div><img src="../../assets/img/components/carousel/02.jpg" alt="Slider image"></div>
+                            <div><img src="../../assets/img/components/carousel/03.jpg" alt="Slider image"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="cs-carousel">
+                          <div class="cs-carousel-inner" data-carousel-options="{
+                      &quot;gutter&quot;: 15,
+                      &quot;nav&quot;: false,
+                      &quot;controlsContainer&quot;: &quot;#tns-custom-controls-2&quot;
+                    }">
+                            <div><img src="../../assets/img/components/carousel/04.jpg" alt="Slider image"></div>
+                            <div><img src="../../assets/img/components/carousel/05.jpg" alt="Slider image"></div>
+                            <div><img src="../../assets/img/components/carousel/06.jpg" alt="Slider image"></div>
+                          </div>
+                        </div>
+                        <div class="tns-custom-controls cs-controls-inverse mt-3" id="tns-custom-controls-2" tabindex="0">
+                          <button type="button" data-controls="prev" tabindex="-1"><i class="cxi-arrow-left"></i></button>
+                          <button type="button" data-controls="next" tabindex="-1"><i class="cxi-arrow-right"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Custom controls outside carousel: Top --&gt;
+&lt;div class=&quot;tns-custom-controls cs-controls-inverse mb-3&quot; id=&quot;tns-custom-controls-1&quot; tabindex=&quot;0&quot;&gt;
+  &lt;button type=&quot;button&quot; data-controls=&quot;prev&quot; tabindex=&quot;-1&quot;&gt;
+    &lt;i class=&quot;cxi-arrow-left&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button type=&quot;button&quot; data-controls=&quot;next&quot; tabindex=&quot;-1&quot;&gt;
+    &lt;i class=&quot;cxi-arrow-right&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;cs-carousel&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options=&#39;{
+    &quot;gutter&quot;: 15,
+    &quot;nav&quot;: false,
+    &quot;controlsContainer&quot;: &quot;#tns-custom-controls-1&quot;
+  }&#39;&gt;
+    &lt;!-- Carousel item... --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Custom controls outside carousel: Bottom --&gt;
+&lt;div class=&quot;cs-carousel&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options=&#39;{
+    &quot;gutter&quot;: 15,
+    &quot;nav&quot;: false,
+    &quot;controlsContainer&quot;: &quot;#tns-custom-controls-1&quot;
+  }&#39;&gt;
+    &lt;!-- Carousel item... --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;tns-custom-controls cs-controls-inverse mt-3&quot; id=&quot;tns-custom-controls-2&quot; tabindex=&quot;0&quot;&gt;
+  &lt;button type=&quot;button&quot; data-controls=&quot;prev&quot; tabindex=&quot;-1&quot;&gt;
+    &lt;i class=&quot;cxi-arrow-left&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+  &lt;button type=&quot;button&quot; data-controls=&quot;next&quot; tabindex=&quot;-1&quot;&gt;
+    &lt;i class=&quot;cxi-arrow-right&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Fade transition + Layer animation-->
+          <section class="pb-5 mb-md-2" id="carousel-fade-animations">
+            <h2 class="h3">Fade transition + Layer animation</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result4" data-toggle="tab" role="tab" aria-controls="result4" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html4" data-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result4" role="tabpanel">
+                    <div class="cs-carousel" style="max-width: 50rem;">
+                      <div class="cs-carousel-inner" data-carousel-options="{
+                  &quot;mode&quot;: &quot;gallery&quot;,
+                  &quot;nav&quot;: false
+                }">
+                        <div class="py-5 bg-faded-primary">
+                          <div class="py-5 px-3 text-center">
+                            <h3 class="mb-2 cs-from-top">From top to bottom</h3>
+                            <p class="mb-4 pb-3 font-size-lg cs-from-bottom">From bottom to top</p>
+                            <button class="btn btn-primary cs-scale-down cs-delay-2" type="button">Scale down</button>
+                          </div>
+                        </div>
+                        <div class="py-5 bg-faded-success">
+                          <div class="py-5 px-3 text-center">
+                            <h3 class="mb-2 cs-from-left">From left to right</h3>
+                            <p class="mb-4 pb-3 font-size-lg cs-from-right">From right to left</p>
+                            <button class="btn btn-success cs-scale-up cs-delay-2" type="button">Scale up</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Fade transition + Layer animation --&gt;
+&lt;div class=&quot;cs-carousel&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options=&#39;{
+    &quot;mode&quot;: &quot;gallery&quot;,
+    &quot;nav&quot;: false
+  }&#39;&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div class=&quot;py-5 bg-faded-primary&quot;&gt;
+      &lt;div class=&quot;py-5 px-3 text-center&quot;&gt;
+        &lt;h3 class=&quot;mb-2 cs-from-top&quot;&gt;From top to bottom&lt;/h3&gt;
+        &lt;p class=&quot;mb-4 pb-3 font-size-lg cs-from-bottom&quot;&gt;From bottom to top&lt;/p&gt;
+        &lt;button class=&quot;btn btn-primary cs-scale-down cs-delay-2&quot; type=&quot;button&quot;&gt;Scale down&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div class=&quot;py-5 bg-faded-success&quot;&gt;
+      &lt;div class=&quot;py-5 px-3 text-center&quot;&gt;
+        &lt;h3 class=&quot;mb-2 cs-from-left&quot;&gt;From left to right&lt;/h3&gt;
+        &lt;p class=&quot;mb-4 pb-3 font-size-lg cs-from-right&quot;&gt;From right to left&lt;/p&gt;
+        &lt;button class=&quot;btn btn-success cs-scale-up cs-delay-2&quot; type=&quot;button&quot;&gt;Scale up&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Vertical slider + Controls visible on hover-->
+          <section class="pb-5 mb-md-2" id="carousel-vertical">
+            <h2 class="h3">Vertical slider + Controls visible on hover</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result5" data-toggle="tab" role="tab" aria-controls="result5" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html5" data-toggle="tab" role="tab" aria-controls="html5" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result5" role="tabpanel">
+                    <div class="cs-carousel cs-controls-onhover" style="max-width: 50rem;">
+                      <div class="cs-carousel-inner" data-carousel-options="{
+                  &quot;axis&quot;: &quot;vertical&quot;
+                }">
+                        <div><img src="../../assets/img/components/carousel/20.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/21.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/22.jpg" alt="Slider image"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html5" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Vertical slider + Controls visible on hover --&gt;
+&lt;div class=&quot;cs-carousel cs-controls-onhover&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options=&#39;{
+    &quot;axis&quot;: &quot;vertical&quot;
+  }&#39;&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Responsive carousel with multiple items-->
+          <section class="pb-5 mb-md-2" id="carousel-multiple">
+            <h2 class="h3">Responsive carousel with multiple items</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result6" data-toggle="tab" role="tab" aria-controls="result6" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html6" data-toggle="tab" role="tab" aria-controls="html6" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result6" role="tabpanel">
+                    <div class="cs-carousel cs-nav-outside cs-controls-outside">
+                      <div class="cs-carousel-inner" data-carousel-options="{
+                  &quot;items&quot;: 4,
+                  &quot;responsive&quot;: {
+                    &quot;0&quot;: {
+                      &quot;items&quot;:1,
+                      &quot;gutter&quot;: 16
+                    },
+                    &quot;500&quot;: {
+                      &quot;items&quot;:2,
+                      &quot;gutter&quot;: 18
+                    },
+                    &quot;768&quot;: {
+                      &quot;items&quot;:3,
+                      &quot;gutter&quot;: 18
+                    },
+                    &quot;1100&quot;: {
+                      &quot;gutter&quot;: 24
+                    }
+                  }
+                }">
+                        <div><img src="../../assets/img/components/carousel/10.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/11.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/12.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/13.jpg" alt="Slider image"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html6" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Responsive carousel with multiple items --&gt;
+&lt;div class=&quot;cs-carousel cs-nav-outside cs-controls-outside&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options=&#39;{
+    &quot;items&quot;: 4,
+    &quot;responsive&quot;: {
+      &quot;0&quot;: {
+        &quot;items&quot;:1,
+        &quot;gutter&quot;: 16
+      },
+      &quot;500&quot;: {
+        &quot;items&quot;:2,
+        &quot;gutter&quot;: 18
+      },
+      &quot;768&quot;: {
+        &quot;items&quot;:3,
+        &quot;gutter&quot;: 18
+      },
+      &quot;1100&quot;: {
+        &quot;gutter&quot;: 24
+      }
+    }
+  }&#39;&gt;
+    
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Nav option: Pager-->
+          <section class="pb-5 mb-md-2" id="carousel-pager">
+            <h2 class="h3">Nav option: Pager</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result7" data-toggle="tab" role="tab" aria-controls="result7" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html7" data-toggle="tab" role="tab" aria-controls="html7" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result7" role="tabpanel">
+                    <div class="cs-carousel" style="max-width: 50rem;">
+                      <div class="cs-carousel-inner" data-carousel-options="{
+                  &quot;gutter&quot;: 15,
+                  &quot;navContainer&quot;: &quot;#cs-pager&quot;
+                }">
+                        <div><img src="../../assets/img/components/carousel/14.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/15.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/16.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/17.jpg" alt="Slider image"></div>
+                      </div>
+                      <div class="cs-pager px-sm-5 pb-sm-5 px-3 pb-3" id="cs-pager">
+                        <button type="button" data-nav="0">01</button>
+                        <button type="button" data-nav="1">02</button>
+                        <button type="button" data-nav="2">03</button>
+                        <button type="button" data-nav="3">04</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html7" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Nav option: Pager --&gt;
+&lt;div class=&quot;cs-carousel&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options=&#39;{
+    &quot;gutter&quot;: 15,
+    &quot;navContainer&quot;: &quot;#cs-pager&quot;
+  }&#39;&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Pager --&gt;
+  &lt;div class=&quot;cs-pager px-sm-5 pb-sm-5 px-3 pb-3&quot; id=&quot;cs-pager&quot;&gt;
+    &lt;button type=&quot;button&quot; data-nav=&quot;0&quot;&gt;01&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-nav=&quot;1&quot;&gt;02&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Nav option: Thumbnails-->
+          <section class="pb-5 mb-md-2" id="carousel-thumbnails">
+            <h2 class="h3">Nav option: Thumbnails</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result8" data-toggle="tab" role="tab" aria-controls="result8" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html8" data-toggle="tab" role="tab" aria-controls="html8" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result8" role="tabpanel">
+                    <div class="cs-carousel" style="max-width: 50rem;">
+                      <div class="cs-carousel-inner" data-carousel-options="{
+                  &quot;gutter&quot;: 15,
+                  &quot;loop&quot;: false,
+                  &quot;navContainer&quot;: &quot;#cs-thumbnails&quot;,
+                  &quot;navAsThumbnails&quot;: true
+                }">
+                        <div><img src="../../assets/img/components/carousel/18.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/19.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/20.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/21.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/22.jpg" alt="Slider image"></div>
+                        <div><img src="../../assets/img/components/carousel/23.jpg" alt="Slider image"></div>
+                      </div>
+                      <div class="cs-thumbnails" id="cs-thumbnails">
+                        <button type="button" data-nav="0"><img src="../../assets/img/components/carousel/24.jpg" alt="Thumbnail"></button>
+                        <button type="button" data-nav="1"><img src="../../assets/img/components/carousel/25.jpg" alt="Thumbnail"></button>
+                        <button type="button" data-nav="2"><img src="../../assets/img/components/carousel/26.jpg" alt="Thumbnail"></button>
+                        <button type="button" data-nav="3"><img src="../../assets/img/components/carousel/27.jpg" alt="Thumbnail"></button>
+                        <button type="button" data-nav="4"><img src="../../assets/img/components/carousel/28.jpg" alt="Thumbnail"></button>
+                        <button type="button" data-nav="5"><img src="../../assets/img/components/carousel/29.jpg" alt="Thumbnail"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html8" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Nav option: Thumbnails --&gt;
+&lt;div class=&quot;cs-carousel&quot;&gt;
+  &lt;div class=&quot;cs-carousel-inner&quot; data-carousel-options=&#39;{
+    &quot;gutter&quot;: 15,
+    &quot;loop&quot;: false,
+    &quot;navContainer&quot;: &quot;#cs-thumbnails&quot;,
+    &quot;navAsThumbnails&quot;: true
+  }&#39;&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Carousel item --&gt;
+    &lt;div&gt;&lt;img src=&quot;path-to-image&quot; alt=&quot;Slider image&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Thumbnails --&gt;
+  &lt;div class=&quot;cs-thumbnails&quot; id=&quot;cs-thumbnails&quot;&gt;
+    &lt;button type=&quot;button&quot; data-nav=&quot;0&quot;&gt;
+      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Thumbnail&quot;&gt;
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-nav=&quot;1&quot;&gt;
+      &lt;img src=&quot;path-to-thumbnail-image&quot; alt=&quot;Thumbnail&quot;&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Default Bootstrap carousel-->
+          <section class="pb-5 mb-md-2" id="carousel-default-bs">
+            <h2 class="h3">Default Bootstrap carousel</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result9" data-toggle="tab" role="tab" aria-controls="result9" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html9" data-toggle="tab" role="tab" aria-controls="html9" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result9" role="tabpanel">
+                    <div class="carousel slide" id="carouselExample" data-ride="carousel" style="max-width: 50rem;">
+                      <ol class="carousel-indicators">
+                        <li class="active" data-target="#carouselExample" data-slide-to="0"></li>
+                        <li data-target="#carouselExample" data-slide-to="1"></li>
+                        <li data-target="#carouselExample" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="../../assets/img/components/carousel/04.jpg" alt="Slider image"></div>
+                        <div class="carousel-item"><img src="../../assets/img/components/carousel/05.jpg" alt="Slider image"></div>
+                        <div class="carousel-item"><img src="../../assets/img/components/carousel/06.jpg" alt="Slider image"></div>
+                      </div><a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html9" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Default Bootstrap carousel --&gt;
+&lt;div id=&quot;carouselExample&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;
+  &lt;ol class=&quot;carousel-indicators&quot;&gt;
+    &lt;li data-target=&quot;#carouselExample&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#carouselExample&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#carouselExample&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
+    &lt;div class=&quot;carousel-item active&quot;&gt;
+      &lt;img src=&quot;path-to-image&quot; alt=&quot;Image&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;carousel-item&quot;&gt;
+      &lt;img src=&quot;path-to-image&quot; alt=&quot;Image&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;carousel-item&quot;&gt;
+      &lt;img src=&quot;path-to-image&quot; alt=&quot;Image&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;a class=&quot;carousel-control-prev&quot; href=&quot;#carouselExample&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;
+    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class=&quot;carousel-control-next&quot; href=&quot;#carouselExample&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;
+    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Quick (anchor) navigation-->
+        <div class="col-xl-3 d-none d-xl-block pl-5">
+          <aside class="sticky-top pt-5">
+            <div class="pt-5 mt-5">
+              <div class="pl-4 border-left">
+                <h3 class="h5 mb-3">Jump to</h3>
+                <nav class="nav nav-dark flex-column">
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#carousel-all-controls-inside">Default: Nav (dots) inside + controls (prev/next) inside</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#carousel-all-controls-outside">Nav (dots) outside + Controls (prev/next) outside + Infinite</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#carousel-controls-top-bot">Custom controls outside carousel</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#carousel-fade-animations">Fade transition + Layer animation</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#carousel-vertical">Vertical carousel + Arrows visible on hover</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#carousel-multiple">Responsive carousel with multiple items</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#carousel-pager">Nav option: Pager</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#carousel-thumbnails">Nav option: Thumbnails</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#carousel-default-bs">Default Bootstrap carousel</a>
+                </nav>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

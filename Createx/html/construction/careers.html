@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | Construction Bureau - Available Positions</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/construction/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Main content-->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper position-relative">
+
+
+      <!-- Navbar -->
+      <!-- Remove .navbar-sticky class to detach .navbar from page scroll -->
+      <header class="cs-header navbar navbar-expand-lg navbar-light navbar-sticky navbar-floating">
+        <div class="container px-0 px-xl-3">
+          <a class="navbar-brand order-lg-1 mr-lg-5 mr-0 pr-lg-2" href="index.html">
+            <img src="../../assets/img/construction/logo-dark.svg" alt="Createx Logo" width="130">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a class="media media-tool" href="tel:(405)555-0128">
+              <i class="media-tool-icon cxi-iphone"></i>
+              <div class="media-body ml-2 pl-1">
+                <h6 class="media-tool-title">Call us</h6>
+                <span class="media-tool-label d-xl-inline-block d-none">(405) 555-0128</span>
+              </div>
+            </a>
+            <a class="media media-tool" href="mailto:hello@example.com">
+              <i class="media-tool-icon cxi-chat"></i>
+              <div class="media-body ml-2 pl-1">
+                <h6 class="media-tool-title">Talk to us</h6>
+                <span class="media-tool-label d-xl-inline-block d-none">hello@example.com</span>
+              </div>
+            </a>
+            <button class="navbar-toggler ml-2 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse1">
+            <ul class="navbar-nav mr-auto text-nowrap">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html">Homepage v.1</a></li>
+                  <li><a class="dropdown-item" href="index-v2.html">Homepage v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="services.html">Services List</a></li>
+                  <li><a class="dropdown-item" href="services-single-v1.html">Single Service v.1</a></li>
+                  <li><a class="dropdown-item" href="services-single-v2.html">Single Service v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Works</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="projects.html">Projects Grid</a></li>
+                  <li><a class="dropdown-item" href="project-single-v1.html">Single Project v.1</a></li>
+                  <li><a class="dropdown-item" href="project-single-v2.html">Single Project v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                  <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">News</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="news.html">News Grid</a></li>
+                  <li><a class="dropdown-item" href="news-single.html">Single Post</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page title-->
+      <section class="mb-md-2 pt-6 pb-lg-6 pb-5 bg-secondary bg-no-repeat bg-position-center-top" style="background-image: url(../../assets/img/construction/careers/page-title-bg.jpg);">
+        <div class="container pt-lg-5 pb-lg-2">
+          <div class="row">
+            <div class="col-lg-6 col-md-8">
+
+              <!-- Breadcrumbs -->
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-lg-4 pb-md-3">
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Homepage</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="about.html">About Us</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">Available Positions</li>
+                </ol>
+              </nav>
+
+              <!-- Title -->
+              <h1 class="display-1 text-uppercase">Available Position</h1>
+              <p class="mb-0 lead text-muted">Build your career with Createx Construction Bureau.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page content-->
+      <!-- Positions -->
+      <section class="container pt-lg-6 pt-5 pb-4">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="card card-horizontal card-hover align-items-center justify-content-sm-between mb-4 px-sm-5">
+              <div class="card-body pl-sm-0 border-0 text-sm-left text-center">
+                <ul class="nav justify-content-sm-start justify-content-center text-nowrap mb-1">
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-map-pin-outline mt-n1 mr-2 font-size-base align-middle"></i>
+                      New York
+                    </span>
+                    <span class="text-border pl-2">|</span>
+                  </li>
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-clock mt-n1 mr-2 font-size-base align-middle"></i>
+                      Full Time
+                    </span>
+                  </li>
+                </ul>
+                <h3 class="h5 mb-0">Heavy Equipment Operator</h3>
+              </div>
+              <div class="card-footer pr-sm-0 border-0">
+                <a href="contacts.html" class="btn btn-outline-primary text-uppercase">Apply now</a>
+              </div>
+            </div>
+            <div class="card card-horizontal card-hover align-items-center justify-content-sm-between mb-4 px-sm-5">
+              <div class="card-body pl-sm-0 border-0 text-sm-left text-center">
+                <ul class="nav justify-content-sm-start justify-content-center text-nowrap mb-1">
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-map-pin-outline mt-n1 mr-2 font-size-base align-middle"></i>
+                      San Francisco
+                    </span>
+                    <span class="text-border pl-2">|</span>
+                  </li>
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-clock mt-n1 mr-2 font-size-base align-middle"></i>
+                      Full Time
+                    </span>
+                  </li>
+                </ul>
+                <h3 class="h5 mb-0">Financial Compliance Analyst</h3>
+              </div>
+              <div class="card-footer pr-sm-0 border-0">
+                <a href="contacts.html" class="btn btn-outline-primary text-uppercase">Apply now</a>
+              </div>
+            </div>
+            <div class="card card-horizontal card-hover align-items-center justify-content-sm-between mb-4 px-sm-5">
+              <div class="card-body pl-sm-0 border-0 text-sm-left text-center">
+                <ul class="nav justify-content-sm-start justify-content-center text-nowrap mb-1">
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-map-pin-outline mt-n1 mr-2 font-size-base align-middle"></i>
+                      New Jersey
+                    </span>
+                    <span class="text-border pl-2">|</span>
+                  </li>
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-clock mt-n1 mr-2 font-size-base align-middle"></i>
+                      Full Time
+                    </span>
+                  </li>
+                </ul>
+                <h3 class="h5 mb-0">Project Manager - Buildings</h3>
+              </div>
+              <div class="card-footer pr-sm-0 border-0">
+                <a href="contacts.html" class="btn btn-outline-primary text-uppercase">Apply now</a>
+              </div>
+            </div>
+            <div class="card card-horizontal card-hover align-items-center justify-content-sm-between mb-4 px-sm-5">
+              <div class="card-body pl-sm-0 border-0 text-sm-left text-center">
+                <ul class="nav justify-content-sm-start justify-content-center text-nowrap mb-1">
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-map-pin-outline mt-n1 mr-2 font-size-base align-middle"></i>
+                      New York
+                    </span>
+                    <span class="text-border pl-2">|</span>
+                  </li>
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-clock mt-n1 mr-2 font-size-base align-middle"></i>
+                      Full Time
+                    </span>
+                  </li>
+                </ul>
+                <h3 class="h5 mb-0">Environment Specialist</h3>
+              </div>
+              <div class="card-footer pr-sm-0 border-0">
+                <a href="contacts.html" class="btn btn-outline-primary text-uppercase">Apply now</a>
+              </div>
+            </div>
+            <div class="card card-horizontal card-hover align-items-center justify-content-sm-between mb-4 px-sm-5">
+              <div class="card-body pl-sm-0 border-0 text-sm-left text-center">
+                <ul class="nav justify-content-sm-start justify-content-center text-nowrap mb-1">
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-map-pin-outline mt-n1 mr-2 font-size-base align-middle"></i>
+                      New York
+                    </span>
+                    <span class="text-border pl-2">|</span>
+                  </li>
+                  <li class="nav-item mr-2">
+                    <span class="font-size-sm text-muted">
+                      <i class="cxi-clock mt-n1 mr-2 font-size-base align-middle"></i>
+                      Full Time
+                    </span>
+                  </li>
+                </ul>
+                <h3 class="h5 mb-0">Accountant</h3>
+              </div>
+              <div class="card-footer pr-sm-0 border-0">
+                <a href="contacts.html" class="btn btn-outline-primary text-uppercase">Apply now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1 pt-lg-0 pt-4 text-lg-left text-center">
+            <h3>Didn’t find what you were looking for?</h3>
+            <p class="mb-5 font-size-lg">Send your CV or subscribe to our newsletter to receive information about new vacancies.</p>
+            <button type="button" data-toggle="modal" data-target="#modalSubscribe" class="btn btn-lg btn-outline-primary mr-sm-grid-gutter mb-sm-grid-gutter mb-4 text-uppercase">Subscribe</button>
+            <button type="button" data-toggle="modal" data-target="#modalCV" class="btn btn-lg btn-primary mb-sm-grid-gutter mb-4 text-uppercase">Send CV</button>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Benefits -->
+      <section class="container mb-md-5 py-lg-6 py-5">
+        <h2 class="h1 text-center">Our core values</h2>
+        <p class="mb-5 pb-md-3 text-muted text-center">Our mission is to set the highest standards for construction sphere.</p>
+        <div class="row">
+          <div class="col-md-4 mb-md-0 mb-5">
+            <div class="mx-auto text-center" style="max-width: 285px;">
+              <img class="mb-4" src="../../assets/img/construction/icons/ic-brain.svg" width="48" alt="Icon box image">
+              <h3 class="h5 mb-2">Training</h3>
+              <p class="mb-0 text-muted">Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.</p>
+            </div>
+          </div>
+          <span class="divider-vertical d-md-block d-none"></span>
+          <div class="col-md-4 mb-md-0 mb-5">
+            <div class="mx-auto text-center" style="max-width: 285px;">
+              <img class="mb-4" src="../../assets/img/construction/icons/ic-steps.svg" width="48" alt="Icon box image">
+              <h3 class="h5 mb-2">Professional Growth</h3>
+              <p class="mb-0 text-muted">Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est ea.</p>
+            </div>
+          </div>
+          <span class="divider-vertical d-md-block d-none"></span>
+          <div class="col-md-4 mb-md-0 mb-5">
+            <div class="mx-auto text-center" style="max-width: 285px;">
+              <img class="mb-4" src="../../assets/img/construction/icons/ic-money-bag.svg" width="48" alt="Icon box image">
+              <h3 class="h5 mb-2">Growing Salary</h3>
+              <p class="mb-0 text-muted">Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Details -->
+      <section class="py-5 jarallax" data-jarallax data-speed="0.8">
+
+        <!-- Parallax bg -->
+        <div class="jarallax-img" style="background-image: url(../../assets/img/construction/detail-form-bg.jpg);"></div>
+
+        <!-- Content -->
+        <div class="container py-4">
+          <div class="ml-md-auto mr-md-0 mx-auto" style="max-width: 495px;">
+
+            <!-- Details form -->
+            <form class="py-5 px-sm-5 px-4 bg-light rounded box-shadow-lg">
+              <h2 class="h3 text-center">A quick way to discuss details</h2>
+              <div class="form-group">
+                <label for="detail-name" class="font-size-sm">Name*</label>
+                <input id="detail-name" class="form-control" type="text" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="detail-tel" class="font-size-sm">Phone*</label>
+                <input id="detail-tel" class="form-control" type="tel" placeholder="Your phone number" required>
+              </div>
+              <div class="form-group">
+                <label for="detail-email" class="font-size-sm">Email</label>
+                <input id="detail-email" class="form-control" type="email" placeholder="Your working email">
+              </div>
+              <div class="form-group">
+                <label for="detail-message" class="font-size-sm">Message*</label>
+                <textarea id="detail-message" class="form-control" rows="2" placeholder="Your message" required></textarea>
+              </div>
+              <div class="form-group custom-control custom-checkbox">
+                <input id="detail-subscribe" class="custom-control-input" type="checkbox" checked>
+                <label for="detail-subscribe" class="custom-control-label font-size-sm">I agree to receive communications from Createx Construction Bureau.</label>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary text-uppercase">Send request</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-3 bg-dark">
+      <div class="container mt-lg-3 py-md-5 py-4">
+        <div class="row mb-5">
+          <div class="col-lg-5 col-md-6">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <a class="d-inline-block" href="index.html">
+                <img src="../../assets/img/construction/logo-light.svg" width="130" alt="Createx logo">
+              </a>
+              <div class="mt-sm-1 mt-4 pr-sm-4">
+                <a href="#" class="social-btn">
+                  <i class="cxi-whatsapp"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-messenger"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-facebook"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-twitter"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <p class="mb-md-0 mb-4 font-size-sm text-light opacity-60">Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service. Our mission is to set the highest standards for construction sphere.</p>
+          </div>
+          <div class="col-lg-5 offset-lg-2 col-md-6">
+            <h4 class="text-light">Let’s stay in touch</h4>
+            <form class="input-group">
+              <input class="form-control input-light" type="email" placeholder="Your email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary text-uppercase" type="submit">Subscribe</button>
+              </div>
+            </form>
+            <p class="mb-0 pt-3 font-size-xs text-light opacity-60">*Subscribe to our newsletter to receive communications and early updates from Createx Construction Bureau.</p>
+          </div>
+        </div>
+        <div class="row mb-sm-5 mb-4">
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Head office</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Address:</span>
+                <a href="#" class="nav-link d-inline-block p-0 font-weight-normal">8502 Preston Rd. Inglewood, New York</a>
+              </li>
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Call:</span>
+                <a href="tel:(405)555-0128" class="nav-link d-inline-block p-0 font-weight-normal">(405) 555-0128</a>
+              </li>
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Email:</span>
+                <a href="mailto:hello@example.com" class="nav-link d-inline-block p-0 font-weight-normal">hello@example.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Who we are</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="about.html" class="nav-link p-0 font-weight-normal">About Us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="careers.html" class="nav-link p-0 font-weight-normal">Available Positions</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 col-sm-6 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Our experience</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="services.html" class="nav-link p-0 font-weight-normal">Services</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="projects.html" class="nav-link p-0 font-weight-normal">Work</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="news.html" class="nav-link p-0 font-weight-normal">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex align-items-sm-center justify-content-between py-1">
+          <div class="font-size-xs text-light">
+            <span class="d-sm-inline d-block mb-1">
+              <span class="font-size-sm">&copy; </span>
+              All rights reserved.
+            </span>
+            Made with 
+            <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+            <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+          </div>
+          <div class="d-flex align-items-sm-center">
+            <span class="d-sm-inline-block d-none text-light font-size-sm mr-3 mb-1 align-vertical text-uppercase">Go to top</span>
+            <a class="btn-scroll-top position-static rounded" href="#top" data-scroll>
+              <i class="btn-scroll-top-icon cxi-angle-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Modal Subscribe -->
+    <div id="modalSubscribe" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+            <h3 class="modal-title mt-4 mb-0 text-center">Subscribe to our newsletter</h3>
+            <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+              <i class="cxi-cross" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="modal-body px-md-5 px-4">
+            <form class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="subscribe-name" class="font-size-sm">Name*</label>
+                <input id="subscribe-name" class="form-control" type="text" placeholder="Your name" required>
+                <div class="invalid-tooltip">Please enter your name.</div>
+              </div>
+              <div class="form-group">
+                <label for="subscribe-email" class="font-size-sm">Email*</label>
+                <input id="subscribe-email" class="form-control" type="email" placeholder="Your working email" required>
+                <div class="invalid-tooltip">Please enter your email.</div>
+              </div>
+              <div class="form-group py-4">
+                <button type="submit" class="btn btn-block btn-primary text-uppercase">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal CV -->
+    <div id="modalCV" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+            <h3 class="modal-title mt-4 mb-0 text-center">Send your CV</h3>
+            <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+              <i class="cxi-cross" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="modal-body px-md-5 px-4">
+            <form class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="cv-name" class="font-size-sm">Name*</label>
+                <input id="cv-name" class="form-control" type="text" placeholder="Your name" required>
+                <div class="invalid-tooltip">Please enter your name.</div>
+              </div>
+              <div class="form-group">
+                <label for="cv-location" class="font-size-sm">Location*</label>
+                <select id="cv-location" class="form-control custom-select bg-image-0">
+                  <option>Choose your location</option>
+                  <option>New York</option>
+                  <option>New Jersey</option>
+                  <option>San Francisco</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cv-phone" class="font-size-sm">Phone*</label>
+                <input id="cv-phone" class="form-control" type="tel" placeholder="Your phone number" required>
+                <div class="invalid-tooltip">Please enter your phone number.</div>
+              </div>
+              <div class="form-group">
+                <label for="cv-email" class="font-size-sm">Email*</label>
+                <input id="cv-email" class="form-control" type="email" placeholder="Your working email" required>
+                <div class="invalid-tooltip">Please enter your email.</div>
+              </div>
+              <div class="form-group">
+                <label for="applicant-cv">Attach your CV*</label>
+                <div class="custom-file">
+                  <input id="cv-file" class="custom-file-input" type="file" required>
+                  <label for="cv-file" class="custom-file-label">Choose file</label>
+                  <div class="invalid-tooltip">Please attach your CV.</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cv-letter" class="font-size-sm">Сovering letter</label>
+                <textarea id="cv-letter" class="form-control bg-image-0" rows="3" placeholder="Your covering letter"></textarea>
+              </div>
+              <div class="form-group py-4">
+                <button type="submit" class="btn btn-block btn-primary text-uppercase">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

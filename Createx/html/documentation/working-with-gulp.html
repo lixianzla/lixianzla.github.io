@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx Docs | Working with Gulp</title>
+    
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template and UI Kit">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/theme.min.css">
+  </head>
+
+
+  <!-- Body-->
+  <body>
+    <main class="container-fluid pb-3 pb-sm-4">
+
+      <!-- Main content-->
+      <section class="cs-offcanvas-enabled row pb-3 pb-md-4">
+        <div class="col-xl-9">
+
+          <!-- Navbar-->
+          <header class="navbar navbar-expand navbar-light fixed-top navbar-box-shadow bg-light px-3 px-lg-4" data-scroll-header data-fixed-element>
+            <a class="navbar-brand d-lg-none" href="dev-setup.html">
+              <img src="../../assets/img/components/logo/logo-dark.svg" alt="Createx" width="130">
+            </a>
+            <button class="navbar-toggler d-block d-lg-none mr-3 ml-auto" type="button" data-toggle="offcanvas" data-target="componentsNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav ml-auto d-none d-lg-flex align-items-center">
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../../index.html">
+                  <i class="cxi-eye align-middle mt-n1 mr-2"></i>
+                  Live preview
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../components/typography.html">
+                  <i class="cxi-layouts align-middle mt-n1 mr-2"></i>
+                  Components
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+            </ul>
+            <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-primary btn-shadow ml-lg-4" target="_blank" rel="noopener">
+              <i class="cxi-cart mr-2 d-none d-sm-inline-block"></i>
+              Buy now
+            </a>
+          </header>
+
+          <!-- Side navigation (Off-canvas)-->
+          <aside class="cs-offcanvas cs-offcanvas-expand bg-dark" id="componentsNav">
+            <div class="cs-offcanvas-cap d-none d-lg-block py-4">
+              <a class="navbar-brand py-2" href="dev-setup.html">
+                <img src="../../assets/img/components/logo/logo-white.svg" alt="Createx" width="130">
+              </a>
+              <span class="badge badge-warning">Docs</span>
+            </div>
+            <div class="cs-offcanvas-cap d-flex d-lg-none">
+              <div class="d-flex align-items-center mt-1">
+                <h5 class="text-light mb-0 mr-3">Menu</h5>
+                <span class="badge badge-warning">Docs</span>
+              </div>
+              <button class="close text-light" type="button" data-dismiss="offcanvas" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="d-flex d-lg-none align-items-center py-4 px-3 border-bottom border-light">
+              <a class="btn btn-primary btn-block mr-3 px-4" href="../../index.html"><i class="cxi-eye mt-n1 mr-2"></i>Preview</a>
+              <a class="btn btn-success btn-block mt-0 px-4" href="../components/typography.html"><i class="cxi-layouts mt-n1 mr-2"></i>Components</a>
+            </div>
+            <div class="cs-offcanvas-body px-0 pt-4 pb-grid-gutter" data-simplebar data-simplebar-inverse>
+              <h6 class="font-size-lg text-light px-4 mt-2 mb-3">Contents</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="dev-setup.html">Dev environment setup</a>
+                <a class="nav-link px-4 active" href="working-with-gulp.html">Working with Gulp</a>
+                <a class="nav-link px-4" href="project-structure.html">Project structure</a>
+                <a class="nav-link px-4" href="install-vendor-plugin.html">Installing Vendor plugins with Npm and Gulp</a>
+                <a class="nav-link px-4" href="using-scss.html">Using Sass (Scss)</a>
+                <a class="nav-link px-4" href="autoprefixer.html">Browser support</a>
+                <a class="nav-link px-4" href="global-colors.html">Global colors</a>
+                <a class="nav-link px-4" href="components.html">Components</a>
+                <a class="nav-link px-4" href="utilities.html">Utility classes</a>
+                <a class="nav-link px-4" href="ui-icons.html">UI icons (Icon font)</a>
+                <a class="nav-link px-4" href="mailchimp.html">Mailchimp subscription form</a>
+                <a class="nav-link px-4" href="figma-files.html">Figma design files</a>
+                <a class="nav-link px-4" href="credits.html">Sources and credits</a>
+              </nav>
+            </div>
+          </aside>
+
+          <!-- Page title-->
+          <div class="border-bottom pt-5 pb-2 mt-lg-2 mb-5">
+            <h1 class="mt-3 mt-md-4 pt-5">Working with Gulp</h1>
+          </div>
+
+          <!-- Page content -->
+          <p>As has been mentioned in previous section, <span class='text-dark font-weight-bold'>Gulp</span> is a JavaScript task runner. It helps with performing repetitive tasks like minification, compilation, unit testing, linting, etc. This is possible thanks to extensive Gulp Plugins library.</p>
+          <p>Gulp tasks are already set up for you. They are stored inside <code>Createx/gulpfile.js</code>. But in order to have access to them via you Command Line tool you will need to install <span class='text-dark font-weight-bold'>gulp-cli node package</span>. Gulp CLI stands for Gulp Command Line Interface. <u class="d-block">To do that type following line in your terminal:</u></p>
+          <kbd class="d-inline-block mb-3">npm install -g gulp-cli</kbd>
+          <span class="d-block text-info mb-4">* if you are on Mac make sure to use <span class='font-weight-bold'>sudo</span> to install packages globally otherwise you may runt into error.</span>
+          <h2 class="h4 pt-3">Gulp CLI commands</h2>
+          <ul class="pt-2">
+            <li class="pb-3"> <kbd>gulp</kbd> - this main command will fire default gulp task which includes: <u>launching BrowserSync, moving vendor libraries from node_modules directory to dist folder, javascript minification, sass compilation and lanching watch task</u>. BrowserSync will create dev server and sync your browser with your code editor. Note: to use other separate tasks explained below you will need to open other Terminal window and leave the one with running server intact.</li>
+            <li class="pb-3"> <kbd>gulp clean</kbd> - as the name implies it cleans dist folder from generated (compiled assests like css, js, vendor libs, etc.)</li>
+            <li class="pb-3"> <kbd>gulp vendor</kbd> - moves vendor libraries from <code>node_modules</code> directory to <code>dist</code> folder. Please check this article explaining how to add new vendor plugin to your project - <a href='install-vendor-plugin.html' class='font-weight-bold'>Installing Vendor plugins with Npm and Gulp</a></li>
+            <li class="pb-3"> <kbd>gulp js</kbd> - polifill using Babel and then minify and uglify main <code>theme.js</code> file from <code>src</code> folder to <code>dist/js/theme.min.js</code> file which linked to your HTML document. Babel gives you an opportunity to write ES6 javascript and be sure it will be compiled to ES5 js that has a better support across browsers.</li>
+            <li class="pb-3"> <kbd>gulp sass:expanded</kbd> - compiles <code>.scss</code> files into non-minified CSS (css/theme.css). From <code>src</code> to <code>dist</code> folder.</li>
+            <li class="pb-3"> <kbd>gulp sass:minified</kbd> - compiles <code>.scss</code> files into minified CSS (css/theme.min.css). From <code>src</code> to <code>dist</code> folder.</li>
+            <li class="pb-3"> <kbd>gulp watch</kbd> - launches <code>watch</code> task. It will watch changes of your .scss / .js / .html files and automatically compile them.</li>
+          </ul>
+          <h2 class="h4 pt-3">Next steps</h2>
+          <p>Now, when you are equiped with all necessary tools and dev invironment is all set you are ready to dive into Createx customization.</p>
+          <p>Take some time to familiarize yourself with <a href='project-structure.html' class='font-weight-bold'>Project structure</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

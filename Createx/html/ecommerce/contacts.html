@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | E-Commerce - Contacts</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template and UI Kit">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/ecommerce/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper">
+
+
+      <!-- Sign in modal-->
+      <div class="modal fade" id="modal-signin" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+
+            <!-- Sign in form -->
+            <div class="cs-view show" id="modal-signin-view">
+              <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+                <h3 class="modal-title mt-4 mb-0 text-center">Sign in</h3>
+                <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                  <i class="cxi-cross" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="modal-body px-md-5 px-4">
+                <p class="font-size-sm text-muted text-center">Sign in to your account using email and password provided during registration.</p>
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" class="form-control" id="signin-email" placeholder="Your email address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signin-password" class="form-label">Password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signin-password" placeholder="Your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="remember-me" checked>
+                      <label for="remember-me" class="custom-control-label">Remember me</label>
+                    </div>
+                    <a href="#" class="font-size-sm text-decoration-none">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                  <p class="font-size-sm pt-4 mb-0">
+                    Don't have an account?
+                    <a href="#" class="font-weight-bold text-decoration-none" data-view="#modal-signup-view">Sign up</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <!-- Sign up form -->
+            <div class="cs-view" id="modal-signup-view">
+              <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+                <h3 class="modal-title mt-4 mb-0 text-center">Sign up</h3>
+                <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                  <i class="cxi-cross" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="modal-body px-md-5 px-4">
+                <p class="font-size-sm text-muted text-center">Sign in to your account using email and password provided during registration.</p>
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="signup-name">Full name</label>
+                    <input type="text" class="form-control" id="signup-name" placeholder="Your full name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" class="form-control" id="signup-email" placeholder="Your email address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-password" class="form-label">Password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signup-password" placeholder="Your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-confirm-password" class="form-label">Confirm password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signup-confirm-password" placeholder="Confirm your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary btn-block" type="submit">Sign up</button>
+                  <p class="font-size-sm pt-4 mb-0">Already have an account?
+                    <a href="#" class="font-weight-bold text-decoration-none" data-view="#modal-signin-view">Sign in</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="modal-body text-center px-0 pt-2 pb-4">
+              <hr>
+              <p class="font-size-sm text-heading mb-3 pt-4">Or sign in with</p>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Facebook">
+                <i class="cxi-facebook"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Google">
+                <i class="cxi-google"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Twitter">
+                <i class="cxi-twitter"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="LinkedIn">
+                <i class="cxi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Shopping cart off-canvas -->
+      <div id="cart" class="cs-offcanvas cs-offcanvas-right">
+
+        <!-- Header -->
+        <div class="cs-offcanvas-cap align-items-center border-bottom">
+          <h2 class="h5 mb-0">Your cart (4)</h2>
+          <button class="close mr-n1" type="button" data-dismiss="offcanvas" aria-label="Close">
+            <span class="h3 font-weight-normal mb-0" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="cs-offcanvas-body">
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/01.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Basic hooded sweatshirt in pink</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Color:</span> Pink</li>
+                    <li class="mb-0"><span class="text-muted">Size:</span> S</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong class="text-danger">$15.00</strong> <s class="font-size-xs text-muted">$31.00</s></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/02.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Black and white sport cap</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$18.15</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/03.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Mid-rise slim cropped fit jeans</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Size:</span> M</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$76.00</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/04.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Men fashion gray shoes</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Color:</span> Gray</li>
+                    <li class="mb-0"><span class="text-muted">Size:</span> 10.5</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$84.00</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="cs-offcanvas-cap flex-column border-top">
+          <div class="d-flex align-items-center justify-content-between mb-3 pb-1">
+            <span class="text-muted mr-2">Subtotal:</span>
+            <span class="h5 mb-0">$198.65</span>
+          </div>
+          <a href="checkout.html" class="btn btn-primary btn-lg btn-block">
+            <i class="cxi-credit-card font-size-lg mt-n1 mr-1"></i>
+            Checkout
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Header (Topbar + Navbar) -->
+      <header class="cs-header">
+  
+        <!-- Topbar -->
+        <div class="topbar topbar-dark bg-dark">
+          <div class="container d-flex align-items-center px-0 px-xl-3">
+            <div class="mr-3">
+              <a href="tel:4055550128" class="topbar-link d-md-inline-block d-none">
+                Available 24/7 at
+                <span class='font-weight-bold'>(405) 555-0128</span>
+              </a>
+              <a href="tel:4055550128" class="topbar-link d-md-none d-inline-block text-nowrap">
+                <i class="cxi-iphone align-middle"></i>
+                (405) 555-0128
+              </a>
+            </div>
+            <a href="order-tracking.html" class="topbar-link ml-auto mr-4 pr-sm-2 text-nowrap">
+              <i class="cxi-map-pin-outline mr-1 font-size-base align-middle"></i>
+              Track <span class="d-none d-sm-inline">order</span>
+            </a>
+            <div class="dropdown">
+              <a href="#" class="topbar-link dropdown-toggle" data-toggle="dropdown">
+                <img src="../../assets/img/ecommerce/flags/en.png" class="mr-2" width="20" alt="English">
+                Eng / $
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/fr.png" class="mr-2" width="20" alt="Français">
+                  Français / €
+                </a>
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/de.png" class="mr-2" width="20" alt="Deutsch">
+                  Deutsch / €
+                </a>
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/it.png" class="mr-2" width="20" alt="Italiano">
+                  Italiano / €
+                </a>
+              </div>
+            </div>
+            <a href="#modal-signin" class="topbar-link d-lg-inline-block d-none ml-4 pl-1 text-decoration-none text-nowrap" data-toggle="modal" data-view="#modal-signin-view">
+              <i class="cxi-profile mr-1 font-size-base align-middle"></i>
+              Sign in / up
+            </a>
+          </div>
+        </div>
+  
+        <!-- Navbar -->
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+        <div class="navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-fixed-element>
+          <div class="container px-0 px-xl-3">
+            <a href="index.html" class="navbar-brand order-lg-1 mr-0 pr-lg-3 mr-lg-4">
+              <img src="../../assets/img/ecommerce/logo.svg" alt="Createx Logo" width="130">
+            </a>
+            <!-- Search desktop -->
+            <div class="input-group-overlay ml-4 d-lg-block d-none order-lg-3" style="max-width: 21rem;">
+              <input class="form-control appended-form-control" type="text" placeholder="Search for products...">
+              <div class="input-group-append-overlay">
+                <span class="input-group-text"><i class="cxi-search lead align-middle"></i></span>
+              </div>
+            </div>
+            <!-- Toolbar -->
+            <div class="d-flex align-items-center order-lg-3">
+              <ul class="nav nav-tools flex-nowrap">
+                <li class="nav-item d-lg-block d-none mb-0">
+                  <a href="account-wishlist.html" class="nav-tool">
+                    <i class="cxi-heart nav-tool-icon"></i>
+                    <span class="nav-tool-label">2</span>
+                  </a>
+                </li>
+                <li class="divider-vertical mb-0 d-lg-block d-none"></li>
+                <li class="nav-item mb-0">
+                  <a href="#" class="nav-tool align-self-center pr-lg-0" data-toggle="offcanvas" data-target="cart">
+                    <i class="cxi-cart nav-tool-icon"></i>
+                    <span class="badge badge-success align-middle mt-n1 ml-2 px-2 py-1 font-size-xs">4</span>
+                  </a>
+                </li>
+                <li class="divider-vertical mb-0 d-lg-none d-block"></li>
+                <li class="nav-item mb-0">
+                  <button class="navbar-toggler mt-n1 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!-- Navbar collapse -->
+            <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse">
+              <!-- Search mobile -->
+              <div class="input-group-overlay form-group mb-0 d-lg-none d-block">
+                <input type="text" class="form-control prepended-form-control rounded-0 border-0" placeholder="Search for products...">
+                <div class="input-group-prepend-overlay">
+                  <span class="input-group-text">
+                    <i class="cxi-search font-size-lg align-middle mt-n1"></i>
+                  </span>
+                </div>
+              </div>
+              <!-- Menu -->
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="shop-catalog.html" class="dropdown-item">Catalog with Filters</a></li>
+                    <li><a href="shop-single.html" class="dropdown-item">Single Product</a></li>
+                    <li><a href="checkout.html" class="dropdown-item">Checkout</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mega-dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Megamenu</a>
+                  <div class="dropdown-menu">
+                    <div class="container pt-lg-1 pb-lg-3">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">New collection</a></li>
+                            <li><a href="#" class="dropdown-item">Best sellers</a></li>
+                            <li><a href="#" class="dropdown-item">Plus size</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Sale up to 70%</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Clothes</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Coats</a></li>
+                            <li><a href="#" class="dropdown-item">Jackets</a></li>
+                            <li><a href="#" class="dropdown-item">Suits</a></li>
+                            <li><a href="#" class="dropdown-item">Dresses</a></li>
+                            <li><a href="#" class="dropdown-item">Cardigans &amp; sweaters</a></li>
+                            <li><a href="#" class="dropdown-item">Sweatshirts &amp; hoodies</a></li>
+                            <li><a href="#" class="dropdown-item">T-shirts &amp; tops</a></li>
+                            <li><a href="#" class="dropdown-item">Pants</a></li>
+                            <li><a href="#" class="dropdown-item">Jeans</a></li>
+                            <li><a href="#" class="dropdown-item">Shorts</a></li>
+                            <li><a href="#" class="dropdown-item">Skirts</a></li>
+                            <li><a href="#" class="dropdown-item">Lingerie &amp; nightwear</a></li>
+                            <li><a href="#" class="dropdown-item">Sportswear</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Shoes</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Boots</a></li>
+                            <li><a href="#" class="dropdown-item">Flat shoes</a></li>
+                            <li><a href="#" class="dropdown-item">Heels</a></li>
+                            <li><a href="#" class="dropdown-item">Sandals</a></li>
+                            <li><a href="#" class="dropdown-item">Mules</a></li>
+                            <li><a href="#" class="dropdown-item">Sliders</a></li>
+                            <li><a href="#" class="dropdown-item">Slippers</a></li>
+                            <li><a href="#" class="dropdown-item">Sneakers</a></li>
+                            <li><a href="#" class="dropdown-item">Leather</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Accessories</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Bags &amp; backpacks</a></li>
+                            <li><a href="#" class="dropdown-item">Hats &amp; scarves</a></li>
+                            <li><a href="#" class="dropdown-item">Hair accessories</a></li>
+                            <li><a href="#" class="dropdown-item">Belts</a></li>
+                            <li><a href="#" class="dropdown-item">Jewellery</a></li>
+                            <li><a href="#" class="dropdown-item">Watches</a></li>
+                            <li><a href="#" class="dropdown-item">Sunglasses</a></li>
+                            <li><a href="#" class="dropdown-item">Purses</a></li>
+                            <li><a href="#" class="dropdown-item">Socks &amp; tights</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-1 d-none d-lg-block py-2">
+                          <span class="divider-vertical h-100 mx-auto"></span>
+                        </div>
+                        <div class="col-lg-3 d-none d-lg-block py-2">
+                          <a href="#" class="d-block text-decoration-none pt-1">
+                            <img src="../../assets/img/ecommerce/megamenu.jpg" class="d-block rounded mb-3" alt="Promo banner">
+                            <h5 class="font-size-sm mb-3">Back to school. Sale up to 50%</h5>
+                            <div class="btn btn-outline-primary btn-sm">
+                              See offers
+                              <i class="cxi-arrow-right ml-1"></i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="account-profile.html" class="dropdown-item">Profile</a></li>
+                    <li><a href="account-orders.html" class="dropdown-item">My Orders</a></li>
+                    <li><a href="account-wishlist.html" class="dropdown-item">Wishlist</a></li>
+                    <li><a href="account-recently-viewed.html" class="dropdown-item">Recently Viewed</a></li>
+                    <li><a href="account-reviews.html" class="dropdown-item">My Reviews</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="blog.html" class="dropdown-item">Blog List</a></li>
+                    <li><a href="blog-single.html" class="dropdown-item">Single Post</a></li>
+                    <li><a href="contacts.html" class="dropdown-item">Contacts</a></li>
+                    <li><a href="order-tracking.html" class="dropdown-item">Order Tracking</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#modal-signin" class="nav-link d-lg-none" data-toggle="modal" data-view="#modal-signin-view">
+                    <i class="cxi-profile font-size-base align-middle mr-1"></i>
+                    Sign in / up
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <!-- Promo bar -->
+      <section class="cs-promo-bar bg-primary py-2">
+        <div class="container d-flex justify-content-center">
+          <div class="cs-carousel cs-controls-inverse">
+            <div class="cs-carousel-inner" data-carousel-options = '{"mode": "gallery", "nav": false}'>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Up to 70% Off.</strong>
+                <a href="#" class="text-light">Shop our latest sale offers</a>
+              </div>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Money back guarantee.</strong>
+                <a href="#" class="text-light">Learn more</a>
+              </div>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Friendly customer support.</strong>
+                <a href="#" class="text-light">Contact 24/7</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Breadcrumb -->
+      <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb breadcrumb-alt mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html"><i class="cxi-home"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Contacts</li>
+          </ol>
+        </div>
+      </nav>
+
+
+      <!-- Page content -->
+      <section class="container pt-3 pt-md-4">
+        <div class="row">
+
+          <!-- Nav tabs -->
+          <div class="col-md-4">
+            <div class="mb-md-5 mb-4 pb-lg-4" data-simplebar data-simplebar-auto-hide="false">
+              <ul class="nav flex-md-column flex-nowrap text-nowrap" role="tablist">
+                <li class="nav-item">
+                  <a href="#contact" id="contact-tab" class="nav-link h3 mr-md-0 mr-sm-5 mr-4 mb-0 px-0 active" data-toggle="tab" role="tab" aria-controls="contact" aria-selected="true">
+                    Contact Us
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#stores" id="stores-tab" class="nav-link h3 mr-md-0 mr-sm-5 mr-4 mb-0 px-0" data-toggle="tab" role="tab" aria-controls="stores" aria-selected="false">
+                    Outlet Stores
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#faq" id="faq-tab" class="nav-link h3 mr-md-0 mr-sm-5 mr-4 mb-0 px-0" data-toggle="tab" role="tab" aria-controls="faq" aria-selected="false">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tabs content -->
+          <div class="col-md-8 ml-auto pt-md-2">
+            <div class="tab-content pb-2 pb-sm-4 pb-lg-5">
+
+              <!-- Tab: Contact Us -->
+              <div id="contact" class="tab-pane pb-5 fade show active" role="tabpanel" aria-labelledby="contact-tab">
+                <p class="text-dark lead font-weight-bold">If you have any questions, concerns or comments, we would love to hear from you! Submit your query using any of the methods below:</p>
+                <div class="nav-dark mb-5">
+                  <a href="tel:4055550128" class="nav-link d-flex align-items-center font-weight-normal p-0 mb-2">
+                    <i class="cxi-iphone text-primary lead mr-2"></i>
+                    <span>(405) 555-0128</span>
+                  </a>
+                  <a href="mailto:support@example.com" class="nav-link d-flex align-items-center font-weight-normal p-0 mb-2">
+                    <i class="cxi-mail text-primary lead mr-2"></i>
+                    <span>support@example.com</span>
+                  </a>
+                  <a href="#" class="nav-link d-flex align-items-center font-weight-normal p-0 mb-2">
+                    <i class="cxi-messenger text-primary lead mr-2"></i>
+                    <span>Connect on Messenger</span>
+                  </a>
+                  <a href="#" class="nav-link d-flex align-items-center font-weight-normal p-0 mb-2">
+                    <i class="cxi-twitter text-primary lead mr-2"></i>
+                    <span>Tweet us</span>
+                  </a>
+                </div>
+                <p class="text-dark lead font-weight-bold pb-2">Or get in touch with us by completing the below form:</p>
+                <form class="needs-validation" novalidate>
+                  <div class="row">
+                    <div class="col-sm-6 form-group">
+                      <label for="cont-name">Name *</label>
+                      <input type="text" id="cont-name" class="form-control form-control-lg" placeholder="John Doe" required>
+                      <div class="invalid-feedback">Please let us know your name.</div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                      <label for="cont-email">Email *</label>
+                      <input type="email" id="cont-email" class="form-control form-control-lg" placeholder="johndoe@example.com" required>
+                      <div class="invalid-feedback">Please provide valid email address.</div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                      <label for="cont-phone">Phone</label>
+                      <input type="text" id="cont-phone" class="form-control form-control-lg bg-0" data-format="custom" data-delimiter="-" data-blocks="2 3 4" placeholder="00-000-0000">
+                    </div>
+                    <div class="col-sm-6 form-group">
+                      <label for="cont-subject">Subject</label>
+                      <input type="text" id="cont-subject" class="form-control form-control-lg bg-0" placeholder="Title of your message">
+                    </div>
+                    <div class="col-12 form-group">
+                      <label for="cont-message">Message *</label>
+                      <textarea id="cont-message" class="form-control form-control-lg" rows="5" placeholder="Write your message here" required></textarea>
+                      <div class="invalid-feedback">Please write your message.</div>
+                    </div>
+                    <div class="col-lg-4 col-sm-5 pt-2">
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Send message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Tab: Outlet Stores -->
+              <div id="stores" class="tab-pane pb-3 fade" role="tabpanel" aria-labelledby="stores-tab">
+                <div class="row">
+                  <div class="col-sm-6 mb-grid-gutter">
+                    <div class="card card-hover">
+                      <img class="card-img-top" src="../../assets/img/ecommerce/contacts/01.jpg" alt="Card image">
+                      <div class="card-body">
+                        <h3 class="h4">New York, USA</h3>
+                        <ul class="mb-0 list-unstyled nav-dark">
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="tel:4055550128">
+                              <i class="cxi-iphone mt-1 mr-2 pr-1 lead text-primary"></i>
+                              (405) 555-0128
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="mailto:newyork@example.com">
+                              <i class="cxi-mail mt-1 mr-2 pr-1 lead text-primary"></i>
+                              newyork@example.com
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <div class="d-flex">
+                              <i class="cxi-clock mt-1 mr-2 pr-1 lead text-primary"></i>
+                              Daily from 9am to 9pm
+                            </div>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="#">
+                              <i class="cxi-map-pin-outline mt-1 mr-2 pr-1 lead text-primary"></i>
+                              20 W 29th Street New York, NY 10001
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 mb-grid-gutter">
+                    <div class="card card-hover">
+                      <img class="card-img-top" src="../../assets/img/ecommerce/contacts/02.jpg" alt="Card image">
+                      <div class="card-body">
+                        <h3 class="h4">Delaware, USA</h3>
+                        <ul class="mb-0 list-unstyled nav-dark">
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="tel:8085550111">
+                              <i class="cxi-iphone mt-1 mr-2 pr-1 lead text-primary"></i>
+                              (808) 555-0111
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="mailto:delaware@example.com">
+                              <i class="cxi-mail mt-1 mr-2 pr-1 lead text-primary"></i>
+                              delaware@example.com
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <div class="d-flex">
+                              <i class="cxi-clock mt-1 mr-2 pr-1 lead text-primary"></i>
+                              Daily from 10am to 9pm
+                            </div>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="#">
+                              <i class="cxi-map-pin-outline mt-1 mr-2 pr-1 lead text-primary"></i>
+                              6391 Elgin St. Celina, Delaware 10299
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 mb-grid-gutter">
+                    <div class="card card-hover">
+                      <img class="card-img-top" src="../../assets/img/ecommerce/contacts/03.jpg" alt="Card image">
+                      <div class="card-body">
+                        <h3 class="h4">New Jersey, USA</h3>
+                        <ul class="mb-0 list-unstyled nav-dark">
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="tel:7025550122">
+                              <i class="cxi-iphone mt-1 mr-2 pr-1 lead text-primary"></i>
+                              (702) 555-0122
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="mailto:newjersey@example.com">
+                              <i class="cxi-mail mt-1 mr-2 pr-1 lead text-primary"></i>
+                              newjersey@example.com
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <div class="d-flex">
+                              <i class="cxi-clock mt-1 mr-2 pr-1 lead text-primary"></i>
+                              Daily from 9am to 8pm
+                            </div>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="#">
+                              <i class="cxi-map-pin-outline mt-1 mr-2 pr-1 lead text-primary"></i>
+                              2464 Royal Ln. Mesa, New Jersey 45463
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 mb-grid-gutter">
+                    <div class="card card-hover">
+                      <img class="card-img-top" src="../../assets/img/ecommerce/contacts/04.jpg" alt="Card image">
+                      <div class="card-body">
+                        <h3 class="h4">Maine, USA</h3>
+                        <ul class="mb-0 list-unstyled nav-dark">
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="tel:2195550114">
+                              <i class="cxi-iphone mt-1 mr-2 pr-1 lead text-primary"></i>
+                              (219) 555-0114
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="mailto:maine@example.com">
+                              <i class="cxi-mail mt-1 mr-2 pr-1 lead text-primary"></i>
+                              maine@example.com
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <div class="d-flex">
+                              <i class="cxi-clock mt-1 mr-2 pr-1 lead text-primary"></i>
+                              Daily from 9am to 8pm
+                            </div>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link font-weight-normal p-0" href="#">
+                              <i class="cxi-map-pin-outline mt-1 mr-2 pr-1 lead text-primary"></i>
+                              8502 Preston Rd. Inglewood, Maine 98380
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab: FAQ -->
+              <div id="faq" class="tab-pane fade mt-n3 mt-dm-0 pb-5" role="tabpanel" aria-labelledby="faq-tab">
+                <div class="accordion-alt" id="accordion">
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="headingFaq-1">
+                      <h5 class="accordion-heading">
+                        <a href="#faq-1" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="faq-1">Do I need to register to place an order?
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="faq-1" class="collapse show" aria-labelledby="headingFaq-1" data-parent="#accordion">
+                      <div class="card-body text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="headingFaq-2">
+                      <h5 class="accordion-heading">
+                        <a href="#faq-2" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="faq-2">What is the estimated delivery time?
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="faq-2" class="collapse" aria-labelledby="headingFaq-2" data-parent="#accordion">
+                      <div class="card-body text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="headingFaq-3">
+                      <h5 class="accordion-heading">
+                        <a href="#faq-3" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="faq-3">How can I pay for my order?
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="faq-3" class="collapse" aria-labelledby="headingFaq-3" data-parent="#accordion">
+                      <div class="card-body text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="headingFaq-4">
+                      <h5 class="accordion-heading">
+                        <a href="#faq-4" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="faq-4">Can I get a refund if the price has changed since I ordered it?
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="faq-4" class="collapse" aria-labelledby="headingFaq-4" data-parent="#accordion">
+                      <div class="card-body text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="headingFaq-5">
+                      <h5 class="accordion-heading">
+                        <a href="#faq-5" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="faq-5">Do you refund delivery charges if I return something?
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="faq-5" class="collapse" aria-labelledby="headingFaq-5" data-parent="#accordion">
+                      <div class="card-body text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="headingFaq-6">
+                      <h5 class="accordion-heading">
+                        <a href="#faq-6" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="faq-6">What documents will be provided with the order?
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="faq-6" class="collapse" aria-labelledby="headingFaq-6" data-parent="#accordion">
+                      <div class="card-body text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="headingFaq-7">
+                      <h5 class="accordion-heading">
+                        <a href="#faq-7" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="faq-7">Can I return the order to the courier if anything does not suit me?
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="faq-7" class="collapse" aria-labelledby="headingFaq-7" data-parent="#accordion">
+                      <div class="card-body text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="headingFaq-8">
+                      <h5 class="accordion-heading">
+                        <a href="#faq-8" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="faq-8">What should I do if my order hasn't been delivered yet?
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="faq-8" class="collapse" aria-labelledby="headingFaq-8" data-parent="#accordion">
+                      <div class="card-body text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="headingFaq-9">
+                      <h5 class="accordion-heading">
+                        <a href="#faq-9" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="faq-9">What is your Returns Policy?
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="faq-9" class="collapse" aria-labelledby="headingFaq-9" data-parent="#accordion">
+                      <div class="card-body text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Subscription CTA -->
+      <section class="bg-secondary py-5">
+        <div class="container pt-2 pt-md-3 pb-3">
+          <div class="row align-items-center">
+            <form class="col-md-6 col-xl-5 needs-validation" novalidate>
+              <h2 class="h1 mb-3">Subscribe for updates</h2>
+              <p class="text-muted font-size-lg pb-3 mb-4">Subscribe for exclusive early sale access and new arrivals.</p>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-women" checked>
+                <label for="s-women" class="cs-btn-control-label">Women</label>
+              </div>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-men">
+                <label for="s-men" class="cs-btn-control-label">Men</label>
+              </div>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-girls">
+                <label for="s-girls" class="cs-btn-control-label">Girls</label>
+              </div>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-boys">
+                <label for="s-boys" class="cs-btn-control-label">Boys</label>
+              </div>
+              <div class="form-group pt-4">
+                <label for="s-email">Email</label>
+                <div class="input-group input-group-lg">
+                  <input type="email" id="s-email" class="form-control" placeholder="Your email address" required>
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" id="s-agree" class="custom-control-input">
+                <label for="s-agree" class="custom-control-label">I agree to receive communications from Createx Store.</label>
+              </div>
+            </form>
+            <div class="col-md-6 col-xl-7 d-none d-md-block">
+              <div class="ml-auto" style="max-width: 459px;">
+                <img src="../../assets/img/ecommerce/subscribe-illustration.png" class="d-block" alt="Illustration">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-sm-5 pt-4 bg-dark">
+      <div class="container pt-3">
+        <div class="row pb-sm-2">
+          <div class="col-6 col-sm-3 col-lg-2 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Help</h3>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Delivery &amp; returns</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">FAQ</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="order-tracking.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Track order</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="blog.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-sm-3 col-lg-2 col-xl-3 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light pl-xl-6">Shop</h3>
+            <ul class="nav nav-light flex-column pl-xl-6">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">New arrivals</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Trending now</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Sales</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Brands</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3 pb-2 pb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Get in Touch</h3>
+            <ul class="nav nav-light flex-column pb-3">
+              <li class="nav-item text-nowrap mb-2">
+                <span class="text-light mr-1">Call:</span>
+                <a href="tel:4055550128" class="nav-link d-inline-block mr-lg-0 mr-sm-4 p-0 font-weight-normal">(405) 555-0128</a>
+              </li>
+              <li class="nav-item text-nowrap mb-2">
+                <span class="text-light mr-1">Email:</span>
+                <a href="mailto:support@example.com" class="nav-link d-inline-block mr-lg-0 mr-sm-4 p-0 font-weight-normal">support@example.com</a>
+              </li>
+            </ul>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-facebook"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-instagram"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-twitter"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-youtube"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light">
+              <i class="cxi-pinterest"></i>
+            </a>
+          </div>
+          <div class="col-lg-4 col-xl-3 mb-4">
+            <h3 class="h6 mb-3 pb-1 text-uppercase text-light">Download our App</h3>
+            <div class="d-flex flex-wrap flex-sm-nowrap">
+              <a href="#" class="btn-market btn-apple mb-3 mr-3" role="button">
+                <span class="btn-market-subtitle">Download on the</span>
+                <span class="btn-market-title">App Store</span>
+              </a>
+              <a href="#" class="btn-market btn-google mb-3" role="button">
+                <span class="btn-market-subtitle">Download on the</span>
+                <span class="btn-market-title">Google Play</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-light">
+        <div class="container py-4">
+          <div class="font-size-xs text-light">
+            <span class="font-size-sm">&copy; </span>
+            All rights reserved. Made with 
+            <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+            <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="../../assets/vendor/cleave.js/dist/cleave.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

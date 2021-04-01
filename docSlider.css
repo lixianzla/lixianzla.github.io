@@ -16,10 +16,8 @@
 
 
 .docSlider-button {
-
   cursor: pointer;
   display: block;
-  opacity: .5;
   appearance: none;
   border: none;
 
@@ -29,6 +27,7 @@
 
 .docSlider-button.selected {
   opacity: 1;
+  color:#424551;
 }
 
 .docSlider-button:active {

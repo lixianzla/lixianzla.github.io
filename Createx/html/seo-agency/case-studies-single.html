@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | SEO &amp; Marketing Agency - 200% increase in conversion rate for Lovato Company</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/seo-agency/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body-->
+  <body class="cs-is-sidebar">
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Main content-->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper position-relative">
+
+
+      <!-- Navbar -->
+      <!-- Remove .navbar-sticky class to detach .navbar from page scroll -->
+      <header class="cs-header navbar navbar-expand-lg navbar-dark navbar-sticky navbar-floating">
+        <div class="container px-0 px-xl-3">
+          <a class="navbar-brand order-lg-1 mr-lg-5 mr-0 pr-lg-2" href="index.html">
+            <img class="navbar-brand-static" src="../../assets/img/seo-agency/logo-light.svg" alt="Createx Logo" width="130">
+            <img class="navbar-brand-floating" src="../../assets/img/seo-agency/logo-dark.svg" alt="Createx Logo" width="130">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a class="btn btn-primary d-sm-inline-block d-none ml-4" href="contacts.html">Talk to a human</a>
+            <button class="navbar-toggler ml-1 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse1">
+            <ul class="navbar-nav mr-auto text-nowrap">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="services.html">Services List</a></li>
+                  <li><a class="dropdown-item" href="services-single.html">Single Service</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">Case Studies</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="case-studies.html">Case Studies Grid</a></li>
+                  <li><a class="dropdown-item" href="case-studies-single.html">Single Case Study</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About us</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="blog.html">Blog grid</a></li>
+                  <li><a class="dropdown-item" href="blog-single.html">Single Post</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Contacts</a>
+              </li>
+              <li class="nav-item d-sm-none d-block">
+                <a class="btn btn-sm btn-primary m-3" href="contacts.html">Get consultation</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page title-->
+      <section class="py-md-6 py-5 bg-dark jarallax" data-jarallax data-speed="0.6">
+        <div class="container mt-5 py-lg-4">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-alt breadcrumb-light justify-content-center mb-sm-4">
+              <li class="breadcrumb-item">
+                <a href="index.html">
+                  <i class="cxi-home"></i>
+                </a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="case-studies.html">Case Studies</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">200% increase in conversion rate for Lovato Company</li>
+            </ol>
+          </nav>
+          <div class="mb-sm-4 mb-3 text-center">
+            <a href="#" class="d-inline-block">
+              <img src="../../assets/img/seo-agency/logo/lovato.svg" width="150" alt="Lovato">
+            </a>
+          </div>
+          <h1 class="display-3 col-lg-10 mx-auto px-sm-3 px-0 text-center text-light">200% increase in conversion rate for Lovato Company</h1>
+        </div>
+
+        <!-- Parallax bg -->
+        <div class="jarallax-img bg-overlay" style="background-image: url(../../assets/img/seo-agency/сase-studies/single/page-title-bg.jpg);"></div>
+      </section>
+
+
+      <!-- Page content -->
+      <section class="bg-no-repeat bg-position-center" style="background-image: url(../../assets/img/seo-agency/shapes/stroke/05.svg)">
+        <div class="container pt-lg-6 pt-5 pb-4">
+          <div class="row">
+
+            <!-- Content -->
+            <div class="col-lg-7">
+              <div class="d-flex flex-sm-row flex-column flex-sm-wrap align-items-sm-start align-items-center mb-4 pb-2">
+                <div class="media flex-sm-row flex-column align-items-center mr-sm-5 pb-sm-5 pb-4 pr-sm-3">
+                  <div class="cs-progress-radial mr-sm-2 mb-sm-0 mb-2 pr-sm-1 pl-0" style="width: 80px;" data-progress-radial='{
+                    "strokeWidth": 8,
+                    "trailWidth": 8,
+                    "color": "#f52f6e",
+                    "trailColor": "rgba(245,47,110, .3)",
+                    "progress": 0.7
+                  }'></div>
+                  <div class="media-body text-sm-left text-center">
+                    <h2 class="mb-0">70%</h2>
+                    <span class="lead">Open Rate</span>
+                  </div>
+                </div>
+                <div class="media flex-sm-row flex-column align-items-center mr-sm-5 pb-sm-5 pb-4 pr-sm-3">
+                  <div class="cs-progress-radial mr-sm-2 mb-sm-0 mb-2 pr-sm-1 pl-0" style="width: 80px;" data-progress-radial='{
+                    "strokeWidth": 8,
+                    "trailWidth": 8,
+                    "color": "#f89828",
+                    "trailColor": "rgba(248,152,40, .3)",
+                    "progress": 1
+                  }'></div>
+                  <div class="media-body text-sm-left text-center">
+                    <h2 class="mb-0">200%</h2>
+                    <span class="lead">Growth in sales</span>
+                  </div>
+                </div>
+                <div class="media flex-sm-row flex-column align-items-center pb-sm-5 pb-4">
+                  <div class="media-body text-sm-left text-center">
+                    <h2 class="mb-0">8,000</h2>
+                    <span class="lead">DAU</span>
+                  </div>
+                </div>
+              </div>
+              <p class="lead font-weight-bold">Lovato Company has been with us for 3 months. They are in our optimal package for SEO & our premium package for SEM plus Ad spend ($1,000). The client’s goal was to get growth in sales. We helped exceeding the client’s goals in generating new clients.</p>
+              <p>At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque, fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi varius viverra risus vel.</p>
+              <img src="../../assets/img/seo-agency/сase-studies/single/01.jpg" alt="Diagram 1" class="d-block mb-5 box-shadow-sm">
+              <h2 class="pt-3">Strategies</h2>
+              <ul class="list-unstyled">
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Gravida elit et libero, varius congue risus quisque enim.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Sit quis vitae, gravida aliquam condimentum.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Praesent et facilisis nam mus senectus massa dignissim.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Fermentum diam elementum viverra proin.
+                </li>
+              </ul>
+              <p>Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id nec sed leo. Nisi in ornare lectus eget. Urna, risus, consectetur volutpat lorem purus. Velit aliquet nibh vitae maecenas. Consectetur neque ut aliquam eros, purus enim dignissim aenean vitae. Ultrices fames augue mattis tortor est justo, pharetra nibh risus. Facilisi at porttitor volutpat natoque proin amet, nulla. Vivamus ut lobortis sagittis curabitur tellus convallis eget netus vitae.</p>
+              <img src="../../assets/img/seo-agency/сase-studies/single/02.jpg" alt="Diagram 2" class="d-block mb-5">
+              <h2 class="pt-3">Resieved goals</h2>
+              <ul class="list-unstyled">
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Bibendum malesuada mauris, id nisl enim diam.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Nam id in non sed cras purus nunc et.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Neque tortor, pellentesque amet est, eu accumsan condimentum nulla.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Mauris orci, cursus nisl odio est adipiscing gravida magna eget.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Sit turpis sit ultrices viverra adipiscing malesuada.
+                </li>
+              </ul>
+              <h2 class="pt-3">Results</h2>
+              <ul class="mb-0 list-unstyled">
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Mauris dignissim blandit cursus imperdiet accumsan lorem vel, tortor.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Quis mauris vel felis convallis nulla dignissim.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Cursus sit platea ac posuere non interdum in.
+                </li>
+                <li class="d-flex">
+                  <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                  Mattis pellentesque vel, venenatis, urna, quis ut.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="col-lg-4 offset-lg-1">
+              <div class="cs-offcanvas cs-offcanvas-collapse cs-offcanvas-right" id="case-study-sidebar">
+                <div class="cs-offcanvas-cap box-shadow mb-3">
+                  <h5 class="h4 mb-0">Sidebar</h5>
+                  <button class="close mr-n1" type="button" data-dismiss="offcanvas" aria-label="Close">
+                    <span class="h2 mt-n1 mb-0 font-weight-normal" aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="cs-offcanvas-body py-4 py-lg-0" data-simplebar data-simplebar-auto-hide="true">
+
+                  <!-- About -->
+                  <div class="mb-lg-5 mb-4 p-4 rounded bg-secondary">
+                    <div class="py-3 px-2">
+                      <h4 class="mb-2 pb-1">About the client</h4>
+                      <p class="font-size-sm">At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque, fermentum.</p>
+                      <h4 class="mb-2 pb-1">Industry</h4>
+                      <p class="font-size-sm">Electric company - B2B</p>
+                      <h4 class="mb-2 pb-1">Services rendered</h4>
+                      <ul class="mb-0 list-unstyled">
+                        <li class="d-flex mb-2">
+                          <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                          Remarketing
+                        </li>
+                        <li class="d-flex mb-2">
+                          <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                          Conversion Rate Optimization
+                        </li>
+                        <li class="d-flex mb-2">
+                          <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                          User Testing
+                        </li>
+                        <li class="d-flex mb-2">
+                          <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                          PPC Management
+                        </li>
+                        <li class="d-flex mb-2">
+                          <i class="cxi-checkmark mt-1 mr-3 text-primary"></i>
+                          Usability Testing
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Widget: Tags -->
+                  <div class="cs-widget mb-lg-5 mb-4">
+                    <a class="cs-tag mr-1 mb-2" href="#">#SEO</a>
+                    <a class="cs-tag mr-1 mb-2" href="#">#research</a>
+                    <a class="cs-tag mr-1 mb-2" href="#">#paid_traffic</a>
+                  </div>
+
+                  <!-- Sharing -->
+                  <div class="mt-n3">
+                    <h5 class="d-inline-block mr-2 mb-0">Share:</h5>
+                    <a href="#" class="social-btn mr-1">
+                      <i class="cxi-facebook"></i>
+                    </a>
+                    <a href="#" class="social-btn mr-1">
+                      <i class="cxi-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn">
+                      <i class="cxi-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </aside> <!--  / Sidebar -->
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Form seo analisys -->
+      <section class="mt-lg-6 mt-5 py-md-5 py-4 bg-dark bg-no-repeat bg-position-center-bottom" style="background-image: url(../../assets/img/seo-agency/form-analysis/bg-shape.svg)">
+        <div class="container py-4 text-light">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-5 col-sm-10 mb-md-0 mb-sm-5 mb-4">
+              <div class="cs-parallax mx-auto">
+                <div class="cs-parallax-layer" data-depth="0.05"><img src="../../assets/img/seo-agency/form-analysis/illustration/01.svg" alt="Layer-1"></div>
+                <div class="cs-parallax-layer" data-depth="0.1"><img src="../../assets/img/seo-agency/form-analysis/illustration/02.svg" alt="Layer-2"></div>
+                <div class="cs-parallax-layer" data-depth="0.13"><img src="../../assets/img/seo-agency/form-analysis/illustration/03.svg" alt="Layer-3"></div>
+                <div class="cs-parallax-layer" data-depth="0.16"><img src="../../assets/img/seo-agency/form-analysis/illustration/04.svg" alt="Layer-4"></div>
+                <div class="cs-parallax-layer" data-depth="0.19"><img src="../../assets/img/seo-agency/form-analysis/illustration/05.svg" alt="Layer-5"></div>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-2 col-md-6 offset-md-1">
+              <h2 class="h1 pb-md-3 text-light">Get a Free SEO Analysis!</h2>
+              <form class="row needs-validation" novalidate>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="analisys-name" class="form-label text-white">Name</label>
+                    <input id="analisys-name" class="form-control input-light" type="text" placeholder="Your name" required>
+                    <div class="invalid-feedback">Please enter the name.</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="analisys-email" class="form-label text-white">Email</label>
+                    <input id="analisys-email" class="form-control input-light" type="email" placeholder="Your working email" required>
+                    <div class="invalid-feedback">Please provide a valid email.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="analisys-url" class="form-label text-white">Your website URL</label>
+                    <input id="analisys-url" class="form-control input-light" type="url" placeholder="http://yoursite.com" required>
+                    <div class="invalid-feedback">Please provide a valid url.</div>
+                  </div>
+                  <div class="d-sm-flex justify-content-between pt-sm-4">
+                    <div class="custom-control custom-checkbox mb-sm-0 mb-4">
+                      <input class="custom-control-input" type="checkbox" id="analisys-receive" checked>
+                      <label class="custom-control-label" for="analisys-receive">I agree to receive communications from Createx SEO Agency</label>
+                    </div>
+                    <div class="ml-sm-3">
+                      <button type="submit" class="btn btn-primary">Get a free analysis</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Shaped bg -->
+      <div class="bg-secondary">
+
+
+        <!-- Testimonials -->
+        <section class="container pt-lg-6 pt-5 pb-4 bg-no-repeat bg-position-center-bottom" style="background-image: url(../../assets/img/seo-agency/testimonials/bg-shape-light.svg)">
+          <h2 class="h1 mb-md-5 pb-2 text-center">What our clients say</h2>
+
+          <!-- Carousel -->
+          <div class="cs-carousel cs-nav-outside cs-controls-outside">
+            <div class="cs-carousel-inner" data-carousel-options='{
+              "autoHeight": true,
+              "responsive": {
+                "0": {
+                  "controls": false
+                },
+                "768": {
+                  "controls": true
+                }
+              }
+            }'>
+
+              <!-- Carousel item -->
+              <div class="px-md-4 pb-lg-3">
+                <div class="blockquote-card card box-shadow border-0 mb-md-4">
+                  <div class="card-body mt-sm-4 mx-xl-5 mx-sm-4 pb-0">
+                    <blockquote class="blockquote">
+                      <p class="lead">Vero dolores exercitationem quidem eum sit accusamus. Quisquam cumque nesciunt fugiat quae delectus quo earum deleniti, labore odio sint recusandae aperiam aut nemo placeat pariatur beatae dignissimos amet quos! A ipsam soluta possimus quisquam commodi natus nam aperiam ratione deleniti.</p>
+                    </blockquote>
+                  </div>
+                  <div class="card-footer mb-sm-4 mx-xl-5 mx-sm-4 pt-0 border-0 media align-items-center">
+                    <img class="mr-3 rounded-circle" src="../../assets/img/online-courses/testimonials/01.jpg" width="72" alt="Author">
+                    <div class="media-body">
+                      <h3 class="h6 mb-0">Courtney Alexander</h3>
+                      <span class="font-size-sm text-muted">Position, Company </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel item -->
+              <div class="px-md-4 pb-lg-3">
+                <div class="blockquote-card card box-shadow border-0 mb-md-4">
+                  <div class="card-body mt-sm-4 mx-xl-5 mx-sm-4 pb-0">
+                    <blockquote class="blockquote">
+                      <p class="lead">Optio deleniti eos harum minus mollitia aut labore maxime rem ex dolores, dignissimos quidem exercitationem dicta praesentium quasi quia nam expedita sed blanditiis alias facere magnam pariatur asperiores. Ad et ullam eos maiores culpa reiciendis delectus ipsa. Eveniet tempora vel quo repellendus nihil, veniam numquam.</p>
+                    </blockquote>
+                  </div>
+                  <div class="card-footer mb-sm-4 mx-xl-5 mx-sm-4 pt-0 border-0 media align-items-center">
+                    <img class="mr-3 rounded-circle" src="../../assets/img/online-courses/testimonials/02.jpg" width="72" alt="Author">
+                    <div class="media-body">
+                      <h3 class="h6 mb-0">Eleanor Pena</h3>
+                      <span class="font-size-sm text-muted">Position, Course</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </div> <!-- / Shaped bg -->
+
+
+      <!-- Case studies -->
+      <section class="py-5 bg-secondary">
+        <div class="container py-lg-4">
+          <div class="d-flex justify-content-between mb-md-5 mb-4">
+            <h2 class="h1 mb-0">Read our clients' case studies</h2>
+            <div class="tns-custom-controls cs-controls-inverse d-md-flex d-none mb-md-n4" id="tns-courses-controls" tabindex="0">
+              <button type="button" data-controls="prev" tabindex="-1">
+                <i class="cxi-arrow-left"></i>
+              </button>
+              <button type="button" data-controls="next" tabindex="-1">
+                <i class="cxi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Carousel -->
+          <div class="cs-carousel cs-nav-inverse">
+            <div class="cs-carousel-inner" data-carousel-options='{
+              "gutter": 30,
+              "controlsContainer": "#tns-courses-controls",
+              "responsive": {
+                "0": {
+                  "items": 1,
+                  "nav": true
+                },
+                "768": {
+                  "items": 2
+                },
+                "992": {
+                  "items": 3,
+                  "nav": false
+                }
+              }
+            }'>
+              <article class="mb-5 pb-md-5 pb-4 pt-2">
+                <a class="cs-image-fade card card-hover h-100 box-shadow" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/recent/01.jpg);">
+                  <div class="cs-image-inner d-flex flex-column justify-content-between h-100 p-3">
+                    <div class="card-header border-0 pb-0">
+                      <img class="cs-inner-img d-block mb-2" src="../../assets/img/seo-agency/logo/orbis.svg" alt="Orbis" style="max-width: 80px;"/>
+                      <span class="cs-inner-text text-sm">Charity organisation</span>
+                      <hr class="hr-gradient mt-4 mx-n4">
+                    </div>
+                    <div class="card-body">
+                      <p class="cs-inner-text mb-0">Createx SEO Agency helped Jive Software increase their MQL to SQL conversion rate by 300%.</p>
+                    </div>
+                    <div class="card-footer border-0 d-flex">
+                      <div class="media align-items-center mr-4 pr-2">
+                        <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                          "strokeWidth": 8,
+                          "trailWidth": 8,
+                          "color": "#f52f6e",
+                          "trailColor": "rgba(245,47,110, .3)",
+                          "progress": 0.7
+                        }'>
+                        </div>
+                        <div class="media-body">
+                          <h5 class="mb-n1 cs-inner-text">90%</h5>
+                          <span class="cs-inner-text font-size-xs">Engagement</span>
+                        </div>
+                      </div>
+                      <div class="media align-items-center">
+                        <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                          "strokeWidth": 8,
+                          "trailWidth": 8,
+                          "color": "#03cea4",
+                          "trailColor": "rgba(3,206,164, .3)",
+                          "progress": 1
+                        }'>
+                        </div>
+                        <div class="media-body">
+                          <h5 class="mb-n1 cs-inner-text">100%</h5>
+                          <span class="cs-inner-text font-size-xs">Deliverability</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="mb-5 pb-md-5 pb-4 pt-2">
+                <a class="cs-image-fade card card-hover h-100 box-shadow" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/recent/02.jpg);">
+                  <div class="cs-image-inner d-flex flex-column justify-content-between h-100 p-3">
+                    <div class="card-header border-0 pb-0">
+                      <img class="cs-inner-img d-block mb-2" src="../../assets/img/seo-agency/logo/exxon.svg" alt="Exxon" style="max-width: 80px;"/>
+                      <span class="cs-inner-text text-sm">Oil and natural resources</span>
+                      <hr class="hr-gradient mt-4 mx-n4">
+                    </div>
+                    <div class="card-body">
+                      <p class="cs-inner-text mb-0">With an advanced A/B testing and usability analysis, Createx SEO Agency helps Exxon see a 400% increase in conversion rate.</p>
+                    </div>
+                    <div class="card-footer border-0 d-flex">
+                      <div class="media align-items-center mr-4 pr-2">
+                        <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                          "strokeWidth": 8,
+                          "trailWidth": 8,
+                          "color": "#5a87fc",
+                          "trailColor": "rgba(90,135,252, .3)",
+                          "progress": 1
+                        }'>
+                        </div>
+                        <div class="media-body">
+                          <h5 class="mb-n1 cs-inner-text">200%</h5>
+                          <span class="cs-inner-text font-size-xs">Growth in sales</span>
+                        </div>
+                      </div>
+                      <div class="media align-items-center">
+                        <div class="media-body">
+                          <h5 class="mb-n1 cs-inner-text">1,400</h5>
+                          <span class="cs-inner-text font-size-xs">Target investors</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="mb-5 pb-md-5 pb-4 pt-2">
+                <a class="cs-image-fade card card-hover h-100 box-shadow" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/recent/03.jpg);">
+                  <div class="cs-image-inner d-flex flex-column justify-content-between h-100 p-3">
+                    <div class="card-header border-0 pb-0">
+                      <img class="cs-inner-img d-block mb-2" src="../../assets/img/seo-agency/logo/dove.svg" alt="Dove" style="max-width: 80px;"/>
+                      <span class="cs-inner-text text-sm">Personal care</span>
+                      <hr class="hr-gradient mt-4 mx-n4">
+                    </div>
+                    <div class="card-body">
+                      <p class="cs-inner-text mb-0">We helped Dove company break through a noisy industry and better understand their buyer's journey.</p>
+                    </div>
+                    <div class="card-footer border-0 d-flex">
+                      <div class="media align-items-center mr-4 pr-2">
+                        <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                          "strokeWidth": 8,
+                          "trailWidth": 8,
+                          "color": "#f52f6e",
+                          "trailColor": "rgba(245,47,110, .3)",
+                          "progress": 0.7
+                        }'>
+                        </div>
+                        <div class="media-body">
+                          <h5 class="mb-n1 cs-inner-text">70%</h5>
+                          <span class="cs-inner-text font-size-xs">Open Rate</span>
+                        </div>
+                      </div>
+                      <div class="media align-items-center">
+                        <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                          "strokeWidth": 8,
+                          "trailWidth": 8,
+                          "color": "#f89828",
+                          "trailColor": "rgba(248,152,40, .3)",
+                          "progress": 1
+                        }'>
+                        </div>
+                        <div class="media-body">
+                          <h5 class="mb-n1 cs-inner-text">200%</h5>
+                          <span class="cs-inner-text font-size-xs">Growth in sales</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </article>
+              <article class="mb-5 pb-md-5 pb-4 pt-2">
+                <a class="cs-image-fade card card-hover h-100 box-shadow" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/recent/04.jpg);">
+                  <div class="cs-image-inner d-flex flex-column justify-content-between h-100 p-3">
+                    <div class="card-header border-0 pb-0">
+                      <img class="cs-inner-img d-block mb-2" src="../../assets/img/seo-agency/logo/lovato.svg" alt="Lovato" style="max-width: 80px;"/>
+                      <span class="cs-inner-text text-sm">Electric company</span>
+                      <hr class="hr-gradient mt-4 mx-n4">
+                    </div>
+                    <div class="card-body">
+                      <p class="cs-inner-text mb-0">With an advanced A/B testing and usability analysis, Createx SEO Agency helps Lovato see a 200% increase in conversion rate..</p>
+                    </div>
+                    <div class="card-footer border-0 d-flex">
+                      <div class="media align-items-center mr-4 pr-2">
+                        <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                          "strokeWidth": 8,
+                          "trailWidth": 8,
+                          "color": "#ff4242",
+                          "trailColor": "rgba(255,66,66, .3)",
+                          "progress": 0.8
+                        }'>
+                        </div>
+                        <div class="media-body">
+                          <h5 class="mb-n1 cs-inner-text">80%</h5>
+                          <span class="cs-inner-text font-size-xs">Open Rate</span>
+                        </div>
+                      </div>
+                      <div class="media align-items-center">
+                        <div class="media-body">
+                          <h5 class="mb-n1 cs-inner-text">1,840</h5>
+                          <span class="cs-inner-text font-size-xs">Target investors</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+          <h4 class="h3 mt-lg-0 my-3 text-center">
+            Explore more case studies
+            <a href="case-studies.html" class="btn btn-lg btn-primary d-sm-inline-block d-block mt-sm-0 mt-4 ml-sm-4">View all case studies</a>
+          </h4>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-3 bg-dark">
+      <div class="container my-lg-3 py-md-5 py-4">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 order-lg-1 order-1 mb-lg-0 mb-4">
+            <a class="d-inline-block mb-4" href="index.html">
+              <img src="../../assets/img/seo-agency/logo-light.svg" width="130" alt="Createx logo">
+            </a>
+            <p class="mb-sm-4 mb-3 pb-lg-3 font-size-xs text-light opacity-60">Createx SEO Agency is a full-service digital marketing agency. We help businesses make more money through a wealth of performance data and market research. We create science-based SEO strategies to empower our clients.</p>
+            <a href="#" class="social-btn mb-1 mt-md-0 mt-sm-1">
+              <i class="cxi-linkedin"></i>
+            </a>
+            <a href="#" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+              <i class="cxi-facebook"></i>
+            </a>
+            <a href="#" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+              <i class="cxi-twitter"></i>
+            </a>
+            <a href="#" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+              <i class="cxi-instagram"></i>
+            </a>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 order-1 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Company</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="about.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">About Us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="case-studies.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Case Studies</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="blog.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="careers.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Careers</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Services</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Social Media</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">SEO</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Research</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Content &amp; PR</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Paid Traffic</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 order-lg-4 order-sm-3 order-3 mb-md-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Contact us</h3>
+            <ul class="nav nav-light flex-md-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="tel:(405)555-0128" class="nav-link mr-md-0 mr-sm-4 p-0 font-weight-normal text-nowrap">
+                  <i class="cxi-iphone mr-2"></i>
+                  (405) 555-0128
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="mailto:hello@example.com" class="nav-link mr-md-0 mr-sm-4 p-0 font-weight-normal text-nowrap">
+                  <i class="cxi-chat mr-2"></i>
+                  hello@example.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 order-lg-5 order-sm-2 order-4 mb-sm-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Sign up to our newsletter</h3>
+            <form>
+              <div class="input-group-overlay input-group-light form-group mb-2 pb-1">
+                <input class="form-control appended-form-control" type="text" placeholder="Email address*" required>
+                <div class="input-group-append-overlay">
+                  <span class="input-group-text">
+                    <button class="btn btn-link bt-sm px-0" type="submit">
+                      <i class="cxi-arrow-right lead mt-n1"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <small class="form-text font-size-xxs text-light">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-gradient hr-light">
+      <div class="container my-lg-3 py-4">
+        <div class="d-flex flex-wrap justify-content-sm-start justify-content-center mx-n2">
+          <a class="px-2 text-decoration-0" href="#">
+            <img src="../../assets/img/seo-agency/footer/award-1.jpg" class="mb-sm-0 mb-3 rounded" width="120" alt="Award title">
+          </a>
+          <a class="px-2 text-decoration-0" href="#">
+            <img src="../../assets/img/seo-agency/footer/award-2.jpg" class="mb-sm-0 mb-3 rounded" width="120" alt="Award title">
+          </a>
+          <a class="px-2 text-decoration-0" href="#">
+            <img src="../../assets/img/seo-agency/footer/award-3.jpg" class="mb-sm-0 mb-3 rounded" width="120" alt="Award title">
+          </a>
+          <a class="px-2 text-decoration-0" href="#">
+            <img src="../../assets/img/seo-agency/footer/award-4.jpg" class="mb-sm-0 mb-3 rounded" width="120" alt="Award title">
+          </a>
+        </div>
+      </div>
+      <div style="background-color: #292C37;">
+        <div class="container py-2">
+          <div class="d-flex align-items-sm-center justify-content-between py-1">
+            <div class="font-size-xs text-light">
+              <span class="d-sm-inline d-block mb-1">
+                <span class="font-size-sm">&copy; </span>
+                All rights reserved.
+              </span>
+              Made with 
+              <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+              <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+            </div>
+            <div class="d-flex align-items-sm-center">
+              <span class="d-sm-inline-block d-none text-light font-size-sm mr-3 mb-1 align-vertical">Back to top</span>
+              <a class="btn-scroll-top position-static rounded" href="#top" data-scroll>
+                <i class="btn-scroll-top-icon cxi-angle-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Offcanvas toggle btn -->
+    <button class="btn btn-primary btn-sm cs-sidebar-toggle" type="button" data-toggle="offcanvas" data-target="case-study-sidebar" data-fixed-element>
+      <i class="cxi-sidebar-right font-size-base mr-1 align-middle"></i>
+      Sidebar
+    </button>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="../../assets/vendor/progressbar.js/dist/progressbar.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx UI Kit | Tabs</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/themes/prism.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/theme.min.css">
+  </head>
+
+
+  <!-- Body-->
+  <body>
+    <main class="container-fluid">
+
+      <!-- Main content-->
+      <section class="cs-offcanvas-enabled row pb-3 pb-md-4">
+        <div class="col-xl-9">
+
+          <!-- Navbar-->
+          <header class="navbar navbar-expand navbar-light fixed-top navbar-box-shadow bg-light px-3 px-lg-4" data-scroll-header data-fixed-element>
+            <a class="navbar-brand d-lg-none" href="typography.html">
+              <img src="../../assets/img/components/logo/logo-dark.svg" alt="Createx" width="130">
+            </a>
+            <button class="navbar-toggler d-block d-lg-none mr-3 ml-auto" type="button" data-toggle="offcanvas" data-target="componentsNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav ml-auto d-none d-lg-flex align-items-center">
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../../index.html">
+                  <i class="cxi-eye align-middle mt-n1 mr-2"></i>
+                  Live preview
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../documentation/dev-setup.html">
+                  <i class="cxi-files align-middle mt-n1 mr-2"></i>
+                  Documentation
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+            </ul>
+            <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-primary btn-shadow ml-lg-4" target="_blank" rel="noopener">
+              <i class="cxi-cart mr-2 d-none d-sm-inline-block"></i>
+              Buy now
+            </a>
+          </header>
+
+          <!-- Side navigation (Off-canvas)-->
+          <aside class="cs-offcanvas cs-offcanvas-expand bg-dark" id="componentsNav">
+            <div class="cs-offcanvas-cap d-none d-lg-block py-4">
+              <a class="navbar-brand py-2" href="typography.html">
+                <img src="../../assets/img/components/logo/logo-white.svg" alt="Createx" width="130">
+              </a>
+              <span class="badge badge-success">UI Kit</span>
+            </div>
+            <div class="cs-offcanvas-cap d-flex d-lg-none">
+              <div class="d-flex align-items-center mt-1">
+                <h5 class="text-light mb-0 mr-3">Menu</h5>
+                <span class="badge badge-success">UI Kit</span>
+              </div>
+              <button class="close text-light" type="button" data-dismiss="offcanvas" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="d-flex d-lg-none align-items-center py-4 px-3 border-bottom border-light">
+              <a class="btn btn-primary btn-block mr-3" href="../../index.html"><i class="cxi-eye mt-n1 mr-2"></i>Preview</a>
+              <a class="btn btn-warning btn-block mt-0" href="../documentation/dev-setup.html"><i class="cxi-files mt-n1 mr-2"></i>Docs</a>
+            </div>
+            <div class="cs-offcanvas-body px-0 pt-4 pb-grid-gutter" data-simplebar data-simplebar-inverse>
+              <h6 class="font-size-lg text-light px-4 mt-2 mb-3">Content</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="typography.html">Typography</a>
+                <a class="nav-link px-4" href="icon-font.html">Icon font</a>
+                <a class="nav-link px-4" href="code.html">Code</a>
+                <a class="nav-link px-4" href="images.html">Images &amp; figures</a>
+                <a class="nav-link px-4" href="tables.html">Tables</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Components</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="alerts.html">Alerts</a>
+                <a class="nav-link px-4" href="badge.html">Badges</a>
+                <a class="nav-link px-4" href="blog-components.html">Blog components</a>
+                <a class="nav-link px-4" href="breadcrumb.html">Breadcrumb</a>
+                <a class="nav-link px-4" href="buttons.html">Buttons</a>
+                <a class="nav-link px-4" href="button-group.html">Button group</a>
+                <a class="nav-link px-4" href="cards.html">Cards</a>
+                <a class="nav-link px-4" href="carousel.html">Carousel</a>
+                <a class="nav-link px-4" href="collapse.html">Collapse</a>
+                <a class="nav-link px-4" href="contacts-card.html">Contacts card</a>
+                <a class="nav-link px-4" href="countdown.html">Countdown</a>
+                <a class="nav-link px-4" href="dividers.html">Dividers</a>
+                <a class="nav-link px-4" href="dropdowns.html">Dropdowns</a>
+                <a class="nav-link px-4" href="forms.html">Forms</a>
+                <a class="nav-link px-4" href="gallery.html">Gallery</a>
+                <a class="nav-link px-4" href="icon-box.html">Icon box</a>
+                <a class="nav-link px-4" href="input-group.html">Input group</a>
+                <a class="nav-link px-4" href="jumbotron.html">Jumbotron</a>
+                <a class="nav-link px-4" href="list-group.html">List group</a>
+                <a class="nav-link px-4" href="media-object.html">Media object</a>
+                <a class="nav-link px-4" href="modal.html">Modal</a>
+                <a class="nav-link px-4" href="navs.html">Navs</a>
+                <a class="nav-link px-4" href="navbar.html">Navbar</a>
+                <a class="nav-link px-4" href="pagination.html">Pagination</a>
+                <a class="nav-link px-4" href="parallax.html">Parallax</a>
+                <a class="nav-link px-4" href="pills.html">Pills</a>
+                <a class="nav-link px-4" href="popovers.html">Popovers</a>
+                <a class="nav-link px-4" href="portfolio-components.html">Portfolio components</a>
+                <a class="nav-link px-4" href="pricing.html">Pricing</a>
+                <a class="nav-link px-4" href="progress-bar.html">Progress bar</a>
+                <a class="nav-link px-4" href="progress-radial.html">Progress radial</a>
+                <a class="nav-link px-4" href="scrollbar-custom.html">Scrollbar (custom)</a>
+                <a class="nav-link px-4" href="shop-components.html">Shop components</a>
+                <a class="nav-link px-4" href="social-buttons.html">Social buttons</a>
+                <a class="nav-link px-4" href="spinners.html">Spinners</a>
+                <a class="nav-link px-4" href="steps.html">Steps</a>
+                <a class="nav-link px-4 active" href="tabs.html">Tabs</a>
+                <a class="nav-link px-4" href="team.html">Team</a>
+                <a class="nav-link px-4" href="testimonials.html">Testimonials / reviews</a>
+                <a class="nav-link px-4" href="toasts.html">Toasts</a>
+                <a class="nav-link px-4" href="tooltips.html">Tooltips</a>
+                <a class="nav-link px-4" href="video-popup.html">Video popup</a>
+                <a class="nav-link px-4" href="widgets.html">Widgets</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Utilities</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="https://getbootstrap.com/docs/4.5/utilities/borders/" target="_blank" rel="noopener">Bootstrap</a>
+                <a class="nav-link px-4" href="utilities.html">Createx</a>
+              </nav>
+            </div>
+          </aside>
+          
+          <!-- Page title-->
+          <div class="border-bottom pt-5 mt-2 mb-5">
+            <h1 class="mt-2 mt-md-4 mb-3 pt-5">Tabs</h1>
+            <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+              <p class="text-muted">Horizontally or vertically stacked list of items. When clicked each item switch content in the tab pane.</p>
+              <p class="font-size-sm font-weight-medium pl-md-4">
+                <a class="text-nowrap" href="https://getbootstrap.com/docs/4.5/components/navs/#tabs" target="_blank" rel="noopener">
+                  Bootstrap docs<i class="cxi-angle-right font-size-base align-middle ml-1"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Basic example-->
+          <section class="pb-5 mb-md-2" id="tabs-basic">
+            <h2 class="h3">Basic example</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result1" role="tabpanel">
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#home1" data-toggle="tab" role="tab"><i class="cxi-home mr-2"></i>Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#profile1" data-toggle="tab" role="tab"><i class="cxi-profile mr-2"></i>Profile</a></li>
+                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">Dropdown</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#messages1" data-toggle="tab" role="tab">Messages</a><a class="dropdown-item" href="#settings1" data-toggle="tab" role="tab">Settings</a></div>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active" id="home1" role="tabpanel">
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Excepteur sint occaecat cupidatat non proident.</p>
+                      </div>
+                      <div class="tab-pane fade" id="profile1" role="tabpanel">
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente.</p>
+                      </div>
+                      <div class="tab-pane fade" id="messages1" role="tabpanel">
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                      </div>
+                      <div class="tab-pane fade" id="settings1" role="tabpanel">
+                        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Nav tabs --&gt;
+&lt;ul class=&quot;nav nav-tabs&quot; role=&quot;tablist&quot;&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a href=&quot;#home1&quot; class=&quot;nav-link active&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+      &lt;i class=&quot;cxi-home mr-2&quot;&gt;&lt;/i&gt;
+      Home
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a href=&quot;#profile1&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+      &lt;i class=&quot;cxi-profile mr-2&quot;&gt;&lt;/i&gt;
+      Profile
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item dropdown&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;nav-link dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot;&gt;Dropdown&lt;/a&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+      &lt;a href=&quot;#messages1&quot; class=&quot;dropdown-item&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Messages&lt;/a&gt;
+      &lt;a href=&quot;#settings1&quot; class=&quot;dropdown-item&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Settings&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Tabs content --&gt;
+&lt;div class=&quot;tab-content&quot;&gt;
+  &lt;div class=&quot;tab-pane fade show active&quot; id=&quot;home1&quot; role=&quot;tabpanel&quot;&gt;
+    &lt;p&gt;Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Excepteur sint occaecat cupidatat non proident.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-pane fade&quot; id=&quot;profile1&quot; role=&quot;tabpanel&quot;&gt;
+    &lt;p&gt;Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-pane fade&quot; id=&quot;messages1&quot; role=&quot;tabpanel&quot;&gt;
+    &lt;p&gt;Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-pane fade&quot; id=&quot;settings1&quot; role=&quot;tabpanel&quot;&gt;
+    &lt;p&gt;Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Alignment and fill-->
+          <section class="pb-5 mb-md-2" id="tabs-alignment">
+            <h2 class="h3">Alignment and fill</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result2" data-toggle="tab" role="tab" aria-controls="result2" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html2" data-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result2" role="tabpanel">
+                    <ul class="nav nav-tabs justify-content-center mb-5" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#" data-toggle="tab" role="tab">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab" role="tab">Profile</a></li>
+                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">Dropdown</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#" data-toggle="tab" role="tab">Messages</a><a class="dropdown-item" href="#" data-toggle="tab" role="tab">Settings</a></div>
+                      </li>
+                    </ul>
+                    <ul class="nav nav-tabs justify-content-end mb-5" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#" data-toggle="tab" role="tab">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab" role="tab">Profile</a></li>
+                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">Dropdown</a>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#" data-toggle="tab" role="tab">Messages</a><a class="dropdown-item" href="#" data-toggle="tab" role="tab">Settings</a></div>
+                      </li>
+                    </ul>
+                    <ul class="nav nav-tabs nav-fill" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#" data-toggle="tab" role="tab">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab" role="tab">Profile</a></li>
+                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">Dropdown</a>
+                        <div class="dropdown-menu w-100 text-center"><a class="dropdown-item" href="#" data-toggle="tab" role="tab">Messages</a><a class="dropdown-item" href="#" data-toggle="tab" role="tab">Settings</a></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Center aligned --&gt;
+&lt;ul class=&quot;nav nav-tabs justify-content-center&quot; role=&quot;tablist&quot;&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&lt;!-- Right aligned --&gt;
+&lt;ul class=&quot;nav nav-tabs justify-content-end&quot; role=&quot;tablist&quot;&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&lt;!-- Fill tabs --&gt;
+&lt;ul class=&quot;nav nav-tabs nav-fill&quot; role=&quot;tablist&quot;&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;nav-link&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Vertical tabs-->
+          <section class="pb-5 mb-md-2" id="tabs-vertical">
+            <h2 class="h3">Vertical tabs</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result3" data-toggle="tab" role="tab" aria-controls="result3" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html3" data-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result3" role="tabpanel">
+                    <ul class="nav nav-tabs flex-column" style="max-width: 16rem;" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#" data-toggle="tab" role="tab"><i class="cxi-home mr-2"></i>Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab" role="tab"><i class="cxi-profile mr-2"></i>Profile</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab" role="tab"><i class="cxi-comment mr-2"></i>Messages</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab" role="tab"><i class="cxi-arrow-vertical mr-2"></i>Settings</a></li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Vertical tabs --&gt;
+&lt;ul class=&quot;nav nav-tabs flex-column&quot; role=&quot;tablist&quot;&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link active&quot; href=&quot;#&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+      &lt;i class=&quot;cxi-home mr-2&quot;&gt;&lt;/i&gt;
+      Home
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+      &lt;i class=&quot;cxi-profile mr-2&quot;&gt;&lt;/i&gt;
+      Profile
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+      &lt;i class=&quot;cxi-comment mr-2&quot;&gt;&lt;/i&gt;
+      Messages
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+      &lt;i class=&quot;cxi-arrow-vertical mr-2&quot;&gt;&lt;/i&gt;
+      Settings
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Light tabs-->
+          <section class="pb-5 mb-md-2" id="tabs-light">
+            <h2 class="h3">Light tabs</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result4" data-toggle="tab" role="tab" aria-controls="result4" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html4" data-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane bg-dark p-4 m-n4 fade show active" id="result4" role="tabpanel">
+                    <ul class="nav nav-tabs nav-tabs-light" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#" data-toggle="tab" role="tab"><i class="cxi-home mr-2"></i>Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab" role="tab"><i class="cxi-profile mr-2"></i>Profile</a></li>
+                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button">Dropdown</a>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#" data-toggle="tab" role="tab">Messages</a><a class="dropdown-item" href="#" data-toggle="tab" role="tab">Settings</a></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Light tabs --&gt;
+&lt;ul class=&quot;nav nav-tabs nav-tabs-light&quot; role=&quot;tablist&quot;&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link active&quot; href=&quot;#&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+      &lt;i class=&quot;cxi-home mr-2&quot;&gt;&lt;/i&gt;
+      Home
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;
+    &lt;a class=&quot;nav-link&quot; href=&quot;#&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+      &lt;i class=&quot;cxi-profile mr-2&quot;&gt;&lt;/i&gt;
+      Profile
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;nav-item dropdown&quot;&gt;
+    &lt;a class=&quot;nav-link dropdown-toggle&quot; href=&quot;#&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot;&gt;Dropdown&lt;/a&gt;
+    &lt;div class=&quot;dropdown-menu dropdown-menu-right&quot;&gt;
+      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Messages&lt;/a&gt;
+      &lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;Settings&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Media tabs: Image-->
+          <section class="pb-5 mb-md-2" id="media-tabs-img">
+            <h2 class="h3">Media tabs: Image</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result5" data-toggle="tab" role="tab" aria-controls="result5" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html5" data-toggle="tab" role="tab" aria-controls="html5" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result5" role="tabpanel">
+                    <div class="pt-3" data-simplebar data-simplebar-horizontal-top>
+                      <ul class="nav cs-media-tabs flex-nowrap mb-5 pb-5" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" href="#media-image1" data-toggle="tab" role="tab"><img class="cs-media-tabs-icon mb-3" src="../../assets/img/components/tabs/01.svg" style="max-width: 48px;" alt="Media tab image">All Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media-image2" data-toggle="tab" role="tab"><img class="cs-media-tabs-icon mb-3" src="../../assets/img/components/tabs/02.svg" style="max-width: 48px;" alt="Media tab image">Construction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media-image3" data-toggle="tab" role="tab"><img class="cs-media-tabs-icon mb-3" src="../../assets/img/components/tabs/03.svg" style="max-width: 48px;" alt="Media tab image">Project Development</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media-image4" data-toggle="tab" role="tab"><img class="cs-media-tabs-icon mb-3" src="../../assets/img/components/tabs/04.svg" style="max-width: 48px;" alt="Media tab image">Interior Design</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media-image5" data-toggle="tab" role="tab"><img class="cs-media-tabs-icon mb-3" src="../../assets/img/components/tabs/05.svg" style="max-width: 48px;" alt="Media tab image">Repairs</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html5" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Media tabs image --&gt;
+&lt;div data-simplebar data-simplebar-horizontal-top class=&quot;pt-3&quot;&gt;
+  &lt;ul class=&quot;nav cs-media-tabs flex-nowrap mb-5 pb-5&quot; role=&quot;tablist&quot;&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link active&quot; href=&quot;#media-image1&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;img class=&quot;cs-media-tabs-icon mb-3&quot; src=&quot;path-to-image&quot; style=&quot;max-width: 48px;&quot; alt=&quot;Media tab image&quot;&gt;
+        All Projects
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#media-image2&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;img class=&quot;cs-media-tabs-icon mb-3&quot; src=&quot;path-to-image&quot; style=&quot;max-width: 48px;&quot; alt=&quot;Media tab image&quot;&gt;
+        Construction
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#media-image3&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;img class=&quot;cs-media-tabs-icon mb-3&quot; src=&quot;path-to-image&quot; style=&quot;max-width: 48px;&quot; alt=&quot;Media tab image&quot;&gt;
+        Project Development
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#media-image4&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;img class=&quot;cs-media-tabs-icon mb-3&quot; src=&quot;path-to-image&quot; style=&quot;max-width: 48px;&quot; alt=&quot;Media tab image&quot;&gt;
+        Interior Design
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#media-image5&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;img class=&quot;cs-media-tabs-icon mb-3&quot; src=&quot;path-to-image&quot; style=&quot;max-width: 48px;&quot; alt=&quot;Media tab image&quot;&gt;
+        Repairs
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Media tabs: Icon-->
+          <section class="pb-5 mb-md-2" id="media-tabs-icon">
+            <h2 class="h3">Media tabs: Font icon</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result6" data-toggle="tab" role="tab" aria-controls="result6" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html6" data-toggle="tab" role="tab" aria-controls="html6" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result6" role="tabpanel">
+                    <div class="pt-3" data-simplebar data-simplebar-horizontal-top>
+                      <ul class="nav cs-media-tabs flex-nowrap mb-5 pb-5" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" href="#media-icon1" data-toggle="tab" role="tab"><i class="cxi-home cs-media-tabs-icon mb-3"></i>Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media-icon2" data-toggle="tab" role="tab"><i class="cxi-profile cs-media-tabs-icon mb-3"></i>Account</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media-icon3" data-toggle="tab" role="tab"><i class="cxi-history cs-media-tabs-icon mb-3"></i>Orders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media-icon4" data-toggle="tab" role="tab"><i class="cxi-heart cs-media-tabs-icon mb-3"></i>Wish list</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media-icon5" data-toggle="tab" role="tab"><i class="cxi-cart cs-media-tabs-icon mb-3"></i>Cart</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html6" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Media tabs icon --&gt;
+&lt;div data-simplebar data-simplebar-horizontal-top class=&quot;pt-3&quot;&gt;
+  &lt;ul class=&quot;nav cs-media-tabs flex-nowrap mb-5 pb-5&quot; role=&quot;tablist&quot;&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link active&quot; href=&quot;#media-icon1&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;i class=&quot;cxi-home cs-media-tabs-icon mb-3&quot;&gt;&lt;/i&gt;
+        Home
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#media-icon2&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;i class=&quot;cxi-profile cs-media-tabs-icon mb-3&quot;&gt;&lt;/i&gt;
+        Account
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#media-icon3&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;i class=&quot;cxi-history cs-media-tabs-icon mb-3 cs-media-tabs-icon mb-3&quot;&gt;&lt;/i&gt;
+        Orders
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#media-icon4&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;i class=&quot;cxi-heart cs-media-tabs-icon mb-3&quot;&gt;&lt;/i&gt;
+        Wish list
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#media-icon5&quot; data-toggle=&quot;tab&quot; role=&quot;tab&quot;&gt;
+        &lt;i class=&quot;cxi-cart cs-media-tabs-icon mb-3&quot;&gt;&lt;/i&gt;
+        Cart
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Quick (anchor) navigation-->
+        <div class="col-xl-3 d-none d-xl-block pl-5">
+          <aside class="sticky-top pt-5">
+            <div class="pt-5 mt-5">
+              <div class="pl-4 border-left">
+                <h3 class="h5 mb-3">Jump to</h3>
+                <nav class="nav nav-dark flex-column">
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#tabs-basic">Basic example</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#tabs-alignment">Alignment and fill</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#tabs-vertical">Vertical tabs</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#tabs-light">Light tabs</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#media-tabs-img">Media tabs: Image</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#media-tabs-icon">Media tabs: Font icon</a>
+                </nav>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

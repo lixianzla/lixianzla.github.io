@@ -1,19 +1,31 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="docSlider.css">
+  <meta charset="UTF-8">
+  <title>Lixian Zeng- Portfolio</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+
+
+  <link rel="stylesheet" href="docSlider.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
 
   <!-- project thumbnail-->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.3.7/gridlex.min.css">
+
+
+  <!-- Vendor Styles-->
+  <link rel="stylesheet" media="screen" href="Createx/assets/vendor/simplebar/dist/simplebar.min.css"/>
+  <link rel="stylesheet" media="screen" href="Createx/assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="Createx/assets/css/demo/creative-agency/theme.css">
+
 
 
   <script src="js/handlebars-v4.7.6.js"></script>
@@ -29,20 +41,14 @@
     type="text/css"
     href="css/style.css"/>
 
-
+<!--
   <link rel="stylesheet"
     type="text/css"
     href="css/bootstrap.css"/>
 
-
+-->
 
   <link rel="icon" href="icon/favicon.png" type="image/png"/>
-
-
-
-
-  <title>Portfolio - Lixian Zeng</title>
-
 
 
 </head>
@@ -50,8 +56,10 @@
 
 <body>
 
-  <div class="d-none d-sm-block bg-white navbar sticky-top navbar-expand-lg navbar-light" style="height:50px;"></div>
-  <!-- navbar -->
+  <div class="d-none d-sm-block bg-white navbar sticky-top navbar-expand-lg navbar-light" style="height:30px;"></div>
+
+
+
   <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white docSlider-pager">
     <div class="container">
 
@@ -63,16 +71,28 @@
         <span><img src="icon/menu-outline.svg" alt="menu" width="25" height="25"></span>
       </button>
 
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <div class="docSlider-button">Work</div> &nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="docSlider-button">Insights</div> &nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="docSlider-button">About</div> &nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="docSlider-button">Resume</div> &nbsp;&nbsp;&nbsp;&nbsp;
-      </div><!-- collapse-->
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-link docSlider-button" href="index.html#work">Work</a>
+          </li>
+          <li>
+            <a class="nav-link docSlider-button" href="index.html#insights">Insights</a>
+          </li>
+
+          <li>
+            <a class="nav-link docSlider-button" href="index.html#about">About</a>
+          </li>
+
+          <li>
+            <a class="nav-link docSlider-button" href="index.html#resume">Resume</a>
+          </li>
+        </ul>
+      </div>
 
     </div> <!-- container-->
   </nav>
-
 
 
 
@@ -83,8 +103,8 @@
     <section id="homes">
         <div class="inner">
       		<!-- Landing page -->
-          <div style="height:80px;"></div>
-          <div class="d-none d-sm-block" style="height:80px;"></div>
+          <div style="height:50px;"></div>
+          <div class="d-none d-sm-block" style="height:100px;"></div>
       		<div class="container">
       			<div class="row">
               <div class="col-md-5">
@@ -92,7 +112,7 @@
                   <div class="d-none d-xl-block d-lg-none" style="height:60px;"></div>
                   <div>
                     <div> HELLO, MY NAME IS</div>
-                    <h1 class="display-3" style="font-weight:700;color:#343a40;">LIXIAN ZENG.<br>
+                    <h1>LIXIAN ZENG.<br>
                         <div style="background-color:#AD6368;height:4px;width:50px;"></div>
                     </h1>
 
@@ -104,8 +124,8 @@
               </div>
 
 
-              <div class="col-md-7">
-                <div style="position:relative;">
+              <div class="col-md-7 mt-5">
+                <div class="col-md-12" style="position:relative;">
                 <img  id="planet1" alt="planet1" src="images/lp/planet1.png"/>
                 <img  id="planet2" alt="planet2" src="images/lp/planet2.png"/>
                 <img  id="planet3" alt="planet3" src="images/lp/planet3.png"/>
@@ -119,7 +139,10 @@
 
       			</div> <!-- row -->
       		</div> <!-- container -->
-          <img  id="galaxy" alt="galaxy1" src="images/lp/galaxy1.png"/>
+
+          <div class="row">
+            <img id="galaxy" alt="galaxy1" src="images/lp/galaxy1.png"/>
+          </div>
 
         </div>
     </section>
@@ -134,87 +157,109 @@
 
       		<div class="container">
       			<div class="row">
-              <div class="wrapper">
-                <!--  <div id="project-grid" class="grid project-grid grid-4-col small-gutter"> -->
-                <div id="project-grid" class="grid-3_md-2_sm-1 project-grid small-gutter">
-                  <div class="col project project--hover-2 web-design mockups">
-                    <div class="project__img-holder">
-                      <img src="images/index/Project1.png" alt="" class="project__img">
 
-                      <div class="project__description">
-                        <h3 class="project__title">Edzy</h3>
-                        <span class="project__category">Make education easier!</span>
-                      </div>
+              <!-- Portfolio: Featured projects -->
+
+                <div class="container py-3 py-lg-0">
+                  <div class="mb-lg-4 mb-2 d-flex justify-content-between">
+                    <h3 class="h3 mb-0">My work</h2>
+                    <div class="tns-custom-controls cs-controls-inverse" id="tns-portfolio-controls" tabindex="0">
+                      <button type="button" data-controls="prev" tabindex="-1">
+                        <i class="cxi-arrow-left"></i>
+                      </button>
+                      <button type="button" data-controls="next" tabindex="-1">
+                        <i class="cxi-arrow-right"></i>
+                      </button>
                     </div>
                   </div>
-                  <!-- end project -->
-
-                  <div class="col project project--hover-2 print mockups">
-                    <div class="project__img-holder">
-                      <a href="p2.html"><img src="images/index/Project4.png" alt="" class="project__img"></a>
-
-                      <div class="project__description">
-                        <h3 class="project__title">Go Street</h3>
-                        <span class="project__category">First app in China to enhance walking experience</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end project -->
-
-                  <div class="col project project--hover-2 web-design graphics print">
-                    <div class="project__img-holder">
-                      <img src="images/index/Project2.png" alt="" class="project__img">
-                      <div class="project__description">
-                        <h3 class="project__title">Locavore</h3>
-                        <span class="project__category">Future of virtual farmers market </span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end project -->
-
-                  <div class="col project project--hover-2 web-design graphics print">
-                    <div class="project__img-holder">
-                      <img src="images/index/Project4.png" alt="" class="project__img">
-                      <div class="project__description">
-                        <h3 class="project__title">Hearme</h3>
-                        <span class="project__category">Online public participation enhancer</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end project -->
-
-                  <div class="col project project--hover-2 web-design">
-                    <div class="project__img-holder">
-                      <img src="images/index/Project3.png" alt="" class="project__img">
-                      <div class="project__description">
-                        <h3 class="project__title">Lichenair</h3>
-                        <span class="project__category">Put a finger on the nature's pulse</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end project -->
-
-                  <div class="col project project--hover-2 web-design">
-                    <div class="project__img-holder">
-                      <img src="images/index/Project4.png" alt="" class="project__img">
-                      </div>
-                      <div class="project__description">
-                        <h3 class="project__title">Side Projects</h3>
-                        <span class="project__category">Design and everything</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end project -->
                 </div>
+                <div class="container px-0">
 
-                <div class="wrapper grid">
-                  <div class="col-6_xs-12"></div>
-                  <div class="col-6_xs-12"></div>
-                </div>
-
-                <div class="wrapper grid-3 text-center">
-                  <div class="col"></div>
-                  <div class="col"></div>
+                  <!-- Carousel  -->
+                  <div class="cs-carousel mb-lg-5 mb-4">
+                    <div class="cs-carousel-inner" data-carousel-options='{
+                      "nav": false,
+                      "controlsContainer": "#tns-portfolio-controls",
+                      "responsive": {
+                        "0": {
+                          "items": 1
+                        },
+                        "576": {
+                          "items": 2
+                        },
+                        "768": {
+                          "items": 3
+                        }
+                      }
+                    }'>
+                      <div class="rounded">
+                        <a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="#">
+                          <div class="cs-portfolio-card-img">
+                            <img src="Createx/assets/img/creative-agency/portfolio/01.jpg" alt="Card image">
+                          </div>
+                          <div class="cs-portfolio-card-body">
+                            <h3 class="cs-portfolio-card-title">Edzy</h3>
+                            <span class="font-size-sm text-muted">Smart recruitment makes education easier.</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="rounded">
+                        <a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="gostreet.html">
+                          <div class="cs-portfolio-card-img">
+                            <img src="Createx/assets/img/creative-agency/portfolio/02.jpg" alt="Card image">
+                          </div>
+                          <div class="cs-portfolio-card-body">
+                            <h3 class="cs-portfolio-card-title">Go Street</h3>
+                            <span class="font-size-sm text-muted">First app in China to enhance walking experience.</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="rounded">
+                        <a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="#">
+                          <div class="cs-portfolio-card-img">
+                            <img src="Createx/assets/img/creative-agency/portfolio/03.jpg" alt="Card image">
+                          </div>
+                          <div class="cs-portfolio-card-body">
+                            <h3 class="cs-portfolio-card-title">Plant Jammer</h3>
+                            <span class="font-size-sm text-muted">Reimagine an AI-powered recipe ingredient substitution UX</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="rounded">
+                        <a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="#">
+                          <div class="cs-portfolio-card-img">
+                            <img src="Createx/assets/img/creative-agency/portfolio/04.jpg" alt="Card image">
+                          </div>
+                          <div class="cs-portfolio-card-body">
+                            <h3 class="cs-portfolio-card-title">Toxcity</h3>
+                            <span class="font-size-sm text-muted">Public participation enhancement.</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="rounded">
+                        <a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="#">
+                          <div class="cs-portfolio-card-img">
+                            <img src="Createx/assets/img/creative-agency/portfolio/04.jpg" alt="Card image">
+                          </div>
+                          <div class="cs-portfolio-card-body">
+                            <h3 class="cs-portfolio-card-title">LichenAir</h3>
+                            <span class="font-size-sm text-muted">Put a finger on the nature's pulse.</span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="rounded">
+                        <a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="#">
+                          <div class="cs-portfolio-card-img">
+                            <img src="Createx/assets/img/creative-agency/portfolio/04.jpg" alt="Card image">
+                          </div>
+                          <div class="cs-portfolio-card-body">
+                            <h3 class="cs-portfolio-card-title">Side projects</h3>
+                            <span class="font-size-sm text-muted">Design and everything.</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
 
@@ -222,10 +267,12 @@
       			</div> <!-- row -->
       		</div> <!-- container -->
         </div>
-        <div class="d-xl-block d-lg-block d-none">
+        <div>
           <img  id="galaxy" alt="galaxy2" src="images/lp/galaxy2.png"/>
-          <img id="planet5" src="images/lp/planet5.png" alt="planet5">
+          <img class="d-xl-block d-lg-block d-none" id="planet5" src="images/lp/planet5.png" alt="planet5">
         </div>
+
+
 
     </section>
 
@@ -334,11 +381,24 @@
         crossorigin="anonymous">
 </script>
 
-
+<!--
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous">
 </script>
+
+-->
+
+<!-- Vendor scripts: js libraries and plugins-->
+<script src="Createx/assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+<script src="Createx/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Createx/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="Createx/assets/vendor/simplebar/dist/simplebar.min.js"></script>
+<script src="Createx/assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+<script src="Createx/assets/vendor/mixitup/dist/mixitup.min.js"></script>
+
+<!-- Main theme script-->
+<script src="Createx/assets/js/theme.min.js"></script>
 
 
 </body>

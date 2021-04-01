@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | E-Commerce - Checkout</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template and UI Kit">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/ecommerce/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper">
+
+
+      <!-- Sign in modal-->
+      <div class="modal fade" id="modal-signin" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+
+            <!-- Sign in form -->
+            <div class="cs-view show" id="modal-signin-view">
+              <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+                <h3 class="modal-title mt-4 mb-0 text-center">Sign in</h3>
+                <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                  <i class="cxi-cross" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="modal-body px-md-5 px-4">
+                <p class="font-size-sm text-muted text-center">Sign in to your account using email and password provided during registration.</p>
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" class="form-control" id="signin-email" placeholder="Your email address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signin-password" class="form-label">Password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signin-password" placeholder="Your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="remember-me" checked>
+                      <label for="remember-me" class="custom-control-label">Remember me</label>
+                    </div>
+                    <a href="#" class="font-size-sm text-decoration-none">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                  <p class="font-size-sm pt-4 mb-0">
+                    Don't have an account?
+                    <a href="#" class="font-weight-bold text-decoration-none" data-view="#modal-signup-view">Sign up</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <!-- Sign up form -->
+            <div class="cs-view" id="modal-signup-view">
+              <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+                <h3 class="modal-title mt-4 mb-0 text-center">Sign up</h3>
+                <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                  <i class="cxi-cross" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="modal-body px-md-5 px-4">
+                <p class="font-size-sm text-muted text-center">Sign in to your account using email and password provided during registration.</p>
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="signup-name">Full name</label>
+                    <input type="text" class="form-control" id="signup-name" placeholder="Your full name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" class="form-control" id="signup-email" placeholder="Your email address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-password" class="form-label">Password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signup-password" placeholder="Your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-confirm-password" class="form-label">Confirm password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signup-confirm-password" placeholder="Confirm your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary btn-block" type="submit">Sign up</button>
+                  <p class="font-size-sm pt-4 mb-0">Already have an account?
+                    <a href="#" class="font-weight-bold text-decoration-none" data-view="#modal-signin-view">Sign in</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="modal-body text-center px-0 pt-2 pb-4">
+              <hr>
+              <p class="font-size-sm text-heading mb-3 pt-4">Or sign in with</p>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Facebook">
+                <i class="cxi-facebook"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Google">
+                <i class="cxi-google"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Twitter">
+                <i class="cxi-twitter"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="LinkedIn">
+                <i class="cxi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Shopping cart off-canvas -->
+      <div id="cart" class="cs-offcanvas cs-offcanvas-right">
+
+        <!-- Header -->
+        <div class="cs-offcanvas-cap align-items-center border-bottom">
+          <h2 class="h5 mb-0">Your cart (4)</h2>
+          <button class="close mr-n1" type="button" data-dismiss="offcanvas" aria-label="Close">
+            <span class="h3 font-weight-normal mb-0" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="cs-offcanvas-body">
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/01.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Basic hooded sweatshirt in pink</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Color:</span> Pink</li>
+                    <li class="mb-0"><span class="text-muted">Size:</span> S</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong class="text-danger">$15.00</strong> <s class="font-size-xs text-muted">$31.00</s></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/02.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Black and white sport cap</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$18.15</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/03.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Mid-rise slim cropped fit jeans</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Size:</span> M</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$76.00</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/04.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Men fashion gray shoes</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Color:</span> Gray</li>
+                    <li class="mb-0"><span class="text-muted">Size:</span> 10.5</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$84.00</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="cs-offcanvas-cap flex-column border-top">
+          <div class="d-flex align-items-center justify-content-between mb-3 pb-1">
+            <span class="text-muted mr-2">Subtotal:</span>
+            <span class="h5 mb-0">$198.65</span>
+          </div>
+          <a href="checkout.html" class="btn btn-primary btn-lg btn-block">
+            <i class="cxi-credit-card font-size-lg mt-n1 mr-1"></i>
+            Checkout
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Header (Topbar + Navbar) -->
+      <header class="cs-header">
+  
+        <!-- Topbar -->
+        <div class="topbar topbar-dark bg-dark">
+          <div class="container d-flex align-items-center px-0 px-xl-3">
+            <div class="mr-3">
+              <a href="tel:4055550128" class="topbar-link d-md-inline-block d-none">
+                Available 24/7 at
+                <span class='font-weight-bold'>(405) 555-0128</span>
+              </a>
+              <a href="tel:4055550128" class="topbar-link d-md-none d-inline-block text-nowrap">
+                <i class="cxi-iphone align-middle"></i>
+                (405) 555-0128
+              </a>
+            </div>
+            <a href="order-tracking.html" class="topbar-link ml-auto mr-4 pr-sm-2 text-nowrap">
+              <i class="cxi-map-pin-outline mr-1 font-size-base align-middle"></i>
+              Track <span class="d-none d-sm-inline">order</span>
+            </a>
+            <div class="dropdown">
+              <a href="#" class="topbar-link dropdown-toggle" data-toggle="dropdown">
+                <img src="../../assets/img/ecommerce/flags/en.png" class="mr-2" width="20" alt="English">
+                Eng / $
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/fr.png" class="mr-2" width="20" alt="Français">
+                  Français / €
+                </a>
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/de.png" class="mr-2" width="20" alt="Deutsch">
+                  Deutsch / €
+                </a>
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/it.png" class="mr-2" width="20" alt="Italiano">
+                  Italiano / €
+                </a>
+              </div>
+            </div>
+            <a href="#modal-signin" class="topbar-link d-lg-inline-block d-none ml-4 pl-1 text-decoration-none text-nowrap" data-toggle="modal" data-view="#modal-signin-view">
+              <i class="cxi-profile mr-1 font-size-base align-middle"></i>
+              Sign in / up
+            </a>
+          </div>
+        </div>
+  
+        <!-- Navbar -->
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+        <div class="navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-fixed-element>
+          <div class="container px-0 px-xl-3">
+            <a href="index.html" class="navbar-brand order-lg-1 mr-0 pr-lg-3 mr-lg-4">
+              <img src="../../assets/img/ecommerce/logo.svg" alt="Createx Logo" width="130">
+            </a>
+            <!-- Search desktop -->
+            <div class="input-group-overlay ml-4 d-lg-block d-none order-lg-3" style="max-width: 21rem;">
+              <input class="form-control appended-form-control" type="text" placeholder="Search for products...">
+              <div class="input-group-append-overlay">
+                <span class="input-group-text"><i class="cxi-search lead align-middle"></i></span>
+              </div>
+            </div>
+            <!-- Toolbar -->
+            <div class="d-flex align-items-center order-lg-3">
+              <ul class="nav nav-tools flex-nowrap">
+                <li class="nav-item d-lg-block d-none mb-0">
+                  <a href="account-wishlist.html" class="nav-tool">
+                    <i class="cxi-heart nav-tool-icon"></i>
+                    <span class="nav-tool-label">2</span>
+                  </a>
+                </li>
+                <li class="divider-vertical mb-0 d-lg-block d-none"></li>
+                <li class="nav-item align-self-center mb-0">
+                  <a href="#" class="nav-tool pr-lg-0" data-toggle="offcanvas" data-target="cart">
+                    <i class="cxi-cart nav-tool-icon"></i>
+                    <span class="badge badge-success align-middle mt-n1 ml-2 px-2 py-1 font-size-xs">4</span>
+                  </a>
+                </li>
+                <li class="divider-vertical mb-0 d-lg-none d-block"></li>
+                <li class="nav-item mb-0">
+                  <button class="navbar-toggler mt-n1 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!-- Navbar collapse -->
+            <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse">
+              <!-- Search mobile -->
+              <div class="input-group-overlay form-group mb-0 d-lg-none d-block">
+                <input type="text" class="form-control prepended-form-control rounded-0 border-0" placeholder="Search for products...">
+                <div class="input-group-prepend-overlay">
+                  <span class="input-group-text">
+                    <i class="cxi-search font-size-lg align-middle mt-n1"></i>
+                  </span>
+                </div>
+              </div>
+              <!-- Menu -->
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="shop-catalog.html" class="dropdown-item">Catalog with Filters</a></li>
+                    <li><a href="shop-single.html" class="dropdown-item">Single Product</a></li>
+                    <li><a href="checkout.html" class="dropdown-item">Checkout</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mega-dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Megamenu</a>
+                  <div class="dropdown-menu">
+                    <div class="container pt-lg-1 pb-lg-3">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">New collection</a></li>
+                            <li><a href="#" class="dropdown-item">Best sellers</a></li>
+                            <li><a href="#" class="dropdown-item">Plus size</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Sale up to 70%</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Clothes</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Coats</a></li>
+                            <li><a href="#" class="dropdown-item">Jackets</a></li>
+                            <li><a href="#" class="dropdown-item">Suits</a></li>
+                            <li><a href="#" class="dropdown-item">Dresses</a></li>
+                            <li><a href="#" class="dropdown-item">Cardigans &amp; sweaters</a></li>
+                            <li><a href="#" class="dropdown-item">Sweatshirts &amp; hoodies</a></li>
+                            <li><a href="#" class="dropdown-item">T-shirts &amp; tops</a></li>
+                            <li><a href="#" class="dropdown-item">Pants</a></li>
+                            <li><a href="#" class="dropdown-item">Jeans</a></li>
+                            <li><a href="#" class="dropdown-item">Shorts</a></li>
+                            <li><a href="#" class="dropdown-item">Skirts</a></li>
+                            <li><a href="#" class="dropdown-item">Lingerie &amp; nightwear</a></li>
+                            <li><a href="#" class="dropdown-item">Sportswear</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Shoes</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Boots</a></li>
+                            <li><a href="#" class="dropdown-item">Flat shoes</a></li>
+                            <li><a href="#" class="dropdown-item">Heels</a></li>
+                            <li><a href="#" class="dropdown-item">Sandals</a></li>
+                            <li><a href="#" class="dropdown-item">Mules</a></li>
+                            <li><a href="#" class="dropdown-item">Sliders</a></li>
+                            <li><a href="#" class="dropdown-item">Slippers</a></li>
+                            <li><a href="#" class="dropdown-item">Sneakers</a></li>
+                            <li><a href="#" class="dropdown-item">Leather</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Accessories</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Bags &amp; backpacks</a></li>
+                            <li><a href="#" class="dropdown-item">Hats &amp; scarves</a></li>
+                            <li><a href="#" class="dropdown-item">Hair accessories</a></li>
+                            <li><a href="#" class="dropdown-item">Belts</a></li>
+                            <li><a href="#" class="dropdown-item">Jewellery</a></li>
+                            <li><a href="#" class="dropdown-item">Watches</a></li>
+                            <li><a href="#" class="dropdown-item">Sunglasses</a></li>
+                            <li><a href="#" class="dropdown-item">Purses</a></li>
+                            <li><a href="#" class="dropdown-item">Socks &amp; tights</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-1 d-none d-lg-block py-2">
+                          <span class="divider-vertical h-100 mx-auto"></span>
+                        </div>
+                        <div class="col-lg-3 d-none d-lg-block py-2">
+                          <a href="#" class="d-block text-decoration-none pt-1">
+                            <img src="../../assets/img/ecommerce/megamenu.jpg" class="d-block rounded mb-3" alt="Promo banner">
+                            <h5 class="font-size-sm mb-3">Back to school. Sale up to 50%</h5>
+                            <div class="btn btn-outline-primary btn-sm">
+                              See offers
+                              <i class="cxi-arrow-right ml-1"></i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="account-profile.html" class="dropdown-item">Profile</a></li>
+                    <li><a href="account-orders.html" class="dropdown-item">My Orders</a></li>
+                    <li><a href="account-wishlist.html" class="dropdown-item">Wishlist</a></li>
+                    <li><a href="account-recently-viewed.html" class="dropdown-item">Recently Viewed</a></li>
+                    <li><a href="account-reviews.html" class="dropdown-item">My Reviews</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="blog.html" class="dropdown-item">Blog List</a></li>
+                    <li><a href="blog-single.html" class="dropdown-item">Single Post</a></li>
+                    <li><a href="contacts.html" class="dropdown-item">Contacts</a></li>
+                    <li><a href="order-tracking.html" class="dropdown-item">Order Tracking</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#modal-signin" class="nav-link d-lg-none" data-toggle="modal" data-view="#modal-signin-view">
+                    <i class="cxi-profile font-size-base align-middle mr-1"></i>
+                    Sign in / up
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <!-- Promo bar -->
+      <section class="cs-promo-bar bg-primary py-2">
+        <div class="container d-flex justify-content-center">
+          <div class="cs-carousel cs-controls-inverse">
+            <div class="cs-carousel-inner" data-carousel-options = '{"mode": "gallery", "nav": false}'>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Up to 70% Off.</strong>
+                <a href="#" class="text-light">Shop our latest sale offers</a>
+              </div>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Money back guarantee.</strong>
+                <a href="#" class="text-light">Learn more</a>
+              </div>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Friendly customer support.</strong>
+                <a href="#" class="text-light">Contact 24/7</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Breadcrumb -->
+      <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb breadcrumb-alt mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html"><i class="cxi-home"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+          </ol>
+        </div>
+      </nav>
+
+
+      <!-- Page content -->
+      <section class="container pt-3 pt-md-4 pb-3 pb-sm-4 pb-lg-5 mb-4">
+        <div class="row">
+
+          <!-- Checkout content -->
+          <div class="col-lg-8 pr-lg-6">
+            <div class="d-flex align-items-center justify-content-between pb-2 mb-4">
+              <h1 class="mb-0">Checkout</h1>
+              <a href="shop-catalog.html"><strong>Back to shopping</strong></a>
+            </div>
+
+            <!-- Alert -->
+            <div class="alert alert-info mb-4" role="alert">
+              <div class="media align-items-center">
+                <i class="cxi-profile lead mr-3"></i>
+                <div class="media-body">
+                  Already have an account?&nbsp;&nbsp;<a href="#modal-signin" class="alert-link" data-toggle="modal" data-view="#modal-signin-view">Sign in</a>&nbsp;&nbsp;for faster checkout experience.
+                </div>
+              </div>
+            </div>
+
+            <hr class="border-top-0 border-bottom pt-2 mb-4">
+
+            <!-- Order review -->
+            <h2 class="h4 mb-4">1. Order Review</h2>
+            <div class="bg-secondary rounded mb-5">
+              <!-- Item -->
+              <div class="media px-2 px-sm-4 py-4 border-bottom">
+                <a href="shop-single.html" style="min-width: 80px;">
+                  <img src="../../assets/img/ecommerce/cart/01.png" width="80" alt="Product thumb">
+                </a>
+                <div class="media-body w-100 pl-3">
+                  <div class="d-sm-flex">
+                    <div class="pr-sm-3 w-100" style="max-width: 16rem;">
+                      <h3 class="font-size-sm mb-3">
+                        <a href="shop-single.html" class="nav-link font-weight-bold">Basic hooded sweatshirt in pink</a>
+                      </h3>
+                      <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                        <li class="mb-0"><span class="text-muted">Color:</span> Pink</li>
+                        <li class="mb-0"><span class="text-muted">Size:</span> S</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex pr-sm-3">
+                      <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                      <div class="text-nowrap pt-2"><strong class="text-danger">$15.00</strong> <s class="font-size-xs text-muted">$31.00</s></div>
+                    </div>
+                    <div class="d-flex align-items-center flex-sm-column text-sm-center ml-sm-auto pt-3 pt-sm-0">
+                      <button class="btn btn-outline-primary btn-sm mr-2 mr-sm-0">Delete</button>
+                      <button class="btn btn-link btn-sm text-decoration-none pt-0 pt-sm-2 px-0 pb-0 mt-0 mt-sm-1">
+                        Move to
+                        <i class="cxi-heart ml-1"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Item -->
+              <div class="media px-2 px-sm-4 py-4 border-bottom">
+                <a href="shop-single.html" style="min-width: 80px;">
+                  <img src="../../assets/img/ecommerce/cart/02.png" width="80" alt="Product thumb">
+                </a>
+                <div class="media-body w-100 pl-3">
+                  <div class="d-sm-flex">
+                    <div class="pr-sm-3 w-100" style="max-width: 16rem;">
+                      <h3 class="font-size-sm mb-3">
+                        <a href="shop-single.html" class="nav-link font-weight-bold">Black and white sport cap</a>
+                      </h3>
+                    </div>
+                    <div class="d-flex pr-sm-3">
+                      <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                      <div class="text-nowrap pt-2"><strong>$18.15</strong></div>
+                    </div>
+                    <div class="d-flex align-items-center flex-sm-column text-sm-center ml-sm-auto pt-3 pt-sm-0">
+                      <button class="btn btn-outline-primary btn-sm mr-2 mr-sm-0">Delete</button>
+                      <button class="btn btn-link btn-sm text-decoration-none pt-0 pt-sm-2 px-0 pb-0 mt-0 mt-sm-1">
+                        Move to
+                        <i class="cxi-heart ml-1"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Item -->
+              <div class="media px-2 px-sm-4 py-4 border-bottom">
+                <a href="shop-single.html" style="min-width: 80px;">
+                  <img src="../../assets/img/ecommerce/cart/03.png" width="80" alt="Product thumb">
+                </a>
+                <div class="media-body w-100 pl-3">
+                  <div class="d-sm-flex">
+                    <div class="pr-sm-3 w-100" style="max-width: 16rem;">
+                      <h3 class="font-size-sm mb-3">
+                        <a href="shop-single.html" class="nav-link font-weight-bold">Mid-rise slim cropped fit jeans</a>
+                      </h3>
+                      <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                        <li class="mb-0"><span class="text-muted">Size:</span> M</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex pr-sm-3">
+                      <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                      <div class="text-nowrap pt-2"><strong>$76.00</strong></div>
+                    </div>
+                    <div class="d-flex align-items-center flex-sm-column text-sm-center ml-sm-auto pt-3 pt-sm-0">
+                      <button class="btn btn-outline-primary btn-sm mr-2 mr-sm-0">Delete</button>
+                      <button class="btn btn-link btn-sm text-decoration-none pt-0 pt-sm-2 px-0 pb-0 mt-0 mt-sm-1">
+                        Move to
+                        <i class="cxi-heart ml-1"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Item -->
+              <div class="media px-2 px-sm-4 py-4 border-bottom">
+                <a href="shop-single.html" style="min-width: 80px;">
+                  <img src="../../assets/img/ecommerce/cart/04.png" width="80" alt="Product thumb">
+                </a>
+                <div class="media-body w-100 pl-3">
+                  <div class="d-sm-flex">
+                    <div class="pr-sm-3 w-100" style="max-width: 16rem;">
+                      <h3 class="font-size-sm mb-3">
+                        <a href="shop-single.html" class="nav-link font-weight-bold">Men fashion gray shoes</a>
+                      </h3>
+                      <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                        <li class="mb-0"><span class="text-muted">Color:</span> Gray</li>
+                        <li class="mb-0"><span class="text-muted">Size:</span> 10.5</li>
+                      </ul>
+                    </div>
+                    <div class="d-flex pr-sm-3">
+                      <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                      <div class="text-nowrap pt-2"><strong>$84.00</strong></div>
+                    </div>
+                    <div class="d-flex align-items-center flex-sm-column text-sm-center ml-sm-auto pt-3 pt-sm-0">
+                      <button class="btn btn-outline-primary btn-sm mr-2 mr-sm-0">Delete</button>
+                      <button class="btn btn-link btn-sm text-decoration-none pt-0 pt-sm-2 px-0 pb-0 mt-0 mt-sm-1">
+                        Move to
+                        <i class="cxi-heart ml-1"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="px-3 px-sm-4 py-4 text-right">
+                <span class="text-muted">Subtotal:<strong class="text-dark font-size-lg ml-2">$198.65</strong></span>
+              </div>
+            </div>
+
+            <!-- Adresses -->
+            <h2 class="h4 mb-4">2. Shipping &amp; Billing Address</h2>
+            <div class="row pb-3">
+              <div class="col-sm-6 form-group">
+                <label for="ch-fn">First Name</label>
+                <input type="text" class="form-control form-control-lg" id="ch-fn" placeholder="Your first name">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ch-ln">Last Name</label>
+                <input type="text" class="form-control form-control-lg" id="ch-ln" placeholder="Your last name">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ch-email">Email</label>
+                <input type="email" class="form-control form-control-lg" id="ch-email" placeholder="Your email address">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ch-phone">Phone</label>
+                <input type="text" class="form-control form-control-lg" id="ch-phone" placeholder="Your phone number">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ch-country">Country</label>
+                <select id="ch-country" class="custom-select custom-select-lg">
+                  <option value="" disabled selected>Choose country</option>
+                  <option value="argentina">Australia</option>
+                  <option value="brazil">Brazil</option>
+                  <option value="belgium">Belgium</option>
+                  <option value="france">France</option>
+                  <option value="germany">Germany</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="usa">USA</option>
+                </select>
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ch-city">City</label>
+                <select id="ch-city" class="custom-select custom-select-lg">
+                  <option value="" disabled selected>Choose city</option>
+                  <option value="belgium">Brussels</option>
+                  <option value="germany">Berlin</option>
+                  <option value="uk">London</option>
+                  <option value="argentina">Melbourne</option>
+                  <option value="usa">New York</option>
+                  <option value="france">Paris</option>
+                  <option value="brazil">Rio de Janeiro</option>
+                </select>
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ch-address">Address</label>
+                <input type="text" class="form-control form-control-lg" id="ch-address" placeholder="Street, appartment...">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label for="ch-zip">ZIP Code</label>
+                <input type="text" class="form-control form-control-lg" id="ch-zip" placeholder="ZIP code">
+              </div>
+              <div class="col-12 form-group">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="same-details" checked>
+                  <label for="same-details" class="custom-control-label">Billing and Shipping details are the same</label>
+                </div>
+              </div>
+            </div>
+
+            <hr class="mb-4 pb-2">
+
+            <!-- Shipping -->
+            <h2 class="h4 mb-4">3. Shipping Method</h2>
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="courier" name="shipping" checked>
+              <label for="courier" class="custom-control-label d-flex align-items-center">
+                <span>
+                  <strong class="d-block">Courier to your address</strong>
+                  <span class="text-muted font-size-sm">Estimated date: November 9</span>
+                </span>
+                <span class="ml-auto">$25.00</span>
+              </label>
+            </div>
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="store-pickup" name="shipping">
+              <label for="store-pickup" class="custom-control-label d-flex align-items-center">
+                <span>
+                  <strong class="d-block">Pick up from store</strong>
+                  <span class="text-muted font-size-sm">Pick up on November 8 from 12:00pm</span>
+                </span>
+                <span class="ml-auto">Free</span>
+              </label>
+            </div>
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="ups" name="shipping">
+              <label for="ups" class="custom-control-label d-flex align-items-center">
+                <span>
+                  <strong class="d-block">UPS Ground Shipping</strong>
+                  <span class="text-muted font-size-sm">Up to one week</span>
+                </span>
+                <span class="ml-auto">$10.00</span>
+              </label>
+            </div>
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="locker-pickup" name="shipping">
+              <label for="locker-pickup" class="custom-control-label d-flex align-items-center">
+                <span>
+                  <strong class="d-block">Pick up at Createx Locker</strong>
+                  <span class="text-muted font-size-sm">Pick up on November 8 from 12:00pm</span>
+                </span>
+                <span class="ml-auto">$8.50</span>
+              </label>
+            </div>
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input" id="global-export" name="shipping">
+              <label for="global-export" class="custom-control-label d-flex align-items-center">
+                <span>
+                  <strong class="d-block">Createx Global Export</strong>
+                  <span class="text-muted font-size-sm">3-4 days</span>
+                </span>
+                <span class="ml-auto">$15.00</span>
+              </label>
+            </div>
+
+            <hr class="border-top-0 border-bottom pt-4 mb-4">
+
+            <!-- Payment -->
+            <h2 class="h4 pt-2 mb-4">4. Payment Method</h2>
+            <div class="row pb-4">
+              <div class="col-lg-7">
+                <div class="accordion-alt" id="payment-methods">
+
+                  <!-- Card: Credit card -->
+                  <div class="card mb-3 px-4 py-3 border rounded box-shadow-sm">
+                    <div class="card-header py-2">
+                      <div class="accordion-heading custom-control custom-radio" data-toggle="collapse" data-target="#cc-card">
+                        <input type="radio" class="custom-control-input" id="cc" name="payment" checked>
+                        <label for="cc" class="custom-control-label d-flex align-items-center">
+                          <strong class="d-block mr-3">Credit card</strong>
+                          <img src="../../assets/img/ecommerce/checkout/cards.png" width="108" alt="Credit cards">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="collapse show" id="cc-card" data-parent="#payment-methods">
+                      <div class="card-body pt-3 pb-0">
+                        <div class="form-group mb-3">
+                          <label for="cc-number">Card number</label>
+                          <input type="text" id="cc-number" class="form-control form-control-lg" data-format="card" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="d-flex">
+                          <div class="form-group mb-3 mr-3">
+                            <label for="cc-exp-date">Expiry date</label>
+                            <input type="text" id="cc-exp-date" class="form-control form-control-lg" data-format="date" placeholder="mm/yy">
+                          </div>
+                          <div class="form-group mb-3">
+                            <label for="cc-cvc">CVC</label>
+                            <input type="text" id="cc-cvc" class="form-control form-control-lg" data-format="cvc" placeholder="000">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Card: PayPal -->
+                  <div class="card mb-3 px-4 py-3 border rounded box-shadow-sm">
+                    <div class="card-header py-2">
+                      <div class="accordion-heading custom-control custom-radio" data-toggle="collapse" data-target="#paypal-card">
+                        <input type="radio" class="custom-control-input" id="paypal" name="payment">
+                        <label for="paypal" class="custom-control-label d-flex align-items-center">
+                          <strong class="d-block mr-3">PayPal</strong>
+                          <img src="../../assets/img/ecommerce/checkout/paypal-badge.png" width="48" alt="PayPal">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="collapse" id="paypal-card" data-parent="#payment-methods">
+                      <div class="card-body pt-3 pb-0">
+                        <a href="#" class="d-inline-block mb-2" style="max-width: 300px;">
+                          <img src="../../assets/img/ecommerce/checkout/paypal.png" alt="PayPal">
+                        </a>
+                        <a href="#" class="d-inline-block mb-2" style="max-width: 300px;">
+                          <img src="../../assets/img/ecommerce/checkout/paypal-credit.png" alt="PayPal Credit">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Card: Cash -->
+                  <div class="card mb-3 px-4 py-3 border rounded box-shadow-sm">
+                    <div class="card-header py-2">
+                      <div class="accordion-heading custom-control custom-radio" data-toggle="collapse" data-target="#cash-card">
+                        <input type="radio" class="custom-control-input" id="cash" name="payment">
+                        <label for="cash" class="custom-control-label">
+                          <strong class="d-block mr-3">Cash on delivery</strong>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="collapse" id="cash-card" data-parent="#payment-methods">
+                      <div class="card-body pt-3 pb-0">
+                        <p class="mb-2 text-muted">You have selected to pay with cash upon delivery.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="mb-4 pb-2">
+
+            <!-- Additional info -->
+            <h2 class="h4 mb-4">5. Additional Information (optional)</h2>
+            <div class="form-group">
+              <label for="ch-notes">Order notes</label>
+              <textarea id="ch-notes" class="form-control form-control-lg" rows="5" placeholder="Notes about your order, e.g. special noted for delivery."></textarea>
+            </div>
+          </div>
+
+
+          <!-- Order totals (sticky sidebar) -->
+          <!-- For more sticky sidebar options visit https://abouolia.github.io/sticky-sidebar/#options -->
+          <aside class="col-lg-4">
+            <div class="sidebar-sticky" data-sidebar-sticky-options='{
+              "topSpacing": 120,
+              "minWidth": 991
+            }'>
+              <div class="sidebar-sticky-inner">
+                <div class="form-group">
+                  <label for="promo-code">Apply a promo code</label>
+                  <div class="input-group input-group-lg">
+                    <input type="text" id="promo-code" class="form-control" placeholder="Enter promo code">
+                    <div class="input-group-append">
+                      <button type="button" class="btn btn-primary">&nbsp;&nbsp;Apply&nbsp;&nbsp;</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-secondary rounded mb-4">
+                  <div class="border-bottom p-4">
+                    <h2 class="h4 mb-0">Order totals</h2>
+                  </div>
+                  <ul class="list-unstyled border-bottom mb-0 p-4">
+                    <li class="d-flex justify-content-between mb-2">
+                      <span class="font-weight-bold">Subtotal:</span>
+                      <span class="font-weight-bold">$198.65</span>
+                    </li>
+                    <li class="d-flex justify-content-between mb-2">
+                      <span>Shipping costs:</span>
+                      <span>$25.00</span>
+                    </li>
+                    <li class="d-flex justify-content-between mb-2">
+                      <span>Discount:</span>
+                      <span>&mdash;</span>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                      <span>Estimated sales tax:</span>
+                      <span>$6.35</span>
+                    </li>
+                  </ul>
+                  <div class="d-flex justify-content-between p-4">
+                    <span class="h5 mb-0">Order total:</span>
+                    <span class="h5 mb-0">$230.00</span>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg btn-block">Complete order</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-sm-5 pt-4 bg-dark">
+      <div class="container pt-3">
+        <div class="row pb-sm-2">
+          <div class="col-6 col-sm-3 col-lg-2 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Help</h3>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Delivery &amp; returns</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">FAQ</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="order-tracking.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Track order</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="blog.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-sm-3 col-lg-2 col-xl-3 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light pl-xl-6">Shop</h3>
+            <ul class="nav nav-light flex-column pl-xl-6">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">New arrivals</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Trending now</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Sales</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Brands</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3 pb-2 pb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Get in Touch</h3>
+            <ul class="nav nav-light flex-column pb-3">
+              <li class="nav-item text-nowrap mb-2">
+                <span class="text-light mr-1">Call:</span>
+                <a href="tel:4055550128" class="nav-link d-inline-block mr-lg-0 mr-sm-4 p-0 font-weight-normal">(405) 555-0128</a>
+              </li>
+              <li class="nav-item text-nowrap mb-2">
+                <span class="text-light mr-1">Email:</span>
+                <a href="mailto:support@example.com" class="nav-link d-inline-block mr-lg-0 mr-sm-4 p-0 font-weight-normal">support@example.com</a>
+              </li>
+            </ul>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-facebook"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-instagram"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-twitter"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-youtube"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light">
+              <i class="cxi-pinterest"></i>
+            </a>
+          </div>
+          <div class="col-lg-4 col-xl-3 mb-4">
+            <h3 class="h6 mb-3 pb-1 text-uppercase text-light">Download our App</h3>
+            <div class="d-flex flex-wrap flex-sm-nowrap">
+              <a href="#" class="btn-market btn-apple mb-3 mr-3" role="button">
+                <span class="btn-market-subtitle">Download on the</span>
+                <span class="btn-market-title">App Store</span>
+              </a>
+              <a href="#" class="btn-market btn-google mb-3" role="button">
+                <span class="btn-market-subtitle">Download on the</span>
+                <span class="btn-market-title">Google Play</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-light">
+        <div class="container py-4">
+          <div class="font-size-xs text-light">
+            <span class="font-size-sm">&copy; </span>
+            All rights reserved. Made with 
+            <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+            <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="../../assets/vendor/cleave.js/dist/cleave.min.js"></script>
+    <script src="../../assets/vendor/css-element-queries/src/ResizeSensor.js"></script>
+    <script src="../../assets/vendor/sticky-sidebar/dist/sticky-sidebar.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

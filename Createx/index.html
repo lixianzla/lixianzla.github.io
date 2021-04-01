@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template and UI Kit">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="assets/vendor/simplebar/dist/simplebar.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body-->
+  <body class="overflow-x-hidden">
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="cs-header navbar navbar-expand-lg navbar-light navbar-sticky navbar-floating">
+        <div class="container px-0 px-xl-3">
+          <a href="index.html" class="navbar-brand order-lg-1 mr-lg-5 mr-0 pr-lg-2">
+            <img src="assets/img/intro/logo-dark.svg" alt="Createx Logo" width="130">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-primary d-sm-inline-block d-none ml-4" target="_blank" rel="noopener">
+              <i class="cxi-cart mt-n1 mr-2"></i>
+              Buy Createx
+            </a>
+            <button class="navbar-toggler ml-1 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse1">
+            <ul class="navbar-nav mr-auto text-nowrap">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Demos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="html/creative-agency/index.html">Creative Agency</a></li>
+                  <li><a class="dropdown-item" href="html/ecommerce/index.html">E-Commerce</a></li>
+                  <li><a class="dropdown-item" href="html/online-courses/index.html">Online Courses</a></li>
+                  <li><a class="dropdown-item" href="html/seo-agency/index.html">SEO &amp; Marketing Agency</a></li>
+                  <li><a class="dropdown-item" href="html/construction/index.html">Construction Bureau</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html/components/typography.html">UI Kit (Components)</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html/documentation/dev-setup.html">Documentation</a>
+              </li>
+              <li class="nav-item d-sm-none d-block">
+                <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-sm btn-primary m-3" target="_blank" rel="noopener">
+                  <i class="cxi-cart mt-n1 mr-2"></i>
+                  Buy Createx
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section class="position-relative mb-md-5 py-lg-0 py-md-5 py-5" style="background-image: url(assets/img/intro/hero/bg.jpg); background-color: #dce0e9;">
+
+        <div class="container-fluid pr-lg-0 jarallax" data-jarallax data-type="scale-opacity" data-speed="0.25">
+          <div class="row no-gutters">
+
+            <!-- Content -->
+            <div class="col-md-5 order-md-1 order-2 align-self-center d-flex justify-content-lg-end justify-content-center mt-xl-n5 py-lg-6 text-md-left text-center">
+              <div class="pb-3 py-md-6" style="max-width: 460px;">
+                <h1 class="display-3 mb-lg-5">
+                  Create your best with CREATE<span class="text-primary">X</span>
+                </h1>
+                <div class="d-flex align-items-center justify-content-lg-start justify-content-center mb-sm-5 mb-4 pb-lg-4 pb-2">
+                  <div class="media flex-sm-row flex-column align-items-center mb-0">
+                    <div class="display-4 mr-sm-2 mb-sm-0 mb-2 text-dark">5</div>
+                    <div class="media-body pl-sm-1">
+                      <h2 class="mb-0 font-size-sm text-sm-left">Complete <br> Websites</h2>
+                    </div>
+                  </div>
+                  <div class="mx-sm-4 px-3 px-md-1 px-lg-3 font-size-lg text-primary">&bull;</div>
+                  <div class="media flex-sm-row flex-column align-items-center">
+                    <div class="display-4 mr-sm-2 mb-sm-0 mb-2 text-dark">50+</div>
+                    <div class="media-body pl-sm-1">
+                      <h2 class="mb-0 font-size-sm text-sm-left">Flexibles <br> Components</h2>
+                    </div>
+                  </div>
+                </div>
+                <a href="#demos" class="btn btn-lg btn-outline-primary pr-4" data-scroll>
+                  View demos
+                  <i class="cxi-arrow-down ml-2"></i>
+                </a>
+              </div>
+            </div>
+  
+            <!-- Parallax elements -->
+            <div class="col-md-7 order-md-2 order-1 mx-lg-auto mx-auto mb-lg-n6">
+              <div class="mb-lg-n6">
+                <div class="mt-lg-n5 position-relative">
+                  <img src="assets/img/intro/hero/demos/01.png" alt="Parallax element" class="position-relative" style="z-index: 1;" data-jarallax-element="14" data-disable-parallax-down="lg">
+                  <img src="assets/img/intro/hero/demos/02.png" alt="Parallax element" class="position-absolute" style="top: 0; left: 0; z-index: 2;" data-jarallax-element="20 -8" data-disable-parallax-down="lg">
+                  <img src="assets/img/intro/hero/demos/03.png" alt="Parallax element" class="position-absolute" style="top: 0; left: 0; z-index: 3;" data-jarallax-element="25 10" data-disable-parallax-down="lg">
+                  <img src="assets/img/intro/hero/demos/04.png" alt="Parallax element" class="position-absolute" style="top: 0; left: 0; z-index: 4;" data-jarallax-element="30 -8" data-disable-parallax-down="lg">
+                  <img src="assets/img/intro/hero/demos/05.png" alt="Parallax element" class="position-absolute" style="top: 0; left: 0; z-index: 5;" data-jarallax-element="30 27" data-disable-parallax-down="lg">
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Parallax bg -->
+          <div class="jarallax-img" style="background-image: url(assets/img/intro/hero/bg-shape.png);"></div>
+        </div>
+        
+      </section>
+
+
+      <!-- Demos -->
+      <section class="container py-lg-6 py-5" id="demos">
+        <h3 class="h6 mb-2 pt-3 pt-md-0 text-center">Createx Demos</h3>
+        <h2 class="h1 text-center">5 pre-built websites</h2>
+        <p class="mb-5 pb-lg-2 font-size-lg text-muted text-center">The collection of carefully built demos that your work has been waiting for. <br>More to come soon!</p>
+
+        <!-- Demo 1 -->
+        <article class="row no-gutters mb-sm-5 mb-grid-gutter rounded" style="background-color: #fff3f6;">
+          <div class="col-md-4 pt-sm-5 pt-4 pb-lg-5 pb-4 pr-lg-0 pl-lg-5 px-4 text-md-left text-center">
+            <h3 class="h2 mb-3">01. Creative Agency</h3>
+            <p class="pb-2 text-muted">Homepage / Portfolio / About / Blog / Contacts</p>
+            <a href="html/creative-agency/index.html" class="btn btn-outline-primary">View demo</a>
+          </div>
+          <div class="col-md-8 d-flex align-items-end justify-content-center">
+            <a href="html/creative-agency/index.html">
+              <img src="assets/img/intro/demos/01.png" width="773" alt="Creative Agency">
+            </a>
+          </div>
+        </article>
+
+        <!-- Demo 2 -->
+        <article class="row no-gutters mb-sm-5 mb-grid-gutter rounded" style="background-color:#e5f7f7;">
+          <div class="col-md-4 pt-sm-5 pt-4 pb-lg-5 pb-4 pr-lg-0 pl-lg-5 px-4 text-md-left text-center">
+            <h3 class="h2 mb-3">02. E-Commerce</h3>
+            <p class="pb-2 text-muted">Homepage / Catalog / Product Page / Cart / Checkout / Account / Blog / Contacts</p>
+            <a href="html/ecommerce/index.html" class="btn btn-outline-primary">View demo</a>
+          </div>
+          <div class="col-md-8 d-flex align-items-end justify-content-center">
+            <a href="html/ecommerce/index.html">
+              <img src="assets/img/intro/demos/05.png" width="820" alt="E-Commerce">
+            </a>
+          </div>
+        </article>
+
+        <!-- Demo 3 -->
+        <article class="row no-gutters mb-sm-5 mb-grid-gutter rounded" style="background-color:#fffcf1;">
+          <div class="col-md-4 pt-sm-5 pt-4 pb-lg-5 pb-4 pr-lg-0 pl-lg-5 px-4 text-md-left text-center">
+            <h3 class="h2 mb-3">03. Online Courses</h3>
+            <p class="pb-2 text-muted">Homepage / Courses / Events / About / Blog / Contacts</p>
+            <a href="html/online-courses/index.html" class="btn btn-outline-primary">View demo</a>
+          </div>
+          <div class="col-md-8 d-flex align-items-end justify-content-center">
+            <a href="html/online-courses/index.html">
+              <img src="assets/img/intro/demos/02.png" width="697" alt="Online Courses">
+            </a>
+          </div>
+        </article>
+
+        <!-- Demo 4 -->
+        <article class="row no-gutters mb-sm-5 mb-grid-gutter rounded" style="background-color:#f3f3ff;">
+          <div class="col-md-4 pt-sm-5 pt-4 pb-lg-5 pb-4 pr-lg-0 pl-lg-5 px-4 text-md-left text-center">
+            <h3 class="h2 mb-3">04. SEO &amp; Marketing Agency</h3>
+            <p class="pb-2 text-muted">Homepage / Portfolio / Services / About / Blog / Careers / Contacts</p>
+            <a href="html/seo-agency/index.html" class="btn btn-outline-primary">View demo</a>
+          </div>
+          <div class="col-md-8 d-flex align-items-end justify-content-center">
+            <a href="html/seo-agency/index.html">
+              <img src="assets/img/intro/demos/03.png" width="772" alt="SEO &amp; Marketing Agency">
+            </a>
+          </div>
+        </article>
+
+        <!-- Demo 5 -->
+        <article class="row no-gutters mb-sm-5 mb-grid-gutter rounded" style="background-color:#fff2ee;">
+          <div class="col-md-4 pt-sm-5 pt-4 pb-lg-5 pb-4 pr-lg-0 pl-lg-5 px-4 text-md-left text-center">
+            <h3 class="h2 mb-3">05. Construction Bureau</h3>
+            <p class="pb-2 text-muted">Homepage / Portfolio / Services / About / Blog / Careers / Contacts</p>
+            <a href="html/construction/index.html" class="btn btn-outline-primary">View demo</a>
+          </div>
+          <div class="col-md-8 d-flex align-items-end justify-content-center">
+            <a href="html/construction/index.html">
+              <img src="assets/img/intro/demos/04.png" width="792" alt="Construction Bureau">
+            </a>
+          </div>
+        </article>
+
+        <div class="d-flex flex-lg-row flex-column align-items-center justify-content-center pt-lg-5 pt-sm-4 py-3 text-center">
+          <h4 class="h3 mr-lg-5 mb-lg-0">Start to create stunning websites now!</h4>
+          <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-lg btn-primary" target="_blank" rel="noopener">
+            <i class="cxi-cart mr-2"></i>
+            Buy Createx
+          </a>
+        </div>
+      </section>
+
+
+      <!-- UI Kit + Docs -->
+      <section class="bg-secondary bg-no-repeat bg-size-cover py-2 py-дп-0" style="background-image: url(assets/img/intro/bg-shape.jpg)">
+        <div class="container">
+          <div class="row">
+
+            <!-- Components -->
+            <div class="col-md-6 pr-lg-6 pr-md-4 py-lg-6 py-5 text-md-left text-center">
+              <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                  <h2 class="mb-3">Flexible components</h2>
+                  <p class="pb-md-3 text-muted">The complete UI Kit with over 50 modular and highly customizable components: Bootstrap + Createx unique elements.</p>
+                </div>
+                <div class="row mx-n2">
+                  <div class="col-sm-6 mb-3 px-2">
+                    <a href="html/components/carousel.html" class="card card-hover cs-heading-highlight align-items-center h-100 p-4 text-decoration-0">
+                      <img src="assets/img/intro/components/01.svg" alt="Sliders &amp; Carousels" class="mx-auto my-3" style="max-width: 40px;">
+                      <div class="card-body p-0 text-center">
+                        <h3 class="h6 mb-3">Sliders &amp; Carousels</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 mb-3 px-2">
+                    <a href="html/components/gallery.html" class="card card-hover cs-heading-highlight align-items-center h-100 p-4 text-decoration-0">
+                      <img src="assets/img/intro/components/02.svg" alt="Image/Video Gallery" class="mx-auto my-3" style="max-width: 40px;">
+                      <div class="card-body p-0 text-center">
+                        <h3 class="h6 mb-3">Image/Video Gallery</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 mb-3 px-2">
+                    <a href="html/components/testimonials.html" class="card card-hover cs-heading-highlight align-items-center h-100 p-4 text-decoration-0">
+                      <img src="assets/img/intro/components/03.svg" alt="Testimonials &amp; Reviews" class="mx-auto my-3" style="max-width: 40px;">
+                      <div class="card-body p-0 text-center">
+                        <h3 class="h6 mb-3">Testimonials &amp; Reviews</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 mb-3 px-2">
+                    <a href="html/components/forms.html" class="card card-hover cs-heading-highlight align-items-center h-100 p-4 text-decoration-0">
+                      <img src="assets/img/intro/components/04.svg" alt="Form Controls" class="mx-auto my-3" style="max-width: 40px;">
+                      <div class="card-body p-0 text-center">
+                        <h3 class="h6 mb-3">Form Controls</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 mb-3 px-2">
+                    <a href="html/components/portfolio-components.html" class="card card-hover cs-heading-highlight align-items-center h-100 p-4 text-decoration-0">
+                      <img src="assets/img/intro/components/05.svg" alt="Portfolio Components" class="mx-auto my-3" style="max-width: 40px;">
+                      <div class="card-body p-0 text-center">
+                        <h3 class="h6 mb-3">Portfolio Components</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-sm-6 mb-3 px-2">
+                    <a href="html/components/shop-components.html" class="card card-hover cs-heading-highlight align-items-center h-100 p-4 text-decoration-0">
+                      <img src="assets/img/intro/components/06.svg" alt="Shop Components" class="mx-auto my-3" style="max-width: 40px;">
+                      <div class="card-body p-0 text-center">
+                        <h3 class="h6 mb-3">Shop Components</h3>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="pt-md-4">
+                  <a href="html/components/typography.html" class="btn btn-primary mt-md-3">All components here</a>
+                </div>
+              </div>
+              <hr class="mt-5 border-dark opacity-10 d-md-none">
+            </div>
+
+            <span class="divider-vertical d-none d-md-block"></span>
+
+            <!-- Documentation -->
+            <div class="col-md-6 pl-lg-6 pl-md-4 py-lg-6 py-5 text-md-left text-center">
+              <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                  <h2 class="mb-3">Documentation</h2>
+                  <p class="pb-md-3 text-muted">Components, plugins, and build tools are all thoroughly documented with live examples and markup for easy use and customization.</p>
+                  <a href="html/documentation/dev-setup.html" class="d-block">
+                    <img src="assets/img/intro/documentation.png" class="d-block mx-auto mb-3" alt="Documentation">
+                  </a>
+                </div>
+                <div class="pt-md-4">
+                  <a href="html/documentation/dev-setup.html" class="btn btn-primary mt-2 mt-md-3">Online documentation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Mobile -->
+      <section class="container pt-lg-6 pt-5">
+        <div class="row align-items-center pt-3 pt-lg-0">
+          <div class="col-md-5 order-md-1 order-2 mb-lg-n6">
+            <div class="position-relative mx-auto" style="max-width: 495px;">
+              <img src="assets/img/intro/mobile/01.png" alt="Mobile screen" data-jarallax-element="5 5" data-disable-parallax-down="lg">
+              <img src="assets/img/intro/mobile/02.png" alt="Mobile screen" class="position-absolute" style="top: 0; left: 0;" data-jarallax-element="10 13" data-disable-parallax-down="lg">
+              <img src="assets/img/intro/mobile/03.png" alt="Mobile screen" class="position-absolute" style="top: 0; left: 0;" data-jarallax-element="15 23" data-disable-parallax-down="lg">
+            </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1 col-md-7 order-md-2 order-1 text-md-left text-center pb-md-5">
+            <h3 class="h6 mb-2 text-uppercase">Responsive</h3>
+            <h2 class="h1">Mobile friendly interface</h2>
+            <p class="pb-2 text-muted">Createx based on advanced fully responsive Bootstrap grid. It looks great on any screen size and resolution and optimized for small touch screens. Createx features mobile friendly navigation for handled devices and off-canvas sidebars that are easily accessible. All sliders used in the template have swipe support.</p>
+            <div class="media d-sm-flex d-none mb-md-0 mb-5 mx-md-0 mx-auto" style="max-width: 336px;">
+              <img src="assets/img/intro/mobile/qrcode.svg" width="124" alt="QR code" class="mr-4">
+              <div class="media-body align-self-center pl-2">
+                <p class="mb-0 lead font-weight-bold">Scan QR code to test on your device</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Features -->
+      <section class="py-lg-6 py-5 bg-secondary bg-no-repeat bg-size-cover" style="background-image: url(assets/img/intro/bg-shape.jpg)">
+        <div class="container py-3 pb-lg-0">
+          <h3 class="h6 mb-2 text-center text-uppercase">Made With Features</h3>
+          <h2 class="h1 mb-5 pb-lg-2 text-center">Feature highlights</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="media mb-4 pb-3">
+                <img src="assets/img/intro/features/01.svg" alt="Gulp" class="mr-3">
+                <div class="media-body pl-1">
+                  <h3 class="mb-1 font-size-lg">Kick-start Your Development</h3>
+                  <p class="mb-0 font-size-sm text-muted">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
+                </div>
+              </div>
+              <div class="media mb-4 pb-3">
+                <img src="assets/img/intro/features/02.svg" alt="Sass" class="mr-3">
+                <div class="media-body pl-1">
+                  <h3 class="mb-1 font-size-lg">Easy to Customize with Sass</h3>
+                  <p class="mb-0 font-size-sm text-muted">Createx is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+                </div>
+              </div>
+              <div class="media mb-4 pb-3">
+                <img src="assets/img/intro/features/03.svg" alt="Bootstrap" class="mr-3">
+                <div class="media-body pl-1">
+                  <h3 class="mb-1 font-size-lg">Built With Latest Bootstrap</h3>
+                  <p class="mb-0 font-size-sm text-muted">Createx is multipurpose front-end solution based on Bootstrap 4 - the world's most popular responsive, mobile-first front-end component library.</p>
+                </div>
+              </div>
+              <div class="media mb-4 pb-3">
+                <img src="assets/img/intro/features/04.svg" alt="Components" class="mr-3">
+                <div class="media-body pl-1">
+                  <h3 class="mb-1 font-size-lg">50+ Flexible Components</h3>
+                  <p class="mb-0 font-size-sm text-muted">Besides styling all default Bootstrap 4 components Createx introduces lots of new flexible, customizable and reusable elements you can use across the website.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="media mb-4 pb-3">
+                <img src="assets/img/intro/features/05.svg" alt="Documentation" class="mr-3">
+                <div class="media-body pl-1">
+                  <h3 class="mb-1 font-size-lg">Detailed Documentation</h3>
+                  <p class="mb-0 font-size-sm text-muted">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
+                </div>
+              </div>
+              <div class="media mb-4 pb-3">
+                <img src="assets/img/intro/features/06.svg" alt="HTML5" class="mr-3">
+                <div class="media-body pl-1">
+                  <h3 class="mb-1 font-size-lg">W3C Valid HTML Code</h3>
+                  <p class="mb-0 font-size-sm text-muted">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Createx is innovative at its core.</p>
+                </div>
+              </div>
+              <div class="media mb-4 pb-3">
+                <img src="assets/img/intro/features/07.svg" alt="Touch" class="mr-3">
+                <div class="media-body pl-1">
+                  <h3 class="mb-1 font-size-lg">Touch-enabled Sliders</h3>
+                  <p class="mb-0 font-size-sm text-muted">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
+                </div>
+              </div>
+              <div class="media mb-4 pb-3">
+                <img src="assets/img/intro/features/08.svg" alt="JS" class="mr-3">
+                <div class="media-body pl-1">
+                  <h3 class="mb-1 font-size-lg">Future-proof JavaScript</h3>
+                  <p class="mb-0 font-size-sm text-muted">Createx core scripts as well as all dependencies are written in vanilla JS. The only component that requires jQuery is Bootstrap itself.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="font-size-lg font-weight-bold text-center">and much more...</div>
+        </div>
+      </section>
+
+
+      <!-- Call to action -->
+      <section class="container py-lg-6 py-5">
+        <div class="row align-items-center pb-2 pb-lg-0">
+          <div class="col-lg-6 order-lg-1 order-2 text-lg-left text-center">
+            <h3 class="h6 mb-2 text-uppercase">Get it now</h3>
+            <h2 class="h1 mx-lg-0 mx-auto mb-5 pb-lg-2" style="max-width: 550px;">Add premium support and lifetime updates to this</h2>
+            <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-lg btn-primary" target="_blank" rel="noopener">
+              <i class="cxi-cart mr-2"></i>
+              Buy Createx
+            </a>
+          </div>
+          <div class="col-lg-5 offset-lg-1 order-lg-2 order-1 mb-lg-0 mb-sm-5 mb-4">
+            <img src="assets/img/intro/illustration.svg" alt="Illustration" class="d-block mx-lg-0 mx-auto">
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Subscription -->
+      <section class="py-5 bg-dark">
+        <div class="container pt-2 pt-md-3">
+          <div class="col-lg-6 col-md-8 col-sm-10 mx-auto px-sm-3 px-0">
+            <div class="cs-widget">
+              <h2 class="h3 pb-3 text-white text-center">Subscribe to our newsletter</h2>
+
+              <!-- Subscribe form -->
+              <form class="cs-subscribe-form validate d-sm-block d-none" action="https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=29ca296126" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                <div class="input-group input-group-overlay flex-nowrap mb-3">
+                  <input class="form-control form-control-lg input-light" type="email" name="EMAIL" placeholder="Your email">
+                  <div class="input-group-append">
+                    <button class="btn btn-lg btn-primary" type="submit" name="subscribe">Subscribe*</button>
+                  </div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input class="cs-subscribe-form-antispam" type="text" name="b_c7103e2c981361a6639545bd5_29ca296126" tabindex="-1">
+                </div>
+                <small class="form-text text-center text-white opacity-60">*Enjoy using Createx and stay tuned for the latest updates and news</small>
+                <div class="cs-subscribe-status"></div>
+              </form>
+
+              <!-- Subscribe form mobile -->
+              <form class="cs-subscribe-form validate d-sm-none d-block" action="mailchimp-embedded-form-action-link" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                <div class="input-group input-group-overlay flex-nowrap mb-3">
+                  <input class="form-control input-light" type="email" name="EMAIL" placeholder="Your email">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit" name="subscribe">Subscribe*</button>
+                  </div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input class="cs-subscribe-form-antispam" type="text" name="mailchimp-embedded-form-antispam-name-attribute" tabindex="-1">
+                </div>
+                <small class="form-text text-center text-white opacity-60">*Enjoy using Createx and stay tuned for the latest updates and news</small>
+                <div class="cs-subscribe-status"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer mt-n1 pb-5 bg-dark">
+      <div class="container pb-md-3">
+        <div class="font-size-xs text-center text-light">
+          <span class="d-sm-inline d-block mb-1">
+            <span class="font-size-sm">&copy; </span>
+            All rights reserved.
+          </span>
+          Made with 
+          <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+          <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax-element.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

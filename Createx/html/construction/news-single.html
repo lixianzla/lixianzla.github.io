@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | Construction Bureau - How to Build Climate Change-Resilient Infrastructure</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/construction/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Main content-->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper position-relative">
+
+
+      <!-- Navbar -->
+      <!-- Remove .navbar-sticky class to detach .navbar from page scroll -->
+      <header class="cs-header navbar navbar-expand-lg navbar-light navbar-sticky navbar-floating">
+        <div class="container px-0 px-xl-3">
+          <a class="navbar-brand order-lg-1 mr-lg-5 mr-0 pr-lg-2" href="index.html">
+            <img src="../../assets/img/construction/logo-dark.svg" alt="Createx Logo" width="130">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a class="media media-tool" href="tel:(405)555-0128">
+              <i class="media-tool-icon cxi-iphone"></i>
+              <div class="media-body ml-2 pl-1">
+                <h6 class="media-tool-title">Call us</h6>
+                <span class="media-tool-label d-xl-inline-block d-none">(405) 555-0128</span>
+              </div>
+            </a>
+            <a class="media media-tool" href="mailto:hello@example.com">
+              <i class="media-tool-icon cxi-chat"></i>
+              <div class="media-body ml-2 pl-1">
+                <h6 class="media-tool-title">Talk to us</h6>
+                <span class="media-tool-label d-xl-inline-block d-none">hello@example.com</span>
+              </div>
+            </a>
+            <button class="navbar-toggler ml-2 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse1">
+            <ul class="navbar-nav mr-auto text-nowrap">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html">Homepage v.1</a></li>
+                  <li><a class="dropdown-item" href="index-v2.html">Homepage v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="services.html">Services List</a></li>
+                  <li><a class="dropdown-item" href="services-single-v1.html">Single Service v.1</a></li>
+                  <li><a class="dropdown-item" href="services-single-v2.html">Single Service v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Works</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="projects.html">Projects Grid</a></li>
+                  <li><a class="dropdown-item" href="project-single-v1.html">Single Project v.1</a></li>
+                  <li><a class="dropdown-item" href="project-single-v2.html">Single Project v.2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                  <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">News</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="news.html">News Grid</a></li>
+                  <li><a class="dropdown-item" href="news-single.html">Single Post</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page title-->
+      <section class="mb-lg-0 mb-5 pt-6 pb-lg-6 pb-5 bg-secondary">
+        <div class="container py-lg-5">
+
+          <!-- Breadcrumbs -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-lg-4 pb-md-3">
+              <li class="breadcrumb-item">
+                <a href="index.html">Homepage</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="news.html">News</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">How to Build Climate Change-Resilient Infrastructure</li>
+            </ol>
+          </nav>
+
+          <!-- Title -->
+          <h1 class="display-2 mb-md-5">How to Build Climate Change-Resilient Infrastructure</h1>
+
+          <!-- Meta -->
+          <div class="d-sm-flex justify-content-between">
+            <ul class="nav nav-muted mb-0">
+              <li class="nav-item mr-2">
+                <a class="nav-link d-inline-block mr-2 p-0 text-primary" href="#">
+                  Industry News
+                </a>
+                <span class="text-border px-1">|</span>
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link d-inline-block mr-2 p-0 font-weight-normal" href="#">
+                  June 24, 2020
+                </a>
+                <span class="text-border d-sm-inline-block d-none px-1">|</span>
+              </li>
+              <li class="nav-item d-sm-block d-none mr-2">
+                <a class="nav-link d-inline-block mr-2 p-0 font-weight-normal" href="#comments" data-scroll>
+                  <i class="cxi-chat mt-n1 mr-2 font-size-base align-middle"></i>
+                  4 comments
+                </a>
+              </li>
+            </ul>
+            <div class="d-sm-block d-none ml-sm-4">
+              <a href="#" class="social-btn">
+                <i class="cxi-facebook"></i>
+              </a>
+              <a href="#" class="social-btn">
+                <i class="cxi-linkedin"></i>
+              </a>
+              <a href="#" class="social-btn">
+                <i class="cxi-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page content-->
+      <section class="container pb-lg-6 pb-5">
+        <img src="../../assets/img/construction/news/single/post-title.jpg" alt="Title" class="d-block mt-lg-n5 mb-5 rounded">
+        <div class="col-lg-8 col-md-10 mx-auto px-0">
+          <h3 class="h5">Vulputate vitae pellentesque scelerisque luctus consequat mattis pellentesque dui odio. Interdum aenean sit malesuada ornare sed gravida rhoncus, congue. Purus auctor nullam diam quis est hendrerit ac euismod.</h3>
+          <p>At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque, fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi varius viverra risus vel.</p>
+          <p>Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci interdum feugiat lectus libero duis. Nisl massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et sed. Aliquet non sed duis diam vehicula rhoncus. In dictum nullam tincidunt semper pellentesque purus morbi sed. Ut aliquet velit pharetra, nisi nunc, non.</p>
+          <div class="py-4">
+            <blockquote class="blockquote">
+              <p class="lead font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus  facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in tot euismod vulputate etiam eros. Vel accumsan at elit neque, ipsum.</p>
+            </blockquote>
+          </div>
+          <p>Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut sed id ut erat mattis. Vitae mus blandit in neque amet non fringilla blandit:</p>
+          <ul class="list-unstyled mb-4">
+            <li class="d-flex">
+              <i class="cxi-check mt-1 mr-3 text-primary"></i>
+              A fermentum in morbi pretium aliquam adipiscing donec tempus.
+            </li>
+            <li class="d-flex">
+              <i class="cxi-check mt-1 mr-3 text-primary"></i>
+              Vulputate placerat amet pulvinar lorem nisl.
+            </li>
+            <li class="d-flex">
+              <i class="cxi-check mt-1 mr-3 text-primary"></i>
+              Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.
+            </li>
+            <li class="d-flex">
+              <i class="cxi-check mt-1 mr-3 text-primary"></i>
+              Etiam duis lobortis in fames ultrices commodo nibh.
+            </li>
+          </ul>
+          <p>Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id nec sed leo. Nisi in ornare lectus eget. Urna, risus, consectetur volutpat lorem purus. Velit aliquet nibh vitae maecenas. Consectetur neque ut aliquam eros, purus enim dignissim aenean vitae. Ultrices fames augue mattis tortor est justo, pharetra nibh risus. Facilisi at porttitor volutpat natoque proin amet, nulla. Vivamus ut lobortis sagittis curabitur tellus convallis eget netus vitae.</p>
+
+          <!-- Share -->
+          <div class="pt-lg-4 text-nowrap">
+            <h6 class="d-inline-block mr-2 mb-0">Share:</h6>
+            <a href="#" class="social-btn mr-1">
+              <i class="cxi-facebook"></i>
+            </a>
+            <a href="#" class="social-btn mr-1">
+              <i class="cxi-twitter"></i>
+            </a>
+            <a href="#" class="social-btn">
+              <i class="cxi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Recent news -->
+      <section class="py-lg-6 py-5 bg-secondary">
+        <div class="container">
+          <h2 class="h1 mb-5 pb-md-3 text-center">Recent news</h2>
+          <div class="row">
+            <div class="col-lg-7 col-md-6 mb-md-0 mb-grid-gutter">
+              <article class="cs-image-scale h-100 card box-shadow card-hover border-0">
+                <a class="cs-image-inner card-img-top" href="news-single.html">
+                  <img src="../../assets/img/construction/news/04.jpg" alt="Blog card image">
+                </a>
+                <div class="card-body">
+                  <h3 class="h5 mb-2 pb-1">
+                    <a class="nav-link" href="news-single.html">How to Build Climate Change-Resilient Infrastructure</a>
+                  </h3>
+                  <ul class="nav nav-muted mb-2 pb-1">
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        Industry News
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        June 24, 2020
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        <i class="cxi-chat mt-n1 mr-2 font-size-base align-middle"></i>
+                        4 comments
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="card-text">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-5 col-md-6 d-flex flex-column mb-md-0 mb-grid-gutter">
+              <article class="cs-image-scale h-100 mb-grid-gutter card box-shadow card-hover border-0">
+                <a class="cs-image-inner card-img-top" href="news-single.html">
+                  <img src="../../assets/img/construction/news/recent/01.jpg" alt="Blog card image">
+                </a>
+                <div class="card-body py-3">
+                  <h3 class="h5 mb-2">
+                    <a class="nav-link" href="news-single.html">How Construction Can Help Itself</a>
+                  </h3>
+                  <ul class="nav nav-muted">
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        Innovation
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        June 12, 2020
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        <i class="cxi-chat mt-n1 mr-2 font-size-base align-middle"></i>
+                        No comments
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="cs-image-scale h-100 card box-shadow card-hover border-0">
+                <a class="cs-image-inner card-img-top" href="news-single.html">
+                  <img src="../../assets/img/construction/news/recent/02.jpg" alt="Blog card image">
+                </a>
+                <div class="card-body py-3">
+                  <h3 class="h5 mb-2">
+                    <a class="nav-link" href="news-single.html">Types of Flooring Materials</a>
+                  </h3>
+                  <ul class="nav nav-muted">
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        Company News
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        June 2, 2020
+                      </a>
+                      <span class="text-border px-1">|</span>
+                    </li>
+                    <li class="nav-item mr-2">
+                      <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                        <i class="cxi-chat mt-n1 mr-2 font-size-base align-middle"></i>
+                        No comments
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+          <h4 class="h3 d-flex flex-md-row flex-column align-items-center justify-content-center mt-md-4 pt-md-5 pt-3 text-center">
+            Explore all our news posts
+            <a href="news.html" class="btn btn-lg btn-primary mt-md-0 mt-sm-4 mt-3 ml-md-5 text-uppercase">View all news</a>
+          </h4>
+        </div>
+      </section>
+
+
+      <!-- Comments -->
+      <section class="container pt-lg-6 pt-5 pb-4" id="comments">
+        <h2 class="h1 mb-5 pb-md-3 text-center">4 comments</h2>
+        <div class="col-lg-8 col-md-10 mx-auto px-0">
+
+          <!-- Post comment -->
+          <div class="cs-comment mb-lg-5 mb-4 pb-2">
+            <div class="row">
+              <div class="col-sm-3 mb-sm-0 mb-3">
+                <div class="mb-2 font-size-lg text-dark font-weight-bold">Devon Lane</div>
+                <span class="font-size-sm text-muted">July 15, 2020</span>
+              </div>
+              <div class="col">
+                <p class="mb-3">
+                  Phasellus varius faucibus ultrices odio in. Massa neque dictum natoque ornare rutrum malesuada et phasellus. Viverra natoque nulla nisl proin senectus. Tortor sed eleifend ante tristique felis sed urna aliquet. Suspendisse fames egestas sed duis purus diam et.
+                </p>
+                <div class="nav-muted">
+                  <a class="nav-link p-0" href="#">
+                    <i class="cxi-comment align-middle mt-n1 mr-2"></i>
+                    Reply
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post comment -->
+          <div class="cs-comment mb-lg-5 mb-4 pb-2">
+            <div class="row">
+              <div class="col-sm-3 mb-sm-0 mb-3">
+                <div class="mb-2 font-size-lg text-dark font-weight-bold">Annette Black</div>
+                <span class="font-size-sm text-muted">1 day ago</span>
+              </div>
+              <div class="col">
+                <p class="mb-3">
+                  <a href="#" class="font-weight-bold text-decoration-none">@Devon Lane</a> Egestas fermentum natoque sollicitudin mauris. Facilisis praesent urna sed rhoncus quis pharetra pellentesque erat sagittis.
+                </p>
+                <div class="nav-muted">
+                  <a class="nav-link p-0" href="#">
+                    <i class="cxi-comment align-middle mt-n1 mr-2"></i>
+                    Reply
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post comment -->
+          <div class="cs-comment mb-lg-5 mb-4 pb-2">
+            <div class="row">
+              <div class="col-sm-3 mb-sm-0 mb-3">
+                <div class="mb-2 font-size-lg text-dark font-weight-bold">Albert Flores</div>
+                <span class="font-size-sm text-muted">July 7, 2020</span>
+              </div>
+              <div class="col">
+                <p class="mb-3">
+                  Libero commodo sit dui ac proin. Penatibus ultricies at adipiscing mauris nunc. Fames faucibus nisl duis id diam.
+                </p>
+                <div class="nav-muted">
+                  <a class="nav-link p-0" href="#">
+                    <i class="cxi-comment align-middle mt-n1 mr-2"></i>
+                    Reply
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post comment -->
+          <div class="cs-comment mb-lg-5 mb-4 pb-2">
+            <div class="row">
+              <div class="col-sm-3 mb-sm-0 mb-3">
+                <div class="mb-2 font-size-lg text-dark font-weight-bold">Marvin McKinney</div>
+                <span class="font-size-sm text-muted">June 28, 2020</span>
+              </div>
+              <div class="col">
+                <p class="mb-3">
+                  Ullamcorper nibh sed ac ipsum nunc imperdiet rhoncus. Quam donec habitant nibh sit consequat erat libero, tincidunt. Eros ut aliquam proin et duis. Mauris, egestas congue nibh dui a nulla.
+                </p>
+                <div class="nav-muted">
+                  <a class="nav-link p-0" href="#">
+                    <i class="cxi-comment align-middle mt-n1 mr-2"></i>
+                    Reply
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Comment form -->
+      <section class="container pb-lg-6 py-5">
+        <h2 class="h1 mb-5 text-center">Leave your comment</h2>
+        <div class="col-lg-8 col-md-10 mx-auto px-0">
+
+          <!-- Form -->
+          <form class="row needs-validation" novalidate>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="comment-name" class="font-size-sm">Name*</label>
+                <input id="comment-name" class="form-control" type="text" placeholder="Your name" required>
+                <div class="invalid-tooltip">Please enter your name.</div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="comment-email" class="font-size-sm">Email*</label>
+                <input id="comment-email" class="form-control" type="email" placeholder="Your working email" required>
+                <div class="invalid-tooltip">Please enter your email.</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <label for="comment-text" class="font-size-sm">Your comment*</label>
+                <textarea id="comment-text" class="form-control" rows="3" placeholder="Type comment here" required></textarea>
+                <div class="invalid-tooltip">Please type a comment.</div>
+              </div>
+              <div class="pt-4 text-center">
+                <button type="submit" class="btn btn-lg btn-primary text-uppercase">Post comment</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+
+      <!-- Details -->
+      <section class="py-5 jarallax" data-jarallax data-speed="0.8">
+
+        <!-- Parallax bg -->
+        <div class="jarallax-img" style="background-image: url(../../assets/img/construction/detail-form-bg.jpg);"></div>
+
+        <!-- Content -->
+        <div class="container py-4">
+          <div class="ml-md-auto mr-md-0 mx-auto" style="max-width: 495px;">
+
+            <!-- Details form -->
+            <form class="py-5 px-sm-5 px-4 bg-light rounded box-shadow-lg">
+              <h2 class="h3 text-center">A quick way to discuss details</h2>
+              <div class="form-group">
+                <label for="detail-name" class="font-size-sm">Name*</label>
+                <input id="detail-name" class="form-control" type="text" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="detail-tel" class="font-size-sm">Phone*</label>
+                <input id="detail-tel" class="form-control" type="tel" placeholder="Your phone number" required>
+              </div>
+              <div class="form-group">
+                <label for="detail-email" class="font-size-sm">Email</label>
+                <input id="detail-email" class="form-control" type="email" placeholder="Your working email">
+              </div>
+              <div class="form-group">
+                <label for="detail-message" class="font-size-sm">Message*</label>
+                <textarea id="detail-message" class="form-control" rows="2" placeholder="Your message" required></textarea>
+              </div>
+              <div class="form-group custom-control custom-checkbox">
+                <input id="detail-subscribe" class="custom-control-input" type="checkbox" checked>
+                <label for="detail-subscribe" class="custom-control-label font-size-sm">I agree to receive communications from Createx Construction Bureau.</label>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary text-uppercase">Send request</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-3 bg-dark">
+      <div class="container mt-lg-3 py-md-5 py-4">
+        <div class="row mb-5">
+          <div class="col-lg-5 col-md-6">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <a class="d-inline-block" href="index.html">
+                <img src="../../assets/img/construction/logo-light.svg" width="130" alt="Createx logo">
+              </a>
+              <div class="mt-sm-1 mt-4 pr-sm-4">
+                <a href="#" class="social-btn">
+                  <i class="cxi-whatsapp"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-messenger"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-facebook"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-twitter"></i>
+                </a>
+                <a href="#" class="social-btn">
+                  <i class="cxi-youtube"></i>
+                </a>
+              </div>
+            </div>
+            <p class="mb-md-0 mb-4 font-size-sm text-light opacity-60">Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service. Our mission is to set the highest standards for construction sphere.</p>
+          </div>
+          <div class="col-lg-5 offset-lg-2 col-md-6">
+            <h4 class="text-light">Let’s stay in touch</h4>
+            <form class="input-group">
+              <input class="form-control input-light" type="email" placeholder="Your email address" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary text-uppercase" type="submit">Subscribe</button>
+              </div>
+            </form>
+            <p class="mb-0 pt-3 font-size-xs text-light opacity-60">*Subscribe to our newsletter to receive communications and early updates from Createx Construction Bureau.</p>
+          </div>
+        </div>
+        <div class="row mb-sm-5 mb-4">
+          <div class="col-md-4 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Head office</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Address:</span>
+                <a href="#" class="nav-link d-inline-block p-0 font-weight-normal">8502 Preston Rd. Inglewood, New York</a>
+              </li>
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Call:</span>
+                <a href="tel:(405)555-0128" class="nav-link d-inline-block p-0 font-weight-normal">(405) 555-0128</a>
+              </li>
+              <li class="nav-item mb-2">
+                <span class="mr-1 text-light">Email:</span>
+                <a href="mailto:hello@example.com" class="nav-link d-inline-block p-0 font-weight-normal">hello@example.com</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Who we are</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="about.html" class="nav-link p-0 font-weight-normal">About Us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="careers.html" class="nav-link p-0 font-weight-normal">Available Positions</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 col-sm-6 mb-md-0 mb-4">
+            <h6 class="text-light text-uppercase">Our experience</h6>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="services.html" class="nav-link p-0 font-weight-normal">Services</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="projects.html" class="nav-link p-0 font-weight-normal">Work</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="news.html" class="nav-link p-0 font-weight-normal">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex align-items-sm-center justify-content-between py-1">
+          <div class="font-size-xs text-light">
+            <span class="d-sm-inline d-block mb-1">
+              <span class="font-size-sm">&copy; </span>
+              All rights reserved.
+            </span>
+            Made with 
+            <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+            <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+          </div>
+          <div class="d-flex align-items-sm-center">
+            <span class="d-sm-inline-block d-none text-light font-size-sm mr-3 mb-1 align-vertical text-uppercase">Go to top</span>
+            <a class="btn-scroll-top position-static rounded" href="#top" data-scroll>
+              <i class="btn-scroll-top-icon cxi-angle-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

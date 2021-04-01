@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx UI Kit | Collapse</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/themes/prism.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/theme.min.css">
+  </head>
+
+
+  <!-- Body-->
+  <body>
+    <main class="container-fluid">
+
+      <!-- Main content-->
+      <section class="cs-offcanvas-enabled row pb-3 pb-md-4">
+        <div class="col-xl-9">
+
+          <!-- Navbar-->
+          <header class="navbar navbar-expand navbar-light fixed-top navbar-box-shadow bg-light px-3 px-lg-4" data-scroll-header data-fixed-element>
+            <a class="navbar-brand d-lg-none" href="typography.html">
+              <img src="../../assets/img/components/logo/logo-dark.svg" alt="Createx" width="130">
+            </a>
+            <button class="navbar-toggler d-block d-lg-none mr-3 ml-auto" type="button" data-toggle="offcanvas" data-target="componentsNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav ml-auto d-none d-lg-flex align-items-center">
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../../index.html">
+                  <i class="cxi-eye align-middle mt-n1 mr-2"></i>
+                  Live preview
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-0" href="../documentation/dev-setup.html">
+                  <i class="cxi-files align-middle mt-n1 mr-2"></i>
+                  Documentation
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link disabled text-border px-1">|</div>
+              </li>
+            </ul>
+            <a href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" class="btn btn-primary btn-shadow ml-lg-4" target="_blank" rel="noopener">
+              <i class="cxi-cart mr-2 d-none d-sm-inline-block"></i>
+              Buy now
+            </a>
+          </header>
+
+          <!-- Side navigation (Off-canvas)-->
+          <aside class="cs-offcanvas cs-offcanvas-expand bg-dark" id="componentsNav">
+            <div class="cs-offcanvas-cap d-none d-lg-block py-4">
+              <a class="navbar-brand py-2" href="typography.html">
+                <img src="../../assets/img/components/logo/logo-white.svg" alt="Createx" width="130">
+              </a>
+              <span class="badge badge-success">UI Kit</span>
+            </div>
+            <div class="cs-offcanvas-cap d-flex d-lg-none">
+              <div class="d-flex align-items-center mt-1">
+                <h5 class="text-light mb-0 mr-3">Menu</h5>
+                <span class="badge badge-success">UI Kit</span>
+              </div>
+              <button class="close text-light" type="button" data-dismiss="offcanvas" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="d-flex d-lg-none align-items-center py-4 px-3 border-bottom border-light">
+              <a class="btn btn-primary btn-block mr-3" href="../../index.html"><i class="cxi-eye mt-n1 mr-2"></i>Preview</a>
+              <a class="btn btn-warning btn-block mt-0" href="../documentation/dev-setup.html"><i class="cxi-files mt-n1 mr-2"></i>Docs</a>
+            </div>
+            <div class="cs-offcanvas-body px-0 pt-4 pb-grid-gutter" data-simplebar data-simplebar-inverse>
+              <h6 class="font-size-lg text-light px-4 mt-2 mb-3">Content</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="typography.html">Typography</a>
+                <a class="nav-link px-4" href="icon-font.html">Icon font</a>
+                <a class="nav-link px-4" href="code.html">Code</a>
+                <a class="nav-link px-4" href="images.html">Images &amp; figures</a>
+                <a class="nav-link px-4" href="tables.html">Tables</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Components</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="alerts.html">Alerts</a>
+                <a class="nav-link px-4" href="badge.html">Badges</a>
+                <a class="nav-link px-4" href="blog-components.html">Blog components</a>
+                <a class="nav-link px-4" href="breadcrumb.html">Breadcrumb</a>
+                <a class="nav-link px-4" href="buttons.html">Buttons</a>
+                <a class="nav-link px-4" href="button-group.html">Button group</a>
+                <a class="nav-link px-4" href="cards.html">Cards</a>
+                <a class="nav-link px-4" href="carousel.html">Carousel</a>
+                <a class="nav-link px-4 active" href="collapse.html">Collapse</a>
+                <a class="nav-link px-4" href="contacts-card.html">Contacts card</a>
+                <a class="nav-link px-4" href="countdown.html">Countdown</a>
+                <a class="nav-link px-4" href="dividers.html">Dividers</a>
+                <a class="nav-link px-4" href="dropdowns.html">Dropdowns</a>
+                <a class="nav-link px-4" href="forms.html">Forms</a>
+                <a class="nav-link px-4" href="gallery.html">Gallery</a>
+                <a class="nav-link px-4" href="icon-box.html">Icon box</a>
+                <a class="nav-link px-4" href="input-group.html">Input group</a>
+                <a class="nav-link px-4" href="jumbotron.html">Jumbotron</a>
+                <a class="nav-link px-4" href="list-group.html">List group</a>
+                <a class="nav-link px-4" href="media-object.html">Media object</a>
+                <a class="nav-link px-4" href="modal.html">Modal</a>
+                <a class="nav-link px-4" href="navs.html">Navs</a>
+                <a class="nav-link px-4" href="navbar.html">Navbar</a>
+                <a class="nav-link px-4" href="pagination.html">Pagination</a>
+                <a class="nav-link px-4" href="parallax.html">Parallax</a>
+                <a class="nav-link px-4" href="pills.html">Pills</a>
+                <a class="nav-link px-4" href="popovers.html">Popovers</a>
+                <a class="nav-link px-4" href="portfolio-components.html">Portfolio components</a>
+                <a class="nav-link px-4" href="pricing.html">Pricing</a>
+                <a class="nav-link px-4" href="progress-bar.html">Progress bar</a>
+                <a class="nav-link px-4" href="progress-radial.html">Progress radial</a>
+                <a class="nav-link px-4" href="scrollbar-custom.html">Scrollbar (custom)</a>
+                <a class="nav-link px-4" href="shop-components.html">Shop components</a>
+                <a class="nav-link px-4" href="social-buttons.html">Social buttons</a>
+                <a class="nav-link px-4" href="spinners.html">Spinners</a>
+                <a class="nav-link px-4" href="steps.html">Steps</a>
+                <a class="nav-link px-4" href="tabs.html">Tabs</a>
+                <a class="nav-link px-4" href="team.html">Team</a>
+                <a class="nav-link px-4" href="testimonials.html">Testimonials / reviews</a>
+                <a class="nav-link px-4" href="toasts.html">Toasts</a>
+                <a class="nav-link px-4" href="tooltips.html">Tooltips</a>
+                <a class="nav-link px-4" href="video-popup.html">Video popup</a>
+                <a class="nav-link px-4" href="widgets.html">Widgets</a>
+              </nav>
+              <h6 class="font-size-lg text-light px-4 pt-1 mt-4 mb-3">Utilities</h6>
+              <hr class="hr-gradient hr-light mb-2 opacity-25">
+              <nav class="nav nav-light">
+                <a class="nav-link px-4" href="https://getbootstrap.com/docs/4.5/utilities/borders/" target="_blank" rel="noopener">Bootstrap</a>
+                <a class="nav-link px-4" href="utilities.html">Createx</a>
+              </nav>
+            </div>
+          </aside>
+          
+          <!-- Page title-->
+          <div class="border-bottom pt-5 mt-2 mb-5">
+            <h1 class="mt-2 mt-md-4 mb-3 pt-5">Collapse</h1>
+            <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+              <p class="text-muted">Toggle the visibility of content.</p>
+              <p class="font-size-sm font-weight-medium pl-md-4">
+                <a class="text-nowrap" href="https://getbootstrap.com/docs/4.5/components/collapse/" target="_blank" rel="noopener">
+                  Bootstrap docs<i class="cxi-angle-right font-size-base align-middle ml-1"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Basic example-->
+          <section class="pb-5 mb-md-2" id="collapse-basic">
+            <h2 class="h3">Basic example</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result1" data-toggle="tab" role="tab" aria-controls="result1" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html1" data-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result1" role="tabpanel"><a class="btn btn-primary mr-2 mb-3" href="#collapseExample" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Link with href</a>
+                    <button class="btn btn-primary mb-3" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-target</button>
+                    <div class="collapse" id="collapseExample">
+                      <div class="card card-body">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Link with href --&gt;
+&lt;a href=&quot;#collapseExample&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;collapse&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseExample&quot;&gt;
+  Link with href
+&lt;/a&gt;
+
+&lt;!-- Button with data-target --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapseExample&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseExample&quot;&gt;
+  Button with data-target
+&lt;/button&gt;
+
+&lt;!-- Collapse --&gt;
+&lt;div class=&quot;collapse&quot; id=&quot;collapseExample&quot;&gt;
+  &lt;div class=&quot;card card-body&quot;&gt;
+    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Multiple targets-->
+          <section class="pb-5 mb-md-2" id="collapse-multiple">
+            <h2 class="h3">Multiple targets</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result2" data-toggle="tab" role="tab" aria-controls="result2" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html2" data-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result2" role="tabpanel"><a class="btn btn-primary mr-2 mb-3" href="#multiCollapseExample1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                    <button class="btn btn-primary mr-2 mb-3" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+                    <button class="btn btn-primary mb-3" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                          <div class="card card-body mb-2">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="collapse multi-collapse" id="multiCollapseExample2">
+                          <div class="card card-body mb-2">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Toggle first element --&gt;
+&lt;a href=&quot;#multiCollapseExample1&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;collapse&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;multiCollapseExample1&quot;&gt;
+  Toggle first element
+&lt;/a&gt;
+
+&lt;!-- Toggle second element --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#multiCollapseExample2&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;multiCollapseExample2&quot;&gt;
+  Toggle second element
+&lt;/button&gt;
+
+&lt;!-- Toggle both elements --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.multi-collapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;multiCollapseExample1 multiCollapseExample2&quot;&gt;
+  Toggle both elements
+&lt;/button&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-6&quot;&gt;
+
+    &lt;!-- Collapse 1 --&gt;
+    &lt;div class=&quot;collapse multi-collapse&quot; id=&quot;multiCollapseExample1&quot;&gt;
+      &lt;div class=&quot;card card-body mb-2&quot;&gt;
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-6&quot;&gt;
+
+    &lt;!-- Collapse 2 --&gt;
+    &lt;div class=&quot;collapse multi-collapse&quot; id=&quot;multiCollapseExample2&quot;&gt;
+      &lt;div class=&quot;card card-body mb-2&quot;&gt;
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Accordion example-->
+          <section class="pb-5 mb-md-2" id="collapse-accordion">
+            <h2 class="h3">Accordion example</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result3" data-toggle="tab" role="tab" aria-controls="result3" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html3" data-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result3" role="tabpanel">
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h3 class="accordion-heading"><a href="#collapseOne" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne"><span class="accordion-indicator"></span>Collapsible Group Item #1</a></h3>
+                        </div>
+                        <div class="collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample">
+                          <div class="card-body">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h3 class="accordion-heading"><a class="collapsed" href="#collapseTwo" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span class="accordion-indicator"></span>Collapsible Group Item #2</a></h3>
+                        </div>
+                        <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                          <div class="card-body">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h3 class="accordion-heading"><a class="collapsed" href="#collapseThree" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span class="accordion-indicator"></span>Collapsible Group Item #3</a></h3>
+                        </div>
+                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample">
+                          <div class="card-body">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Accordion made of cards --&gt;
+&lt;div class=&quot;accordion&quot; id=&quot;accordionExample&quot;&gt;
+  
+  &lt;!-- Card --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header&quot; id=&quot;headingOne&quot;&gt;
+      &lt;h3 class=&quot;accordion-heading&quot;&gt;&lt;a href=&quot;#collapseOne&quot; role=&quot;button&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;collapseOne&quot;&gt;&lt;span class=&quot;accordion-indicator&quot;&gt;&lt;/span&gt;Collapsible Group Item #1&lt;/a&gt;&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse show&quot; id=&quot;collapseOne&quot; aria-labelledby=&quot;headingOne&quot; data-parent=&quot;#accordionExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Card --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header&quot; id=&quot;headingTwo&quot;&gt;
+      &lt;h3 class=&quot;accordion-heading&quot;&gt;&lt;a class=&quot;collapsed&quot; href=&quot;#collapseTwo&quot; role=&quot;button&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseTwo&quot;&gt;&lt;span class=&quot;accordion-indicator&quot;&gt;&lt;/span&gt;Collapsible Group Item #2&lt;/a&gt;&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;collapseTwo&quot; aria-labelledby=&quot;headingTwo&quot; data-parent=&quot;#accordionExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Card --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header&quot; id=&quot;headingThree&quot;&gt;
+      &lt;h3 class=&quot;accordion-heading&quot;&gt;&lt;a class=&quot;collapsed&quot; href=&quot;#collapseThree&quot; role=&quot;button&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseThree&quot;&gt;&lt;span class=&quot;accordion-indicator&quot;&gt;&lt;/span&gt;Collapsible Group Item #3&lt;/a&gt;&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;collapseThree&quot; aria-labelledby=&quot;headingThree&quot; data-parent=&quot;#accordionExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Accordion alt example-->
+          <section class="pb-5 mb-md-2" id="collapse-accordion-alt">
+            <h2 class="h3">Accordion alt example</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result4" data-toggle="tab" role="tab" aria-controls="result4" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html4" data-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result4" role="tabpanel">
+                    <div class="accordion-alt" id="accordionAltExample" style="max-width: 27rem;">
+                      <div class="card border-bottom">
+                        <div class="card-header" id="headingAltOne">
+                          <h6 class="accordion-heading"><a href="#collapseAltOne" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseAltOne">Collapsible Group Item #1<span class="accordion-indicator"></span></a></h6>
+                        </div>
+                        <div class="collapse show" id="collapseAltOne" aria-labelledby="headingAltOne" data-parent="#accordionAltExample">
+                          <div class="card-body">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                        </div>
+                      </div>
+                      <div class="card border-bottom">
+                        <div class="card-header" id="headingAltTwo">
+                          <h6 class="accordion-heading"><a class="collapsed" href="#collapseAltTwo" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseAltTwo">Collapsible Group Item #2<span class="accordion-indicator"></span></a></h6>
+                        </div>
+                        <div class="collapse" id="collapseAltTwo" aria-labelledby="headingAltTwo" data-parent="#accordionAltExample">
+                          <div class="card-body">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingAltThree">
+                          <h6 class="accordion-heading"><a class="collapsed" href="#collapseAltThree" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseAltThree">Collapsible Group Item #3<span class="accordion-indicator"></span></a></h6>
+                        </div>
+                        <div class="collapse" id="collapseAltThree" aria-labelledby="headingAltThree" data-parent="#accordionAltExample">
+                          <div class="card-body">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Accordion made of cards --&gt;
+&lt;div class=&quot;accordion-alt&quot; id=&quot;accordionAltExample&quot;&gt;
+
+  &lt;!-- Card --&gt;
+  &lt;div class=&quot;card border-bottom&quot;&gt;
+    &lt;div class=&quot;card-header&quot; id=&quot;headingAltOne&quot;&gt;
+      &lt;h6 class=&quot;accordion-heading&quot;&gt;
+        &lt;a href=&quot;#collapseAltOne&quot; role=&quot;button&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;collapseAltOne&quot;&gt;Collapsible Group Item #1
+          &lt;span class=&quot;accordion-indicator&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse show&quot; id=&quot;collapseAltOne&quot; aria-labelledby=&quot;headingAltOne&quot; data-parent=&quot;#accordionAltExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Card --&gt;
+  &lt;div class=&quot;card border-bottom&quot;&gt;
+    &lt;div class=&quot;card-header&quot; id=&quot;headingAltTwo&quot;&gt;
+      &lt;h6 class=&quot;accordion-heading&quot;&gt;
+        &lt;a class=&quot;collapsed&quot; href=&quot;#collapseAltTwo&quot; role=&quot;button&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseAltTwo&quot;&gt;Collapsible Group Item #2
+          &lt;span class=&quot;accordion-indicator&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;collapseAltTwo&quot; aria-labelledby=&quot;headingAltTwo&quot; data-parent=&quot;#accordionAltExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Card --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-header&quot; id=&quot;headingAltThree&quot;&gt;
+      &lt;h6 class=&quot;accordion-heading&quot;&gt;
+        &lt;a class=&quot;collapsed&quot; href=&quot;#collapseAltThree&quot; role=&quot;button&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseAltThree&quot;&gt;Collapsible Group Item #3
+          &lt;span class=&quot;accordion-indicator&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;collapseAltThree&quot; aria-labelledby=&quot;headingAltThree&quot; data-parent=&quot;#accordionAltExample&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Accordion alt bordered example-->
+          <section class="pb-5 mb-md-2" id="collapse-accordion-alt-bordered">
+            <h2 class="h3">Accordion alt bordered example</h2>
+            <div class="card box-shadow-sm">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" href="#result5" data-toggle="tab" role="tab" aria-controls="result5" aria-selected="true">Result</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#html5" data-toggle="tab" role="tab" aria-controls="html5" aria-selected="false">HTML</a></li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="result5" role="tabpanel">
+                    <div class="accordion-alt" id="accordionAltBorderedExample" style="max-width: 27rem;">
+                      <div class="card mb-3 px-4 py-3 border rounded box-shadow-sm">
+                        <div class="card-header py-0" id="headingAltBorderedOne">
+                          <h6 class="accordion-heading"><a href="#collapseAltBorderedOne" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseAltBorderedOne">Collapsible Group Item #1<span class="accordion-indicator"></span></a></h6>
+                        </div>
+                        <div class="collapse show" id="collapseAltBorderedOne" aria-labelledby="headingAltBorderedOne" data-parent="#accordionAltBorderedExample">
+                          <div class="card-body pt-3 pb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                        </div>
+                      </div>
+                      <div class="card mb-3 px-4 py-3 border rounded box-shadow-sm">
+                        <div class="card-header py-0" id="headingAltBorderedTwo">
+                          <h6 class="accordion-heading"><a class="collapsed" href="#collapseAltBorderedTwo" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseAltBorderedTwo">Collapsible Group Item #2<span class="accordion-indicator"></span></a></h6>
+                        </div>
+                        <div class="collapse" id="collapseAltBorderedTwo" aria-labelledby="headingAltBorderedTwo" data-parent="#accordionAltBorderedExample">
+                          <div class="card-body pt-3 pb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                        </div>
+                      </div>
+                      <div class="card px-4 py-3 border rounded box-shadow-sm">
+                        <div class="card-header py-0" id="headingAltBorderedThree">
+                          <h6 class="accordion-heading"><a class="collapsed" href="#collapseAltBorderedThree" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapseAltBorderedThree">Collapsible Group Item #3<span class="accordion-indicator"></span></a></h6>
+                        </div>
+                        <div class="collapse" id="collapseAltBorderedThree" aria-labelledby="headingAltBorderedThree" data-parent="#accordionAltBorderedExample">
+                          <div class="card-body pt-3 pb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="html5" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Accordion made of cards --&gt;
+&lt;div class=&quot;accordion-alt&quot; id=&quot;accordionAltBorderedExample&quot;&gt;
+
+  &lt;!-- Card --&gt;
+  &lt;div class=&quot;card mb-3 px-4 py-3 border rounded box-shadow-sm&quot;&gt;
+    &lt;div class=&quot;card-header py-0&quot; id=&quot;headingAltBorderedOne&quot;&gt;
+      &lt;h6 class=&quot;accordion-heading&quot;&gt;
+        &lt;a href=&quot;#collapseAltBorderedOne&quot; role=&quot;button&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;collapseAltBorderedOne&quot;&gt;
+          Collapsible Group Item #1
+          &lt;span class=&quot;accordion-indicator&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse show&quot; id=&quot;collapseAltBorderedOne&quot; aria-labelledby=&quot;headingAltBorderedOne&quot; data-parent=&quot;#accordionAltBorderedExample&quot;&gt;
+      &lt;div class=&quot;card-body pt-3 pb-0&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Card --&gt;
+  &lt;div class=&quot;card mb-3 px-4 py-3 border rounded box-shadow-sm&quot;&gt;
+    &lt;div class=&quot;card-header py-0&quot; id=&quot;headingAltBorderedTwo&quot;&gt;
+      &lt;h6 class=&quot;accordion-heading&quot;&gt;
+        &lt;a class=&quot;collapsed&quot; href=&quot;#collapseAltBorderedTwo&quot; role=&quot;button&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseAltBorderedTwo&quot;&gt;
+          Collapsible Group Item #2
+          &lt;span class=&quot;accordion-indicator&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;collapseAltBorderedTwo&quot; aria-labelledby=&quot;headingAltBorderedTwo&quot; data-parent=&quot;#accordionAltBorderedExample&quot;&gt;
+      &lt;div class=&quot;card-body pt-3 pb-0&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Card --&gt;
+  &lt;div class=&quot;card px-4 py-3 border rounded box-shadow-sm&quot;&gt;
+    &lt;div class=&quot;card-header py-0&quot; id=&quot;headingAltBorderedThree&quot;&gt;
+      &lt;h6 class=&quot;accordion-heading&quot;&gt;
+        &lt;a class=&quot;collapsed&quot; href=&quot;#collapseAltBorderedThree&quot; role=&quot;button&quot; data-toggle=&quot;collapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseAltBorderedThree&quot;&gt;
+          Collapsible Group Item #3
+          &lt;span class=&quot;accordion-indicator&quot;&gt;&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/h6&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;collapse&quot; id=&quot;collapseAltBorderedThree&quot; aria-labelledby=&quot;headingAltBorderedThree&quot; data-parent=&quot;#accordionAltBorderedExample&quot;&gt;
+      &lt;div class=&quot;card-body pt-3 pb-0&quot;&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Quick (anchor) navigation-->
+        <div class="col-xl-3 d-none d-xl-block pl-5">
+          <aside class="sticky-top pt-5">
+            <div class="pt-5 mt-5">
+              <div class="pl-4 border-left">
+                <h3 class="h5 mb-3">Jump to</h3>
+                <nav class="nav nav-dark flex-column">
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#collapse-basic">Basic example</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#collapse-multiple">Multiple targets</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#collapse-accordion">Accordion example</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#collapse-accordion-alt">Accordion alt example</a>
+                  <a class="nav-link font-size-sm font-weight-normal px-0 py-1" data-scroll href="#collapse-accordion-alt-bordered">Accordion alt bordered example</a>
+                </nav>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="../../assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="../../assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

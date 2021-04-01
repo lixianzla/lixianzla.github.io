@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | SEO &amp; Marketing Agency - Case Studies</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/seo-agency/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Main content-->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper position-relative">
+
+
+      <!-- Navbar -->
+      <!-- Remove .navbar-sticky class to detach .navbar from page scroll -->
+      <header class="cs-header navbar navbar-expand-lg navbar-dark navbar-sticky navbar-floating">
+        <div class="container px-0 px-xl-3">
+          <a class="navbar-brand order-lg-1 mr-lg-5 mr-0 pr-lg-2" href="index.html">
+            <img class="navbar-brand-static" src="../../assets/img/seo-agency/logo-light.svg" alt="Createx Logo" width="130">
+            <img class="navbar-brand-floating" src="../../assets/img/seo-agency/logo-dark.svg" alt="Createx Logo" width="130">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a class="btn btn-primary d-sm-inline-block d-none ml-4" href="contacts.html">Talk to a human</a>
+            <button class="navbar-toggler ml-1 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse1">
+            <ul class="navbar-nav mr-auto text-nowrap">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="services.html">Services List</a></li>
+                  <li><a class="dropdown-item" href="services-single.html">Single Service</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">Case Studies</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="case-studies.html">Case Studies Grid</a></li>
+                  <li><a class="dropdown-item" href="case-studies-single.html">Single Case Study</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About us</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="blog.html">Blog grid</a></li>
+                  <li><a class="dropdown-item" href="blog-single.html">Single Post</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Contacts</a>
+              </li>
+              <li class="nav-item d-sm-none d-block">
+                <a class="btn btn-sm btn-primary m-3" href="contacts.html">Get consultation</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Page title-->
+      <section class="py-md-6 py-5 bg-dark jarallax" data-jarallax data-speed="0.8">
+        <div class="container mt-5 py-lg-4">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-alt breadcrumb-light justify-content-center mb-sm-4">
+              <li class="breadcrumb-item">
+                <a href="index.html">
+                  <i class="cxi-home"></i>
+                </a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Case Studies</li>
+            </ol>
+          </nav>
+          <h1 class="display-1 text-center text-light">Case Studies</h1>
+          <p class="mx-auto mb-sm-5 pb-3 lead text-center text-light opacity-60" style="max-width: 810px;">We help our clients get better results with our creative and data-driven approach to online advertising. View our case study portfolio and learn more about the process that sets us apart.</p>
+
+          <!-- Mail form -->
+          <form class="col-lg-6 col-md-8 col-sm-10 d-sm-block d-none mx-auto">
+            <label for="subscribe" class="form-label-lg text-light">Email</label>
+            <div class="input-group">
+              <input id="subscribe" class="form-control form-control-lg input-light" type="email" placeholder="Your working email" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Mail form  mobile-->
+          <form class="d-sm-none d-block">
+            <div class="form-group">
+              <label for="subscribe-m" class="text-light">Email</label>
+              <input id="subscribe-m" class="form-control input-light" type="email" placeholder="Your working email" required>
+              <button type="submit" class="btn btn-primary btn-block mt-3">Subscribe</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Parallax bg -->
+        <div class="jarallax-img" style="background-image: url(../../assets/img/seo-agency/сase-studies/page-title-bg.jpg);"></div>
+      </section>
+
+
+      <!-- Page content -->
+      <!-- Case studies grid -->
+      <section class="container pt-lg-6 pt-5 pb-4">
+
+        <!-- Filterable grid container. IMPORTANT: it should wrap filters/sorters and target grid of items in order for plugin to work! -->
+        <div data-filter-grid>
+
+          <!-- Filter navs -->
+          <nav class="mb-lg-5 mb-4 pb-3" data-simplebar data-simplebar-auto-hide="false">
+            <ul class="nav nav-tabs nav-fill flex-nowrap mb-0 text-nowrap">
+              <li class="nav-item mb-0">
+                <span class="nav-link active" data-filter="all">
+                  All case studies
+                </span>
+              </li>
+              <li class="nav-item mb-0">
+                <span class="nav-link" data-filter=".social-media">
+                  Social Media
+                </span>
+              </li>
+              <li class="nav-item mb-0">
+                <span class="nav-link" data-filter=".seo">
+                  SEO
+                </span>
+              </li>
+              <li class="nav-item mb-0">
+                <span class="nav-link" data-filter=".research">
+                  Research
+                </span>
+              </li>
+              <li class="nav-item mb-0">
+                <span class="nav-link" data-filter=".content-pr">
+                  Content &amp; PR
+                </span>
+              </li>
+              <li class="nav-item mb-0">
+                <span class="nav-link" data-filter=".paid-traffic">
+                  Paid Traffic
+                </span>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Filterable grid of items -->
+          <div class="row pt-3">
+            <div class="cs-grid-item paid-traffic col-md-6 mb-md-5 mb-grid-gutter">
+
+              <!-- Card with overlaid image & radial progress -->
+              <div class="card card-hover h-100 box-shadow overflow-hidden">
+                <a class="card-header position-relative p-sm-4 p-3 bg-size-cover bg-position-center bg-no-repeat text-decoration-none" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/01.jpg);">
+                  <div class="bg-overlay opacity-60"></div>
+                  <div class="bg-overlay-content mb-sm-5 mb-4 px-sm-3 pb-2">
+                    <img class="card-logo d-block mb-1" src="../../assets/img/seo-agency/logo/orbis.svg" alt="Orbis" width="120">
+                    <span class="card-text font-size-sm text-white">Charity organization</span>
+                  </div>
+                </a>
+                <div class="card-body mx-sm-n2 px-sm-5 px-3 pb-3">
+                  <div class="d-flex mb-4">
+                    <div class="media align-items-center mr-sm-4 mr-3 pr-sm-2">
+                      <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                        "strokeWidth": 8,
+                        "trailWidth": 8,
+                        "color": "#f89828",
+                        "trailColor": "rgba(248,152,40, .3)",
+                        "progress": 0.9
+                      }'></div>
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">90%</h5>
+                        <span class="card-text font-size-xs">Engagement</span>
+                      </div>
+                    </div>
+                    <div class="media align-items-center">
+                      <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                        "strokeWidth": 8,
+                        "trailWidth": 8,
+                        "color": "#03cea4",
+                        "trailColor": "rgba(3,206,164, .3)",
+                        "progress": 1
+                      }'></div>
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">100%</h5>
+                        <span class="card-text font-size-xs">Deliverability</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr-gradient mx-sm-n5 mx-n3 mb-3 px-1">
+                  <p class="mb-1 pt-1 text-muted">Createx SEO Agency helped Jive Software increase their MQL to SQL conversion rate by 300%.</p>
+                </div>
+                <div class="card-footer mx-sm-n2 px-sm-5 px-3 pt-0 border-0">
+                  <div class="h6 mb-2">
+                    <a class="nav-link py-3" href="case-studies-single.html">View case</a>
+                    <i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cs-grid-item seo col-md-6 mb-md-5 mb-grid-gutter">
+
+              <!-- Card with overlaid image & radial progress -->
+              <div class="card card-hover h-100 box-shadow overflow-hidden">
+                <a class="card-header position-relative p-sm-4 p-3 bg-size-cover bg-position-center bg-no-repeat text-decoration-none" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/02.jpg);">
+                  <div class="bg-overlay opacity-60"></div>
+                  <div class="bg-overlay-content mb-sm-5 mb-4 px-sm-3 pb-2">
+                    <img class="card-logo d-block mb-1" src="../../assets/img/seo-agency/logo/exxon.svg" alt="Exxon" width="120">
+                    <span class="card-text font-size-sm text-white">Oil and natural resources</span>
+                  </div>
+                </a>
+                <div class="card-body mx-sm-n2 px-sm-5 px-3 pb-3">
+                  <div class="d-flex mb-4">
+                    <div class="media align-items-center mr-sm-4 mr-3 pr-sm-2">
+                      <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                        "strokeWidth": 8,
+                        "trailWidth": 8,
+                        "color": "#5a87fc",
+                        "trailColor": "rgba(90,135,252, .3)",
+                        "progress": 1
+                      }'></div>
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">200%</h5>
+                        <span class="card-text font-size-xs">Growth in sales</span>
+                      </div>
+                    </div>
+                    <div class="media align-items-center">
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">1,400</h5>
+                        <span class="card-text font-size-xs">Target investors</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr-gradient mx-sm-n5 mx-n3 mb-3 px-1">
+                  <p class="mb-1 pt-1 text-muted">With an advanced A/B testing and usability analysis, Createx SEO Agency helps Exxon see a 400% increase in conversion rate.</p>
+                </div>
+                <div class="card-footer mx-sm-n2 px-sm-5 px-3 pt-0 border-0">
+                  <div class="h6 mb-2">
+                    <a class="nav-link py-3" href="case-studies-single.html">View case</a>
+                    <i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cs-grid-item content-pr col-md-6 mb-md-5 mb-grid-gutter">
+
+              <!-- Card with overlaid image & radial progress -->
+              <div class="card card-hover h-100 box-shadow overflow-hidden">
+                <a class="card-header position-relative p-sm-4 p-3 bg-size-cover bg-position-center bg-no-repeat text-decoration-none" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/03.jpg);">
+                  <div class="bg-overlay opacity-60"></div>
+                  <div class="bg-overlay-content mb-sm-5 mb-4 px-sm-3 pb-2">
+                    <img class="card-logo d-block mb-1" src="../../assets/img/seo-agency/logo/lovato.svg" alt="Lovato" width="120">
+                    <span class="card-text font-size-sm text-white">Electric company</span>
+                  </div>
+                </a>
+                <div class="card-body mx-sm-n2 px-sm-5 px-3 pb-3">
+                  <div class="d-flex mb-4">
+                    <div class="media align-items-center mr-sm-4 mr-3 pr-sm-2">
+                      <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                        "strokeWidth": 8,
+                        "trailWidth": 8,
+                        "color": "#ff4242",
+                        "trailColor": "rgba(255,66,66, .3)",
+                        "progress": 0.8
+                      }'></div>
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">80%</h5>
+                        <span class="card-text font-size-xs">Open Rate</span>
+                      </div>
+                    </div>
+                    <div class="media align-items-center">
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">1,840</h5>
+                        <span class="card-text font-size-xs">Target investors</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr-gradient mx-sm-n5 mx-n3 mb-3 px-1">
+                  <p class="mb-1 pt-1 text-muted">With an advanced A/B testing and usability analysis, Createx SEO Agency helps Lovato see a 200% increase in conversion rate.</p>
+                </div>
+                <div class="card-footer mx-sm-n2 px-sm-5 px-3 pt-0 border-0">
+                  <div class="h6 mb-2">
+                    <a class="nav-link py-3" href="case-studies-single.html">View case</a>
+                    <i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cs-grid-item research col-md-6 mb-md-5 mb-grid-gutter">
+
+              <!-- Card with overlaid image & radial progress -->
+              <div class="card card-hover h-100 box-shadow overflow-hidden">
+                <a class="card-header position-relative p-sm-4 p-3 bg-size-cover bg-position-center bg-no-repeat text-decoration-none" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/04.jpg);">
+                  <div class="bg-overlay opacity-60"></div>
+                  <div class="bg-overlay-content mb-sm-5 mb-4 px-sm-3 pb-2">
+                    <img class="card-logo d-block mb-1" src="../../assets/img/seo-agency/logo/dove.svg" alt="Dove" width="120">
+                    <span class="card-text font-size-sm text-white">Personal care</span>
+                  </div>
+                </a>
+                <div class="card-body mx-sm-n2 px-sm-5 px-3 pb-3">
+                  <div class="d-flex mb-4">
+                    <div class="media align-items-center mr-sm-4 mr-3 pr-sm-2">
+                      <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                        "strokeWidth": 8,
+                        "trailWidth": 8,
+                        "color": "#f52f6e",
+                        "trailColor": "rgba(245,47,110, .3)",
+                        "progress": 0.7
+                      }'></div>
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">70%</h5>
+                        <span class="card-text font-size-xs">Open Rate</span>
+                      </div>
+                    </div>
+                    <div class="media align-items-center">
+                      <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                        "strokeWidth": 8,
+                        "trailWidth": 8,
+                        "color": "#f89828",
+                        "trailColor": "rgba(248,152,40, .3)",
+                        "progress": 1
+                      }'></div>
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">200%</h5>
+                        <span class="card-text font-size-xs">Growth in sales</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr-gradient mx-sm-n5 mx-n3 mb-3 px-1">
+                  <p class="mb-1 pt-1 text-muted">We helped Dove company break through a noisy industry and better understand their buyer's journey.</p>
+                </div>
+                <div class="card-footer mx-sm-n2 px-sm-5 px-3 pt-0 border-0">
+                  <div class="h6 mb-2">
+                    <a class="nav-link py-3" href="case-studies-single.html">View case</a>
+                    <i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cs-grid-item social-media col-md-6 mb-md-5 mb-grid-gutter">
+
+              <!-- Card with overlaid image & radial progress -->
+              <div class="card card-hover h-100 box-shadow overflow-hidden">
+                <a class="card-header position-relative p-sm-4 p-3 bg-size-cover bg-position-center bg-no-repeat text-decoration-none" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/05.jpg);">
+                  <div class="bg-overlay opacity-60"></div>
+                  <div class="bg-overlay-content mb-sm-5 mb-4 px-sm-3 pb-2">
+                    <img class="card-logo d-block mb-1" src="../../assets/img/seo-agency/logo/lotte.svg" alt="Lotte" width="120">
+                    <span class="card-text font-size-sm text-white">Departments stores</span>
+                  </div>
+                </a>
+                <div class="card-body mx-sm-n2 px-sm-5 px-3 pb-3">
+                  <div class="d-flex mb-4">
+                    <div class="media align-items-center mr-sm-4 mr-3 pr-sm-2">
+                      <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                        "strokeWidth": 8,
+                        "trailWidth": 8,
+                        "color": "#5a87fc",
+                        "trailColor": "rgba(90,135,252, .3)",
+                        "progress": 0.5
+                      }'></div>
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">50%</h5>
+                        <span class="card-text font-size-xs">Increase in leads</span>
+                      </div>
+                    </div>
+                    <div class="media align-items-center">
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">190+</h5>
+                        <span class="card-text font-size-xs">Prospects</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr-gradient mx-sm-n5 mx-n3 mb-3 px-1">
+                  <p class="mb-1 pt-1 text-muted">We helped Lotte company break through a noisy industry and better understand their buyer's journey.</p>
+                </div>
+                <div class="card-footer mx-sm-n2 px-sm-5 px-3 pt-0 border-0">
+                  <div class="h6 mb-2">
+                    <a class="nav-link py-3" href="case-studies-single.html">View case</a>
+                    <i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cs-grid-item paid-traffic col-md-6 mb-md-5 mb-grid-gutter">
+
+              <!-- Card with overlaid image & radial progress -->
+              <div class="card card-hover h-100 box-shadow overflow-hidden">
+                <a class="card-header position-relative p-sm-4 p-3 bg-size-cover bg-position-center bg-no-repeat text-decoration-none" href="case-studies-single.html" style="background-image: url(../../assets/img/seo-agency/сase-studies/06.jpg);">
+                  <div class="bg-overlay opacity-60"></div>
+                  <div class="bg-overlay-content mb-sm-5 mb-4 px-sm-3 pb-2">
+                    <img class="card-logo d-block mb-1" src="../../assets/img/seo-agency/logo/tesla.svg" alt="Tesla" width="120">
+                    <span class="card-text font-size-sm text-white">Electric cars, solar &amp; clean energy</span>
+                  </div>
+                </a>
+                <div class="card-body mx-sm-n2 px-sm-5 px-3 pb-3">
+                  <div class="d-flex mb-4">
+                    <div class="media align-items-center mr-sm-4 mr-3 pr-sm-2">
+                      <div class="cs-progress-radial mr-2 pr-1 pl-0" style="width: 40px;" data-progress-radial='{
+                        "strokeWidth": 8,
+                        "trailWidth": 8,
+                        "color": "#03cea4",
+                        "trailColor": "rgba(3,206,164, .3)",
+                        "progress": 1
+                      }'></div>
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">200%</h5>
+                        <span class="card-text font-size-xs">ROI</span>
+                      </div>
+                    </div>
+                    <div class="media align-items-center">
+                      <div class="media-body">
+                        <h5 class="mb-n1 card-title">$12,000</h5>
+                        <span class="card-text font-size-xs">Increase per month</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="hr-gradient mx-sm-n5 mx-n3 mb-3 px-1">
+                  <p class="mb-1 pt-1 text-muted">We helped Tesla company break through a noisy industry and better understand their buyer's journey.</p>
+                </div>
+                <div class="card-footer mx-sm-n2 px-sm-5 px-3 pt-0 border-0">
+                  <div class="h6 mb-2">
+                    <a class="nav-link py-3" href="case-studies-single.html">View case</a>
+                    <i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-lg-5 mb-4 pt-3 text-center">
+            <button class="btn btn-lg btn-link load-more-btn p-0 text-decoration-none" type="button">
+              <i class="cxi-arrow-convert mt-n1 mr-3 align-middle"></i>
+              Load more
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Shaped bg -->
+      <div class="bg-secondary">
+
+
+        <!-- Brands -->
+        <section class="container mt-md-4 pt-lg-6 pt-5 pb-4 px-0">
+          <div class="cs-carousel">
+            <div class="cs-carousel-inner" data-carousel-options='{
+              "nav": false,
+              "controls": false,
+              "autoplay": true,
+              "autoplayTimeout": 4000,
+              "responsive": {
+                "0": {
+                  "items": 2
+                },
+                "576": {
+                  "items": 3
+                },
+                "768": {
+                  "items": 4
+                },
+                "992": {
+                  "items": 5
+                },
+                "1200": {
+                  "items": 6
+                }
+              }
+            }'>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/seo-agency/logo/wisecat.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/seo-agency/logo/wisecat-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/seo-agency/logo/lovato.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/seo-agency/logo/lovato-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/seo-agency/logo/bassett-furniture.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/seo-agency/logo/bassett-furniture-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/seo-agency/logo/curtis.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/seo-agency/logo/curtis-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/seo-agency/logo/orbis.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/seo-agency/logo/orbis-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/seo-agency/logo/gabor.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/seo-agency/logo/gabor-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+              <div class="px-3 text-center">
+                <a href="#" class="cs-swap-image">
+                  <img src="../../assets/img/seo-agency/logo/exxon.svg" class="cs-swap-to" width="120" alt="Brand logo hover">
+                  <img src="../../assets/img/seo-agency/logo/exxon-g.svg" class="cs-swap-from" width="120" alt="Brand logo">
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Testimonials -->
+        <section class="container mt-md-4 pt-lg-6 pt-5 pb-4 bg-no-repeat bg-position-center-bottom" style="background-image: url(../../assets/img/seo-agency/testimonials/bg-shape-light.svg)">
+          <h2 class="h1 mb-md-5 pb-2 text-center">What our clients say</h2>
+
+          <!-- Carousel -->
+          <div class="cs-carousel cs-nav-outside cs-controls-outside">
+            <div class="cs-carousel-inner" data-carousel-options='{
+              "autoHeight": true,
+              "responsive": {
+                "0": {
+                  "controls": false
+                },
+                "768": {
+                  "controls": true
+                }
+              }
+            }'>
+
+              <!-- Carousel item -->
+              <div class="px-md-4 pb-lg-3">
+                <div class="blockquote-card card box-shadow border-0 mb-md-4">
+                  <div class="card-body mt-sm-4 mx-xl-5 mx-sm-4 pb-0">
+                    <blockquote class="blockquote">
+                      <p class="lead">Vero dolores exercitationem quidem eum sit accusamus. Quisquam cumque nesciunt fugiat quae delectus quo earum deleniti, labore odio sint recusandae aperiam aut nemo placeat pariatur beatae dignissimos amet quos! A ipsam soluta possimus quisquam commodi natus nam aperiam ratione deleniti.</p>
+                    </blockquote>
+                  </div>
+                  <div class="card-footer mb-sm-4 mx-xl-5 mx-sm-4 pt-0 border-0 media align-items-center">
+                    <img class="mr-3 rounded-circle" src="../../assets/img/online-courses/testimonials/01.jpg" width="72" alt="Author">
+                    <div class="media-body">
+                      <h3 class="h6 mb-0">Courtney Alexander</h3>
+                      <span class="font-size-sm text-muted">Position, Company </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel item -->
+              <div class="px-md-4 pb-lg-3">
+                <div class="blockquote-card card box-shadow border-0 mb-md-4">
+                  <div class="card-body mt-sm-4 mx-xl-5 mx-sm-4 pb-0">
+                    <blockquote class="blockquote">
+                      <p class="lead">Optio deleniti eos harum minus mollitia aut labore maxime rem ex dolores, dignissimos quidem exercitationem dicta praesentium quasi quia nam expedita sed blanditiis alias facere magnam pariatur asperiores. Ad et ullam eos maiores culpa reiciendis delectus ipsa. Eveniet tempora vel quo repellendus nihil, veniam numquam.</p>
+                    </blockquote>
+                  </div>
+                  <div class="card-footer mb-sm-4 mx-xl-5 mx-sm-4 pt-0 border-0 media align-items-center">
+                    <img class="mr-3 rounded-circle" src="../../assets/img/online-courses/testimonials/02.jpg" width="72" alt="Author">
+                    <div class="media-body">
+                      <h3 class="h6 mb-0">Eleanor Pena</h3>
+                      <span class="font-size-sm text-muted">Position, Course</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Blog recent -->
+        <section class="mt-md-4 py-lg-6 py-5 bg-no-repeat bg-position-center-bottom" style="background-image: url(../../assets/img/seo-agency/blog/recent/bg-shape.svg)">
+          <div class="container mb-lg-5 pb-md-4">
+            <div class="row">
+              <div class="col-lg-4 mb-lg-0 mb-5 text-lg-left text-center">
+                <h2 class="h1 pb-lg-3">Latest news</h2>
+                <p class="mx-lg-0 mx-auto mb-lg-5 pb-2 lead" style="max-width: 280px;">Check more posts in our blog for featured news and advertising insights</p>
+                <a href="blog.html" class="btn btn-lg btn-primary">Go to blog</a>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-sm-0 mb-grid-gutter">
+                <article class="cs-image-scale card h-100 border-0 bg-transparent">
+                  <a class="cs-image-inner card-header mb-3 p-0 border-0 rounded" href="blog-single.html">
+                    <img src="../../assets/img/seo-agency/blog/recent/01.jpg" alt="Blog card image">
+                  </a>
+                  <div class="card-body p-0">
+                    <ul class="nav nav-muted mb-2">
+                      <li class="nav-item mr-2">
+                        <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                          SEO
+                        </a>
+                        <span class="text-border px-1">|</span>
+                      </li>
+                      <li class="nav-item mr-2">
+                        <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                          <i class="cxi-clock mt-n1 mr-2 font-size-base align-middle"></i>
+                          July 5, 2020
+                        </a>
+                        <span class="text-border px-1">|</span>
+                      </li>
+                      <li class="nav-item mr-2">
+                        <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                          <i class="cxi-profile mt-n1 mr-2 font-size-base align-middle"></i>
+                          By Diane Mccoy
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="h5 mb-2 nav-dark">
+                      <a class="nav-link" href="blog-single.html">How to Maximize Your ROI Through Scientific SEM?</a>
+                    </h3>
+                    <p class="mb-3">Vulputate vitae pellentesque scelerisque luctus consequat mattis pellentesque dui odio...</p>
+                  </div>
+                  <div class="card-footer p-0 border-0">
+                    <div class="h6 mb-0">
+                      <a class="nav-link py-3" href="blog-single.html">Read more</a>
+                      <i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-sm-0 mb-grid-gutter">
+                <article class="cs-image-scale card h-100 border-0 bg-transparent">
+                  <a class="cs-image-inner card-header mb-3 p-0 border-0 rounded" href="blog-single.html">
+                    <img src="../../assets/img/seo-agency/blog/recent/02.jpg" alt="Blog card image">
+                  </a>
+                  <div class="card-body p-0">
+                    <ul class="nav nav-muted mb-2">
+                      <li class="nav-item mr-2">
+                        <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                          Marketing
+                        </a>
+                        <span class="text-border px-1">|</span>
+                      </li>
+                      <li class="nav-item mr-2">
+                        <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                          <i class="cxi-clock mt-n1 mr-2 font-size-base align-middle"></i>
+                          July 2, 2020
+                        </a>
+                        <span class="text-border px-1">|</span>
+                      </li>
+                      <li class="nav-item mr-2">
+                        <a class="nav-link d-inline-block mr-2 p-0 font-size-sm font-weight-normal" href="#">
+                          <i class="cxi-profile mt-n1 mr-2 font-size-base align-middle"></i>
+                          By Diane Mccoy
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="h5 mb-2 nav-dark">
+                      <a class="nav-link" href="blog-single.html">The Basics of Blogging Search Engine Optimization.</a>
+                    </h3>
+                    <p class="mb-3">Mauris tincidunt sollicitudin tristique odio eget volutpat. Fringilla viverra amet, mi interdum blandit...</p>
+                  </div>
+                  <div class="card-footer p-0 border-0">
+                    <div class="h6 mb-0">
+                      <a class="nav-link py-3" href="blog-single.html">Read more</a>
+                      <i class="cxi-arrow-right text-primary align-middle h5 mb-0 ml-2"></i>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div> <!-- / Shaped bg -->
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-3 bg-dark">
+      <div class="container my-lg-3 py-md-5 py-4">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 order-lg-1 order-1 mb-lg-0 mb-4">
+            <a class="d-inline-block mb-4" href="index.html">
+              <img src="../../assets/img/seo-agency/logo-light.svg" width="130" alt="Createx logo">
+            </a>
+            <p class="mb-sm-4 mb-3 pb-lg-3 font-size-xs text-light opacity-60">Createx SEO Agency is a full-service digital marketing agency. We help businesses make more money through a wealth of performance data and market research. We create science-based SEO strategies to empower our clients.</p>
+            <a href="#" class="social-btn mb-1 mt-md-0 mt-sm-1">
+              <i class="cxi-linkedin"></i>
+            </a>
+            <a href="#" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+              <i class="cxi-facebook"></i>
+            </a>
+            <a href="#" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+              <i class="cxi-twitter"></i>
+            </a>
+            <a href="#" class="social-btn mr-1 mb-2 mt-md-0 mt-sm-1">
+              <i class="cxi-instagram"></i>
+            </a>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-2 order-sm-4 order-1 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Company</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="about.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">About Us</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="case-studies.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Case Studies</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="blog.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="careers.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Careers</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-sm-12 col-6 order-lg-3 order-sm-5 order-2 mb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Services</h3>
+            <ul class="nav nav-light flex-lg-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Social Media</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">SEO</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Research</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Content &amp; PR</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="services-single.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Paid Traffic</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 order-lg-4 order-sm-3 order-3 mb-md-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Contact us</h3>
+            <ul class="nav nav-light flex-md-column flex-sm-row flex-column">
+              <li class="nav-item mb-2">
+                <a href="tel:(405)555-0128" class="nav-link mr-md-0 mr-sm-4 p-0 font-weight-normal text-nowrap">
+                  <i class="cxi-iphone mr-2"></i>
+                  (405) 555-0128
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="mailto:hello@example.com" class="nav-link mr-md-0 mr-sm-4 p-0 font-weight-normal text-nowrap">
+                  <i class="cxi-chat mr-2"></i>
+                  hello@example.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 order-lg-5 order-sm-2 order-4 mb-sm-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Sign up to our newsletter</h3>
+            <form>
+              <div class="input-group-overlay input-group-light form-group mb-2 pb-1">
+                <input class="form-control appended-form-control" type="text" placeholder="Email address*" required>
+                <div class="input-group-append-overlay">
+                  <span class="input-group-text">
+                    <button class="btn btn-link bt-sm px-0" type="submit">
+                      <i class="cxi-arrow-right lead mt-n1"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <small class="form-text font-size-xxs text-light">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-gradient hr-light">
+      <div class="container my-lg-3 py-4">
+        <div class="d-flex flex-wrap justify-content-sm-start justify-content-center mx-n2">
+          <a class="px-2 text-decoration-0" href="#">
+            <img src="../../assets/img/seo-agency/footer/award-1.jpg" class="mb-sm-0 mb-3 rounded" width="120" alt="Award title">
+          </a>
+          <a class="px-2 text-decoration-0" href="#">
+            <img src="../../assets/img/seo-agency/footer/award-2.jpg" class="mb-sm-0 mb-3 rounded" width="120" alt="Award title">
+          </a>
+          <a class="px-2 text-decoration-0" href="#">
+            <img src="../../assets/img/seo-agency/footer/award-3.jpg" class="mb-sm-0 mb-3 rounded" width="120" alt="Award title">
+          </a>
+          <a class="px-2 text-decoration-0" href="#">
+            <img src="../../assets/img/seo-agency/footer/award-4.jpg" class="mb-sm-0 mb-3 rounded" width="120" alt="Award title">
+          </a>
+        </div>
+      </div>
+      <div style="background-color: #292C37;">
+        <div class="container py-2">
+          <div class="d-flex align-items-sm-center justify-content-between py-1">
+            <div class="font-size-xs text-light">
+              <span class="d-sm-inline d-block mb-1">
+                <span class="font-size-sm">&copy; </span>
+                All rights reserved.
+              </span>
+              Made with 
+              <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+              <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+            </div>
+            <div class="d-flex align-items-sm-center">
+              <span class="d-sm-inline-block d-none text-light font-size-sm mr-3 mb-1 align-vertical">Back to top</span>
+              <a class="btn-scroll-top position-static rounded" href="#top" data-scroll>
+                <i class="btn-scroll-top-icon cxi-angle-up"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="../../assets/vendor/progressbar.js/dist/progressbar.min.js"></script>
+    <script src="../../assets/vendor/mixitup/dist/mixitup.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>

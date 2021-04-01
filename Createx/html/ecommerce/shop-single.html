@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Createx | E-Commerce - Product Page</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Createx - Multipurpose Bootstrap Template and UI Kit">
+    <meta name="keywords" content="bootstrap, business, creative agency, construction, services, e-commerce, shopping cart, mobile app showcase, multipurpose, shop, ui kit, marketing, seo, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+    <link rel="stylesheet" media="screen" href="../../assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../../assets/css/demo/ecommerce/theme.min.css">
+    
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body-->
+  <body>
+
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="cs-page-wrapper">
+
+
+      <!-- Sign in modal-->
+      <div class="modal fade" id="modal-signin" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+
+            <!-- Sign in form -->
+            <div class="cs-view show" id="modal-signin-view">
+              <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+                <h3 class="modal-title mt-4 mb-0 text-center">Sign in</h3>
+                <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                  <i class="cxi-cross" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="modal-body px-md-5 px-4">
+                <p class="font-size-sm text-muted text-center">Sign in to your account using email and password provided during registration.</p>
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" class="form-control" id="signin-email" placeholder="Your email address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signin-password" class="form-label">Password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signin-password" placeholder="Your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center form-group">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="remember-me" checked>
+                      <label for="remember-me" class="custom-control-label">Remember me</label>
+                    </div>
+                    <a href="#" class="font-size-sm text-decoration-none">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                  <p class="font-size-sm pt-4 mb-0">
+                    Don't have an account?
+                    <a href="#" class="font-weight-bold text-decoration-none" data-view="#modal-signup-view">Sign up</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <!-- Sign up form -->
+            <div class="cs-view" id="modal-signup-view">
+              <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+                <h3 class="modal-title mt-4 mb-0 text-center">Sign up</h3>
+                <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                  <i class="cxi-cross" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="modal-body px-md-5 px-4">
+                <p class="font-size-sm text-muted text-center">Sign in to your account using email and password provided during registration.</p>
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="signup-name">Full name</label>
+                    <input type="text" class="form-control" id="signup-name" placeholder="Your full name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" class="form-control" id="signup-email" placeholder="Your email address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-password" class="form-label">Password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signup-password" placeholder="Your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="signup-confirm-password" class="form-label">Confirm password</label>
+                    <div class="cs-password-toggle input-group-overlay">
+                      <input type="password" class="form-control appended-form-control" id="signup-confirm-password" placeholder="Confirm your password" required>
+                      <div class="input-group-append-overlay">
+                        <label class="btn cs-password-toggle-btn input-group-text">
+                          <input type="checkbox" class="custom-control-input">
+                          <i class="cxi-eye cs-password-toggle-indicator"></i>
+                          <span class="sr-only">Show password</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary btn-block" type="submit">Sign up</button>
+                  <p class="font-size-sm pt-4 mb-0">Already have an account?
+                    <a href="#" class="font-weight-bold text-decoration-none" data-view="#modal-signin-view">Sign in</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="modal-body text-center px-0 pt-2 pb-4">
+              <hr>
+              <p class="font-size-sm text-heading mb-3 pt-4">Or sign in with</p>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Facebook">
+                <i class="cxi-facebook"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Google">
+                <i class="cxi-google"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="Twitter">
+                <i class="cxi-twitter"></i>
+              </a>
+              <a href="#" class="social-btn sb-solid mx-1 mb-2" data-toggle="tooltip" title="LinkedIn">
+                <i class="cxi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Sizing modal-->
+      <div class="modal fade" id="modal-sizing" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+            <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+              <h3 class="modal-title mt-4 mb-0 text-center">Size chart</h3>
+              <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                <i class="cxi-cross" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="modal-body px-md-5 px-4">
+              <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                  <a href="#" class="nav-link active">Women</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Men</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Kids</a>
+                </li>
+              </ul>
+              <div class="table-responsive border rounded">
+                <h4 class="mb-0 py-3 font-size-lg text-center">Footwear</h4>
+                <table class="table table-striped mb-0">
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="font-weight-normal">Europe</th>
+                      <td>35</td>
+                      <td>36</td>
+                      <td>37</td>
+                      <td>38</td>
+                      <td>39</td>
+                      <td>40</td>
+                      <td>41</td>
+                      <td>42</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="font-weight-normal">USA</th>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>6.5</td>
+                      <td>7.5</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="font-weight-normal">United Kingdom</th>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="font-weight-normal">China</th>
+                      <td>230/83</td>
+                      <td>235/84</td>
+                      <td>240/85</td>
+                      <td>245/86</td>
+                      <td>255/87</td>
+                      <td>260/88</td>
+                      <td>265/89</td>
+                      <td>275/90</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="font-weight-normal">Russia</th>
+                      <td>35</td>
+                      <td>36</td>
+                      <td>37</td>
+                      <td>38</td>
+                      <td>39</td>
+                      <td>40</td>
+                      <td>41</td>
+                      <td>42</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="font-weight-normal">Italy</th>
+                      <td>35</td>
+                      <td>36</td>
+                      <td>37</td>
+                      <td>38</td>
+                      <td>39</td>
+                      <td>40</td>
+                      <td>41</td>
+                      <td>42</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="font-weight-normal">Italy</th>
+                      <td>230</td>
+                      <td>235</td>
+                      <td>240</td>
+                      <td>245</td>
+                      <td>255</td>
+                      <td>260</td>
+                      <td>265</td>
+                      <td>275</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <hr class="my-4 mx-md-n5 mx-n4">
+              <div class="d-flex flex-lg-row flex-column align-items-center justify-content-center mb-4">
+                <h6 class="mb-lg-0">I want to see size equivalence in: </h6>
+                <ul class="nav nav-tabs mb-0 ml-lg-4">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active">cm</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Inches</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="table-responsive border rounded mb-4">
+                <h4 class="mb-0 py-3 font-size-lg text-center">Equivalence in centimeters</h4>
+                <table class="table table-striped mb-0">
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="font-weight-normal">Foot length</th>
+                      <td>22.4 cm</td>
+                      <td>23 cm</td>
+                      <td>23.6 cm</td>
+                      <td>24.3 cm</td>
+                      <td>24.9 cm</td>
+                      <td>25.5 cm</td>
+                      <td>26.2 cm</td>
+                      <td>26.8 cm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Review modal-->
+      <div class="modal fade" id="modal-review" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+            <div class="modal-header border-0 pb-0 px-md-5 px-4 d-block position-relative">
+              <h3 class="modal-title mt-4 mb-0 text-center">Leave a review</h3>
+              <button type="button" class="close position-absolute" style="top: 1.5rem; right: 1.5rem;" data-dismiss="modal" aria-label="Close">
+                <i class="cxi-cross" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="modal-body px-md-5 px-4">
+
+              <!-- Review form -->
+              <form class="needs-validation" novalidate>
+                <div class="form-group">
+                  <label for="review-name">Name</label>
+                  <input id="review-name" class="form-control" type="text" placeholder="Your name" required>
+                  <div class="invalid-feedback">Please let us know your name.</div>
+                </div>
+                <div class="form-group">
+                  <label for="review-email">Email</label>
+                  <input id="review-email" class="form-control" type="email" placeholder="Your email address" required>
+                  <div class="invalid-feedback">Please provide a valid email address.</div>
+                </div>
+                <div class="form-group">
+                  <label for="review-rating">Rating</label>
+                  <select id="review-rating" class="form-control custom-select bg-image-0">
+                    <option>Choose rating</option>
+                    <option>Option item 1</option>
+                    <option>Option item 2</option>
+                    <option>Option item 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="review-file">Upload a photo or video (optional)</label>
+                  <div class="cs-file-drop-area">
+                    <div class="cs-file-drop-icon cxi-upload"></div>
+                    <span class="cs-file-drop-message">Drag and drop here to upload</span>
+                    <input id="review-file" type="file" class="cs-file-drop-input">
+                    <button type="button" class="cs-file-drop-btn btn btn-outline-primary btn-sm">Or select file</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="review-text">Review</label>
+                  <textarea class="form-control" id="review-text" rows="3" placeholder="Your review message" required></textarea>
+                  <div class="invalid-feedback">Please write your review.</div>
+                </div>
+                <div class="form-group pt-2">
+                  <button type="submit" class="btn btn-block btn-primary">Submit a review</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Shopping cart off-canvas -->
+      <div id="cart" class="cs-offcanvas cs-offcanvas-right">
+
+        <!-- Header -->
+        <div class="cs-offcanvas-cap align-items-center border-bottom">
+          <h2 class="h5 mb-0">Your cart (4)</h2>
+          <button class="close mr-n1" type="button" data-dismiss="offcanvas" aria-label="Close">
+            <span class="h3 font-weight-normal mb-0" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="cs-offcanvas-body">
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/01.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Basic hooded sweatshirt in pink</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Color:</span> Pink</li>
+                    <li class="mb-0"><span class="text-muted">Size:</span> S</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong class="text-danger">$15.00</strong> <s class="font-size-xs text-muted">$31.00</s></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/02.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Black and white sport cap</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$18.15</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 border-bottom mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/03.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Mid-rise slim cropped fit jeans</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Size:</span> M</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$76.00</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="media p-4 mx-n4">
+            <a href="shop-single.html" style="min-width: 80px;">
+              <img src="../../assets/img/ecommerce/cart/04.png" width="80" alt="Product thumb">
+            </a>
+            <div class="media-body pl-3">
+              <div class="d-flex justify-content-between">
+                <div class="pr-2">
+                  <h3 class="font-size-sm mb-3">
+                    <a href="shop-single.html" class="nav-link font-weight-bold">Men fashion gray shoes</a>
+                  </h3>
+                  <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                    <li class="mb-0"><span class="text-muted">Color:</span> Gray</li>
+                    <li class="mb-0"><span class="text-muted">Size:</span> 10.5</li>
+                  </ul>
+                  <div class="d-flex align-items-center">
+                    <input type="number" class="form-control form-control-sm bg-light mr-3" style="width: 4.5rem;" value="1">
+                    <div class="text-nowrap"><strong>$84.00</strong></div>
+                  </div>
+                  <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                    Move to
+                    <i class="cxi-heart ml-1"></i>
+                  </button>
+                </div>
+                <div class="nav-muted mr-n2">
+                  <a href="#" class="nav-link px-2 mt-n2" data-toggle="tooltip" title="Remove"><i class="cxi-delete"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="cs-offcanvas-cap flex-column border-top">
+          <div class="d-flex align-items-center justify-content-between mb-3 pb-1">
+            <span class="text-muted mr-2">Subtotal:</span>
+            <span class="h5 mb-0">$198.65</span>
+          </div>
+          <a href="checkout.html" class="btn btn-primary btn-lg btn-block">
+            <i class="cxi-credit-card font-size-lg mt-n1 mr-1"></i>
+            Checkout
+          </a>
+        </div>
+      </div>
+
+      
+      <!-- Header (Topbar + Navbar) -->
+      <header class="cs-header">
+  
+        <!-- Topbar -->
+        <div class="topbar topbar-dark bg-dark">
+          <div class="container d-flex align-items-center px-0 px-xl-3">
+            <div class="mr-3">
+              <a href="tel:4055550128" class="topbar-link d-md-inline-block d-none">
+                Available 24/7 at
+                <span class='font-weight-bold'>(405) 555-0128</span>
+              </a>
+              <a href="tel:4055550128" class="topbar-link d-md-none d-inline-block text-nowrap">
+                <i class="cxi-iphone align-middle"></i>
+                (405) 555-0128
+              </a>
+            </div>
+            <a href="order-tracking.html" class="topbar-link ml-auto mr-4 pr-sm-2 text-nowrap">
+              <i class="cxi-map-pin-outline mr-1 font-size-base align-middle"></i>
+              Track <span class="d-none d-sm-inline">order</span>
+            </a>
+            <div class="dropdown">
+              <a href="#" class="topbar-link dropdown-toggle" data-toggle="dropdown">
+                <img src="../../assets/img/ecommerce/flags/en.png" class="mr-2" width="20" alt="English">
+                Eng / $
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/fr.png" class="mr-2" width="20" alt="Français">
+                  Français / €
+                </a>
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/de.png" class="mr-2" width="20" alt="Deutsch">
+                  Deutsch / €
+                </a>
+                <a href="#" class="dropdown-item">
+                  <img src="../../assets/img/ecommerce/flags/it.png" class="mr-2" width="20" alt="Italiano">
+                  Italiano / €
+                </a>
+              </div>
+            </div>
+            <a href="#modal-signin" class="topbar-link d-lg-inline-block d-none ml-4 pl-1 text-decoration-none text-nowrap" data-toggle="modal" data-view="#modal-signin-view">
+              <i class="cxi-profile mr-1 font-size-base align-middle"></i>
+              Sign in / up
+            </a>
+          </div>
+        </div>
+  
+        <!-- Navbar -->
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+        <div class="navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-fixed-element>
+          <div class="container px-0 px-xl-3">
+            <a href="index.html" class="navbar-brand order-lg-1 mr-0 pr-lg-3 mr-lg-4">
+              <img src="../../assets/img/ecommerce/logo.svg" alt="Createx Logo" width="130">
+            </a>
+            <!-- Search desktop -->
+            <div class="input-group-overlay ml-4 d-lg-block d-none order-lg-3" style="max-width: 21rem;">
+              <input class="form-control appended-form-control" type="text" placeholder="Search for products...">
+              <div class="input-group-append-overlay">
+                <span class="input-group-text"><i class="cxi-search lead align-middle"></i></span>
+              </div>
+            </div>
+            <!-- Toolbar -->
+            <div class="d-flex align-items-center order-lg-3">
+              <ul class="nav nav-tools flex-nowrap">
+                <li class="nav-item d-lg-block d-none mb-0">
+                  <a href="account-wishlist.html" class="nav-tool">
+                    <i class="cxi-heart nav-tool-icon"></i>
+                    <span class="nav-tool-label">2</span>
+                  </a>
+                </li>
+                <li class="divider-vertical mb-0 d-lg-block d-none"></li>
+                <li class="nav-item align-self-center mb-0">
+                  <a href="#" class="nav-tool pr-lg-0" data-toggle="offcanvas" data-target="cart">
+                    <i class="cxi-cart nav-tool-icon"></i>
+                    <span class="badge badge-success align-middle mt-n1 ml-2 px-2 py-1 font-size-xs">4</span>
+                  </a>
+                </li>
+                <li class="divider-vertical mb-0 d-lg-none d-block"></li>
+                <li class="nav-item mb-0">
+                  <button class="navbar-toggler mt-n1 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!-- Navbar collapse -->
+            <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse">
+              <!-- Search mobile -->
+              <div class="input-group-overlay form-group mb-0 d-lg-none d-block">
+                <input type="text" class="form-control prepended-form-control rounded-0 border-0" placeholder="Search for products...">
+                <div class="input-group-prepend-overlay">
+                  <span class="input-group-text">
+                    <i class="cxi-search font-size-lg align-middle mt-n1"></i>
+                  </span>
+                </div>
+              </div>
+              <!-- Menu -->
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="shop-catalog.html" class="dropdown-item">Catalog with Filters</a></li>
+                    <li><a href="shop-single.html" class="dropdown-item">Single Product</a></li>
+                    <li><a href="checkout.html" class="dropdown-item">Checkout</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown mega-dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Megamenu</a>
+                  <div class="dropdown-menu">
+                    <div class="container pt-lg-1 pb-lg-3">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">New collection</a></li>
+                            <li><a href="#" class="dropdown-item">Best sellers</a></li>
+                            <li><a href="#" class="dropdown-item">Plus size</a></li>
+                            <li><a href="#" class="dropdown-item text-danger">Sale up to 70%</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Clothes</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Coats</a></li>
+                            <li><a href="#" class="dropdown-item">Jackets</a></li>
+                            <li><a href="#" class="dropdown-item">Suits</a></li>
+                            <li><a href="#" class="dropdown-item">Dresses</a></li>
+                            <li><a href="#" class="dropdown-item">Cardigans &amp; sweaters</a></li>
+                            <li><a href="#" class="dropdown-item">Sweatshirts &amp; hoodies</a></li>
+                            <li><a href="#" class="dropdown-item">T-shirts &amp; tops</a></li>
+                            <li><a href="#" class="dropdown-item">Pants</a></li>
+                            <li><a href="#" class="dropdown-item">Jeans</a></li>
+                            <li><a href="#" class="dropdown-item">Shorts</a></li>
+                            <li><a href="#" class="dropdown-item">Skirts</a></li>
+                            <li><a href="#" class="dropdown-item">Lingerie &amp; nightwear</a></li>
+                            <li><a href="#" class="dropdown-item">Sportswear</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Shoes</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Boots</a></li>
+                            <li><a href="#" class="dropdown-item">Flat shoes</a></li>
+                            <li><a href="#" class="dropdown-item">Heels</a></li>
+                            <li><a href="#" class="dropdown-item">Sandals</a></li>
+                            <li><a href="#" class="dropdown-item">Mules</a></li>
+                            <li><a href="#" class="dropdown-item">Sliders</a></li>
+                            <li><a href="#" class="dropdown-item">Slippers</a></li>
+                            <li><a href="#" class="dropdown-item">Sneakers</a></li>
+                            <li><a href="#" class="dropdown-item">Leather</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-3 py-2">
+                          <h4 class="font-size-sm text-uppercase pt-1 mb-2">Accessories</h4>
+                          <ul class="list-unstyled">
+                            <li><a href="#" class="dropdown-item">Bags &amp; backpacks</a></li>
+                            <li><a href="#" class="dropdown-item">Hats &amp; scarves</a></li>
+                            <li><a href="#" class="dropdown-item">Hair accessories</a></li>
+                            <li><a href="#" class="dropdown-item">Belts</a></li>
+                            <li><a href="#" class="dropdown-item">Jewellery</a></li>
+                            <li><a href="#" class="dropdown-item">Watches</a></li>
+                            <li><a href="#" class="dropdown-item">Sunglasses</a></li>
+                            <li><a href="#" class="dropdown-item">Purses</a></li>
+                            <li><a href="#" class="dropdown-item">Socks &amp; tights</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-1 d-none d-lg-block py-2">
+                          <span class="divider-vertical h-100 mx-auto"></span>
+                        </div>
+                        <div class="col-lg-3 d-none d-lg-block py-2">
+                          <a href="#" class="d-block text-decoration-none pt-1">
+                            <img src="../../assets/img/ecommerce/megamenu.jpg" class="d-block rounded mb-3" alt="Promo banner">
+                            <h5 class="font-size-sm mb-3">Back to school. Sale up to 50%</h5>
+                            <div class="btn btn-outline-primary btn-sm">
+                              See offers
+                              <i class="cxi-arrow-right ml-1"></i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="account-profile.html" class="dropdown-item">Profile</a></li>
+                    <li><a href="account-orders.html" class="dropdown-item">My Orders</a></li>
+                    <li><a href="account-wishlist.html" class="dropdown-item">Wishlist</a></li>
+                    <li><a href="account-recently-viewed.html" class="dropdown-item">Recently Viewed</a></li>
+                    <li><a href="account-reviews.html" class="dropdown-item">My Reviews</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="blog.html" class="dropdown-item">Blog List</a></li>
+                    <li><a href="blog-single.html" class="dropdown-item">Single Post</a></li>
+                    <li><a href="contacts.html" class="dropdown-item">Contacts</a></li>
+                    <li><a href="order-tracking.html" class="dropdown-item">Order Tracking</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#modal-signin" class="nav-link d-lg-none" data-toggle="modal" data-view="#modal-signin-view">
+                    <i class="cxi-profile font-size-base align-middle mr-1"></i>
+                    Sign in / up
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <!-- Promo bar -->
+      <section class="cs-promo-bar bg-primary py-2">
+        <div class="container d-flex justify-content-center">
+          <div class="cs-carousel cs-controls-inverse">
+            <div class="cs-carousel-inner" data-carousel-options = '{"mode": "gallery", "nav": false}'>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Up to 70% Off.</strong>
+                <a href="#" class="text-light">Shop our latest sale offers</a>
+              </div>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Money back guarantee.</strong>
+                <a href="#" class="text-light">Learn more</a>
+              </div>
+              <div class="font-size-xs text-light px-2">
+                <strong class="mr-1">Friendly customer support.</strong>
+                <a href="#" class="text-light">Contact 24/7</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Breadcrumb -->
+      <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb breadcrumb-alt mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html"><i class="cxi-home"></i></a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="shop-catalog.html">Women</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="shop-catalog.html">Clothes</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Basic hooded sweatshirt in pink</li>
+          </ol>
+        </div>
+      </nav>
+
+
+      <!-- Page title -->
+      <section class="container d-md-flex align-items-center justify-content-between py-3 py-md-4 mb-3">
+        <h1 class="mb-2 mb-md-0">Basic hooded sweatshirt in pink</h1>
+        <span class="text-muted"><strong>Art. No.</strong> 183260098</span>
+      </section>
+
+
+      <!-- Single product -->
+      <section class="container mb-lg-3">
+
+        <!-- Nav tabs -->
+        <div data-simplebar data-simplebar-auto-hide="false">
+          <ul class="nav nav-tabs flex-nowrap text-nowrap" role="tablist">
+            <li class="nav-item">
+              <a href="#info" class="nav-link active" data-toggle="tab" role="tab">General info</a>
+            </li>
+            <li class="nav-item">
+              <a href="#details" class="nav-link" data-toggle="tab" role="tab">Product details</a>
+            </li>
+            <li class="nav-item">
+              <a href="#reviews" class="nav-link" data-toggle="tab" role="tab">
+                Reviews
+                <sup class="ml-1">12</sup>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content border-top pt-4">
+
+          <!-- General info -->
+          <div class="tab-pane fade show active pt-3" id="info" role="tabpanel">
+            <div class="row">
+              <div class="col-md-6 mb-md-0 mb-4">
+
+                <!-- Product gallery -->
+                <div class="cs-carousel cs-gallery cs-product-gallery mx-auto" style="max-width: 570px;">
+                  <div class="cs-carousel-inner" data-carousel-options='{
+                    "gutter": 15,
+                    "navContainer": "#cs-thumbnails",
+                    "navAsThumbnails": true
+                  }'>
+
+                    <!-- Product gallery item -->
+                    <a class="cs-gallery-item" href="../../assets/img/ecommerce/shop/single/01.jpg" data-sub-html='<h6 class="text-light">Gallery image caption #1</h6>'>
+                      <img class="rounded" src="../../assets/img/ecommerce/shop/single/01.jpg" alt="Carousel image">
+                      <span class="cs-gallery-caption">Gallery image caption #1</span>
+                    </a>
+
+                    <!-- Product gallery item -->
+                    <a class="cs-gallery-item" href="../../assets/img/ecommerce/shop/single/02.jpg" data-sub-html='<h6 class="text-light">Gallery image caption #2</h6>'>
+                      <img class="rounded" src="../../assets/img/ecommerce/shop/single/02.jpg" alt="Carousel image">
+                      <span class="cs-gallery-caption">Gallery image caption #2</span>
+                    </a>
+
+                    <!-- Product gallery item -->
+                    <a class="cs-gallery-item" href="../../assets/img/ecommerce/shop/single/03.jpg" data-sub-html='<h6 class="text-light">Gallery image caption #3</h6>'>
+                      <img class="rounded" src="../../assets/img/ecommerce/shop/single/03.jpg" alt="Carousel image">
+                      <span class="cs-gallery-caption">Gallery image caption #3</span>
+                    </a>
+
+                    <!-- Product gallery item -->
+                    <a class="cs-gallery-item" href="../../assets/img/ecommerce/shop/single/04.jpg" data-sub-html='<h6 class="text-light">Gallery image caption #4</h6>'>
+                      <img class="rounded" src="../../assets/img/ecommerce/shop/single/04.jpg" alt="Carousel image">
+                      <span class="cs-gallery-caption">Gallery image caption #4</span>
+                    </a>
+
+                    <!-- Product gallery video item -->
+                    <a class="cs-gallery-item video-item" href="https://www.youtube.com/watch?v=1vrXpMLLK14" data-sub-html='<h6 class="text-light">Gallery image caption #5</h6>'>
+                      <img class="rounded" src="../../assets/img/ecommerce/shop/single/05.jpg" alt="Carousel image">
+                      <span class="cs-gallery-caption">Gallery image caption #5</span>
+                    </a>
+                  </div>
+
+                  <!-- Product gallery thumbnails -->
+                  <div class="cs-thumbnails" id="cs-thumbnails">
+                    <button type="button" data-nav="0">
+                      <img src="../../assets/img/ecommerce/shop/single/th01.jpg" alt="Thumbnail">
+                    </button>
+                    <button type="button" data-nav="1">
+                      <img src="../../assets/img/ecommerce/shop/single/th02.jpg" alt="Thumbnail">
+                    </button>
+                    <button type="button" data-nav="2">
+                      <img src="../../assets/img/ecommerce/shop/single/th03.jpg" alt="Thumbnail">
+                    </button>
+                    <button type="button" data-nav="3">
+                      <img src="../../assets/img/ecommerce/shop/single/th04.jpg" alt="Thumbnail">
+                    </button>
+                    <button type="button" data-nav="4" class="video-indicator">
+                      <img src="../../assets/img/ecommerce/shop/single/th05.jpg" alt="Thumbnail">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 pl-xl-5">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+
+                  <!-- Price -->
+                  <div class="d-flex align-items-center mb-sm-0 mb-4">
+                    <span class="h3 d-inline-block mb-0 text-danger">$15.50</span>
+                    <del class="d-inline-block ml-2 pl-1 font-size-lg text-muted">$31.00</del>
+                    <span class="ml-4 p-2 badge badge-danger font-size-base font-weight-bold">- 50%</span>
+                  </div>
+
+                  <!-- Rating -->
+                  <div class="text-sm-right">
+                    <div class="star-rating ml-auto">
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star"></i>
+                    </div>
+                    <span class="font-size-sm text-muted">12 reviews</span>
+                  </div>
+                </div>
+
+                <!-- Ordering form -->
+                <form class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="pink">Color</label>
+                      <div class="d-flex align-items-middle">
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline mr-2 mb-2">
+                          <input class="custom-control-input" type="radio" name="color" id="pink" value="Pink" data-label="colorOptionText" checked>
+                          <label class="cs-custom-option-label" for="pink">
+                            <span class="cs-color-swatch" style="background-color: #e0aea2;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline mr-2 mb-2">
+                          <input class="custom-control-input" type="radio" name="color" id="blue" value="Blue" data-label="colorOptionText">
+                          <label class="cs-custom-option-label" for="blue">
+                            <span class="cs-color-swatch" style="background-color: #c0dded;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline mr-2 mb-2">
+                          <input class="custom-control-input" type="radio" name="color" id="yellow" value="Yellow" data-label="colorOptionText">
+                          <label class="cs-custom-option-label" for="yellow">
+                            <span class="cs-color-swatch" style="background-color: #fede41;"></span>
+                          </label>
+                        </div>
+                        <span class="d-inline-block pl-2 text-muted" id="colorOptionText">Pink</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-8 order-sm-1 order-2">
+                    <div class="form-group">
+                      <label for="size">Size</label>
+                      <select class="form-control custom-select" id="size">
+                        <option>Please select</option>
+                        <option>Option item 1</option>
+                        <option>Option item 2</option>
+                        <option>Option item 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 order-sm-2 order-1 text-sm-right">
+                    <a href="#modal-sizing" data-toggle="modal" class="d-inline-block mt-sm-4 mb-sm-0 mb-4 pt-sm-3 font-weight-bold text-decoration-0 text-dark">
+                      <i class="cxi-hanger mr-2"></i>
+                      Size chart
+                    </a>
+                  </div>
+                  <div class="col-lg-2 col-4 order-lg-3 order-3">
+                    <div class="form-group">
+                      <select class="form-control custom-select" id="select-input">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>5</option>
+                        <option>10</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 order-lg-4 order-4">
+                    <button class="btn btn-block btn-primary">
+                      <i class="cxi-cart mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                  <div class="col-lg-4 col-8 order-lg-5 order-2">
+                    <button class="btn btn-block btn-outline-primary px-lg-4">
+                      <i class="cxi-heart mr-2"></i>
+                      Favourite
+                    </button>
+                  </div>
+                </form>
+
+                <!-- Terms -->
+                <!-- Accordion made of cards -->
+                <div class="accordion-alt mb-4" id="productTerms">
+
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="delivery-card">
+                      <h6 class="accordion-heading">
+                        <a href="#delivery" class="collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="delivery">Delivery
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h6>
+                    </div>
+                    <div class="collapse" id="delivery" aria-labelledby="delivery-card" data-parent="#productTerms">
+                      <div class="card-body">
+                        <p class="font-size-sm">
+                          Free standard shipping on orders <strong>over $35</strong> before tax, plus free returns.
+                        </p>
+
+                        <!-- Delivery table -->
+                        <div class="table-responsive px-md-3">
+                          <table class="table mb-0" style="min-width: 450px;">
+                            <thead class="font-size-xs text-uppercase text-muted">
+                              <tr>
+                                <th class="border-0 font-weight-normal">Type</th>
+                                <th class="border-0 font-weight-normal">How long</th>
+                                <th class="border-0 font-weight-normal">How much</th>
+                              </tr>
+                            </thead>
+                            <tbody class="font-size-sm">
+                              <tr>
+                                <th class="font-weight-normal">Standard delivery</th>
+                                <td>1-4 business days</td>
+                                <td>$4.50</td>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-normal">Express delivery</th>
+                                <td>1 business day</td>
+                                <td>$10.00</td>
+                              </tr>
+                              <tr>
+                                <th class="font-weight-normal">Pick up in store</th>
+                                <td>1-3 business days</td>
+                                <td>Free</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Card -->
+                  <div class="card border-bottom">
+                    <div class="card-header" id="return-card">
+                      <h6 class="accordion-heading">
+                        <a class="collapsed" href="#return" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="return">Return
+                          <span class="accordion-indicator"></span>
+                        </a>
+                      </h6>
+                    </div>
+                    <div class="collapse" id="return" aria-labelledby="return-card" data-parent="#productTerms">
+                      <p class="font-size-sm">
+                        You have <strong>60 days</strong> to return the item(s) using any of the following methods:
+                      </p>
+                      <ul class="mb-4 pl-3">
+                        <li>Free store return</li>
+                        <li>Free returns via USPS Dropoff Service</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Share -->
+                <div class="mb-5 text-nowrap">
+                  <h6 class="d-inline-block align-middle mr-2 mb-0">Share:</h6>
+                  <a href="#" class="social-btn sb-solid align-middle mr-2" data-toggle="tooltip" title="Facebook">
+                    <i class="cxi-facebook"></i>
+                  </a>
+                  <a href="#" class="social-btn sb-solid align-middle mr-2" data-toggle="tooltip" title="Twitter">
+                    <i class="cxi-twitter"></i>
+                  </a>
+                  <a href="#" class="social-btn sb-solid align-middle" data-toggle="tooltip" title="Pinterest">
+                    <i class="cxi-pinterest"></i>
+                  </a>
+                </div>
+
+                <!-- Payment -->
+                <div class="pb-3 text-nowrap" data-simplebar data-simplebar-auto-hide="false">
+                  <a href="#" class="d-inline-block mb-3 mr-xl-4 mr-3">
+                    <img src="../../assets/img/ecommerce/shop/single/cards/visa.jpg" alt="Visa" class="border rounded">
+                  </a>
+                  <a href="#" class="d-inline-block mb-3 mr-xl-4 mr-3">
+                    <img src="../../assets/img/ecommerce/shop/single/cards/master-card.jpg" alt="Mastercard" class="border rounded">
+                  </a>
+                  <a href="#" class="d-inline-block mb-3">
+                    <img src="../../assets/img/ecommerce/shop/single/cards/pay-pal.jpg" alt="PayPal" class="border rounded">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Product details -->
+          <div class="tab-pane fade pt-3" id="details" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-7 col-md-8 mb-md-0 mb-4">
+                <h3 class="h5 mb-3">Details</h3>
+                <p>Id habitant tempor aliquam vulputate enim velit tincidunt sed. Urna sed facilisis nulla feugiat amet venenatis. Id suspendisse ut quis tellus aliquam pellentesque neque, semper donec.</p>
+                <ul class="pl-3">
+                  <li>Brand: Jordan</li>
+                  <li>Color: gray / red / yellow</li>
+                  <li>Mid-cut design</li>
+                  <li>Lace-up fastening</li>
+                  <li>Rubber outsole pods for durability and traction</li>
+                  <li>Moulded grooves in forefoot offer added flexibility</li>
+                  <li>Padded cuff with inner nodes designed to offer comfort and support around the Achilles tendon</li>
+                </ul>
+                <hr class="my-4">
+                <h3 class="h5 mb-3">Fabric</h3>
+                <ul class="pl-3">
+                  <li>Upper: 50% real leather, 50% textile</li>
+                  <li>Lining: 100% textile</li>
+                  <li>Sole: 100% other materials</li>
+                </ul>
+                <hr class="my-4">
+                <h3 class="h5 mb-3">Care</h3>
+                <ul class="pl-0">
+                  <li class="media">
+                    <img src="../../assets/img/ecommerce/shop/single/care/hand-wash.svg" alt="Icon" class="d-block mr-3">
+                    <div class="media-body pl-1">
+                      Hand wash only (30°)
+                    </div>
+                  </li>
+                  <li class="media">
+                    <img src="../../assets/img/ecommerce/shop/single/care/no-ironing.svg" alt="Icon" class="d-block mr-3">
+                    <div class="media-body pl-1">
+                      No ironing
+                    </div>
+                  </li>
+                  <li class="media">
+                    <img src="../../assets/img/ecommerce/shop/single/care/no-bleach.svg" alt="Icon" class="d-block mr-3">
+                    <div class="media-body pl-1">
+                      Do not use any bleach
+                    </div>
+                  </li>
+                  <li class="media">
+                    <img src="../../assets/img/ecommerce/shop/single/care/no-tumble-dry.svg" alt="Icon" class="d-block mr-3">
+                    <div class="media-body pl-1">
+                      Do not tumble dry
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 offset-lg-1">
+
+                <!-- Product card carousel -->
+                <div class="card card-product">
+                  <div class="card-product-img">
+                    <div class="cs-carousel cs-controls-onhover">
+                      <a class="cs-carousel-inner" href="#" data-carousel-options="{
+                        &quot;nav&quot;: false,
+                        &quot;controlsText&quot;: [
+                          &quot;&lt;i class='cxi-angle-left'&gt;&lt;/i&gt;&quot;,
+                          &quot;&lt;i class='cxi-angle-right'&gt;&lt;/i&gt;&quot;
+                        ]
+                      }">
+                        <div><img class="card-img-top" src="../../assets/img/ecommerce/shop/single/product/01.jpg" alt="Product image"></div>
+                        <div><img class="card-img-top" src="../../assets/img/ecommerce/shop/single/product/02.jpg" alt="Product image"></div>
+                        <div><img class="card-img-top" src="../../assets/img/ecommerce/shop/single/product/03.jpg" alt="Product image"></div>
+                      </a>
+                    </div>
+                    <div class="card-product-widgets-top">
+                      <div class="ml-auto star-rating">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a class="btn-wishlist ml-auto" href="#" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Basic hooded sweatshirt in pink</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block text-danger mb-0">$15.50</span>
+                      <del class="d-inline-block ml-2 pl-1 text-muted">$31.00</del>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-2 pb-1">
+                      <div class="mt-n2">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-01" id="l-1" checked>
+                          <label for="l-1" class="cs-custom-option-label">L</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-01" id="m-1">
+                          <label for="m-1" class="cs-custom-option-label">M</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-01" id="s-1">
+                          <label for="s-1" class="cs-custom-option-label">S</label>
+                        </div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-01" id="beige-1" value="Beige" checked>
+                          <label for="beige-1" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #dead9c;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-01" id="blue-1" value="Blue">
+                          <label for="blue-1" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #7998d1;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-01" id="white-1" value="White">
+                          <label for="white-1" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #f4f4f4;"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Reviews -->
+          <div class="tab-pane fade pt-3" id="reviews" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-7 col-md-8 mb-md-0 mb-5">
+                <div class="row mb-sm-5 mb-4 pb-2 pb-md-4">
+
+                  <!-- Rating -->
+                  <div class="col-sm-5 mb-sm-0 mb-4">
+                    <h3 class="h2 mb-3 pb-1">12 reviews</h3>
+                    <div class="star-rating mb-3 pb-1">
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star"></i>
+                    </div>
+                    <span class="font-size-sm text-muted">
+                      9 out of 12 (75%) <br>
+                      Customers recommended this product
+                    </span>
+                  </div>
+
+                  <!-- Reviews -->
+                  <div class="col-sm-7">
+
+                    <!-- 5 stars -->
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="text-nowrap text-muted mr-3">
+                        <span class="d-inline-block align-middle">5</span>
+                        <i class="cxi-star font-size-sm align-middle ml-1"></i>
+                      </div>
+                      <div class="w-100">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <span class="text-muted ml-3">7</span>
+                    </div>
+
+                    <!-- 4 stars -->
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="text-nowrap text-muted mr-3">
+                        <span class="d-inline-block align-middle">4</span>
+                        <i class="cxi-star font-size-sm align-middle ml-1"></i>
+                      </div>
+                      <div class="w-100">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #a7e453;" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <span class="text-muted ml-3">2</span>
+                    </div>
+
+                    <!-- 3 stars -->
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="text-nowrap text-muted mr-3">
+                        <span class="d-inline-block align-middle">3</span>
+                        <i class="cxi-star font-size-sm align-middle ml-1"></i>
+                      </div>
+                      <div class="w-100">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar" role="progressbar" style="width: 30%; background-color: #ffda75;" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <span class="text-muted ml-3">1</span>
+                    </div>
+
+                    <!-- 2 stars -->
+                    <div class="d-flex align-items-center mb-2">
+                      <div class="text-nowrap text-muted mr-3">
+                        <span class="d-inline-block align-middle">2</span>
+                        <i class="cxi-star font-size-sm align-middle ml-1"></i>
+                      </div>
+                      <div class="w-100">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%;" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <span class="text-muted ml-3">1</span>
+                    </div>
+
+                    <!-- 1 star -->
+                    <div class="d-flex align-items-center">
+                      <div class="text-nowrap text-muted mr-3">
+                        <span class="d-inline-block align-middle">1</span>
+                        <i class="cxi-star font-size-sm align-middle ml-1"></i>
+                      </div>
+                      <div class="w-100">
+                        <div class="progress" style="height: 4px;">
+                          <div class="progress-bar bg-danger" role="progressbar" style="width: 30%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <span class="text-muted ml-3">1</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Button + sorting -->
+                <div class="d-flex align-items-center justify-content-between mb-4 pb-2 pb-sm-4">
+                  <a href="#modal-review" data-toggle="modal" class="btn btn-primary">Leave a review</a>
+                  <div class="form-inline">
+                    <label for="sort-orders" class="d-none d-sm-block font-weight-bold mr-2 pr-1">Sort by</label>
+                    <select id="sort-orders" class="custom-select">
+                      <option>Newest</option>
+                      <option>Oldest</option>
+                      <option>High rating</option>
+                      <option>Low rating</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Review -->
+                <div class="mb-4 pb-4 border-bottom">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+                      <h3 class="mb-2 font-size-lg">Devon Lane</h3>
+                      <span class="d-block mb-3 font-size-sm text-muted">3 days ago</span>
+                      <div class="mt-n1 star-rating">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="mb-3">Vel velit pulvinar montes, sit rhoncus odio molestie. Venenatis nunc fames ut proin adipiscing sit. Etiam egestas elit varius a, vestibulum bibendum nibh sociis in. Ut facilisis sit eget cum fringilla. Dapibus mauris viverra est sed risus quam lacinia.</p>
+                      <div class="d-flex justify-content-end">
+                        <a class="nav-link mr-3 p-0 font-size-sm" href="#">
+                          <i class="cxi-like mr-2 font-size-base align-middle mt-n1 text-success"></i>
+                          2
+                        </a>
+                        <a class="nav-link p-0 font-size-sm" href="#">
+                          <i class="cxi-dislike mr-2 font-size-base align-middle mt-n1 text-danger"></i>
+                          0
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review -->
+                <div class="mb-4 pb-4 border-bottom">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+                      <h3 class="mb-2 font-size-lg">Annette Black</h3>
+                      <span class="d-block mb-3 font-size-sm text-muted">November 29, 2020</span>
+                      <div class="mt-n1 star-rating">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="mb-3">Amet ut augue dignissim lorem. Diam volutpat porttitor vel, pulvinar semper. Faucibus vel accumsan mi diam magna. Nunc diam lorem semper rhoncus in ut. Quis risus viverra bibendum eu.</p>
+                      <div class="d-flex justify-content-end">
+                        <a class="nav-link mr-3 p-0 font-size-sm" href="#">
+                          <i class="cxi-like mr-2 font-size-base align-middle mt-n1 text-success"></i>
+                          5
+                        </a>
+                        <a class="nav-link p-0 font-size-sm" href="#">
+                          <i class="cxi-dislike mr-2 font-size-base align-middle mt-n1 text-danger"></i>
+                          1
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review -->
+                <div class="mb-4 pb-4 border-bottom">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+                      <h3 class="mb-2 font-size-lg">Albert Flores</h3>
+                      <span class="d-block mb-3 font-size-sm text-muted">November 5, 2020</span>
+                      <div class="mt-n1 star-rating">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="mb-3">Et, enim pellentesque ut malesuada interdum. Id odio proin molestie ac tellus ornare lectus amet semper. Bibendum non nulla leo pharetra, mi ultrices proin rhoncus diam.</p>
+                      <div class="d-flex justify-content-end">
+                        <a class="nav-link mr-3 p-0 font-size-sm" href="#">
+                          <i class="cxi-like mr-2 font-size-base align-middle mt-n1 text-success"></i>
+                          0
+                        </a>
+                        <a class="nav-link p-0 font-size-sm" href="#">
+                          <i class="cxi-dislike mr-2 font-size-base align-middle mt-n1 text-danger"></i>
+                          0
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review -->
+                <div class="mb-4 pb-4 border-bottom">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+                      <h3 class="mb-2 font-size-lg">Marvin McKinney</h3>
+                      <span class="d-block mb-3 font-size-sm text-muted">October 13, 2020</span>
+                      <div class="mt-n1 star-rating">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <p class="mb-3">Eu duis ac, faucibus et egestas morbi elementum urna in. Feugiat natoque vestibulum, augue nisi. Vulputate vitae felis quis mauris morbi massa ut. Dolor in amet volutpat facilisi luctus duis mauris.</p>
+                      <div class="d-flex justify-content-end">
+                        <a class="nav-link mr-3 p-0 font-size-sm" href="#">
+                          <i class="cxi-like mr-2 font-size-base align-middle mt-n1 text-success"></i>
+                          9
+                        </a>
+                        <a class="nav-link p-0 font-size-sm" href="#">
+                          <i class="cxi-dislike mr-2 font-size-base align-middle mt-n1 text-danger"></i>
+                          2
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pagination: With icons -->
+                <nav class="mt-4 pt-4" aria-label="Reviews pagination">
+                  <ul class="pagination justify-content-center mb-0">
+                    <li class="page-item d-sm-none">
+                      <span class="page-link page-link-static">1 / 4</span>
+                    </li>
+                    <li class="page-item active d-none d-sm-block" aria-current="page">
+                      <span class="page-link">1
+                        <span class="sr-only">(current)</span>
+                      </span>
+                    </li>
+                    <li class="page-item d-none d-sm-block">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item d-none d-sm-block">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item d-none d-sm-block">
+                      <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">
+                        <i class="cxi-arrow-right"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-md-4 offset-lg-1">
+
+                <!-- Product card carousel -->
+                <div class="card card-product">
+                  <div class="card-product-img">
+                    <div class="cs-carousel cs-controls-onhover">
+                      <a class="cs-carousel-inner" href="#" data-carousel-options="{
+                        &quot;nav&quot;: false,
+                        &quot;controlsText&quot;: [
+                          &quot;&lt;i class='cxi-angle-left'&gt;&lt;/i&gt;&quot;,
+                          &quot;&lt;i class='cxi-angle-right'&gt;&lt;/i&gt;&quot;
+                        ]
+                      }">
+                        <div><img class="card-img-top" src="../../assets/img/ecommerce/shop/single/product/01.jpg" alt="Product image"></div>
+                        <div><img class="card-img-top" src="../../assets/img/ecommerce/shop/single/product/02.jpg" alt="Product image"></div>
+                        <div><img class="card-img-top" src="../../assets/img/ecommerce/shop/single/product/03.jpg" alt="Product image"></div>
+                      </a>
+                    </div>
+                    <div class="card-product-widgets-top">
+                      <div class="ml-auto star-rating">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a class="btn-wishlist ml-auto" href="#" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Basic hooded sweatshirt in pink</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block text-danger mb-0">$15.50</span>
+                      <del class="d-inline-block ml-2 pl-1 text-muted">$31.00</del>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center mb-2 pb-1">
+                      <div class="mt-n2">
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-02" id="l-2" checked>
+                          <label for="l-2" class="cs-custom-option-label">L</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-02" id="m-2">
+                          <label for="m-2" class="cs-custom-option-label">M</label>
+                        </div>
+                        <div class="custom-control cs-custom-size-option cs-custom-size-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="size-02" id="s-2">
+                          <label for="s-2" class="cs-custom-option-label">S</label>
+                        </div>
+                      </div>
+                      <div class="ml-auto">
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-02" id="beige-2" value="Beige" checked>
+                          <label for="beige-2" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #dead9c;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-02" id="blue-2" value="Blue">
+                          <label for="blue-2" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #7998d1;"></span>
+                          </label>
+                        </div>
+                        <div class="custom-control cs-custom-color-option cs-custom-color-option-sm custom-control-inline">
+                          <input type="radio" class="custom-control-input" name="color-02" id="white-2" value="White">
+                          <label for="white-2" class="cs-custom-option-label">
+                            <span class="cs-color-swatch" style="background-color: #f4f4f4;"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">
+                      <i class="cxi-cart align-middle mt-n1 mr-2"></i>
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Look -->
+      <section class="container py-md-6 py-5 mb-2">
+
+        <!-- Title + carousel controls -->
+        <div class="d-flex align-items-center justify-content-between pb-sm-1 mb-5">
+          <h2 class="h1 pr-3 mb-0">Complete your look</h2>
+          <div class="tns-custom-controls cs-controls-inverse" id="tns-look-controls" tabindex="0">
+            <button type="button" data-controls="prev" tabindex="-1">
+              <i class="cxi-arrow-left"></i>
+            </button>
+            <button type="button" data-controls="next" tabindex="-1">
+              <i class="cxi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-5 col-md-7 d-md-block d-none">
+            <img src="../../assets/img/ecommerce/shop/single/look.jpg" class="rounded" alt="Look">
+          </div>
+          <div class="col-lg-6 offset-lg-1 col-md-5">
+
+            <!-- Carousel -->
+            <div class="cs-carousel cs-nav-outside">
+              <div class="cs-carousel-inner" data-carousel-options='{
+                "controlsContainer": "#tns-look-controls",
+                "responsive": {
+                  "0": {
+                    "items": 1,
+                    "gutter": 20
+                  },
+                  "480": {
+                    "items": 2,
+                    "gutter": 24
+                  },
+                  "767": {
+                    "items": 1
+                  },
+                  "991": {
+                    "items": 2,
+                    "gutter": 30
+                  }
+                }
+              }'>
+
+                <!-- Item -->
+                <div class="card card-product">
+                  <div class="card-product-img">
+                    <a href="#" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/15.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <span class="badge product-badge badge-danger">-20%</span>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Denim shorts</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block text-danger mb-0">$20.00</span>
+                      <del class="d-inline-block ml-2 pl-1 text-muted">$24.00</del>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Item -->
+                <div class="card card-product">
+                  <div class="card-product-img">
+                    <a href="#" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/16.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Modal-blend trenchcoat</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$45.20</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Item -->
+                <div class="card card-product">
+                  <div class="card-product-img">
+                    <a href="#" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/17.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Leather sandals</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$48.00</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Item -->
+                <div class="card card-product">
+                  <div class="card-product-img">
+                    <a href="#" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/07.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Chrono watch with gold rim and blue strap</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$120.60</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Related products (carousel) -->
+      <section class="py-5" style="background-color: #e5e8ed;">
+        <div class="container my-lg-2 py-2 py-md-4">
+          <div class="d-flex align-items-center justify-content-between pb-sm-1 mb-5">
+            <h2 class="h1 pr-3 mb-0">You may be interested in</h2>
+            <div class="tns-custom-controls cs-controls-inverse" id="custom-controls-related" tabindex="0">
+              <button type="button" data-controls="prev" tabindex="-1">
+                <i class="cxi-arrow-left"></i>
+              </button>
+              <button type="button" data-controls="next" tabindex="-1">
+                <i class="cxi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="cs-carousel pb-2">
+            <div class="cs-carousel-inner" data-carousel-options='{
+              "nav": false,
+              "controlsContainer": "#custom-controls-related",
+              "responsive": {
+                "0": {
+                  "items": 1,
+                  "gutter": 20
+                },
+                "480": {
+                  "items": 2,
+                  "gutter": 24
+                },
+                "700": {
+                  "items": 3,
+                  "gutter": 24
+                },
+                "1100": {
+                  "items": 4,
+                  "gutter": 30
+                }
+              }
+            }'>
+
+              <!-- Item -->
+              <div>
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="#" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/13.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body bg-0 pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Metal bridge sunglasses</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$89.95</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div>
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="#" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/02.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body bg-0 pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Mid-rise slim cropped fit jeans</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$40.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div>
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="#" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/11.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <span class="badge product-badge badge-danger">-50%</span>
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body bg-0 pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="shop-single.html" class="nav-link">Leather crossbody bag with chain lace</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block text-danger mb-0">$89.50</span>
+                      <del class="d-inline-block ml-2 pl-1 text-muted">$179.00</del>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div>
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="#" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/01.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-top">
+                      <div class="star-rating ml-auto">
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                        <i class="sr-star cxi-star-filled active"></i>
+                      </div>
+                    </div>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body bg-0 pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Shirt with insertion lace trims</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$49.95</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div>
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a href="#" class="card-img-top">
+                      <img src="../../assets/img/ecommerce/shop/07.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-bottom">
+                      <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body bg-0 pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a href="#" class="nav-link">Chrono watch with gold rim and blue strap</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$120.60</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Recently viewed products (carousel) -->
+      <section class="container mt-2 mt-lg-0 mb-md-2 py-5 py-lg-6">
+        <div class="d-flex align-items-center justify-content-between pb-sm-1 mb-5">
+          <h2 class="h1 pr-3 mb-0">Recently viewed</h2>
+          <div class="tns-custom-controls cs-controls-inverse" id="custom-controls-recent" tabindex="0">
+            <button type="button" data-controls="prev" tabindex="-1">
+              <i class="cxi-arrow-left"></i>
+            </button>
+            <button type="button" data-controls="next" tabindex="-1">
+              <i class="cxi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="cs-carousel pb-2">
+          <div class="cs-carousel-inner" data-carousel-options='{
+            "nav": false,
+            "controlsContainer": "#custom-controls-recent",
+            "responsive": {
+              "0": {
+                "items": 1,
+                "gutter": 20
+              },
+              "480": {
+                "items": 2,
+                "gutter": 24
+              },
+              "700": {
+                "items": 3,
+                "gutter": 24
+              },
+              "1100": {
+                "items": 4,
+                "gutter": 30
+              }
+            }
+          }'>
+
+            <!-- Item -->
+            <div>
+              <div class="card card-product mx-auto">
+                <div class="card-product-img">
+                  <a href="#" class="card-img-top">
+                    <img src="../../assets/img/ecommerce/shop/08.jpg" alt="Product image">
+                  </a>
+                  <div class="card-product-widgets-bottom">
+                    <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                  </div>
+                </div>
+                <div class="card-body pb-2">
+                  <h3 class="card-product-title text-truncate mb-2">
+                    <a href="#" class="nav-link">Baby shoes with laces</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <span class="h5 d-inline-block mb-0">$30.75</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div>
+              <div class="card card-product mx-auto">
+                <div class="card-product-img">
+                  <a href="#" class="card-img-top">
+                    <img src="../../assets/img/ecommerce/shop/04.jpg" alt="Product image">
+                  </a>
+                  <div class="card-product-widgets-top">
+                    <div class="star-rating ml-auto">
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-product-widgets-bottom">
+                    <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                  </div>
+                </div>
+                <div class="card-body pb-2">
+                  <h3 class="card-product-title text-truncate mb-2">
+                    <a href="#" class="nav-link">Green baby romper</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <span class="h5 d-inline-block mb-0">$20.40</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div>
+              <div class="card card-product mx-auto">
+                <div class="card-product-img">
+                  <a href="#" class="card-img-top">
+                    <img src="../../assets/img/ecommerce/shop/12.jpg" alt="Product image">
+                  </a>
+                  <div class="card-product-widgets-bottom">
+                    <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                  </div>
+                </div>
+                <div class="card-body pb-2">
+                  <h3 class="card-product-title text-truncate mb-2">
+                    <a href="#" class="nav-link">Men fashion gray shoes</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <span class="h5 d-inline-block mb-0">$85.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div>
+              <div class="card card-product mx-auto">
+                <div class="card-product-img">
+                  <a href="#" class="card-img-top">
+                    <img src="../../assets/img/ecommerce/shop/10.jpg" alt="Product image">
+                  </a>
+                  <div class="card-product-widgets-top">
+                    <span class="badge product-badge badge-danger">-33%</span>
+                  </div>
+                  <div class="card-product-widgets-bottom">
+                    <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                  </div>
+                </div>
+                <div class="card-body pb-2">
+                  <h3 class="card-product-title text-truncate mb-2">
+                    <a href="#" class="nav-link">Skinny push-up jeans</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <span class="h5 d-inline-block text-danger mb-0">$53.60</span>
+                    <del class="d-inline-block ml-2 pl-1 text-muted">$80.00</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div>
+              <div class="card card-product mx-auto">
+                <div class="card-product-img">
+                  <a href="#" class="card-img-top">
+                    <img src="../../assets/img/ecommerce/shop/03.jpg" alt="Product image">
+                  </a>
+                  <div class="card-product-widgets-top">
+                    <div class="star-rating ml-auto">
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star-filled active"></i>
+                      <i class="sr-star cxi-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-product-widgets-bottom">
+                    <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                  </div>
+                </div>
+                <div class="card-body pb-2">
+                  <h3 class="card-product-title text-truncate mb-2">
+                    <a href="#" class="nav-link">Black and white sport cap</a>
+                  </h3>
+                  <div class="d-flex align-items-center">
+                    <span class="h5 d-inline-block mb-0">$18.15</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Subscription CTA -->
+      <section class="bg-secondary py-5">
+        <div class="container pt-2 pt-md-3 pb-3">
+          <div class="row align-items-center">
+            <form class="col-md-6 col-xl-5 needs-validation" novalidate>
+              <h2 class="h1 mb-3">Subscribe for updates</h2>
+              <p class="text-muted font-size-lg pb-3 mb-4">Subscribe for exclusive early sale access and new arrivals.</p>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-women" checked>
+                <label for="s-women" class="cs-btn-control-label">Women</label>
+              </div>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-men">
+                <label for="s-men" class="cs-btn-control-label">Men</label>
+              </div>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-girls">
+                <label for="s-girls" class="cs-btn-control-label">Girls</label>
+              </div>
+              <div class="cs-btn-control custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="s-boys">
+                <label for="s-boys" class="cs-btn-control-label">Boys</label>
+              </div>
+              <div class="form-group pt-4">
+                <label for="s-email">Email</label>
+                <div class="input-group input-group-lg">
+                  <input type="email" id="s-email" class="form-control" placeholder="Your email address" required>
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" id="s-agree" class="custom-control-input">
+                <label for="s-agree" class="custom-control-label">I agree to receive communications from Createx Store.</label>
+              </div>
+            </form>
+            <div class="col-md-6 col-xl-7 d-none d-md-block">
+              <div class="ml-auto" style="max-width: 459px;">
+                <img src="../../assets/img/ecommerce/subscribe-illustration.png" class="d-block" alt="Illustration">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="cs-footer pt-sm-5 pt-4 bg-dark">
+      <div class="container pt-3">
+        <div class="row pb-sm-2">
+          <div class="col-6 col-sm-3 col-lg-2 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Help</h3>
+            <ul class="nav nav-light flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Delivery &amp; returns</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">FAQ</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="order-tracking.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Track order</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="blog.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Blog</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="contacts.html" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-sm-3 col-lg-2 col-xl-3 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light pl-xl-6">Shop</h3>
+            <ul class="nav nav-light flex-column pl-xl-6">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">New arrivals</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Trending now</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Sales</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link mr-lg-0 mr-sm-4 p-0 font-weight-normal">Brands</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3 pb-2 pb-lg-0 mb-4">
+            <h3 class="h6 mb-2 pb-1 text-uppercase text-light">Get in Touch</h3>
+            <ul class="nav nav-light flex-column pb-3">
+              <li class="nav-item text-nowrap mb-2">
+                <span class="text-light mr-1">Call:</span>
+                <a href="tel:4055550128" class="nav-link d-inline-block mr-lg-0 mr-sm-4 p-0 font-weight-normal">(405) 555-0128</a>
+              </li>
+              <li class="nav-item text-nowrap mb-2">
+                <span class="text-light mr-1">Email:</span>
+                <a href="mailto:support@example.com" class="nav-link d-inline-block mr-lg-0 mr-sm-4 p-0 font-weight-normal">support@example.com</a>
+              </li>
+            </ul>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-facebook"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-instagram"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-twitter"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light mr-2">
+              <i class="cxi-youtube"></i>
+            </a>
+            <a href="#" class="social-btn sb-solid sb-light">
+              <i class="cxi-pinterest"></i>
+            </a>
+          </div>
+          <div class="col-lg-4 col-xl-3 mb-4">
+            <h3 class="h6 mb-3 pb-1 text-uppercase text-light">Download our App</h3>
+            <div class="d-flex flex-wrap flex-sm-nowrap">
+              <a href="#" class="btn-market btn-apple mb-3 mr-3" role="button">
+                <span class="btn-market-subtitle">Download on the</span>
+                <span class="btn-market-title">App Store</span>
+              </a>
+              <a href="#" class="btn-market btn-google mb-3" role="button">
+                <span class="btn-market-subtitle">Download on the</span>
+                <span class="btn-market-title">Google Play</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-light">
+        <div class="container py-4">
+          <div class="font-size-xs text-light">
+            <span class="font-size-sm">&copy; </span>
+            All rights reserved. Made with 
+            <i class="cxi-heart mt-n1 mx-1 font-size-base text-primary align-middle"></i>
+            <a href="https://createx.studio/" class="text-light" target="_blank" rel="noopener noreferrer">by Createx Studio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+      <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+      <i class="btn-scroll-top-icon cxi-angle-up"></i>
+    </a>
+
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="../../assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="../../assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="../../assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="../../assets/vendor/lg-fullscreen.js/dist/lg-fullscreen.min.js"></script>
+    <script src="../../assets/vendor/lg-zoom.js/dist/lg-zoom.min.js"></script>
+    <script src="../../assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
+
+    <!-- Main theme script-->
+    <script src="../../assets/js/theme.min.js"></script>
+  </body>
+</html>
