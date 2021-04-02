@@ -11025,6 +11025,19 @@ dt {
   font-size: 1.25rem;
 }
 
+.blockquote.GT ::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "createx-icons";
+  color: #35BABB;
+  font-weight: normal;
+  line-height: 1;
+  content: '\e93a';
+  font-size: 1.25rem;
+}
+
 .blockquote.text-center {
   padding-top: 2.5rem;
   padding-left: initial;
@@ -14127,7 +14140,7 @@ a.card-body:hover {
 
 [class^='accordion'] .accordion-heading > a:hover,
 [class*=' accordion'] .accordion-heading > a:hover {
-  color: #f52f6e;
+  color: #35BABB;
 }
 
 [class^='accordion'] .accordion-indicator,
@@ -14142,8 +14155,10 @@ a.card-body:hover {
   align-self: flex-start;
   font-family: "createx-icons";
   font-weight: 400;
-  color: #f52f6e;
+  color: #35BBAB;
 }
+
+
 
 [class^='accordion'] .accordion-indicator::before, [class^='accordion'] .accordion-indicator::after,
 [class*=' accordion'] .accordion-indicator::before,
