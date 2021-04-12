@@ -49,6 +49,8 @@
   --danger: #ff4242;
   --light: #fff;
   --dark: #424551;
+  --pj1:#FFFAEC;
+  --pj2:#FCBD6A;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -6833,6 +6835,16 @@ a.close.disabled {
   vertical-align: text-top !important;
 }
 
+
+.bg-pj1{
+  background-color: #FFFAEC !important;
+}
+
+.bg-pj2{
+  background-color: #FCBD6A !important;
+}
+
+
 .bg-primary {
   background-color: #AD6368 !important;
 }
@@ -12890,6 +12902,7 @@ img[src*='.svg'].cs-media-tabs-icon {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.0625rem;
+  opacity: .5;
 }
 
 .navbar-brand > img {
@@ -17837,4 +17850,20 @@ a.cs-image-fade {
 
 .cs-view.show {
   display: block;
+}
+
+
+
+
+/** PJ**/
+
+#bg-right{
+ top:0;
+ right:0;
+ width:50%;
+ height:100%;
+ position:absolute;
+ z-index:-1;
+ background-color:#FCBD6A;
+
 }

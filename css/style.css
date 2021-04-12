@@ -682,3 +682,15 @@ width: 20%;
 .ColorGT{
 	color:#35BABB;
 }
+
+/** pj bg **/
+
+#bg-right{
+ top:0;
+ right:0;
+ width:50%;
+ height:100%;
+ position:absolute;
+ z-index:-1;
+ background-color:#FCBD6A;
+}
