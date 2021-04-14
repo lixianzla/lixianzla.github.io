@@ -12726,7 +12726,7 @@ h4 .nav-link:hover, .h4 .nav-link:hover, h5 .nav-link:hover, .h5 .nav-link:hover
 }
 
 .nav-tabs .nav-link.active {
-  color: #AD6368;
+  color: #424551;
 }
 
 .nav-tabs .nav-link > i {
@@ -15914,7 +15914,7 @@ a.badge.badge-warning:hover {
 .cs-step .cs-step-indicator::before {
   width: 5.25rem;
   height: 5.25rem;
-  background-color: rgba(245, 47, 110, 0.12);
+  background-color: rgba(252, 189, 106, 0.12);
   transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out, opacity .3s ease-in-out;
   transition: transform .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
@@ -15923,7 +15923,7 @@ a.badge.badge-warning:hover {
 .cs-step .cs-step-indicator::after {
   width: 7.3125rem;
   height: 7.3125rem;
-  background-color: rgba(245, 47, 110, 0.06);
+  background-color: rgba(252, 189, 106, 0.06);
   transition: opacity .3s ease .1s, -webkit-transform .3s ease .1s;
   transition: transform .3s ease .1s, opacity .3s ease .1s;
   transition: transform .3s ease .1s, opacity .3s ease .1s, -webkit-transform .3s ease .1s;
@@ -15939,7 +15939,7 @@ a.badge.badge-warning:hover {
 }
 
 .cs-step:hover .cs-step-indicator {
-  color: #AD6368;
+  color: #FCBD6A;
 }
 
 .cs-step:hover .cs-step-indicator::before, .cs-step:hover .cs-step-indicator::after {
@@ -15950,7 +15950,7 @@ a.badge.badge-warning:hover {
 
 @media (max-width: 767.98px) {
   .cs-step .cs-step-indicator {
-    color: #AD6368;
+    color: #FCBD6A;
   }
   .cs-step .cs-step-indicator::before {
     width: 4.5rem;
