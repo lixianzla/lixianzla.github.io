@@ -59,11 +59,111 @@
 
 		<link rel="icon" href="icon/favicon.png" type="image/png"/>
 
+
+				<!-- Page loading styles-->
+				<style>
+					.cs-page-loading {
+						position: fixed;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						-webkit-transition: all .4s .2s ease-in-out;
+						transition: all .4s .2s ease-in-out;
+						background-color: #fff;
+						opacity: 0;
+						visibility: hidden;
+						z-index: 9999;
+					}
+					.cs-page-loading.active {
+						opacity: 1;
+						visibility: visible;
+					}
+					.cs-page-loading-inner {
+						position: absolute;
+						top: 50%;
+						left: 0;
+						width: 100%;
+						text-align: center;
+						-webkit-transform: translateY(-50%);
+						transform: translateY(-50%);
+						-webkit-transition: opacity .2s ease-in-out;
+						transition: opacity .2s ease-in-out;
+						opacity: 0;
+					}
+					.cs-page-loading.active > .cs-page-loading-inner {
+						opacity: 1;
+					}
+					.cs-page-loading-inner > span {
+						display: block;
+						font-size: 1rem;
+						font-weight: normal;
+						color: #787a80;
+					}
+					.cs-page-spinner {
+						display: inline-block;
+						width: 2.75rem;
+						height: 2.75rem;
+						margin-bottom: .75rem;
+						vertical-align: text-bottom;
+						background-color: #cfcfd1;
+						border-radius: 50%;
+						opacity: 0;
+						-webkit-animation: spinner .75s linear infinite;
+						animation: spinner .75s linear infinite;
+					}
+					@-webkit-keyframes spinner {
+						0% {
+							-webkit-transform: scale(0);
+							transform: scale(0);
+						}
+						50% {
+							opacity: 1;
+							-webkit-transform: none;
+							transform: none;
+						}
+					}
+					@keyframes spinner {
+						0% {
+							-webkit-transform: scale(0);
+							transform: scale(0);
+						}
+						50% {
+							opacity: 1;
+							-webkit-transform: none;
+							transform: none;
+						}
+					}
+				</style>
+				<!-- Page loading scripts-->
+				<script>
+					(function () {
+						window.onload = function () {
+							var preloader = document.querySelector('.cs-page-loading');
+							preloader.classList.remove('active');
+							setTimeout(function () {
+								preloader.remove();
+							}, 2000);
+						};
+					})();
+				</script>
+
+
 		<title>Go Street - Lixian Zeng</title>
 
 	</head>
 
 	<body>
+
+		<!-- Page loading spinner-->
+		<div class="cs-page-loading active">
+			<div class="cs-page-loading-inner">
+				<div class="cs-page-spinner"></div><span>Loading...</span>
+			</div>
+		</div>
+
 
 		  <div class="d-none d-sm-block bg-white navbar sticky-top navbar-expand-lg navbar-light" style="height:30px;"></div>
 
@@ -84,9 +184,7 @@
 		          <li>
 		            <a class="nav-link" style="opacity:1;" href="index.html#work">Work</a>
 		          </li>
-		          <li>
-		            <a class="nav-link" href="index.html#insights">Insights</a>
-		          </li>
+
 
 		          <li>
 		            <a class="nav-link " href="index.html#about">About</a>
@@ -129,7 +227,8 @@
 			<h2 class="h6 mb-3 text-uppercase">Project goal</h2>
 			<div class="row mb-lg-6 mb-sm-5 mb-4">
 				<div class="col-md-7">
-					<p class="mb-3 lead font-weight-bold">Create a new street lifestyle and consumer ecosystem.</p>
+
+					<p class="mb-3 lead font-weight-bold">Create personalized walking experiences</p>
 					<p class="mb-md-0 text-muted">
 						Go Street is a mobile application for urban street walking index measurement and navigation. It involves transforming and applying big data from the streets and surroundings to people's daily lives. It is designed to create novel experiences of walking navigation that help people effectively get the street information tailoring to their own preferences, and complete the corresponding social, entertainment, travel, and sports activities.
 					</p>
@@ -780,7 +879,7 @@
 			<div class="container pt-2 pt-lg-0">
 				<div class="row mb-lg-6 mb-5">
 					<div class="col-lg-8 col-sm-10 mx-auto">
-						<h2 class="h6 mb-3 text-uppercase">Takeaways and future works</h2>
+						<h2 class="h6 mb-3 text-uppercase">Takeaways</h2>
 						<ul class="pb-2 px-2">
 							<li>Product design includes both divergent and convergent thinking process. Divergent thinking helps us to think broad, exploring the possible solutions that could be valuable. Convergent thinking leads us to adopt analytical and logical methodologies to evaluate the solutions we have, delivering explicit ideas and avoiding losing the focused goals.
 							</li>
@@ -844,53 +943,66 @@
 			}'>
 
 
-				<div class="rounded">
-					<a class="cs-portfolio-card-scale text-decoration-none mt-3 mx-3" href="plantjammer.html">
-						<div class="cs-portfolio-card-img">
-							<img src="Createx/assets/img/creative-agency/portfolio/03.jpg" alt="Card image">
-						</div>
-						<div class="cs-portfolio-card-body">
-							<h3 class="cs-portfolio-card-title">Plant Jammer</h3>
-							<span class="font-size-sm text-muted">Reimagine an AI-powered recipe ingredient substitution UX</span>
-						</div>
-					</a>
-				</div>
 
-				<div class="rounded">
-					<a class="cs-portfolio-card-scale text-decoration-none mt-3 mx-3" href="smartlandscapes.html">
-						<div class="cs-portfolio-card-img">
-							<img src="Createx/assets/img/creative-agency/portfolio/03.jpg" alt="Card image">
-						</div>
-						<div class="cs-portfolio-card-body">
-							<h3 class="cs-portfolio-card-title">LichenAir</h3>
-							<span class="font-size-sm text-muted">Put a finger on the nature's pulse.</span>
-						</div>
-					</a>
-				</div>
+			<div class="rounded">
+				<a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="plantjammer.html">
+					<div class="cs-portfolio-card-img">
+						<img src="images/index/cover3.png" alt="Card image 3">
+					</div>
+					<div class="cs-portfolio-card-body">
+						<h3 class="cs-portfolio-card-title">Plant Jammer</h3>
+						<span class="font-size-sm text-muted">Reimagine an AI-powered recipe ingredient substitution UX</span>
+					</div>
+				</a>
+			</div>
 
-				<div class="rounded">
-					<a class="cs-portfolio-card-scale text-decoration-none mt-3 mx-3" href="extras.html">
-						<div class="cs-portfolio-card-img">
-							<img src="Createx/assets/img/creative-agency/portfolio/04.jpg" alt="Card image">
-						</div>
-						<div class="cs-portfolio-card-body">
-							<h3 class="cs-portfolio-card-title">Extras</h3>
-							<span class="font-size-sm text-muted">Design and everything</span>
-						</div>
-					</a>
-				</div>
+			<div class="rounded">
+				<a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="smartlandscapes.html">
+					<div class="cs-portfolio-card-img">
+						<img src="images/index/cover4.png" alt="Card image 4">
+					</div>
+					<div class="cs-portfolio-card-body">
+						<h3 class="cs-portfolio-card-title">Smart Landscapes</h3>
+						<span class="font-size-sm text-muted">Put a finger on the nature's pulse</span>
+					</div>
+				</a>
+			</div>
 
-				<div class="rounded">
-					<a class="cs-portfolio-card-scale text-decoration-none mt-3 mx-3" href="portfolio-single-v2.html">
-						<div class="cs-portfolio-card-img">
-							<img src="Createx/assets/img/creative-agency/portfolio/01.jpg" alt="Card image">
-						</div>
-						<div class="cs-portfolio-card-body">
-							<h3 class="cs-portfolio-card-title">Edzy.Inc</h3>
-							<span class="font-size-sm text-muted">Smart recruitment makes education easier.</span>
-						</div>
-					</a>
-				</div>
+			<div class="rounded">
+				<a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="#">
+					<div class="cs-portfolio-card-img">
+						<img src="images/index/cover1.png" alt="Card image 1">
+					</div>
+					<div class="cs-portfolio-card-body">
+						<h3 class="cs-portfolio-card-title">Edzy Inc.</h3>
+						<span class="font-size-sm text-muted">Create a global skill scoring system</span>
+					</div>
+				</a>
+			</div>
+			<div class="rounded">
+				<a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="gostreet.html">
+					<div class="cs-portfolio-card-img">
+						<img src="images/index/cover2.png" alt="Card image 2">
+					</div>
+					<div class="cs-portfolio-card-body">
+						<h3 class="cs-portfolio-card-title">Go Street</h3>
+						<span class="font-size-sm text-muted">First app in China to enhance walking experiences</span>
+					</div>
+				</a>
+			</div>
+			<!--
+			<div class="rounded">
+				<a class="cs-portfolio-card-scale text-decoration-none mt-0 mx-3" href="extras.html">
+					<div class="cs-portfolio-card-img">
+						<img src="Createx/assets/img/creative-agency/portfolio/04.jpg" alt="Card image">
+					</div>
+					<div class="cs-portfolio-card-body">
+						<h3 class="cs-portfolio-card-title">Extras</h3>
+						<span class="font-size-sm text-muted">Design and everything else</span>
+					</div>
+				</a>
+			</div>
+-->
 
 			</div>
 		</div>
