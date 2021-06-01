@@ -105,41 +105,35 @@
         <div class="inner">
       		<!-- Landing page -->
           <div style="height:50px;"></div>
-          <div class="d-none d-sm-block" style="height:100px;"></div>
+          <div class="d-none d-sm-block" style="height:50px;"></div>
       		<div class="container">
       			<div class="row">
-              <div class="col-md-5">
-                <div>
-                  <div class="d-none d-xl-block d-lg-none" style="height:30px;"></div>
-                  <div style="height:30px;"></div>
-                  <div>
-                    <div> HELLO, MY NAME IS</div>
-                    <h1>LIXIAN ZENG.<br>
-                        <div style="background-color:#AD6368;height:4px;width:50px;"></div>
-                    </h1>
+              <div class="col-md-7 mx-auto mb-5 mb-lg-0">
+                <div style="height:30px;"></div>
 
-                  </div>
-                  <div style="height:10px;"></div>
-                  <p>I am sorry that I'm still working on the rendering of my portfolio so part of the contents are not able to be seen.</p>
-                  <div style="height:100px;"></div>
+
+                <div class="text-center"> HELLO, MY NAME IS &nbsp;</div>
+                <h1 class="text-center">LIXIAN ZENG.<br>
+                <div class="mx-auto" style="background-color:#AD6368;height:4px;width:50px;"></div>
+                </h1>
+
+                <div class="mt-3">
+                  <p class="text-center"> I am passionate about crafting the future of delightful user experiences. I like thinking how designers lead the way in creating a more sustainable planet through digital mediums.</p>
                 </div>
               </div>
 
+            </div>
 
-              <div class="col-md-7 mt-5">
-                <div class="col-md-12" style="position:relative;">
+
+      			<div class="row" style="position:relative;">
                 <img  id="planet1" alt="planet1" src="images/lp/planet1.png"/>
                 <img  id="planet2" alt="planet2" src="images/lp/planet2.png"/>
                 <img  id="planet3" alt="planet3" src="images/lp/planet3.png"/>
                 <img  id="planet4" alt="planet4" src="images/lp/planet4.png"/>
                 <img  id="star" alt="star" src="images/lp/star.png"/>
-              </div>
-              </div>
+            </div>
 
 
-
-
-      			</div> <!-- row -->
       		</div> <!-- container -->
 
           <div class="row">
@@ -164,7 +158,7 @@
 
                 <div class="container py-3 py-lg-0">
                   <div class="mb-lg-4 mb-2 d-flex justify-content-between">
-                    <h3 class="h3 mb-0">My work</h2>
+                    <h3 class="h3 mb-0 mx-auto">My work</h3>
                     <div class="tns-custom-controls cs-controls-inverse" id="tns-portfolio-controls" tabindex="0">
                       <button type="button" data-controls="prev" tabindex="-1">
                         <i class="cxi-arrow-left"></i>
@@ -264,7 +258,6 @@
         </div>
         <div>
           <img  id="galaxy" alt="galaxy2" src="images/lp/galaxy2.png"/>
-          <img class="d-xl-block d-lg-block d-none" id="planet5" src="images/lp/planet5.png" alt="planet5">
         </div>
 
 
@@ -309,32 +302,85 @@
 -->
 
     <section id="about">
-        <div class="inner">
-          <div style="height:80px;"></div>
-          <div class="d-none d-sm-block" style="height:70px;"></div>
-          <div class="container">
-          <div class="row">
-            <div class="col-md-5 col-sm-4 col-4"></div>
-            <div class="col-md-2 col-sm-4 col-4"><img class="d-block" style="max-width:100%;" src="images/index/profile.png" alt="profile"/></div>
-            <div class="col-md-5 col-sm-4 col-4">
+      <div class="inner">
+        <div style="height:80px;"></div>
+        <div class="d-none d-sm-block" style="height:70px;"></div>
+        <div class="container py-3 py-lg-0">
+        <div class="row">
+          <h3 class="h3 mb-0 d-flex  mx-auto">About me</h3>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-2 col-4">
+            <img class="d-block mt-3" style="max-width:90%;" src="images/index/profile.png" alt="profile"/>
           </div>
+        </div>
 
-            <div class="row" >
 
-              <!-- ul=unordered list: bullet pints; ol=ordered list: 1,2,3,4-->
-              <p class="col-md-12">
-              I believe:<br>
-              Climate change is not a hoax.<br>
-              Good judgements come from experience of bad judements.<br>
-              Animals are adorable.<br>
+          <div class="row mt-lg-3 mt-2">
+            <div class="col-lg-9 col-sm-10 mx-auto">
+              <div class="row">
+                <div class="col-md-3">
 
+                  <!-- Vertical tab navs -->
+                  <div class="mb-sm-0 pb-sm-0 pb-2" data-simplebar data-simplebar-auto-hide="false">
+                    <ul class="nav flex-sm-column flex-nowrap" id="storyTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link h4 mb-0  active float-right" href="#vision" id="vision-tab" data-toggle="tab" role="tab" aria-controls="vision" aria-selected="true">
+                          My Story
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link h4 mb-0  float-right" href="#mission" id="mission-tab" data-toggle="tab" role="tab" aria-controls="mission" aria-selected="false">
+                          My Drives
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link h4 mb-0  float-right" href="#values" id="values-tab" data-toggle="tab" role="tab" aria-controls="values" aria-selected="false">
+                          My Favorites
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-9">
+
+                  <!-- Tabs content -->
+                  <div class="tab-content mt-lg-2">
+                    <div class="tab-pane fade show active" id="vision" role="tabpanel" aria-labelledby="vision-tab">
+                      <p>I  am a designer with a blend of design and research skills and a passion to tackle complex challenges. I have worked on user experience design, digital design and branding. Currently, I am a User Experience Designer in Edzy. </p>
+                      <p>In 2017, I had an occasional opportunity to design a user interface of Singapore MRT weather monitoring system for the company called Nextant, where I found myself inspired by field of HCI.</p>
+                      <p>From 2019 to 2020, I worked in SEDAC (a research consulting team at UIUC) as a research assistant, where I also took over lots of rebranding tasks because of my design skills. I had the chance to redesign the website and lots of digital materials.
+
+                      </p>
+
+                    </div>
+                    <div class="tab-pane fade" id="mission" role="tabpanel" aria-labelledby="mission-tab">
+                      <p>Coming from interdisciplinary domains of study comprised of creative work and research methods, I have been thinking about resonating my design strategies deeply with analytic approaches to craft meaningful experiences. </p>
+                      <p> I love to spend extensive time and collaboration efforts in coordinating and communicating within cross-functional teams. I eagerly strive to embody new ways of reducing the global carbon footprint and ensuring a safe, healthy, and sustainable built environment through research and design.</p>
+                    </div>
+                    <div class="tab-pane fade" id="values" role="tabpanel" aria-labelledby="values-tab">
+                      <p>&#128054; &nbsp;	I love <strong>animals</strong>. <br>-I have a 10-year old golden retriever who just got a 6-pound spleen tumor removed and the pathological diagnosis indicated no sign of cancer!!!</p>
+                      <p>&#127918; &nbsp; I love <strong>playing video games</strong>. <br>- I recently played <i>Detroit: Become Human</i> and I like its immersive interaction design to make players empathize more with artificial beings.
+                      </p>
+                      <p>&#127966; &nbsp; I love <strong>traveling and taking photographs</strong>.
+                        <br> -No matter where I go, I always take the two cameras (Canon Gtx Mark III and Ricoh GR II) with me to record any creative moments.
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
             </div>
           </div>
         </div>
-        <div>
-          <img  id="galaxy" alt="galaxy4" src="images/lp/galaxy3.png"/>
-        </div>
+      </div>
+
+      <div>
+        <img class="d-xl-block d-lg-block d-none" id="planet5" src="images/lp/planet5.png" alt="planet5">
+        <img  id="galaxy" alt="galaxy4" src="images/lp/galaxy3.png"/>
+      </div>
     </section>
 
 
@@ -343,16 +389,13 @@
         <div class="inner">
           <div style="height:80px;"></div>
           <div class="d-none d-sm-block" style="height:70px;"></div>
-          <div class="container">
-            <div class="row" >
-
-              <h3 class="col-md-12">Download Resume</h3>
-
+          <div class="container py-3 py-lg-0">
+            <div class="row">
+              <h3 class="h3 mb-0 d-flex  mx-auto">Download Resume</h3>
             </div>
           </div>
-        </div>
         <div>
-          <img  id="galaxy" alt="galaxy5" src="images/lp/galaxy5.png"/>
+          <img  id="galaxy" alt="galaxy5b" src="images/lp/galaxy5b.png"/>
         </div>
 
     </section>

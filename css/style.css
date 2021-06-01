@@ -275,52 +275,52 @@ section{
 /* landing page image */
 #planet1 {
 top:80px;
-right:28%;
+right:23%;
 z-index:-1;
 position:absolute;
 animation-name: float1;
 animation-duration: 4s;
 animation-iteration-count: infinite;
-width:40%;
+width:23%;
 }
 
 #planet2 {
-top:380px;
-right:62%;
+top:60px;
+right:50%;
 position:absolute;
 z-index:-1;
 animation-name: float2;
 animation-duration: 4s;
 animation-iteration-count: infinite;
-width:22%;
+width:9%;
 }
 
 #planet3 {
-top:280px;
-right:2%;
+top:250px;
+right:3%;
 position:absolute;
 z-index:-1;
 animation-name: float3;
 animation-duration: 4.5s;
 animation-iteration-count: infinite;
-width:18%
+width:13%
 }
 
 
 #planet4 {
-top:10px;
-right:58%;
+top:0;
+right:83%;
 position:absolute;
 z-index:-1;
 animation-name: float4;
 animation-duration: 4s;
 animation-iteration-count: infinite;
-width:12%
+width:11%
 }
 
 #planet5 {
-bottom:16%;
-right:1%;
+bottom:11%;
+right:30%;
 position:absolute;
 z-index:-1;
 width:10%
@@ -328,11 +328,11 @@ width:10%
 
 
 #star {
-top:80px;
-right:30%;
+top:370px;
+right:12%;
 position:absolute;
 z-index:-1;
-width:3%
+width:2%
 }
 
 
@@ -349,43 +349,44 @@ width:3%
 }
 
 
+
 @keyframes float1{
 	0% {top:80px;}
-	25% {top:85px;}
-	50% {top:75px;}
-	80% {top:90px;}
+	25% {top:82px;}
+	50% {top:85px;}
+	80% {top:97px;}
 	100% {top:80px;}
 }
 
 @keyframes float2{
-	0% {top:380px;}
-	30% {top:370px;}
-	50% {top:380px;}
-	75% {top:370px;}
-	100% {top:380px;}
+	0% {top:60px;}
+	30% {top:70px;}
+	50% {top:55px;}
+	75% {top:70px;}
+	100% {top:60px;}
 }
 
 @keyframes float3{
-	0% {top:280px;}
-	28% {top:270px;}
-	40% {top:280px;}
-	80% {top:270px;}
-	90% {top:275px;}
-	100% {top:280px;}
+	0% {top:250px;}
+	28% {top:240px;}
+	40% {top:250px;}
+	80% {top:240px;}
+	90% {top:255px;}
+	100% {top:250px;}
 }
 
 @keyframes float4{
-	0% {top:10px;}
-	32% {top:0px;}
+	0% {top:0px;}
+	32% {top:3px;}
 	45% {top:5px;}
 	70% {top:0px;}
 	80% {top:8px;}
-	100% {top:10px;}
+	100% {top:0px;}
 }
 
 
 
- @media (max-width:1200px){
+ @media (max-width:1000px){
 	 #planet1 {
 	 top:50px;
 	 right:28%;
@@ -394,7 +395,7 @@ width:3%
 	 animation-name: float1;
 	 animation-duration: 4s;
 	 animation-iteration-count: infinite;
-	 width:40%;
+	 width:30%;
 	 }
 
 	 #planet2 {
