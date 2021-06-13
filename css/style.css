@@ -292,7 +292,7 @@ z-index:-1;
 animation-name: float2;
 animation-duration: 4s;
 animation-iteration-count: infinite;
-width:9%;
+width:11%;
 }
 
 #planet3 {
@@ -315,7 +315,7 @@ z-index:-1;
 animation-name: float4;
 animation-duration: 4s;
 animation-iteration-count: infinite;
-width:11%
+width:14%
 }
 
 #planet5 {
@@ -325,6 +325,64 @@ position:absolute;
 z-index:-1;
 width:10%
 }
+
+
+#astronaut{
+	top:360px;
+	right:68%;
+	position:absolute;
+	z-index:-1;
+	animation-name: float5;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	width:15%
+
+}
+
+#planet_linkedin{
+	top:720px;
+	right:55%;
+	position:absolute;
+	z-index:-1;
+	animation-name: float;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	width:8%
+}
+
+#planet_phone{
+	top:570px;
+	right:47%;
+	position:absolute;
+	z-index:-1;
+	animation-name: float;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	width:9%
+}
+
+#planet_email{
+	top:390px;
+	right:35%;
+	position:absolute;
+	z-index:-1;
+	animation-name: float;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	width:12%
+}
+
+#planet_ig{
+	top:450px;
+	right:23%;
+	position:absolute;
+	z-index:-1;
+	animation-name: float;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	width:9%
+}
+
 
 
 #star {
@@ -384,18 +442,27 @@ width:2%
 	100% {top:0px;}
 }
 
+@keyframes float5{
+	0% {top:360px;}
+	32% {top:375px;}
+	45% {top:358px;}
+	75% {top:380px;}
+	80% {top:373px;}
+	100% {top:360px;}
+}
+
 
 
  @media (max-width:1000px){
 	 #planet1 {
 	 top:50px;
-	 right:28%;
+	 right:32%;
 	 z-index:-1;
 	 position:absolute;
 	 animation-name: float1;
 	 animation-duration: 4s;
 	 animation-iteration-count: infinite;
-	 width:30%;
+	 width:31%;
 	 }
 
 	 #planet2 {
@@ -406,7 +473,7 @@ width:2%
 	 animation-name: float2;
 	 animation-duration: 4s;
 	 animation-iteration-count: infinite;
-	 width:18%;
+	 width:22%;
 	 }
 
 	 #planet3 {
@@ -429,7 +496,64 @@ width:2%
 	 animation-name: float4;
 	 animation-duration: 4s;
 	 animation-iteration-count: infinite;
-	 width:12%
+	 width:17%
+	 }
+
+
+	 #astronaut{
+	 	top:320px;
+	 	right:63%;
+	 	position:absolute;
+	 	z-index:-1;
+	 	animation-name: float5;
+	 	animation-duration: 4s;
+	 	animation-iteration-count: infinite;
+	 	width:30%
+
+	 }
+
+	 #planet_linkedin{
+	 	top:590px;
+	 	right:30%;
+	 	position:absolute;
+	 	z-index:-1;
+	 	animation-name: float;
+	 	animation-duration: 4s;
+	 	animation-iteration-count: infinite;
+	 	width:15%
+	 }
+
+	 #planet_phone{
+	 	top:470px;
+	 	right:13%;
+	 	position:absolute;
+	 	z-index:-1;
+	 	animation-name: float;
+	 	animation-duration: 4s;
+	 	animation-iteration-count: infinite;
+	 	width:18%
+	 }
+
+	 #planet_email{
+	 	top:290px;
+	 	right:17%;
+	 	position:absolute;
+	 	z-index:-1;
+	 	animation-name: float;
+	 	animation-duration: 4s;
+	 	animation-iteration-count: infinite;
+	 	width:20%
+	 }
+
+	 #planet_ig{
+	 	top:400px;
+	 	right:36%;
+	 	position:absolute;
+	 	z-index:-1;
+	 	animation-name: float;
+	 	animation-duration: 4s;
+	 	animation-iteration-count: infinite;
+	 	width:16%
 	 }
 
 
@@ -474,6 +598,15 @@ width:2%
 	 	80% {top:-8px;}
 	 	100% {top:0px;}
 	 }
+
+	 @keyframes float5{
+	 	0% {top:320px;}
+	 	32% {top:335px;}
+	 	45% {top:318px;}
+	 	75% {top:340px;}
+	 	80% {top:333px;}
+	 	100% {top:320px;}
+	}
 
  }
 
