@@ -363,13 +363,13 @@ width:10%
 
 #planet_email{
 	top:390px;
-	right:35%;
+	right:37%;
 	position:absolute;
 	z-index:-1;
 	animation-name: float;
 	animation-duration: 4s;
 	animation-iteration-count: infinite;
-	width:12%
+	width:10%
 }
 
 #planet_ig{
@@ -513,7 +513,7 @@ width:2%
 	 }
 
 	 #planet_linkedin{
-	 	top:590px;
+	 	top:530px;
 	 	right:30%;
 	 	position:absolute;
 	 	z-index:-1;
