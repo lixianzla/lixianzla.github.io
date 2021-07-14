@@ -64,6 +64,10 @@ margin-bottom: 30px;
 /* 3 parameter for the border propoerty */
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 .thin_border{
 	border:1px solid black;
@@ -262,14 +266,45 @@ section{
 /* slection */
 ::-moz-selection { /* Code for Firefox */
   color: black;
-  background: #C9B9C9;
+  background: #E1CA95;
 }
 
 ::selection {
   color: black;
-  background: #C9B9C9;
+  background: #E1CA95;
 }
 
+
+/* landing page image2 */
+#buttom{
+position: relative;
+left:0;
+object-fit: cover;
+width:90%;
+}
+
+#buttom2{
+object-fit: cover;
+width:100%;
+}
+
+#spaceship{
+right:0;
+position: absolute;
+width:22%;
+top:200px;
+}
+
+
+
+ @media (max-width:1000px){
+   #spaceship{
+   right:0;
+   position: absolute;
+   width:25%;
+   top:350px;
+   }
+}
 
 
 /* landing page image */
@@ -828,3 +863,8 @@ width: 20%;
  z-index:-1;
  background-color:#FCBD6A;
 }
+
+
+
+
+/** cursor effect**/
