@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+   <title>Password Protected Site</title>
+    <script type="text/javascript">
+        var password = 'yourPassword'; // Change 'yourPassword' to your actual password
+        var userInput = prompt('Please enter the password to access this site:');
+        if(userInput !== password) {
+            document.write('Incorrect password. Access denied.');
+            // Optionally, redirect them away or disable the current page
+            window.location.href = 'about:blank'; // Redirects to a blank page
+        }
+    </script>
   <title>Lixian Zeng- Portfolio</title>
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
