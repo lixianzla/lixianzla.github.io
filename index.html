@@ -3,13 +3,28 @@
 <head>
   <meta charset="UTF-8">
    <title>Password Protected Site</title>
+    <title>Password Protected Page</title>
     <script type="text/javascript">
-        var password = 'yourPassword'; // Change 'yourPassword' to your actual password
-        var userInput = prompt('Please enter the password to access this site:');
-        if(userInput !== password) {
-            document.write('Incorrect password. Access denied.');
-            // Optionally, redirect them away or disable the current page
-            window.location.href = 'about:blank'; // Redirects to a blank page
+        // Function to check the password
+        function checkPassword() {
+            var passwordEntered = prompt('Please enter the password to view this page:', '');
+            var correctPassword = 'bubble2024'; // Replace 'yourPassword' with your actual password
+
+            // Loop until the user enters the correct password or cancels the prompt
+            while (passwordEntered !== null) {
+                if (passwordEntered === correctPassword) {
+                    alert('Correct password! Welcome.');
+                    // You can add code here to display the protected content or redirect to another page
+                    return true; // Exit the function
+                } else {
+                    passwordEntered = prompt('Incorrect password. Please try again:', '');
+                }
+            }
+
+            // If the user presses Cancel, redirect them away or hide content
+            window.location = 'about:blank'; // Redirects to a blank page
+            // Alternatively, you could display a message or hide content without redirecting
+            return false;
         }
     </script>
   <title>Lixian Zeng | Product Designer</title>
